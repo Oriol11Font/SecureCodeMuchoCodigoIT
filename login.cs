@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProvaClasse
 {
-    public partial class Form2 : Form
+    public partial class login : Form
     {
-        public Form2()
+        public login()
         {
             InitializeComponent();
         }
@@ -56,7 +56,7 @@ namespace ProvaClasse
 
             if (username == user && password == pass)
             {
-                Form3 Form3 = new Form3();
+                Menu Form3 = new Menu();
                 Form3.Show();
                 this.Close();
                 

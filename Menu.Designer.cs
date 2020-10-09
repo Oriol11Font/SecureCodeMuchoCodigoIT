@@ -1,6 +1,6 @@
 ﻿namespace ProvaClasse
 {
-    partial class Form3
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.

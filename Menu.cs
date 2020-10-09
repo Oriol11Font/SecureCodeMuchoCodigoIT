@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProvaClasse
 {
-    public partial class Form3 : Form
+    public partial class Menu : Form
     {
-        public Form3()
+        public Menu()
         {
             InitializeComponent();
         }

@@ -11,10 +11,10 @@ using System.Windows.Forms.VisualStyles;
 
 namespace ProvaClasse
 {
-    public partial class Form1 : Form
+    public partial class splash : Form
     {
         
-        public Form1()
+        public splash()
         {
             InitializeComponent();
         }
@@ -39,7 +39,7 @@ namespace ProvaClasse
                 progressBar1.Value++;
             } else {
                
-                Form2 f2 = new Form2();
+                login f2 = new login();
                 timer1.Enabled = false;
                 f2.Show();
                 this.Hide();
@@ -66,7 +66,7 @@ namespace ProvaClasse
 
                 timer1.Stop();
                 this.Hide();
-                Form2 Form2 = new Form2();
+                login Form2 = new login();
                 Form2.Show();
             }
         }

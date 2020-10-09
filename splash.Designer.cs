@@ -1,6 +1,6 @@
 ﻿namespace ProvaClasse
 {
-    partial class Form1
+    partial class splash
     {
         /// <summary>
         /// Variable del diseñador necesaria.
