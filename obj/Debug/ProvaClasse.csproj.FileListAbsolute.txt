@@ -1,0 +1,11 @@
+C:\S2AM\M20\SolucioProva\ProvaClasse\bin\Debug\ProvaClasse.exe.config
+C:\S2AM\M20\SolucioProva\ProvaClasse\bin\Debug\ProvaClasse.exe
+C:\S2AM\M20\SolucioProva\ProvaClasse\bin\Debug\ProvaClasse.pdb
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.Form1.resources
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.Properties.Resources.resources
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.csproj.GenerateResource.cache
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.exe
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.pdb
+C:\S2AM\M20\SolucioProva\ProvaClasse\obj\Debug\ProvaClasse.Form2.resources
