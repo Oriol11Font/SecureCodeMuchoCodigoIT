@@ -12,6 +12,8 @@ namespace secureCore
 {
     public partial class TaulaEsquadres : Form
     {
+        public bool FontSize { get; private set; }
+
         public TaulaEsquadres()
         {
             InitializeComponent();
@@ -60,6 +62,26 @@ namespace secureCore
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

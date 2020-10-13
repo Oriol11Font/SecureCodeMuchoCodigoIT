@@ -20,3 +20,5 @@ C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.exe
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.pdb
+C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.Menu.resources
+C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\secureCore.TaulaEsquadres.resources

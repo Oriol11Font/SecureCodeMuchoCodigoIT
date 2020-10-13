@@ -1,4 +1,5 @@
-﻿using System;
+﻿using secureCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,13 @@ namespace ProvaClasse
             {
                 MessageBox.Show("Nom d'usuari o contrassenya incorrecte");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TaulaEsquadres Form3 = new TaulaEsquadres();
+            Form3.Show();
+            this.Close();
         }
     }
 }

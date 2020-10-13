@@ -72,6 +72,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="img\Darth-Vader-512.png" />
+    <EmbeddedResource Include="menu\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="splash\splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +92,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="taulaSimple\TaulaEsquadres.resx">
+      <DependentUpon>TaulaEsquadres.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Fonts\Starjedi.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,5 +112,6 @@
   <ItemGroup>
     <None Include="img\LogotipoEmpresa.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

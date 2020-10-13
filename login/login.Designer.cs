@@ -38,6 +38,7 @@
             this.mtxt_password = new System.Windows.Forms.MaskedTextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1074, 32);
             this.panel1.TabIndex = 1;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_minimize
             // 
@@ -153,12 +153,23 @@
             this.pic_logo.TabIndex = 6;
             this.pic_logo.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(879, 434);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1074, 572);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.mtxt_password);
@@ -189,5 +200,6 @@
         private System.Windows.Forms.MaskedTextBox mtxt_password;
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button button1;
     }
 }

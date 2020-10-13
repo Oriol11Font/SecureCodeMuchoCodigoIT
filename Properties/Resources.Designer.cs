@@ -63,6 +63,16 @@ namespace ProvaClasse.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Darth_Vader_512 {
+            get {
+                object obj = ResourceManager.GetObject("Darth-Vader-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogotipoEmpresa {
             get {
                 object obj = ResourceManager.GetObject("LogotipoEmpresa", resourceCulture);
