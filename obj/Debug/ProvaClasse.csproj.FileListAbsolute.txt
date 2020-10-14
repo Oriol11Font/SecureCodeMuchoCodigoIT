@@ -22,3 +22,4 @@ C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.pdb
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.Menu.resources
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\secureCore.TaulaEsquadres.resources
+C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.Form1.resources

@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace secureCore
+namespace ProvaClasse
 {
-    public partial class TaulaEsquadres : Form
+    public partial class Form1 : Form
     {
         public bool FontSize { get; private set; }
 
-        public TaulaEsquadres()
+        public Form1()
         {
             InitializeComponent();
             GoFullscreen(true);
@@ -78,10 +78,15 @@ namespace secureCore
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
         {
 
         }

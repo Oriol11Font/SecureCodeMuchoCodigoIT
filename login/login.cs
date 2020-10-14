@@ -70,7 +70,7 @@ namespace ProvaClasse
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaulaEsquadres Form3 = new TaulaEsquadres();
+            Form1 Form3 = new Form1();
             Form3.Show();
             this.Close();
         }
