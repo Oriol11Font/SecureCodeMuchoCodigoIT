@@ -20,3 +20,14 @@ C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.exe
 C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse.pdb
+C:\Users\pol\Desktop\GRUP\projecte_github\bin\Debug\ProvaClasse.exe.config
+C:\Users\pol\Desktop\GRUP\projecte_github\bin\Debug\ProvaClasse.exe
+C:\Users\pol\Desktop\GRUP\projecte_github\bin\Debug\ProvaClasse.pdb
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.splash.resources
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.login.resources
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.Properties.Resources.resources
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.csproj.GenerateResource.cache
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.exe
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.pdb

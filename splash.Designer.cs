@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(116, 148);
+            this.label1.Location = new System.Drawing.Point(110, 177);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(582, 85);
             this.label1.TabIndex = 0;
@@ -63,24 +63,26 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(163, 300);
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBar1.Location = new System.Drawing.Point(0, 422);
             this.progressBar1.Maximum = 10;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(464, 27);
+            this.progressBar1.Size = new System.Drawing.Size(800, 28);
             this.progressBar1.TabIndex = 2;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
-            // Form1
+            // splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::ProvaClasse.Properties.Resources.bg_image;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "splash";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
