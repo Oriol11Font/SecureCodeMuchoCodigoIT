@@ -56,7 +56,7 @@ namespace ProvaClasse
 
             if (username == user && password == pass)
             {
-                Menu Form3 = new Menu();
+                Menu Form3 = new Menu(user);
                 Form3.Show();
                 this.Close();
                 

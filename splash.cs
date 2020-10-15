@@ -28,7 +28,7 @@ namespace ProvaClasse
         {
           
             timer1.Enabled = true;
-            timer1. Interval = 1000;
+            timer1. Interval = 300;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
