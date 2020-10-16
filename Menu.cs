@@ -14,12 +14,13 @@ namespace ProvaClasse
 {
     public partial class Menu : Form
     {
-        public Menu(string user)
+        String user= "pepito";
+        public Menu(/*string user*/)
         {
             InitializeComponent();
             initMenu(user);
         }
-
+        
         private void initMenu(string user)
         {
             DateTime now = DateTime.Now;
@@ -70,6 +71,11 @@ namespace ProvaClasse
         private void openShipsForm(object sender, EventArgs e)
         {
             MessageBox.Show("Obert");
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
