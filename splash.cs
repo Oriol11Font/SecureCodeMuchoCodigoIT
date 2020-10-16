@@ -28,15 +28,15 @@ namespace ProvaClasse
         {
           
             timer1.Enabled = true;
-            timer1. Interval = 1000;
+            timer1. Interval = 200;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
            
           
-            if (progressBar1.Value < 10){
-                progressBar1.Value++;
+            if (progressBar1.Value < 102){
+                progressBar1.Value = progressBar1.Value+3;
             } else {
                
                 login f2 = new login();
@@ -68,6 +68,14 @@ namespace ProvaClasse
                 this.Hide();
                 login Form2 = new login();
                 Form2.Show();
+            }
+
+            if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
+
+            {
+
+                timer1.Stop();
+                
             }
         }
     }

@@ -73,9 +73,41 @@ namespace ProvaClasse.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gratis_png_guerra_de_las_galaxias_guerras_de_clon_de_la_rebelion_nueva_republica_wookieepedia_vivir_para_siempre_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("gratis-png-guerra-de-las-galaxias-guerras-de-clon-de-la-rebelion-nueva-republica-" +
+                        "wookieepedia-vivir-para-siempre-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogotipoEmpresa {
             get {
                 object obj = ResourceManager.GetObject("LogotipoEmpresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_New_Republic_Seal {
+            get {
+                object obj = ResourceManager.GetObject("New_New_Republic_Seal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_star_wars_rebellion_clone_wars_new_republic_wookieepedia_forever_living_smiley_sith {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-star-wars-rebellion-clone-wars-new-republic-wookieepedia-forever-livi" +
+                        "ng-smiley-sith", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

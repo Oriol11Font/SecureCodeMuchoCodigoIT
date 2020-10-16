@@ -65,6 +65,19 @@ namespace ProvaClasse
             {
                 MessageBox.Show("Nom d'usuari o contrassenya incorrecte");
             }
+
+
+        }
+
+        private void mtxt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+
+            {
+            MessageBox.Show("hola");
+            btn_login_Click(null, null);
+
+            }
         }
     }
 }

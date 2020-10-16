@@ -23,7 +23,6 @@ C:\Users\oriol\OneDrive\Escriptori\SecureCodeMuchoCodigoIt\obj\Debug\ProvaClasse
 C:\Users\pol\Desktop\GRUP\projecte_github\bin\Debug\ProvaClasse.exe.config
 C:\Users\pol\Desktop\GRUP\projecte_github\bin\Debug\ProvaClasse.exe
 C:\Users\pol\Desktop\GRUP\projecte_github\bin\Debug\ProvaClasse.pdb
-C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.splash.resources
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.login.resources
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.Properties.Resources.resources
