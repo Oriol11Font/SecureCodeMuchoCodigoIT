@@ -15,7 +15,7 @@ namespace ProvaClasse
     public partial class Menu : Form
     {
         String user= "pepito";
-        public Menu(/*string user*/)
+        public Menu(string user)
         {
             InitializeComponent();
             initMenu(user);
