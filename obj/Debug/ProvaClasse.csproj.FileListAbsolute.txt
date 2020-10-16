@@ -31,3 +31,15 @@ C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.csproj.CoreCompi
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.exe
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.pdb
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\bin\Debug\ProvaClasse.exe.config
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\bin\Debug\ProvaClasse.exe
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\bin\Debug\ProvaClasse.pdb
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.Form1.resources
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.splash.resources
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.login.resources
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.Properties.Resources.resources
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.csproj.GenerateResource.cache
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.exe
+C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.pdb

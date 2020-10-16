@@ -52,6 +52,11 @@
     <Compile Include="BaseForms.Designer.cs">
       <DependentUpon>BaseForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,14 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,19 +105,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\LogotipoEmpresa.png" />
+    <None Include="Properties\imgapp\bg_image.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\bg_image.jpg" />
+    <None Include="Properties\imgapp\logo_app.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\png-clipart-star-wars-rebellion-clone-wars-new-republic-wookieepedia-forever-living-smiley-sith.png" />
+    <None Include="Properties\imgapp\logo_login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\gratis-png-guerra-de-las-galaxias-guerras-de-clon-de-la-rebelion-nueva-republica-wookieepedia-vivir-para-siempre-thumbnail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="img\New_New_Republic_Seal.png" />
+    <None Include="Properties\imgapp\profile_img.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
