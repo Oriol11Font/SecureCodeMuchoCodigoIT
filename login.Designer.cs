@@ -135,7 +135,6 @@
             // pic_logo
             // 
             this.pic_logo.BackColor = System.Drawing.Color.Transparent;
-            this.pic_logo.Image = global::ProvaClasse.Properties.Resources.New_New_Republic_Seal;
             this.pic_logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pic_logo.InitialImage")));
             this.pic_logo.Location = new System.Drawing.Point(396, 67);
             this.pic_logo.Name = "pic_logo";
@@ -160,7 +159,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = global::ProvaClasse.Properties.Resources.bg_image;
             this.ClientSize = new System.Drawing.Size(1126, 723);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pic_logo);

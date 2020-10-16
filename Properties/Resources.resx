@@ -118,19 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gratis-png-guerra-de-las-galaxias-guerras-de-clon-de-la-rebelion-nueva-republica-wookieepedia-vivir-para-siempre-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\gratis-png-guerra-de-las-galaxias-guerras-de-clon-de-la-rebelion-nueva-republica-wookieepedia-vivir-para-siempre-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-clipart-star-wars-rebellion-clone-wars-new-republic-wookieepedia-forever-living-smiley-sith" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\png-clipart-star-wars-rebellion-clone-wars-new-republic-wookieepedia-forever-living-smiley-sith.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogotipoEmpresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\LogotipoEmpresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bg_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\bg_image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="New_New_Republic_Seal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\New_New_Republic_Seal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogotipoEmpresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\LogotipoEmpresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -76,7 +76,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProvaClasse.Properties.Resources.LogotipoEmpresa;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
@@ -139,7 +138,6 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::ProvaClasse.Properties.Resources.Darth_Vader_512;
             this.pictureBox3.Location = new System.Drawing.Point(1203, 53);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
