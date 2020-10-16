@@ -43,3 +43,5 @@ C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.csproj.Gener
 C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
 C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.exe
 C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.pdb
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.Form1.resources
+C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.Menu.resources

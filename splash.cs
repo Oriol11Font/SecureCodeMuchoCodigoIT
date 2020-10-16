@@ -13,10 +13,11 @@ namespace ProvaClasse
 {
     public partial class splash : Form
     {
-        
+        int porcentaje = 0;
         public splash()
         {
             InitializeComponent();
+            lbl_progressCarga.Text = porcentaje + "%";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,11 +34,17 @@ namespace ProvaClasse
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           
-          
-            if (progressBar1.Value < 102){
-                progressBar1.Value = progressBar1.Value+3;
-            } else {
+
+
+            if (progressBar1.Value < 100)
+            {
+
+                progressBar1.Value += 2;
+                porcentaje += 2;
+                lbl_progressCarga.Text = porcentaje + "%";
+
+            }
+            else {
                
                 login f2 = new login();
                 timer1.Enabled = false;

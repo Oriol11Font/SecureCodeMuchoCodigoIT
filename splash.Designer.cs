@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_carga = new System.Windows.Forms.Label();
+            this.lbl_progressCarga = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
@@ -52,15 +52,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lbl_carga
+            // lbl_progressCarga
             // 
-            this.lbl_carga.AutoSize = true;
-            this.lbl_carga.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_carga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.lbl_carga.Location = new System.Drawing.Point(374, 355);
-            this.lbl_carga.Name = "lbl_carga";
-            this.lbl_carga.Size = new System.Drawing.Size(0, 40);
-            this.lbl_carga.TabIndex = 1;
+            this.lbl_progressCarga.AutoSize = true;
+            this.lbl_progressCarga.Font = new System.Drawing.Font("Nasalization", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_progressCarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.lbl_progressCarga.Location = new System.Drawing.Point(374, 355);
+            this.lbl_progressCarga.Name = "lbl_progressCarga";
+            this.lbl_progressCarga.Size = new System.Drawing.Size(0, 32);
+            this.lbl_progressCarga.TabIndex = 1;
             // 
             // progressBar1
             // 
@@ -78,9 +78,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::ProvaClasse.Properties.Resources.bg_image;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.lbl_carga);
+            this.Controls.Add(this.lbl_progressCarga);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "splash";
@@ -97,7 +98,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label lbl_carga;
+        private System.Windows.Forms.Label lbl_progressCarga;
         private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
