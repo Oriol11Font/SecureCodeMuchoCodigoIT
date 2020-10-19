@@ -77,9 +77,7 @@ namespace ProvaClasse
                 this.Hide();
                 login Form2 = new login();
                 Form2.Show();
-            }
-
-            if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
+            } else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
 
             {
                 timer1.Stop();   

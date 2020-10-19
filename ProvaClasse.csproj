@@ -122,5 +122,17 @@
   <ItemGroup>
     <None Include="Properties\imgapp\ship1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\imgapp\squadron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\imgapp\casco_piloto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\imgapp\company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\imgapp\settings.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

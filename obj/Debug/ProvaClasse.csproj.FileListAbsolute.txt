@@ -45,3 +45,16 @@ C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.exe
 C:\Users\oriol\OneDrive\Escriptori\SecureCode\obj\Debug\ProvaClasse.pdb
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.Form1.resources
 C:\Users\pol\Desktop\GRUP\projecte_github\obj\Debug\ProvaClasse.Menu.resources
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.Form1.resources
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.Menu.resources
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.splash.resources
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.login.resources
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.Properties.Resources.resources
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.csproj.GenerateResource.cache
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.exe
+C:\Users\pauco\Documents\SecureCore\obj\Debug\ProvaClasse.pdb
+C:\Users\pauco\Documents\SecureCore\bin\Debug\ProvaClasse.exe.config
+C:\Users\pauco\Documents\SecureCore\bin\Debug\ProvaClasse.exe
+C:\Users\pauco\Documents\SecureCore\bin\Debug\ProvaClasse.pdb
