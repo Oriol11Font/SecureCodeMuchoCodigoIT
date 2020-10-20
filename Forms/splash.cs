@@ -29,7 +29,7 @@ namespace ProvaClasse
         {
           
             timer1.Enabled = true;
-            timer1. Interval = 200;
+            timer1.Interval = 200;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -39,8 +39,8 @@ namespace ProvaClasse
             if (progressBar1.Value < 100)
             {
 
-                progressBar1.Value += 2;
-                porcentaje += 2;
+                progressBar1.Value += 10;
+                porcentaje += 10;
                 lbl_progressCarga.Text = porcentaje + "%";
 
             }
@@ -58,7 +58,6 @@ namespace ProvaClasse
 
         private void SplashScreen_KeyDon(object sender, KeyEventArgs e)
         {
-           
 
         }
 
