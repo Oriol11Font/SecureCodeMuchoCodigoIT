@@ -80,6 +80,7 @@ namespace ProvaClasse
                     btn_login.Visible = true;
                     label1.Visible = true;
                     label2.Visible = true;
+                    label3.Visible = false;
                     mtxt_password.Visible = true;
                     txt_username.Visible = true;
                     progressBar1.Visible = false;
@@ -109,6 +110,7 @@ namespace ProvaClasse
             btn_login.Visible = false;
             label1.Visible = false;
             label2.Visible = false;
+            label3.Visible = true;
             mtxt_password.Visible = false;
             txt_username.Visible = false;
             progressBar1.Visible = true;
@@ -128,12 +130,5 @@ namespace ProvaClasse
 
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

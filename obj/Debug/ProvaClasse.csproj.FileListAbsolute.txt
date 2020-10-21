@@ -62,7 +62,6 @@ C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ProvaClasse.
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ProvaClasse.exe
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ProvaClasse.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Form1.resources
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Menu.resources
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.splash.resources
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.login.resources
@@ -85,3 +84,5 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.exe
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.pdb
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.BaseForms.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.Form1.resources
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.BaseForms.resources
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.Form1.resources
