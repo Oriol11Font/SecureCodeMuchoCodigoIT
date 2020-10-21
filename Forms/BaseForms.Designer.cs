@@ -1,6 +1,6 @@
 ﻿namespace ProvaClasse
 {
-    partial class Form1
+    partial class BaseForms
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -164,7 +164,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Log out";
             // 
-            // Form1
+            // BaseForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +179,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "BaseForms";
             this.Text = "Menú";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TaulaEsquadres_Load);

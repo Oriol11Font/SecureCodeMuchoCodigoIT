@@ -63,6 +63,16 @@ namespace ProvaClasse.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alertscreen {
+            get {
+                object obj = ResourceManager.GetObject("alertscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_image {
             get {
                 object obj = ResourceManager.GetObject("bg_image", resourceCulture);

@@ -166,6 +166,7 @@
             // 
             // progressBar1
             // 
+            this.progressBar1.BackColor = System.Drawing.Color.Red;
             this.progressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
             this.progressBar1.Location = new System.Drawing.Point(345, 478);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

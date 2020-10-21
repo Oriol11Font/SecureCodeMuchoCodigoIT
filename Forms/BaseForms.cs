@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ProvaClasse
 {
-    public partial class Form1 : Form
+    public partial class BaseForms : Form
     {
         public bool FontSize { get; private set; }
 
-        public Form1()
+        public BaseForms()
         {
             InitializeComponent();
             GoFullscreen(true);

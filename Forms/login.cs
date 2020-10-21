@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProvaClasse.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ProvaClasse
 {
     public partial class login : Form
     {
+        int intentos = 0;
         public login()
         {
             InitializeComponent();
@@ -73,6 +75,8 @@ namespace ProvaClasse
                 }
                 else
                 {
+                    intentos++;
+
                     btn_login.Visible = true;
                     label1.Visible = true;
                     label2.Visible = true;
@@ -80,8 +84,20 @@ namespace ProvaClasse
                     txt_username.Visible = true;
                     progressBar1.Visible = false;
                     timer1.Enabled = false;
-                    MessageBox.Show("Nom d'usuari o contrassenya incorrecte");
                     
+                    
+
+                    if (intentos >= 3)
+                    {
+                        //Abrir nuevo formulario con mensaje AMENAZADDOR
+                        Form1 amenaza = new Form1();
+                        amenaza.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nom d'usuari o contrassenya incorrecte");
+                    }
                 }
             }
         }
