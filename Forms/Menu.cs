@@ -71,9 +71,12 @@ namespace ProvaClasse
         {
             MessageBox.Show("Obert");
         }
-        private void Menu_Load(object sender, EventArgs e)
-        {
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            login logout = new login();
+            logout.Show();
+            this.Close();
         }
     }
 }

@@ -19,11 +19,6 @@ namespace ProvaClasse
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -35,25 +30,15 @@ namespace ProvaClasse
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void txt_username_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             timer1.Enabled = true;
             timer1.Interval = 200;
 
-            if (progressBar1.Value < 100)
+            if (loginBar.Value < 100)
             {
 
-                progressBar1.Value += 2;
+                loginBar.Value += 2;
 
             }
             else
@@ -78,12 +63,12 @@ namespace ProvaClasse
                     intentos++;
 
                     btn_login.Visible = true;
-                    label1.Visible = true;
-                    label2.Visible = true;
-                    label3.Visible = false;
+                    usernameLabel.Visible = true;
+                    passwordLabel.Visible = true;
+                    messageLoginLabel.Visible = false;
                     mtxt_password.Visible = true;
                     txt_username.Visible = true;
-                    progressBar1.Visible = false;
+                    loginBar.Visible = false;
                     timer1.Enabled = false;
                     
                     
@@ -91,7 +76,7 @@ namespace ProvaClasse
                     if (intentos >= 3)
                     {
                         //Abrir nuevo formulario con mensaje AMENAZADDOR
-                        Form1 amenaza = new Form1();
+                        AlertScreen amenaza = new AlertScreen();
                         amenaza.Show();
                         this.Close();
                     }
@@ -108,14 +93,14 @@ namespace ProvaClasse
         private void btn_login_Click(object sender, EventArgs e)
         {
             btn_login.Visible = false;
-            label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = true;
+            usernameLabel.Visible = false;
+            passwordLabel.Visible = false;
+            messageLoginLabel.Visible = true;
             mtxt_password.Visible = false;
             txt_username.Visible = false;
-            progressBar1.Visible = true;
+            loginBar.Visible = true;
 
-            progressBar1.Value = 0;
+            loginBar.Value = 0;
 
             timer1_Tick_1(sender, e);
         }
@@ -125,9 +110,7 @@ namespace ProvaClasse
             if (e.KeyCode == Keys.Enter)
 
             {
-            MessageBox.Show("hola");
             btn_login_Click(null, null);
-
             }
         }
     }

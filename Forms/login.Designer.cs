@@ -33,17 +33,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.mtxt_password = new System.Windows.Forms.MaskedTextBox();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.pic_logo_login = new System.Windows.Forms.PictureBox();
             this.btn_login = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.loginBar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
+            this.messageLoginLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo_login)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,29 +94,29 @@
             this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // label1
+            // usernameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.label1.Location = new System.Drawing.Point(433, 330);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Username";
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.usernameLabel.Location = new System.Drawing.Point(433, 330);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(91, 20);
+            this.usernameLabel.TabIndex = 2;
+            this.usernameLabel.Text = "Username";
             // 
-            // label2
+            // passwordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.label2.Location = new System.Drawing.Point(433, 408);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.passwordLabel.Location = new System.Drawing.Point(433, 408);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(86, 20);
+            this.passwordLabel.TabIndex = 3;
+            this.passwordLabel.Text = "Password";
             // 
             // txt_username
             // 
@@ -125,7 +125,6 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(242, 22);
             this.txt_username.TabIndex = 4;
-            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
             // mtxt_password
             // 
@@ -134,23 +133,22 @@
             this.mtxt_password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtxt_password.Name = "mtxt_password";
             this.mtxt_password.PasswordChar = '*';
-            this.mtxt_password.Size = new System.Drawing.Size(242, 23);
+            this.mtxt_password.Size = new System.Drawing.Size(242, 20);
             this.mtxt_password.TabIndex = 5;
-            this.mtxt_password.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             this.mtxt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtxt_password_KeyDown);
             // 
-            // pic_logo
+            // pic_logo_login
             // 
-            this.pic_logo.BackColor = System.Drawing.Color.Transparent;
-            this.pic_logo.Image = global::ProvaClasse.Properties.Resources.logo_login;
-            this.pic_logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("pic_logo.InitialImage")));
-            this.pic_logo.Location = new System.Drawing.Point(352, 54);
-            this.pic_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(278, 259);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_logo.TabIndex = 6;
-            this.pic_logo.TabStop = false;
+            this.pic_logo_login.BackColor = System.Drawing.Color.Transparent;
+            this.pic_logo_login.Image = global::ProvaClasse.Properties.Resources.logo_login;
+            this.pic_logo_login.InitialImage = ((System.Drawing.Image)(resources.GetObject("pic_logo_login.InitialImage")));
+            this.pic_logo_login.Location = new System.Drawing.Point(352, 54);
+            this.pic_logo_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_logo_login.Name = "pic_logo_login";
+            this.pic_logo_login.Size = new System.Drawing.Size(278, 259);
+            this.pic_logo_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo_login.TabIndex = 6;
+            this.pic_logo_login.TabStop = false;
             // 
             // btn_login
             // 
@@ -164,33 +162,33 @@
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // progressBar1
+            // loginBar
             // 
-            this.progressBar1.BackColor = System.Drawing.Color.Red;
-            this.progressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.progressBar1.Location = new System.Drawing.Point(311, 434);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(366, 23);
-            this.progressBar1.TabIndex = 8;
-            this.progressBar1.Visible = false;
+            this.loginBar.BackColor = System.Drawing.Color.Red;
+            this.loginBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.loginBar.Location = new System.Drawing.Point(283, 434);
+            this.loginBar.Name = "loginBar";
+            this.loginBar.Size = new System.Drawing.Size(416, 23);
+            this.loginBar.TabIndex = 8;
+            this.loginBar.Visible = false;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // label3
+            // messageLoginLabel
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.label3.Location = new System.Drawing.Point(288, 356);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(420, 53);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Estamos validando sus datos!\r\nEsto puede tardar unos minutos...\r\n";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Visible = false;
+            this.messageLoginLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.messageLoginLabel.BackColor = System.Drawing.Color.Transparent;
+            this.messageLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageLoginLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.messageLoginLabel.Location = new System.Drawing.Point(288, 356);
+            this.messageLoginLabel.Name = "messageLoginLabel";
+            this.messageLoginLabel.Size = new System.Drawing.Size(420, 53);
+            this.messageLoginLabel.TabIndex = 9;
+            this.messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar unos minutos...\r\n";
+            this.messageLoginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.messageLoginLabel.Visible = false;
             // 
             // login
             // 
@@ -199,23 +197,22 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::ProvaClasse.Properties.Resources.bg_image;
             this.ClientSize = new System.Drawing.Size(1001, 578);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.messageLoginLabel);
+            this.Controls.Add(this.loginBar);
             this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.pic_logo);
+            this.Controls.Add(this.pic_logo_login);
             this.Controls.Add(this.mtxt_password);
             this.Controls.Add(this.txt_username);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo_login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,14 +223,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_minimize;
         private System.Windows.Forms.Button btn_exit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.MaskedTextBox mtxt_password;
-        private System.Windows.Forms.PictureBox pic_logo;
+        private System.Windows.Forms.PictureBox pic_logo_login;
         private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar loginBar;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label messageLoginLabel;
     }
 }

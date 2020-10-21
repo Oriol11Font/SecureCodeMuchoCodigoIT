@@ -34,38 +34,39 @@
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuButtonLabel1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usernameMenu = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.menuButtonLabel2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLogOut = new System.Windows.Forms.LinkLabel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.menuButtonLabel2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_minimize
@@ -122,12 +123,15 @@
             this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.Location = new System.Drawing.Point(92, 125);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(128, 48);
+            this.welcomeLabel.Size = new System.Drawing.Size(106, 39);
             this.welcomeLabel.TabIndex = 3;
             this.welcomeLabel.Text = "Menú";
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.Red;
             this.panel2.Controls.Add(this.menuButtonLabel1);
@@ -146,48 +150,38 @@
             this.menuButtonLabel1.ForeColor = System.Drawing.Color.White;
             this.menuButtonLabel1.Location = new System.Drawing.Point(312, 100);
             this.menuButtonLabel1.Name = "menuButtonLabel1";
-            this.menuButtonLabel1.Size = new System.Drawing.Size(123, 56);
+            this.menuButtonLabel1.Size = new System.Drawing.Size(101, 45);
             this.menuButtonLabel1.TabIndex = 5;
             this.menuButtonLabel1.Text = "Naus";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::ProvaClasse.Properties.Resources.ship1;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(202, 179);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // usernameMenu
             // 
-            this.usernameMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.usernameMenu.AutoSize = true;
+            this.usernameMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameMenu.Location = new System.Drawing.Point(1728, 105);
+            this.usernameMenu.Location = new System.Drawing.Point(1640, 61);
             this.usernameMenu.Name = "usernameMenu";
-            this.usernameMenu.Size = new System.Drawing.Size(64, 25);
+            this.usernameMenu.Size = new System.Drawing.Size(182, 26);
             this.usernameMenu.TabIndex = 7;
             this.usernameMenu.Text = "Name";
             this.usernameMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel3
-            // 
-            this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel3.Controls.Add(this.menuButtonLabel2);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(701, 223);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(550, 250);
-            this.panel3.TabIndex = 9;
-            // 
-            // menuButtonLabel2
-            // 
-            this.menuButtonLabel2.AutoSize = true;
-            this.menuButtonLabel2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuButtonLabel2.ForeColor = System.Drawing.Color.White;
-            this.menuButtonLabel2.Location = new System.Drawing.Point(233, 100);
-            this.menuButtonLabel2.Name = "menuButtonLabel2";
-            this.menuButtonLabel2.Size = new System.Drawing.Size(264, 56);
-            this.menuButtonLabel2.TabIndex = 5;
-            this.menuButtonLabel2.Text = "Companyies";
-            // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.Green;
             this.panel4.Controls.Add(this.label1);
@@ -206,12 +200,28 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(259, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 56);
+            this.label1.Size = new System.Drawing.Size(181, 45);
             this.label1.TabIndex = 5;
             this.label1.Text = "Esquadres";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Enabled = false;
+            this.pictureBox4.Image = global::ProvaClasse.Properties.Resources.squadron;
+            this.pictureBox4.Location = new System.Drawing.Point(20, 25);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(210, 202);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.AutoSize = true;
             this.panel5.BackColor = System.Drawing.Color.Red;
             this.panel5.Controls.Add(this.label4);
@@ -230,36 +240,28 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(290, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 56);
+            this.label4.Size = new System.Drawing.Size(110, 45);
             this.label4.TabIndex = 5;
             this.label4.Text = "Pilots";
             // 
-            // panel6
+            // pictureBox5
             // 
-            this.panel6.AutoSize = true;
-            this.panel6.BackColor = System.Drawing.Color.Red;
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel6.Location = new System.Drawing.Point(701, 533);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(550, 250);
-            this.panel6.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(292, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 56);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Perfil";
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Enabled = false;
+            this.pictureBox5.Image = global::ProvaClasse.Properties.Resources.casco_piloto;
+            this.pictureBox5.Location = new System.Drawing.Point(22, 35);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(202, 189);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.AutoSize = true;
             this.panel7.BackColor = System.Drawing.Color.DimGray;
             this.panel7.Controls.Add(this.label8);
@@ -278,7 +280,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(250, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(247, 49);
+            this.label8.Size = new System.Drawing.Size(199, 40);
             this.label8.TabIndex = 5;
             this.label8.Text = "Configuració";
             // 
@@ -295,6 +297,31 @@
             this.pictureBox7.TabIndex = 4;
             this.pictureBox7.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Image = global::ProvaClasse.Properties.Resources.profile_img;
+            this.pictureBox3.Location = new System.Drawing.Point(1828, 50);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // linkLogOut
+            // 
+            this.linkLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLogOut.AutoSize = true;
+            this.linkLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLogOut.Location = new System.Drawing.Point(1770, 87);
+            this.linkLogOut.Name = "linkLogOut";
+            this.linkLogOut.Size = new System.Drawing.Size(52, 16);
+            this.linkLogOut.TabIndex = 13;
+            this.linkLogOut.TabStop = true;
+            this.linkLogOut.Text = "Log out";
+            this.linkLogOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -303,36 +330,37 @@
             this.pictureBox6.Location = new System.Drawing.Point(20, 30);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(202, 136);
+            this.pictureBox6.Size = new System.Drawing.Size(202, 196);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox5
+            // label6
             // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Enabled = false;
-            this.pictureBox5.Image = global::ProvaClasse.Properties.Resources.casco_piloto;
-            this.pictureBox5.Location = new System.Drawing.Point(22, 35);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(202, 189);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(292, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 45);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Perfil";
             // 
-            // pictureBox4
+            // panel6
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Enabled = false;
-            this.pictureBox4.Image = global::ProvaClasse.Properties.Resources.squadron;
-            this.pictureBox4.Location = new System.Drawing.Point(20, 25);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(210, 202);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.AutoSize = true;
+            this.panel6.BackColor = System.Drawing.Color.Red;
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.pictureBox6);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel6.Location = new System.Drawing.Point(701, 533);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(550, 250);
+            this.panel6.TabIndex = 11;
             // 
             // pictureBox2
             // 
@@ -347,34 +375,39 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
+            // menuButtonLabel2
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.Image = global::ProvaClasse.Properties.Resources.logo_app;
-            this.pictureBox3.Location = new System.Drawing.Point(1802, 92);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
+            this.menuButtonLabel2.AutoSize = true;
+            this.menuButtonLabel2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuButtonLabel2.ForeColor = System.Drawing.Color.White;
+            this.menuButtonLabel2.Location = new System.Drawing.Point(233, 100);
+            this.menuButtonLabel2.Name = "menuButtonLabel2";
+            this.menuButtonLabel2.Size = new System.Drawing.Size(214, 45);
+            this.menuButtonLabel2.TabIndex = 5;
+            this.menuButtonLabel2.Text = "Companyies";
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::ProvaClasse.Properties.Resources.ship1;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 179);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.menuButtonLabel2);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(701, 223);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(550, 250);
+            this.panel3.TabIndex = 9;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.linkLogOut);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -391,23 +424,23 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,20 +457,21 @@
         private System.Windows.Forms.Label menuButtonLabel1;
         private System.Windows.Forms.Label usernameMenu;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label menuButtonLabel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.LinkLabel linkLogOut;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label menuButtonLabel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

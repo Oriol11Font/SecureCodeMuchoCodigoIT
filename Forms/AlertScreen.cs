@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProvaClasse.Forms
 {
-    public partial class Form1 : Form
+    public partial class AlertScreen : Form
     {
-        public Form1()
+        public AlertScreen()
         {
             InitializeComponent();
             timer1.Enabled = true;

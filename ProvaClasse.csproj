@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\BaseForms.cs">
+    <Compile Include="Forms\AlertScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BaseForms.Designer.cs">
-      <DependentUpon>BaseForms.cs</DependentUpon>
+    <Compile Include="Forms\AlertScreen.Designer.cs">
+      <DependentUpon>AlertScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form1.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Forms\test.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -83,11 +83,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\BaseForms.resx">
-      <DependentUpon>BaseForms.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AlertScreen.resx">
+      <DependentUpon>AlertScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -97,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\imgapp\alertscreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="LibreriaControles\LibreriaControles.csproj">
+      <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
+      <Name>LibreriaControles</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

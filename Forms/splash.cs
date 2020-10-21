@@ -20,14 +20,8 @@ namespace ProvaClasse
             lbl_progressCarga.Text = porcentaje + "%";
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-          
             timer1.Enabled = true;
             timer1.Interval = 200;
         }
@@ -36,10 +30,10 @@ namespace ProvaClasse
         {
 
 
-            if (progressBar1.Value < 100)
+            if (splashBar1.Value < 100)
             {
 
-                progressBar1.Value += 10;
+                splashBar1.Value += 10;
                 porcentaje += 10;
                 lbl_progressCarga.Text = porcentaje + "%";
 
@@ -54,16 +48,6 @@ namespace ProvaClasse
 
             
             
-        }
-
-        private void SplashScreen_KeyDon(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

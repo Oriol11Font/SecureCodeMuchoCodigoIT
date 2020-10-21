@@ -84,5 +84,8 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.exe
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.pdb
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.BaseForms.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.Form1.resources
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.BaseForms.resources
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.Form1.resources
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaControles.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaControles.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.csproj.CopyComplete
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.AlertScreen.resources
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.test.resources

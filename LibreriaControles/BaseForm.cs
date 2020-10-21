@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProvaClasse
+namespace LibreriaControles
 {
-    public partial class BaseForms : Form
+    public partial class BaseForm: UserControl
     {
         public bool FontSize { get; private set; }
 
-        public BaseForms()
+        public BaseForm()
         {
             InitializeComponent();
             GoFullscreen(true);
@@ -24,14 +24,11 @@ namespace ProvaClasse
         {
             if (fullscreen)
             {
-                this.WindowState = FormWindowState.Normal;
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                this.Bounds = Screen.PrimaryScreen.Bounds;
+ 
             }
             else
             {
-                this.WindowState = FormWindowState.Maximized;
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
             }
         }
 
@@ -47,8 +44,13 @@ namespace ProvaClasse
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+       
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+    
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ProvaClasse.Forms
 {
-    partial class Form1
+    partial class AlertScreen
     {
         /// <summary>
         /// Required designer variable.
