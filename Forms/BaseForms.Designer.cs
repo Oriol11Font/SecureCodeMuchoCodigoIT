@@ -69,7 +69,7 @@
             this.AppTitle.AutoSize = true;
             this.AppTitle.Location = new System.Drawing.Point(43, 12);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(236, 17);
+            this.AppTitle.Size = new System.Drawing.Size(262, 20);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "Rebel Alliance System Upgrade";
             // 
@@ -128,7 +128,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(412, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 69);
+            this.label1.Size = new System.Drawing.Size(370, 82);
             this.label1.TabIndex = 1;
             this.label1.Text = "Title Form";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -150,7 +150,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(1162, 62);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 17);
+            this.label7.Size = new System.Drawing.Size(40, 20);
             this.label7.TabIndex = 16;
             this.label7.Text = "test";
             // 
@@ -159,14 +159,14 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(1134, 79);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(63, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(70, 20);
             this.linkLabel1.TabIndex = 17;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Log out";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 577);
             this.ControlBox = false;
@@ -181,6 +181,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Menú";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TaulaEsquadres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel1.ResumeLayout(false);
