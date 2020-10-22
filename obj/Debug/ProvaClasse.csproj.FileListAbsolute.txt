@@ -73,7 +73,6 @@ C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.
 C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\ProvaClasse.exe.config
 C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\ProvaClasse.exe
 C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\ProvaClasse.pdb
-C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Menu.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.splash.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.login.resources
@@ -82,10 +81,13 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csproj.Gener
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csproj.CoreCompileInputs.cache
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.exe
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.pdb
-C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.BaseForms.resources
-C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.Form1.resources
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaControles.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaControles.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.csproj.CopyComplete
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.AlertScreen.resources
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.test.resources
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\LibreriaControles.dll
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\LibreriaControles.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.AlertScreen.resources
+C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.test.resources
+C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csproj.CopyComplete
