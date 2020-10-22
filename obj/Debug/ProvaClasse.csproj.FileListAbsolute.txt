@@ -91,3 +91,4 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\LibreriaControles.pdb
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.AlertScreen.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.test.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csproj.CopyComplete
+C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
