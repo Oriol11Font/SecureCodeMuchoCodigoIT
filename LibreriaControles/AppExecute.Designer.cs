@@ -1,6 +1,6 @@
 ﻿namespace LibreriaControles
 {
-    partial class UserControl1
+    partial class AppExecute
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // AppExecute
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "AppExecute";
+            this.Load += new System.EventHandler(this.AppExecute_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

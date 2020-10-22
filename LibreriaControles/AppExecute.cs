@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace LibreriaControles
 {
-    public partial class UserControl1 : UserControl
+    public partial class AppExecute : UserControl
     {
-        public UserControl1()
+        public AppExecute()
         {
             InitializeComponent();
+        }
+
+        private void AppExecute_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
