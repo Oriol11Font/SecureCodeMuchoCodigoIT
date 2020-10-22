@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LibreriaControles
 {
-    public partial class UserControl1 : UserControl
+    public partial class SWTextbox : UserControl
     {
-        public UserControl1()
+        public SWTextbox()
         {
             InitializeComponent();
-        }
-
-        private void UserControl1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

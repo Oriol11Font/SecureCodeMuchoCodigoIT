@@ -87,7 +87,6 @@
             this.btn_minimize.TabIndex = 2;
             this.btn_minimize.Text = "-";
             this.btn_minimize.UseVisualStyleBackColor = false;
-            this.btn_minimize.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_exit
             // 
@@ -126,7 +125,6 @@
             this.linkLabel1.TabIndex = 17;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Log out";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox3
             // 
@@ -166,7 +164,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BaseForm";
             this.Size = new System.Drawing.Size(1265, 577);
-            this.Load += new System.EventHandler(this.TaulaEsquadres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

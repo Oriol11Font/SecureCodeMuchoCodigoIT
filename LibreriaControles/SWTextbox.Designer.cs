@@ -1,6 +1,6 @@
 ﻿namespace LibreriaControles
 {
-    partial class UserControl1
+    partial class SWTextbox
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,27 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // textBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(378, 229);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.textBox1.Location = new System.Drawing.Point(19, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 0;
             // 
-            // UserControl1
+            // SWTextbox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(881, 519);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
+            this.Controls.Add(this.textBox1);
+            this.Name = "SWTextbox";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +51,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
