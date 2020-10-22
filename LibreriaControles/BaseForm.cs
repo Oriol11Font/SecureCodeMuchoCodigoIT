@@ -32,25 +32,9 @@ namespace LibreriaControles
             }
         }
 
-        private void TaulaEsquadres_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-       
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-    
         }
     }
 }
