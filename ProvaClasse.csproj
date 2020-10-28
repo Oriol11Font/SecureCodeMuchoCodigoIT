@@ -159,6 +159,10 @@
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
       <Name>LibreriaControles</Name>
     </ProjectReference>
+    <ProjectReference Include="TextBoxControls\TextBoxControls.csproj">
+      <Project>{fb17de15-0b06-41fc-96aa-3a53d9f7b289}</Project>
+      <Name>TextBoxControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

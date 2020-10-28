@@ -4,3 +4,8 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaClases\obj\Debug\LibreriaC
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaClases\obj\Debug\LibreriaClases.csproj.CoreCompileInputs.cache
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaClases\obj\Debug\LibreriaClases.dll
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaClases\obj\Debug\LibreriaClases.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\bin\Debug\LibreriaClases.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\bin\Debug\LibreriaClases.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\obj\Debug\LibreriaClases.csproj.CoreCompileInputs.cache
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\obj\Debug\LibreriaClases.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\obj\Debug\LibreriaClases.pdb

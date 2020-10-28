@@ -92,3 +92,11 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.AlertS
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.Forms.test.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csproj.CopyComplete
 C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csprojAssemblyReference.cache
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\Controls.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaClases.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\TextBoxControls.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ObjetosClase.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\Controls.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaClases.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\TextBoxControls.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ObjetosClase.pdb
