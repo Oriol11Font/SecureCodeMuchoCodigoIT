@@ -1,6 +1,6 @@
 ﻿namespace TextBoxControls
 {
-    partial class SWCodi
+    partial class MCCodi
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

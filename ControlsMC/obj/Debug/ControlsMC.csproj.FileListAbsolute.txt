@@ -20,3 +20,4 @@ C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\C
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\ControlsMC.csproj.CoreCompileInputs.cache
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\Controls.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\Controls.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\ControlsMC.csprojAssemblyReference.cache

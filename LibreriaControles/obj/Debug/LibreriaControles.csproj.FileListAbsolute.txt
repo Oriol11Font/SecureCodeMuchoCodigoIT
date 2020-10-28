@@ -15,3 +15,4 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\obj\Debug\Librer
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\bin\Debug\LibreriaControles.dll
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\bin\Debug\LibreriaControles.pdb
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\obj\Debug\LibreriaControles.csprojAssemblyReference.cache
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaControles\obj\Debug\LibreriaControles.csprojAssemblyReference.cache

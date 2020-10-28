@@ -10,11 +10,12 @@ C:\Users\oriol\OneDrive\Documents\TextBoxControls\obj\Debug\TextBoxControls.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\TextBoxControls.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\TextBoxControls.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.Properties.Resources.resources
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.SWCodi.resources
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.csproj.GenerateResource.cache
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.csproj.CoreCompileInputs.cache
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.csproj.CopyComplete
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\ObjetosClase.dll
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\ObjetosClase.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\LibreriaClases.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\LibreriaClases.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.csprojAssemblyReference.cache
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\obj\Debug\TextBoxControls.MCCodi.resources

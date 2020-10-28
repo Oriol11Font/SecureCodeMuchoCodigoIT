@@ -95,8 +95,7 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\obj\Debug\ProvaClasse.csprojAssemb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\Controls.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaClases.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\TextBoxControls.dll
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ObjetosClase.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\Controls.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaClases.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\TextBoxControls.pdb
-C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ObjetosClase.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.TestOriol.resources

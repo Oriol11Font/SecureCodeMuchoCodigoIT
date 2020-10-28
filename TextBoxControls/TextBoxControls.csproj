@@ -48,11 +48,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SWCodi.cs">
+    <Compile Include="MCCodi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SWCodi.Designer.cs">
-      <DependentUpon>SWCodi.cs</DependentUpon>
+    <Compile Include="MCCodi.Designer.cs">
+      <DependentUpon>MCCodi.cs</DependentUpon>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -61,17 +61,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SWCodi.resx">
-      <DependentUpon>SWCodi.cs</DependentUpon>
+    <EmbeddedResource Include="MCCodi.resx">
+      <DependentUpon>MCCodi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="img\alertRequisit.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ObjetosClase\ObjetosClase.csproj">
-      <Project>{af969c9b-7477-42eb-80b9-19528eef3dc9}</Project>
-      <Name>ObjetosClase</Name>
+    <ProjectReference Include="..\LibreriaClases\LibreriaClases.csproj">
+      <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
+      <Name>LibreriaClases</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

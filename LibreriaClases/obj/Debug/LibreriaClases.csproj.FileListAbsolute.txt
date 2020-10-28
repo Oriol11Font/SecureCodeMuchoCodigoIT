@@ -9,3 +9,4 @@ C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\bin\Deb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\obj\Debug\LibreriaClases.csproj.CoreCompileInputs.cache
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\obj\Debug\LibreriaClases.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\obj\Debug\LibreriaClases.pdb
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaClases\obj\Debug\LibreriaClases.csprojAssemblyReference.cache
