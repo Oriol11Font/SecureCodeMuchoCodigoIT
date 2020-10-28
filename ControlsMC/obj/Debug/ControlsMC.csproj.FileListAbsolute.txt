@@ -1,0 +1,14 @@
+C:\Users\pol\Desktop\GRUP\Controls\bin\Debug\Controls.dll
+C:\Users\pol\Desktop\GRUP\Controls\bin\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\ControlsMC.SWTextBox.resources
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\ControlsMC.csproj.GenerateResource.cache
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\ControlsMC.csproj.CoreCompileInputs.cache
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.dll
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\bin\Debug\Controls.dll
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\bin\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.SWTextBox.resources
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.csproj.GenerateResource.cache
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.csproj.CoreCompileInputs.cache
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\Controls.dll
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\Controls.pdb

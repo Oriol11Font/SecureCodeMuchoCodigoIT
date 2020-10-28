@@ -17,5 +17,3 @@ C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaControles\obj\
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\LibreriaControles\obj\Debug\LibreriaControles.SWTextbox.resources
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\bin\Debug\LibreriaControles.dll
 C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\bin\Debug\LibreriaControles.pdb
-C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\obj\Debug\LibreriaControles.AppExecute.resources
-C:\Users\pol\Desktop\GRUP\projecte_securecode\LibreriaControles\obj\Debug\LibreriaControles.SWTextbox.resources

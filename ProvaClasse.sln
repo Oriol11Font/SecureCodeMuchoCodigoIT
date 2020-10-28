@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaClasse", "ProvaClasse.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaControles", "LibreriaControles\LibreriaControles.csproj", "{F986A883-16EE-4A84-85A6-AA7DED000265}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsMC", "ControlsMC\ControlsMC.csproj", "{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F986A883-16EE-4A84-85A6-AA7DED000265}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F986A883-16EE-4A84-85A6-AA7DED000265}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F986A883-16EE-4A84-85A6-AA7DED000265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

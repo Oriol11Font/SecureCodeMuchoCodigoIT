@@ -1,0 +1,8 @@
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.csproj.CoreCompileInputs.cache
+C:\Users\pol\Desktop\GRUP\Controls\bin\Debug\Controls.dll
+C:\Users\pol\Desktop\GRUP\Controls\bin\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.dll
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.SWTextBox.resources
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.csproj.GenerateResource.cache
+C:\Users\pol\Desktop\GRUP\Controls\obj\Debug\Controls.csprojAssemblyReference.cache

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace LibreriaControles
 {
-    public partial class BaseForm: UserControl
+    public partial class BaseForm: Form
     {
         public bool FontSize { get; private set; }
 
@@ -35,6 +35,11 @@ namespace LibreriaControles
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

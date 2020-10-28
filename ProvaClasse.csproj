@@ -53,7 +53,7 @@
       <DependentUpon>AlertScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\test.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
@@ -86,6 +86,9 @@
     <EmbeddedResource Include="Forms\AlertScreen.resx">
       <DependentUpon>AlertScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,9 +97,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\login.resx">
       <DependentUpon>login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
