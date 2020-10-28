@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaControles", "Librer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsMC", "ControlsMC\ControlsMC.csproj", "{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaClases", "LibreriaClases\LibreriaClases.csproj", "{0E14A562-ABFC-4ED3-A95E-2D96A976C12A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E14A562-ABFC-4ED3-A95E-2D96A976C12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E14A562-ABFC-4ED3-A95E-2D96A976C12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E14A562-ABFC-4ED3-A95E-2D96A976C12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E14A562-ABFC-4ED3-A95E-2D96A976C12A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

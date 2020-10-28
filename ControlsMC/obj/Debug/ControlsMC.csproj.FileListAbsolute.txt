@@ -12,3 +12,4 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.cs
 C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.csproj.CoreCompileInputs.cache
 C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\Controls.dll
 C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.csprojAssemblyReference.cache
