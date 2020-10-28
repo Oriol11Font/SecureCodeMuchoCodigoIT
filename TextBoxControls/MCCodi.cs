@@ -16,7 +16,11 @@ namespace TextBoxControls
         private String NomDesc = "Salesians Sarria";
         private String NomId;
 
+<<<<<<< HEAD:TextBoxControls/MCCodi.cs
         public MCCodi()
+=======
+        public SWCodi()
+>>>>>>> 277af653629cc2348d05bb16436ad8f6d0e48ab4:TextBoxControls/SWCodi.cs
         {
             InitializeComponent();
         }
@@ -33,7 +37,11 @@ namespace TextBoxControls
 
         private void ValidacioCodi(object sender, EventArgs e)
         {
+<<<<<<< HEAD:TextBoxControls/MCCodi.cs
             NomTaula="dbo.Sectors";
+=======
+        //    NomTaula = taula.NomTaula();
+>>>>>>> 277af653629cc2348d05bb16436ad8f6d0e48ab4:TextBoxControls/SWCodi.cs
             Requerit = true;
             NomCodi = CodiBox.Text;
 

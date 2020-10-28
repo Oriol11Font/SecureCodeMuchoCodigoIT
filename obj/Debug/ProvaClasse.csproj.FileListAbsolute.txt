@@ -98,4 +98,14 @@ C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\TextBoxContr
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\Controls.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\LibreriaClases.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\TextBoxControls.pdb
+<<<<<<< HEAD
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\obj\Debug\ProvaClasse.Forms.TestOriol.resources
+=======
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\bin\Debug\ObjetosClase.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\Controls.dll
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\LibreriaClases.dll
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\TextBoxControls.dll
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\LibreriaClases.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\bin\Debug\TextBoxControls.pdb
+>>>>>>> 277af653629cc2348d05bb16436ad8f6d0e48ab4

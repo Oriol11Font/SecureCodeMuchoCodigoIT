@@ -23,6 +23,7 @@ namespace ControlsMC
             // 
             // SWTextBox
             // 
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Enter += new System.EventHandler(this.SWTextbox_Enter);
             this.Leave += new System.EventHandler(this.SWTextbox_Leave);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWTextBox_Validating);
@@ -59,11 +60,15 @@ namespace ControlsMC
         }
         private void SWTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //Declaració de vara
+            //Declaració de variables
             String nombre = this.Name;
             String text = this.Text;
 
-
+            if (!AllowEmpty && text.Length == 0)
+            {
+                MessageBox.Show("Aquest camp és obligatori.");
+                e.Cancel = true;
+            }
             switch (this.Tipus)
             {
                 case TipusDada.Numero:
@@ -82,7 +87,7 @@ namespace ControlsMC
                 case TipusDada.Text:
                     break;
                 case TipusDada.Data:
-                    if (Regex.IsMatch(text, @"^(0?[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20|18)\d\d$"))
+                    if (Regex.IsMatch(text, @"^(0?[1-9]|[12][0-9]|3[01])[- /.](0?[1-9]|1[012])[- /.](18|19|20)\d\d$"))
                     {
                         e.Cancel = false;
                         this.ForeColor = Color.Black;
@@ -95,10 +100,52 @@ namespace ControlsMC
                     }
                     break;
                 case TipusDada.Codi:
+                 //   /*
+                    if (Regex.IsMatch(text, @"^([A-Z][A-Z][A-Z][A-Z])[-]([0-9][0-9][0-9])[/][13579][AEIOU]$"))
+                    {
+                        e.Cancel = false;
+                        this.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Comproba la sintaxi del codi.");
+                        e.Cancel = true;
+                        this.ForeColor = Color.Red;
+                    }
                     break;
                 default:
                     break;
             }            
+        }
+
+        private String _CampoBBDD;
+        public String CampoBBDD
+        {
+            get { return _CampoBBDD; }
+            set
+            {
+                _CampoBBDD = value;
+            }
+        }
+
+        private Boolean _foranea;
+        public Boolean Foranea
+        {
+            get { return _foranea; }
+            set
+            {
+                _foranea = value;
+            }
+        }
+
+        private Boolean _AllowEmpty = true;
+        public Boolean AllowEmpty
+        {
+            get { return _AllowEmpty; }
+            set
+            {
+                _AllowEmpty = value;
+            }
         }
     }
 }

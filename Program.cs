@@ -17,7 +17,11 @@ namespace ProvaClasse
         {
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new TestOriol());
+=======
+            Application.Run(new test());
+>>>>>>> 277af653629cc2348d05bb16436ad8f6d0e48ab4
         }
     }
 }
