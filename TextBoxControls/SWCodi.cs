@@ -14,8 +14,6 @@ namespace TextBoxControls
         private String NomDesc = "Salesians Sarria";
         private String NomId;
 
-        ObjetosClase.swcodiObj taula = new ObjetosClase.swcodiObj();
-
         public SWCodi()
         {
             InitializeComponent();
@@ -33,7 +31,7 @@ namespace TextBoxControls
 
         private void ValidacioCodi(object sender, EventArgs e)
         {
-            NomTaula = taula.NomTaula();
+        //    NomTaula = taula.NomTaula();
             Requerit = true;
             NomCodi = CodiBox.Text;
 

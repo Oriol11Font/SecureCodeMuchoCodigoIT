@@ -12,7 +12,6 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.cs
 C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.csproj.CoreCompileInputs.cache
 C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\Controls.dll
 C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\Controls.pdb
-C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.csprojAssemblyReference.cache
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\bin\Debug\Controls.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\bin\Debug\Controls.pdb
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\ControlsMC.SWTextBox.resources
@@ -20,3 +19,4 @@ C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\C
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\ControlsMC.csproj.CoreCompileInputs.cache
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\Controls.dll
 C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\ControlsMC\obj\Debug\Controls.pdb
+C:\Users\pol\Desktop\GRUP\projecte_securecode\ControlsMC\obj\Debug\ControlsMC.csprojAssemblyReference.cache

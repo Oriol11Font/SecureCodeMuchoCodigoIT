@@ -28,20 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.swTextBox1 = new ControlsMC.SWTextBox();
+            this.swTextBox2 = new ControlsMC.SWTextBox();
+            this.swTextBox3 = new ControlsMC.SWTextBox();
+            this.swTextBox4 = new ControlsMC.SWTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Form1
+            // swTextBox1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.swTextBox1.AllowEmpty = true;
+            this.swTextBox1.CampoBBDD = "securecode";
+            this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swTextBox1.Foranea = true;
+            this.swTextBox1.Location = new System.Drawing.Point(203, 140);
+            this.swTextBox1.Name = "swTextBox1";
+            this.swTextBox1.Size = new System.Drawing.Size(166, 26);
+            this.swTextBox1.TabIndex = 18;
+            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Numero;
+            // 
+            // swTextBox2
+            // 
+            this.swTextBox2.AllowEmpty = true;
+            this.swTextBox2.CampoBBDD = "";
+            this.swTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swTextBox2.Foranea = false;
+            this.swTextBox2.Location = new System.Drawing.Point(203, 205);
+            this.swTextBox2.Name = "swTextBox2";
+            this.swTextBox2.Size = new System.Drawing.Size(166, 26);
+            this.swTextBox2.TabIndex = 19;
+            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            // 
+            // swTextBox3
+            // 
+            this.swTextBox3.AllowEmpty = true;
+            this.swTextBox3.CampoBBDD = "";
+            this.swTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swTextBox3.Foranea = false;
+            this.swTextBox3.Location = new System.Drawing.Point(203, 266);
+            this.swTextBox3.Name = "swTextBox3";
+            this.swTextBox3.Size = new System.Drawing.Size(166, 26);
+            this.swTextBox3.TabIndex = 20;
+            this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Data;
+            // 
+            // swTextBox4
+            // 
+            this.swTextBox4.AllowEmpty = true;
+            this.swTextBox4.CampoBBDD = "";
+            this.swTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swTextBox4.Foranea = false;
+            this.swTextBox4.Location = new System.Drawing.Point(203, 333);
+            this.swTextBox4.Name = "swTextBox4";
+            this.swTextBox4.Size = new System.Drawing.Size(166, 26);
+            this.swTextBox4.TabIndex = 21;
+            this.swTextBox4.Tipus = ControlsMC.SWTextBox.TipusDada.Codi;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(108, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "numero";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(108, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "text";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(108, 272);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "data";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(108, 339);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "codi";
+            // 
+            // test
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(889, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.swTextBox4);
+            this.Controls.Add(this.swTextBox3);
+            this.Controls.Add(this.swTextBox2);
+            this.Controls.Add(this.swTextBox1);
+            this.Name = "test";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.SetChildIndex(this.swTextBox1, 0);
+            this.Controls.SetChildIndex(this.swTextBox2, 0);
+            this.Controls.SetChildIndex(this.swTextBox3, 0);
+            this.Controls.SetChildIndex(this.swTextBox4, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private ControlsMC.SWTextBox swTextBox1;
+        private ControlsMC.SWTextBox swTextBox2;
+        private ControlsMC.SWTextBox swTextBox3;
+        private ControlsMC.SWTextBox swTextBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
