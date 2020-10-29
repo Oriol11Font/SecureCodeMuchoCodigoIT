@@ -38,6 +38,10 @@
             this.mcCodi2.FormCS = null;
             this.mcCodi2.Location = new System.Drawing.Point(267, 212);
             this.mcCodi2.Name = "mcCodi2";
+            this.mcCodi2.NomCodi = null;
+            this.mcCodi2.NomDesc = null;
+            this.mcCodi2.NomId = null;
+            this.mcCodi2.NomTaula = null;
             this.mcCodi2.Requerit = false;
             this.mcCodi2.Size = new System.Drawing.Size(349, 28);
             this.mcCodi2.TabIndex = 19;
@@ -48,6 +52,10 @@
             this.mcCodi1.FormCS = "Menu";
             this.mcCodi1.Location = new System.Drawing.Point(267, 178);
             this.mcCodi1.Name = "mcCodi1";
+            this.mcCodi1.NomCodi = "CodeAgency";
+            this.mcCodi1.NomDesc = "DescAgency";
+            this.mcCodi1.NomId = "idAgency";
+            this.mcCodi1.NomTaula = "Agencies";
             this.mcCodi1.Requerit = true;
             this.mcCodi1.Size = new System.Drawing.Size(349, 28);
             this.mcCodi1.TabIndex = 18;
