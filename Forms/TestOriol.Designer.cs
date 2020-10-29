@@ -28,23 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mcCodi1 = new TextBoxControls.MCCodi();
             this.mcCodi2 = new TextBoxControls.MCCodi();
+            this.mcCodi1 = new TextBoxControls.MCCodi();
             this.SuspendLayout();
-            // 
-            // mcCodi1
-            // 
-            this.mcCodi1.Location = new System.Drawing.Point(267, 178);
-            this.mcCodi1.Name = "mcCodi1";
-            this.mcCodi1.Size = new System.Drawing.Size(349, 28);
-            this.mcCodi1.TabIndex = 18;
             // 
             // mcCodi2
             // 
+            this.mcCodi2.ClasseCS = null;
+            this.mcCodi2.FormCS = null;
             this.mcCodi2.Location = new System.Drawing.Point(267, 212);
             this.mcCodi2.Name = "mcCodi2";
+            this.mcCodi2.Requerit = false;
             this.mcCodi2.Size = new System.Drawing.Size(349, 28);
             this.mcCodi2.TabIndex = 19;
+            // 
+            // mcCodi1
+            // 
+            this.mcCodi1.ClasseCS = null;
+            this.mcCodi1.FormCS = "Menu";
+            this.mcCodi1.Location = new System.Drawing.Point(267, 178);
+            this.mcCodi1.Name = "mcCodi1";
+            this.mcCodi1.Requerit = true;
+            this.mcCodi1.Size = new System.Drawing.Size(349, 28);
+            this.mcCodi1.TabIndex = 18;
             // 
             // TestOriol
             // 

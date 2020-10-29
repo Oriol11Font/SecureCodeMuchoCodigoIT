@@ -63,14 +63,14 @@
             this.AttentionRequerit.TabStop = false;
             this.AttentionRequerit.Visible = false;
             // 
-            // SWCodi
+            // MCCodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.AttentionRequerit);
             this.Controls.Add(this.DescBox);
             this.Controls.Add(this.CodiBox);
-            this.Name = "SWCodi";
+            this.Name = "MCCodi";
             this.Size = new System.Drawing.Size(349, 28);
             ((System.ComponentModel.ISupportInitialize)(this.AttentionRequerit)).EndInit();
             this.ResumeLayout(false);
