@@ -17,10 +17,5 @@ namespace ProvaClasse.Forms
         {
             InitializeComponent();
         }
-
-        private void TestOriol_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

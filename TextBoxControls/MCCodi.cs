@@ -103,11 +103,9 @@ namespace TextBoxControls
             String Codi = CodiBox.Text;
 
             String sql = "Select "+NomId+", "+NomCodi+", "+NomDesc+" from " + NomTaula + " where "+NomCodi+"='" + Codi+"'";
-            String countsql = "Select count("+NomId+") from "+NomTaula+" where "+NomCodi+"='" +Codi+"'" ;
 
-            //FALTA CONECTAR LA BASE DE DATOS PARA COGER LA INFORMACION 
-
-            //String CodiTaula = "S1J";
+            DataAccessClass data = new DataAccessClass();
+            DataSet sqldata = data.GetByQuery(sql);
 
             if (Requerit)
             {
@@ -119,55 +117,53 @@ namespace TextBoxControls
                 }
                 else
                 {
-                    DataAccessClass data = new DataAccessClass();
-                    DataSet sqlDataNum = data.GetByQuery(countsql);
-                    DataSet sqldata = data.GetByQuery(sql);
-
-                    int numrows = Int32.Parse(sqlDataNum.ToString());
-
-                    DataRow dr = sqldata.Tables[0].Rows[numrows];
-
-                    String CodiTaula = dr.ItemArray.GetValue(1).ToString();
-
-                    CodiBox.BackColor = Color.White;
-                    AttentionRequerit.Visible = false;
-
-                    if (Codi == CodiTaula)
+                    if (sqldata.Tables[0].Rows.Count > 0)
                     {
-                        DescBox.Text = dr.ItemArray.GetValue(2).ToString();
-                        ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
-                        //DescBox.Text = "Salesians de Sarria";
+                        DataRow dr = sqldata.Tables[0].Rows[0];
+
+                        String CodiTaula = dr.ItemArray.GetValue(1).ToString();
+
+                        CodiBox.BackColor = Color.White;
+                        AttentionRequerit.Visible = false;
+
+                        if (Codi == CodiTaula)
+                        {
+                            DescBox.Text = dr.ItemArray.GetValue(2).ToString();
+                            ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
+                            //DescBox.Text = "Salesians de Sarria";
+                        }
                     }
                     else
                     {
+                        CodiBox.BackColor = Color.White;
                         AttentionRequerit.Visible = true;
                         DescBox.Text = "Unknown data";
                     }
                 }
-            }
-            else
+            } else
             {
-                CodiBox.BackColor = Color.White;
-                AttentionRequerit.Visible = false;
-                if (Codi.Length != 0)
+                if (Codi.Length > 0)
                 {
-                    DataAccessClass data = new DataAccessClass();
-                    DataSet sqldata = data.GetByQuery(sql);
-
-                    DataRow dr = sqldata.Tables[0].Rows[0];
-
-                    String CodiTaula = dr.ItemArray.GetValue(1).ToString();
-
-                    if (Codi == CodiTaula)
+                    if (sqldata.Tables[0].Rows.Count > 0)
                     {
-                        DescBox.Text = dr.ItemArray.GetValue(2).ToString();
-                        ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
-                        //DescBox.Text = "Salesians de Sarria";
+                        DataRow dr = sqldata.Tables[0].Rows[0];
+                        String CodiTaula = dr.ItemArray.GetValue(1).ToString();
+
+                        if (Codi == CodiTaula)
+                        {
+                            DescBox.Text = dr.ItemArray.GetValue(2).ToString();
+                            ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
+                            //DescBox.Text = "Salesians de Sarria";
+                        }
+                        else
+                        {
+                            DescBox.Text = "Unknown data";
+                        }
                     }
-                    else
-                    {
-                        DescBox.Text = "Unknown data";
-                    }
+                }
+                else
+                {
+                    DescBox.Text = "";
                 }
             }
         }
