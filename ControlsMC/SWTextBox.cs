@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Messaging;
+using System.Drawing;
 using System.Text.RegularExpressions;
 
 
@@ -69,6 +69,8 @@ namespace ControlsMC
                 MessageBox.Show("Aquest camp és obligatori.");
                 e.Cancel = true;
             }
+
+            //
             switch (this.Tipus)
             {
                 case TipusDada.Numero:
