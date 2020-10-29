@@ -10,7 +10,8 @@ namespace LibreriaClases
         #region publicVariables
 
         private SqlConnection _conn;
-        private static readonly string ConnectionString = $"Server=DESKTOP-3TBSEIL\\paucolo;Database=SecureCore;User Id=secureCoreApp;";
+        private static readonly string ConnectionString =
+            $"Data Source={System.Environment.MachineName.ToString()}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
         private DataSet _dts;
 
         #endregion
@@ -29,7 +30,7 @@ namespace LibreriaClases
             {
                 // if an exception is thrown and the connection is up, this will close it
                 _conn?.Close();
-                
+
                 // to be changed with a invisible label on the Form that gets displayed when an error happens
                 MessageBox.Show($"La connexió a la base de dades no s'ha pogut realitzar. Excepció {e}",
                     "Error no fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -55,7 +56,7 @@ namespace LibreriaClases
             return _dts;
         }
 
-        private DataSet GetByQuery(string query)
+        public DataSet GetByQuery(string query)
         {
             // variable declarations needed
             SqlDataAdapter adapter;
@@ -96,11 +97,11 @@ namespace LibreriaClases
             {
                 // we first get our DataSet using the other method
                 _dts = GetByQuery(query);
-                
+
                 // we create a new DataTable in which we add the table of the first DataSet, and then we change the TableName
                 DataTable newDt = _dts.Tables[0];
                 newDt.TableName = dataTableName;
-                
+
                 // we add the DataTable to a new DataSet
                 _dts = new DataSet();
                 _dts.Tables.Add(newDt);
@@ -126,11 +127,11 @@ namespace LibreriaClases
             try
             {
                 DataSet OriginalDs = GetByQuery(query);
-                
+
                 // we check if the DataSet has any changes
                 if (newDs.HasChanges())
                 {
-                    
+
                 }
                 else
                 {
@@ -176,6 +177,19 @@ namespace LibreriaClases
             if (message == null) message = "Error";
             if (title == null) title = "Error no fatal ";
             MessageBox.Show($"{message}: Excepció {e}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void TestConnection()
+        {
+            ConnectDb();
+            if (_conn != null)
+            {
+                MessageBox.Show("CONNECTAT");
+            }
+            else
+            {
+                MessageBox.Show("ME CAGO EN TODOOOO");
+            }
         }
 
         #endregion

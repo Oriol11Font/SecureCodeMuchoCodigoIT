@@ -44,7 +44,7 @@
             // 
             // mcCodi1
             // 
-            this.mcCodi1.ClasseCS = null;
+            this.mcCodi1.ClasseCS = "TextBoxControls";
             this.mcCodi1.FormCS = "Menu";
             this.mcCodi1.Location = new System.Drawing.Point(267, 178);
             this.mcCodi1.Name = "mcCodi1";

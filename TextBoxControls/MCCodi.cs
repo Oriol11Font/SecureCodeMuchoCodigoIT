@@ -4,25 +4,16 @@ using System.Drawing;
 using System.Windows.Forms;
 using LibreriaClases;
 using System.Text.RegularExpressions;
+using System.Reflection;
+using LibreriaControles;
 
 namespace TextBoxControls
 {
     public partial class MCCodi : UserControl
     {
         private String ControlID;
-        private String NomTaula;
-        private String NomCodi;
-        private String NomDesc = "Salesians Sarria";
-        private String NomId;
-
-<<<<<<< HEAD
-        public MCCodi()
-=======
 
         public MCCodi()
-
-        public SWCodi()
->>>>>>> 6005512f3857fa31f19464371323bc6d064afcc4
         {
             InitializeComponent();
         }
@@ -57,42 +48,79 @@ namespace TextBoxControls
             }
         }
 
+        private String _NomTaula;
+        public String NomTaula
+        {
+            get { return _NomTaula; }
+            set
+            {
+                _NomTaula = value;
+            }
+        }
+
+        private String _NomId;
+        public String NomId
+        {
+            get { return _NomId; }
+            set
+            {
+                _NomId = value;
+            }
+        }
+
+        private String _NomCodi;
+        public String NomCodi
+        {
+            get { return _NomCodi; }
+            set
+            {
+                _NomCodi = value;
+            }
+        }
+
+        private String _NomDesc;
+        public String NomDesc
+        {
+            get { return _NomDesc; }
+            set
+            {
+                _NomDesc = value;
+            }
+        }
+
         private void ValidacioCodi(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            NomTaula="dbo.Sectors";
-=======
 
-            NomTaula="dbo.Sectors";
-            Requerit = true;
->>>>>>> 6005512f3857fa31f19464371323bc6d064afcc4
-            NomCodi = CodiBox.Text;
+            //NomTaula="dbo.Sectors";
+            String Codi = CodiBox.Text;
 
-            //String sql = "Select DescSector, idSector, CodiSector from " + NomTaula + " where CodiSector=" + NomCodi;
+            String sql = "Select "+NomId+", "+NomCodi+", "+NomDesc+"from " + NomTaula + " where CodiSector='" + Codi+"'";
+
+            //FALTA CONECTAR LA BASE DE DATOS PARA COGER LA INFORMACION
 
             //DataAccessClass data = new DataAccessClass();
             //DataSet sqldata = data.getByQuery(sql);
 
             //DataRow dr = sqldata.Tables[0].Rows[3];
 
-            //NomId = dr.ItemArray.GetValue(2).ToString();
+            //String CodiTaula = dr.ItemArray.GetValue(2).ToString();
 
-            NomId = "S1J";
+            String CodiTaula = "S1J";
 
             if (Requerit)
             {
-                if (NomId != NomCodi)
+                if (Codi.Length == 0)
                 {
                     CodiBox.BackColor = Color.Red;
                     AttentionRequerit.Visible = true;
-                    DescBox.Text = "Unknown data";
+                    DescBox.Text = "Campo Requerido";
                 }
                 else
                 {
                     CodiBox.BackColor = Color.White;
                     AttentionRequerit.Visible = false;
 
-                    if (NomId == NomCodi)
+                    if (Codi == CodiTaula)
                     {
                         //DescBox.Text = dr.ItemArray.GetValue(1).ToString();
                         DescBox.Text = "Salesians de Sarria";
@@ -109,7 +137,7 @@ namespace TextBoxControls
                 CodiBox.BackColor = Color.White;
                 AttentionRequerit.Visible = false;
 
-                if (NomId == NomCodi)
+                if (Codi == CodiTaula)
                 {
                     //DescBox.Text = dr.ItemArray.GetValue(1).ToString();
                     DescBox.Text = "Salesians de Sarria";
@@ -125,12 +153,7 @@ namespace TextBoxControls
         {
             if (e.KeyCode == Keys.F2)
             {
-                Form = FormCS;
-                Form formCS = new FormCS();
-                //formCs.Text = FormCS;
-                FormCS.Show();
-
-                
+                MessageBox.Show("Has obert la Taula de Cerca! :)");
             }
         }
     }

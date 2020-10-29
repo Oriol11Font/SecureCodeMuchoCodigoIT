@@ -33,3 +33,5 @@ C:\Users\pol\Desktop\GRUP\projecte_securecode\TextBoxControls\bin\Debug\TextBoxC
 C:\Users\pol\Desktop\GRUP\projecte_securecode\TextBoxControls\bin\Debug\TextBoxControls.pdb
 C:\Users\pol\Desktop\GRUP\projecte_securecode\TextBoxControls\obj\Debug\TextBoxControls.csprojAssemblyReference.cache
 >>>>>>> 277af653629cc2348d05bb16436ad8f6d0e48ab4
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\LibreriaControles.dll
+C:\Users\oriol\OneDrive\Documents\SecureCodeMuchoCodigoIT\TextBoxControls\bin\Debug\LibreriaControles.pdb
