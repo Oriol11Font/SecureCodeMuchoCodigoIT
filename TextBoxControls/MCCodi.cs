@@ -15,7 +15,14 @@ namespace TextBoxControls
         private String NomDesc = "Salesians Sarria";
         private String NomId;
 
+<<<<<<< HEAD
         public MCCodi()
+=======
+
+        public MCCodi()
+
+        public SWCodi()
+>>>>>>> 6005512f3857fa31f19464371323bc6d064afcc4
         {
             InitializeComponent();
         }
@@ -52,7 +59,13 @@ namespace TextBoxControls
 
         private void ValidacioCodi(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             NomTaula="dbo.Sectors";
+=======
+
+            NomTaula="dbo.Sectors";
+            Requerit = true;
+>>>>>>> 6005512f3857fa31f19464371323bc6d064afcc4
             NomCodi = CodiBox.Text;
 
             //String sql = "Select DescSector, idSector, CodiSector from " + NomTaula + " where CodiSector=" + NomCodi;
