@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.Remoting.Messaging;
 using System.Drawing;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 
 namespace ControlsMC
@@ -102,7 +97,7 @@ namespace ControlsMC
                     }
                     break;
                 case TipusDada.Codi:
-                 //   /*
+                    //   /*
                     if (Regex.IsMatch(text, @"^([A-Z][A-Z][A-Z][A-Z])[-]([0-9][0-9][0-9])[/][13579][AEIOU]$"))
                     {
                         e.Cancel = false;
@@ -117,7 +112,7 @@ namespace ControlsMC
                     break;
                 default:
                     break;
-            }            
+            }
         }
 
         private String _CampoBBDD;
