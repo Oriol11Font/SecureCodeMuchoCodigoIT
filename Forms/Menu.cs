@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using LibreriaControles;
 
 namespace ProvaClasse
 {
-    public partial class Menu : Form
+    public partial class Menu : BaseForm
     {
         public Menu(string user)
         {
@@ -27,14 +28,13 @@ namespace ProvaClasse
             user = getUpperCaseStr(user);
             setWelcomeLabel(now, user);
             this.WindowState = FormWindowState.Maximized;
-            usernameMenu.Text = user;
         }
 
         private void setWelcomeLabel(DateTime tiempo, string user)
         {
             string welcomeText, momentDia;
 
-            welcomeText = welcomeLabel.Text;
+            welcomeText = this.welcomeText.Text;
 
             switch ((int)tiempo.Hour)
             {
@@ -49,7 +49,7 @@ namespace ProvaClasse
                     break;
             }
 
-            welcomeLabel.Text = $"{momentDia} {user}";
+            this.welcomeText.Text = $"{momentDia} {user}";
         }
 
         static string getUpperCaseStr(string str)
@@ -77,6 +77,16 @@ namespace ProvaClasse
             login logout = new login();
             logout.Show();
             this.Close();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void welcomeLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

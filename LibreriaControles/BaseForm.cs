@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace LibreriaControles
 {
@@ -17,29 +18,11 @@ namespace LibreriaControles
         public BaseForm()
         {
             InitializeComponent();
-            GoFullscreen(true);
-        }
-
-        private void GoFullscreen(bool fullscreen)
-        {
-            if (fullscreen)
-            {
- 
-            }
-            else
-            {
-
-            }
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void BaseForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -155,10 +155,10 @@ namespace TextBoxControls
                             ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
                             //DescBox.Text = "Salesians de Sarria";
                         }
-                        else
-                        {
-                            DescBox.Text = "Unknown data";
-                        }
+                    }
+                    else
+                    {
+                        DescBox.Text = "Unknown data";
                     }
                 }
                 else
