@@ -24,7 +24,7 @@ namespace ProvaClasse
         private void initMenu(string user)
         {
             DateTime now = DateTime.Now;
-            System.DateTime tiempo = new System.DateTime();
+            //System.DateTime tiempo = new System.DateTime();
             user = getUpperCaseStr(user);
             setWelcomeLabel(now, user);
             this.WindowState = FormWindowState.Maximized;
