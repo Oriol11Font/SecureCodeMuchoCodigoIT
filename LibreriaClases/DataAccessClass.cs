@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Windows.Forms;
-using System.Configuration;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace LibreriaClases
 {
@@ -12,10 +12,13 @@ namespace LibreriaClases
         #region publicVariables
 
         private SqlConnection _conn;
+
         // TODO: guardar la connection string en el app.config
         private static readonly string ConnectionString =
             $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
-        private static Configuration _config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+        private static readonly Configuration Config =
+            ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
         #endregion
 
@@ -23,10 +26,10 @@ namespace LibreriaClases
 
         public void EncryptConnString()
         {
-            _config.ConnectionStrings.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
+            Config.ConnectionStrings.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
         }
 
-        public void ConnectDb()
+        private void ConnectDb()
         {
             // TODO: connection to the database with the specified connectionString stored encrypted in the app.config file
             try
@@ -69,7 +72,7 @@ namespace LibreriaClases
             // variable declarations needed
             SqlDataAdapter adapter;
             DataSet ds;
-            
+
             try
             {
                 // first we call the connectDB method so we now have our public variable conn initialized
@@ -109,7 +112,7 @@ namespace LibreriaClases
                 ds = GetByQuery(query);
 
                 // we create a new DataTable in which we add the table of the first DataSet, and then we change the TableName
-                DataTable newDt = ds.Tables[0];
+                var newDt = ds.Tables[0];
                 newDt.TableName = dataTableName;
 
                 // we add the DataTable to a new DataSet
@@ -131,16 +134,16 @@ namespace LibreriaClases
             // the DataSet is returned
             return ds;
         }
-        
+
         // runs the query that is sent to it by params on the database
         public void RunQuery(string query)
         {
-            SqlCommand cm = new SqlCommand(query, _conn);
+            var cm = new SqlCommand(query, _conn);
 
             try
             {
                 ConnectDb();
-                
+
                 _conn.Open();
 
                 cm.ExecuteNonQuery();
@@ -161,33 +164,52 @@ namespace LibreriaClases
             try
             {
                 var originalDs = GetByQuery(query);
-
+                
                 // we check if the DataSet has any changes
                 if (newDs.HasChanges())
                 {
-                    List<string> queries = new List<string>();
-
+                    var queries = new List<string>();
                     for (var i = 0; i < newDs.Tables.Count; i++)
                     {
-                        foreach (DataRow row in newDs.Tables[0].Rows)
+                        foreach (DataRow row in newDs.Tables[i].Rows)
                         {
-                            if (!originalDs.Tables[0].Rows.Contains(row))
+                            if (originalDs.Tables[i]
+                                .Select($@"{originalDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
+                                .Length == 0) // condició en la que es determina que el codi de row no està a la taula
                             {
-                                queries.Add($"INSERT INTO {originalDs.Tables[0].TableName} ({GetColumnNames(newDs.Tables[0])}) VALUES ({GetValues(row)});");
+                                // TODO: ARREGLAR NOMBRES TABLA
+                                queries.Add(
+                                    $"SET IDENTITY_INSERT Agencies ON; INSERT INTO Agencies ({GetColumnNames(originalDs.Tables[i])}) VALUES ({GetValues(row)}); SET IDENTITY_INSERT Agencies OFF");
                             }
-                            else
+                            /*else if (newDs.Tables[i]
+                                .Select($@"{originalDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
+                                .Length == 0)
                             {
-                                queries.Add($"DELETE FROM {originalDs.Tables[0].TableName} ({GetColumnNames(newDs.Tables[0])}) VALUES ({GetValues(row)});");
+                                queries.Add(
+                                    $"DELETE FROM {originalDs.Tables[i].TableName} ({GetColumnNames(newDs.Tables[i])}) VALUES ({GetValues(row)});");
+                            }*/
+                        }
+
+                        foreach (DataRow row in originalDs.Tables[i].Rows)
+                        {
+                            if (newDs.Tables[i]
+                                .Select($@"{newDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
+                                .Length == 0) // condició en la que es determina que el codi de row no està a la taula
+                            {
+                                queries.Add(
+                                    $"DELETE FROM {originalDs.Tables[i].TableName} WHERE {newDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)};");
                             }
                         }
                     }
 
-                    foreach (var q in queries)
+                    if (queries.Count > 0)
                     {
-                        RunQuery(q);
+                        RunQuery(CreateSQLTransaction(queries));
+                        MessageBox.Show($"S'han efectuat {queries.Count} canvis a la base de dades");
                     }
+                    // MessageBox.Show(CreateSQLTransaction(queries));
                 }
-            
+
                 else
                 {
                     // not an Exception. If there is no changes in the DataSet, this message will be shown.
@@ -209,33 +231,39 @@ namespace LibreriaClases
 
         private static string GetColumnNames(DataTable dt)
         {
-            string finalStr= "";
-            
-            foreach (DataColumn dtColumn in dt.Columns) finalStr = $"{finalStr}{dtColumn.ColumnName}, ";
-            
-            return finalStr;
+            string[] ls = new string[dt.Columns.Count];
+
+            for (var i = 0; i < dt.Columns.Count; i++)
+            {
+                ls[i] = dt.Columns[i].ColumnName;
+            }
+
+            return String.Join(", ", ls);
         }
-        
+
         private static string GetValues(DataRow dr)
         {
-            string finalStr= "";
-
+            var finalStr = "";
+            var index = 0;
+            
             foreach (var str in dr.ItemArray)
             {
                 if (str is string)
-                    finalStr = $"{finalStr}'{str}', ";
+                    finalStr = $"{finalStr}'{str}'";
                 {
-                    finalStr = $"{finalStr}{str}, ";
+                    finalStr = $"{finalStr}{str}";
                 }
+                if (index != (dr.ItemArray.Length - 1)) finalStr = $"{finalStr},";
+                index++;
             }
-            
+
             return finalStr;
         }
 
         // TODO
         private static string CreateSQLTransaction(List<string> queries)
         {
-            return "";
+            return $@"BEGIN TRANSACTION; {String.Join(" ", queries)} COMMIT;";
         }
 
         private void ErrorMessage(Exception e, string message, string title)
@@ -250,13 +278,9 @@ namespace LibreriaClases
         {
             ConnectDb();
             if (_conn != null)
-            {
                 MessageBox.Show("CONNECTAT");
-            }
             else
-            {
                 MessageBox.Show("ME CAGO EN TODOOOO");
-            }
         }
 
         #endregion

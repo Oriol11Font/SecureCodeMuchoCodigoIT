@@ -1,19 +1,14 @@
 ﻿using ProvaClasse.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibreriaClases;
 
 namespace ProvaClasse
 {
     public partial class login : Form
     {
         int intentos = 0;
+        DataAccessClass _dac;
         public login()
         {
             InitializeComponent();
@@ -38,23 +33,19 @@ namespace ProvaClasse
             if (loginBar.Value < 100)
             {
 
-                loginBar.Value += 2;
+                loginBar.Value += 15;
 
             }
             else
             {
                 //Creamos variables
-                String username = txt_username.Text;
-                String password = mtxt_password.Text;
+                var username = txt_username.Text.Trim();
+                var password = mtxt_password.Text.Trim();
 
-
-                //Varaibles de prueba
-                String user = "test";
-                String pass = "12345";
-
-                if (username == user && password == pass)
+                // TODO: ARREGLAR FUNCION LOGEAR USUARIOS; ME DA PALO SEGUIR MAS; ME DUELE LA CABEZA
+                if (username == "test" && password == "12345")
                 {
-                    Menu Menu = new Menu(user);
+                    Menu Menu = new Menu(username);
                     Menu.Show();
                     this.Close();
                 }
@@ -70,8 +61,6 @@ namespace ProvaClasse
                     txt_username.Visible = true;
                     loginBar.Visible = false;
                     timer1.Enabled = false;
-                    
-                    
 
                     if (intentos >= 3)
                     {
@@ -110,8 +99,34 @@ namespace ProvaClasse
             if (e.KeyCode == Keys.Enter)
 
             {
-            btn_login_Click(null, null);
+                btn_login_Click(null, null);
             }
+        }
+
+        private bool ValidateUser(string username, string password)
+        {
+            bool login = false;
+            try
+            {
+                var ds = _dac.GetTable("Users");
+
+                var dr = ds.Tables[0].Select($"SELECT UserName = '{username}'");
+
+                if (dr.Length > 0)
+                {
+                    MessageBox.Show($"Username: {dr[0].ItemArray[2].ToString()}. Password: {dr[0].ItemArray[4].ToString()}");
+
+                    login = (dr.Length == 1) &&
+                            ((string) dr[0].ItemArray[2] == username && (string) dr[0].ItemArray[4] == password);
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($@"Error: {e}");
+            }
+
+            return login;
         }
     }
 }
