@@ -49,7 +49,8 @@ namespace ProvaClasse
                     break;
             }
 
-            this.welcomeText.Text = $"{momentDia} {user}";
+            String hora = "\nSon les " + tiempo.Hour + ":" + tiempo.Minute;
+            this.welcomeText.Text = $"{momentDia} {user} {hora}";
         }
 
         static string getUpperCaseStr(string str)
