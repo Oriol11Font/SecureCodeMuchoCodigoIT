@@ -31,6 +31,7 @@
             this.swTextBox1 = new ControlsMC.SWTextBox();
             this.mcCodi2 = new TextBoxControls.MCCodi();
             this.mcCodi1 = new TextBoxControls.MCCodi();
+            this.mcExecuteApp1 = new TextBoxControls.MCExecuteApp();
             this.SuspendLayout();
             // 
             // swTextBox1
@@ -75,20 +76,33 @@
             this.mcCodi1.Size = new System.Drawing.Size(349, 28);
             this.mcCodi1.TabIndex = 18;
             // 
+            // mcExecuteApp1
+            // 
+            this.mcExecuteApp1.BackColor = System.Drawing.Color.Transparent;
+            this.mcExecuteApp1.Classe = "Menu";
+            this.mcExecuteApp1.Form = "Menu";
+            this.mcExecuteApp1.Location = new System.Drawing.Point(767, 395);
+            this.mcExecuteApp1.Name = "mcExecuteApp1";
+            this.mcExecuteApp1.Size = new System.Drawing.Size(117, 43);
+            this.mcExecuteApp1.TabIndex = 21;
+            // 
             // TestOriol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.mcExecuteApp1);
             this.Controls.Add(this.swTextBox1);
             this.Controls.Add(this.mcCodi2);
             this.Controls.Add(this.mcCodi1);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "TestOriol";
             this.Text = "TestOriol";
             this.Controls.SetChildIndex(this.mcCodi1, 0);
             this.Controls.SetChildIndex(this.mcCodi2, 0);
             this.Controls.SetChildIndex(this.swTextBox1, 0);
+            this.Controls.SetChildIndex(this.mcExecuteApp1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +113,6 @@
         private TextBoxControls.MCCodi mcCodi1;
         private TextBoxControls.MCCodi mcCodi2;
         private ControlsMC.SWTextBox swTextBox1;
+        private TextBoxControls.MCExecuteApp mcExecuteApp1;
     }
 }

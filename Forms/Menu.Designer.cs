@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,11 +43,11 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.welcomeText = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.welcomeText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -127,14 +128,14 @@
             this.tableLayoutPanel1.Controls.Add(this.panel8, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.welcomeText, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 111);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1287, 935);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1659, 991);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
             // panel9
@@ -145,10 +146,10 @@
             this.panel9.BackColor = System.Drawing.Color.Gray;
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel9.Location = new System.Drawing.Point(43, 512);
-            this.panel9.Margin = new System.Windows.Forms.Padding(43, 45, 43, 45);
+            this.panel9.Location = new System.Drawing.Point(55, 550);
+            this.panel9.Margin = new System.Windows.Forms.Padding(55);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(343, 378);
+            this.panel9.Size = new System.Drawing.Size(443, 386);
             this.panel9.TabIndex = 5;
             // 
             // pictureBox8
@@ -157,10 +158,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = global::ProvaClasse.Properties.Resources.ship1;
-            this.pictureBox8.Location = new System.Drawing.Point(25, 57);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox8.Location = new System.Drawing.Point(32, 70);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(282, 270);
+            this.pictureBox8.Size = new System.Drawing.Size(365, 253);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
@@ -173,10 +174,10 @@
             this.panel5.BackColor = System.Drawing.Color.Gray;
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(901, 512);
-            this.panel5.Margin = new System.Windows.Forms.Padding(43, 45, 43, 45);
+            this.panel5.Location = new System.Drawing.Point(1161, 550);
+            this.panel5.Margin = new System.Windows.Forms.Padding(55);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(343, 378);
+            this.panel5.Size = new System.Drawing.Size(443, 386);
             this.panel5.TabIndex = 3;
             // 
             // pictureBox6
@@ -185,10 +186,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::ProvaClasse.Properties.Resources.settings;
-            this.pictureBox6.Location = new System.Drawing.Point(30, 57);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Location = new System.Drawing.Point(39, 70);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(280, 270);
+            this.pictureBox6.Size = new System.Drawing.Size(362, 253);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -201,10 +202,10 @@
             this.panel4.BackColor = System.Drawing.Color.Gray;
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel4.Location = new System.Drawing.Point(901, 45);
-            this.panel4.Margin = new System.Windows.Forms.Padding(43, 45, 43, 45);
+            this.panel4.Location = new System.Drawing.Point(1161, 55);
+            this.panel4.Margin = new System.Windows.Forms.Padding(55);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(343, 377);
+            this.panel4.Size = new System.Drawing.Size(443, 385);
             this.panel4.TabIndex = 2;
             // 
             // pictureBox5
@@ -213,25 +214,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = global::ProvaClasse.Properties.Resources.company;
-            this.pictureBox5.Location = new System.Drawing.Point(30, 53);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Location = new System.Drawing.Point(39, 65);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(280, 270);
+            this.pictureBox5.Size = new System.Drawing.Size(362, 253);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
-            // 
-            // welcomeText
-            // 
-            this.welcomeText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.welcomeText.AutoSize = true;
-            this.welcomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeText.Location = new System.Drawing.Point(164, 215);
-            this.welcomeText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.welcomeText.Name = "welcomeText";
-            this.welcomeText.Size = new System.Drawing.Size(100, 37);
-            this.welcomeText.TabIndex = 0;
-            this.welcomeText.Text = "Menu";
             // 
             // panel3
             // 
@@ -242,10 +231,10 @@
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Location = new System.Drawing.Point(472, 45);
-            this.panel3.Margin = new System.Windows.Forms.Padding(43, 45, 43, 45);
+            this.panel3.Location = new System.Drawing.Point(608, 55);
+            this.panel3.Margin = new System.Windows.Forms.Padding(55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(343, 377);
+            this.panel3.Size = new System.Drawing.Size(443, 385);
             this.panel3.TabIndex = 1;
             // 
             // pictureBox2
@@ -254,10 +243,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::ProvaClasse.Properties.Resources.casco_piloto;
-            this.pictureBox2.Location = new System.Drawing.Point(30, 53);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(39, 65);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(282, 270);
+            this.pictureBox2.Size = new System.Drawing.Size(365, 253);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -270,10 +259,10 @@
             this.panel8.BackColor = System.Drawing.Color.Gray;
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel8.Location = new System.Drawing.Point(472, 512);
-            this.panel8.Margin = new System.Windows.Forms.Padding(43, 45, 43, 45);
+            this.panel8.Location = new System.Drawing.Point(608, 550);
+            this.panel8.Margin = new System.Windows.Forms.Padding(55);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(343, 378);
+            this.panel8.Size = new System.Drawing.Size(443, 386);
             this.panel8.TabIndex = 4;
             // 
             // pictureBox7
@@ -282,23 +271,34 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.Image = global::ProvaClasse.Properties.Resources.squadron;
-            this.pictureBox7.Location = new System.Drawing.Point(30, 57);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox7.Location = new System.Drawing.Point(39, 70);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(282, 270);
+            this.pictureBox7.Size = new System.Drawing.Size(365, 253);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
+            // welcomeText
+            // 
+            this.welcomeText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.welcomeText.AutoSize = true;
+            this.welcomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeText.Location = new System.Drawing.Point(215, 224);
+            this.welcomeText.Name = "welcomeText";
+            this.welcomeText.Size = new System.Drawing.Size(123, 46);
+            this.welcomeText.TabIndex = 0;
+            this.welcomeText.Text = "Menu";
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1287, 935);
+            this.ClientSize = new System.Drawing.Size(1659, 1102);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Menu";
             this.Text = "Form3";
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);

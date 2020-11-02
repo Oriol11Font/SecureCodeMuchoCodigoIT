@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(splash));
             this.splashTitle = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_progressCarga = new System.Windows.Forms.Label();
@@ -43,7 +44,7 @@
             this.splashTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
             this.splashTitle.Location = new System.Drawing.Point(88, 145);
             this.splashTitle.Name = "splashTitle";
-            this.splashTitle.Size = new System.Drawing.Size(399, 48);
+            this.splashTitle.Size = new System.Drawing.Size(492, 59);
             this.splashTitle.TabIndex = 0;
             this.splashTitle.Text = "SECURE CORE";
             this.splashTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -59,7 +60,7 @@
             this.lbl_progressCarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
             this.lbl_progressCarga.Location = new System.Drawing.Point(332, 284);
             this.lbl_progressCarga.Name = "lbl_progressCarga";
-            this.lbl_progressCarga.Size = new System.Drawing.Size(0, 22);
+            this.lbl_progressCarga.Size = new System.Drawing.Size(0, 27);
             this.lbl_progressCarga.TabIndex = 1;
             // 
             // splashBar1
@@ -85,6 +86,7 @@
             this.Controls.Add(this.lbl_progressCarga);
             this.Controls.Add(this.splashTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

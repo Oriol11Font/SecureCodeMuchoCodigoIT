@@ -54,6 +54,12 @@
     <Compile Include="MCCodi.Designer.cs">
       <DependentUpon>MCCodi.cs</DependentUpon>
     </Compile>
+    <Compile Include="MCExecuteApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MCExecuteApp.Designer.cs">
+      <DependentUpon>MCExecuteApp.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +70,9 @@
     <EmbeddedResource Include="MCCodi.resx">
       <DependentUpon>MCCodi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MCExecuteApp.resx">
+      <DependentUpon>MCExecuteApp.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="img\alertRequisit.png" />
@@ -73,9 +82,9 @@
       <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
       <Name>LibreriaClases</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LibreriaControles\LibreriaControles.csproj">
+    <ProjectReference Include="..\LibreriaControles\BasicForms.csproj">
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
-      <Name>LibreriaControles</Name>
+      <Name>BasicForms</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

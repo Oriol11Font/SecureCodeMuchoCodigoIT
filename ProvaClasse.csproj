@@ -164,13 +164,13 @@
       <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
       <Name>LibreriaClases</Name>
     </ProjectReference>
-    <ProjectReference Include="LibreriaControles\LibreriaControles.csproj">
+    <ProjectReference Include="LibreriaControles\BasicForms.csproj">
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
-      <Name>LibreriaControles</Name>
+      <Name>BasicForms</Name>
     </ProjectReference>
-    <ProjectReference Include="TextBoxControls\TextBoxControls.csproj">
+    <ProjectReference Include="TextBoxControls\CustomControlsMC.csproj">
       <Project>{fb17de15-0b06-41fc-96aa-3a53d9f7b289}</Project>
-      <Name>TextBoxControls</Name>
+      <Name>CustomControlsMC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

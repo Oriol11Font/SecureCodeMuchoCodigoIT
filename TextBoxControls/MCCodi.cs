@@ -175,5 +175,10 @@ namespace TextBoxControls
                 MessageBox.Show("Has obert la Taula de Cerca! :)");
             }
         }
+
+        private void CodiBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
