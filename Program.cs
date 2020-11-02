@@ -16,7 +16,7 @@ namespace ProvaClasse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu("Oriol"));
+            Application.Run(new splash());
             // DbTest();
         }
         

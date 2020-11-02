@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaClasse", "ProvaClasse.csproj", "{5DA0EAC1-8C60-42BF-94D6-ABD50746D743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaControles", "LibreriaControles\LibreriaControles.csproj", "{F986A883-16EE-4A84-85A6-AA7DED000265}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicForms", "LibreriaControles\BasicForms.csproj", "{F986A883-16EE-4A84-85A6-AA7DED000265}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsMC", "ControlsMC\ControlsMC.csproj", "{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaClases", "LibreriaClases\LibreriaClases.csproj", "{0E14A562-ABFC-4ED3-A95E-2D96A976C12A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBoxControls", "TextBoxControls\TextBoxControls.csproj", "{FB17DE15-0B06-41FC-96AA-3A53D9F7B289}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlsMC", "TextBoxControls\CustomControlsMC.csproj", "{FB17DE15-0B06-41FC-96AA-3A53D9F7B289}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

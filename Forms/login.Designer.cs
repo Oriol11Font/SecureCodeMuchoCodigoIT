@@ -102,7 +102,7 @@
             this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
             this.usernameLabel.Location = new System.Drawing.Point(433, 330);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(91, 20);
+            this.usernameLabel.Size = new System.Drawing.Size(110, 25);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "Username";
             // 
@@ -114,7 +114,7 @@
             this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
             this.passwordLabel.Location = new System.Drawing.Point(433, 408);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(86, 20);
+            this.passwordLabel.Size = new System.Drawing.Size(106, 25);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Text = "Password";
             // 
@@ -133,7 +133,7 @@
             this.mtxt_password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtxt_password.Name = "mtxt_password";
             this.mtxt_password.PasswordChar = '*';
-            this.mtxt_password.Size = new System.Drawing.Size(242, 20);
+            this.mtxt_password.Size = new System.Drawing.Size(242, 23);
             this.mtxt_password.TabIndex = 5;
             this.mtxt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtxt_password_KeyDown);
             // 
@@ -153,6 +153,7 @@
             // btn_login
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.Color.Black;
             this.btn_login.Location = new System.Drawing.Point(423, 488);
             this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_login.Name = "btn_login";
@@ -194,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::ProvaClasse.Properties.Resources.bg_image;
             this.ClientSize = new System.Drawing.Size(1001, 578);
             this.Controls.Add(this.messageLoginLabel);
@@ -206,7 +207,9 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.DarkRed;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
