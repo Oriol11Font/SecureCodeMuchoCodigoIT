@@ -17,10 +17,6 @@ namespace ProvaClasse
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new splash());
-<<<<<<< HEAD
-            // DbTest();
-=======
->>>>>>> fbc772baaf7442cf31974f7b6028c25bc4c97d29
         }
         
         // TODO: PROVES DE LA BASE DE DADES. BORRAR QUAN S'ACABI
