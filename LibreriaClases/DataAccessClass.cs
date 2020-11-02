@@ -162,49 +162,49 @@ namespace LibreriaClases
         }
 
         // function that receives a DataSet and updates the database with the new changes
-        public void UpdateDb(DataSet newDs)
+        public void UpdateDb(string query, DataSet newDs)
         {
             try
             {
                 var originalDs = GetTable(newDs.Tables[0].TableName);
                 var queries = new List<string>();
-                string tableName = originalDs.Tables[0].TableName;
+                string tableName;
                 
                 // we check if the DataSet has any changes
                 if (newDs.HasChanges())
                 {
-                    /*for (var i = 0; i < newDs.Tables.Count; i++)
-                    {*/
-                    foreach (DataRow row in newDs.Tables[0].Rows)
+                    for (var i = 0; i < newDs.Tables.Count; i++)
                     {
-                        if (originalDs.Tables[0]
-                            .Select($@"{originalDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
-                            .Length == 0) // condició en la que es determina que el codi de row no està a la taula
+                        tableName = originalDs.Tables[i].TableName;
+                        foreach (DataRow row in newDs.Tables[i].Rows)
                         {
-                            queries.Add(
-                                $"SET IDENTITY_INSERT {tableName} ON; INSERT INTO {tableName} ({GetColumnNames(originalDs.Tables[0])}) VALUES ({GetValues(row)}); SET IDENTITY_INSERT {tableName} OFF;");
+                            if (originalDs.Tables[i]
+                                .Select($@"{originalDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
+                                .Length == 0) // condició en la que es determina que el codi de row no està a la taula
+                            {
+                                queries.Add(
+                                    $"SET IDENTITY_INSERT {tableName} ON; INSERT INTO {tableName} ({GetColumnNames(originalDs.Tables[0])}) VALUES ({GetValues(row)}); SET IDENTITY_INSERT {tableName} OFF;");
+                            }
+                        }
+
+                        foreach (DataRow row in originalDs.Tables[0].Rows)
+                        {
+                            if (newDs.Tables[i]
+                                .Select($@"{newDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
+                                .Length == 0) // condició en la que es determina que el codi de row no està a la taula
+                            {
+                                queries.Add(
+                                    $"DELETE FROM {tableName} WHERE {newDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)};");
+                            }
                         }
                     }
 
-                    foreach (DataRow row in originalDs.Tables[0].Rows)
+                    if (queries.Count > 0)
                     {
-                        if (newDs.Tables[0]
-                            .Select($@"{newDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
-                            .Length == 0) // condició en la que es determina que el codi de row no està a la taula
-                        {
-                            queries.Add(
-                                $"DELETE FROM {tableName} WHERE {newDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)};");
-                        }
+                        RunQuery(CreateSQLTransaction(queries));
+                        MessageBox.Show($"S'han efectuat {queries.Count.ToString()} canvis a la base de dades");
                     }
                 }
-
-                if (queries.Count > 0)
-                {
-                    var queriesStr = CreateSQLTransaction(queries);
-                    MessageBox.Show(queriesStr);
-                    // MessageBox.Show($"S'han efectuat {queries.Count.ToString()} canvis a la base de dades");
-                }
-                // }
 
                 else
                 {

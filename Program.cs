@@ -24,7 +24,8 @@ namespace ProvaClasse
         private static void DbTest()
         {
             var dac = new DataAccessClass();
-            var ds = dac.GetTable("Agencies");
+            var query = "SELECT * FROM Agencies";
+            var ds = dac.GetByQuery(query);
             DataRow dr = ds.Tables[0].NewRow();
             DataRow dr2 = ds.Tables[0].NewRow();
             dr[0] = 6;
@@ -35,7 +36,7 @@ namespace ProvaClasse
             dr2[1] = "45J";
             dr2[2] = "AAAAAAAAAAAAAAAAAAAA";
             ds.Tables[0].Rows.Add(dr2);
-            dac.UpdateDb(ds);
+            dac.UpdateDb(query, ds);
         }
     }
 }
