@@ -33,7 +33,7 @@ namespace ProvaClasse
             if (loginBar.Value < 100)
             {
 
-                loginBar.Value += 15;
+                loginBar.Value += 10;
 
             }
             else
@@ -43,7 +43,7 @@ namespace ProvaClasse
                 var password = mtxt_password.Text.Trim();
 
                 // TODO: ARREGLAR FUNCION LOGEAR USUARIOS; ME DA PALO SEGUIR MAS; ME DUELE LA CABEZA
-                if (username == "test" && password == "12345")
+                if (ValidateUser(username, password))
                 {
                     Menu Menu = new Menu(username);
                     Menu.Show();
@@ -56,7 +56,8 @@ namespace ProvaClasse
                     btn_login.Visible = true;
                     usernameLabel.Visible = true;
                     passwordLabel.Visible = true;
-                    messageLoginLabel.Visible = false;
+                    messageLoginLabel.Visible = true; // todo
+                    messageLoginLabel.Text = @"El usuario y/o la contraseña son incorrectos! Inténtelo de nuevo";
                     mtxt_password.Visible = true;
                     txt_username.Visible = true;
                     loginBar.Visible = false;
@@ -69,21 +70,28 @@ namespace ProvaClasse
                         amenaza.Show();
                         this.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("Nom d'usuari o contrassenya incorrecte");
-                    }
                 }
             }
         }
 
-
+        private void ToggleVisibility()
+        {
+            btn_login.Visible = true;
+            usernameLabel.Visible = true;
+            passwordLabel.Visible = true;
+            messageLoginLabel.Visible = false;
+            mtxt_password.Visible = true;
+            txt_username.Visible = true;
+            loginBar.Visible = false;
+            timer1.Enabled = false;
+        }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
             btn_login.Visible = false;
             usernameLabel.Visible = false;
             passwordLabel.Visible = false;
+            messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar...\r\n";
             messageLoginLabel.Visible = true;
             mtxt_password.Visible = false;
             txt_username.Visible = false;
@@ -103,27 +111,19 @@ namespace ProvaClasse
             }
         }
 
-        private bool ValidateUser(string username, string password)
+        private static bool ValidateUser(string username, string password)
         {
-            bool login = false;
+            var dac = new DataAccessClass();
+            var login = false;
             try
             {
-                var ds = _dac.GetTable("Users");
+                var dt = dac.GetByQuery("SELECT * FROM Users WHERE UserName = 'Guti Stormlight';").Tables[0];
 
-                var dr = ds.Tables[0].Select($"SELECT UserName = '{username}'");
-
-                if (dr.Length > 0)
-                {
-                    MessageBox.Show($"Username: {dr[0].ItemArray[2].ToString()}. Password: {dr[0].ItemArray[4].ToString()}");
-
-                    login = (dr.Length == 1) &&
-                            ((string) dr[0].ItemArray[2] == username && (string) dr[0].ItemArray[4] == password);
-                }
-
+                login = (dt.Rows.Count == 1) && ((string) dt.Rows[0].ItemArray[2] == username && (string) dt.Rows[0].ItemArray[4] == password);
             }
             catch (Exception e)
             {
-                MessageBox.Show($@"Error: {e}");
+                MessageBox.Show($"Error: {e}");
             }
 
             return login;

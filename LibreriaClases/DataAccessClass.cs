@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace LibreriaClases
@@ -53,10 +55,11 @@ namespace LibreriaClases
             try
             {
                 ds = GetByQuery($"SELECT * FROM {table}");
+                ds.Tables[0].TableName = table;
             }
             catch (Exception e)
             {
-                ErrorMessage(e, "La petició de dades d'una taula no s'ha pogut realitzar", null);
+                ErrorMessage(e, @"La petició de dades d'una taula no s'ha pogut realitzar", null);
                 ds = null;
             }
             finally
@@ -159,56 +162,49 @@ namespace LibreriaClases
         }
 
         // function that receives a DataSet and updates the database with the new changes
-        public void UpdateDb(string query, DataSet newDs)
+        public void UpdateDb(DataSet newDs)
         {
             try
             {
-                var originalDs = GetByQuery(query);
+                var originalDs = GetTable(newDs.Tables[0].TableName);
+                var queries = new List<string>();
+                string tableName = originalDs.Tables[0].TableName;
                 
                 // we check if the DataSet has any changes
                 if (newDs.HasChanges())
                 {
-                    var queries = new List<string>();
-                    for (var i = 0; i < newDs.Tables.Count; i++)
+                    /*for (var i = 0; i < newDs.Tables.Count; i++)
+                    {*/
+                    foreach (DataRow row in newDs.Tables[0].Rows)
                     {
-                        foreach (DataRow row in newDs.Tables[i].Rows)
+                        if (originalDs.Tables[0]
+                            .Select($@"{originalDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
+                            .Length == 0) // condició en la que es determina que el codi de row no està a la taula
                         {
-                            if (originalDs.Tables[i]
-                                .Select($@"{originalDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
-                                .Length == 0) // condició en la que es determina que el codi de row no està a la taula
-                            {
-                                // TODO: ARREGLAR NOMBRES TABLA
-                                queries.Add(
-                                    $"SET IDENTITY_INSERT Agencies ON; INSERT INTO Agencies ({GetColumnNames(originalDs.Tables[i])}) VALUES ({GetValues(row)}); SET IDENTITY_INSERT Agencies OFF");
-                            }
-                            /*else if (newDs.Tables[i]
-                                .Select($@"{originalDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
-                                .Length == 0)
-                            {
-                                queries.Add(
-                                    $"DELETE FROM {originalDs.Tables[i].TableName} ({GetColumnNames(newDs.Tables[i])}) VALUES ({GetValues(row)});");
-                            }*/
-                        }
-
-                        foreach (DataRow row in originalDs.Tables[i].Rows)
-                        {
-                            if (newDs.Tables[i]
-                                .Select($@"{newDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
-                                .Length == 0) // condició en la que es determina que el codi de row no està a la taula
-                            {
-                                queries.Add(
-                                    $"DELETE FROM {originalDs.Tables[i].TableName} WHERE {newDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)};");
-                            }
+                            queries.Add(
+                                $"SET IDENTITY_INSERT {tableName} ON; INSERT INTO {tableName} ({GetColumnNames(originalDs.Tables[0])}) VALUES ({GetValues(row)}); SET IDENTITY_INSERT {tableName} OFF;");
                         }
                     }
 
-                    if (queries.Count > 0)
+                    foreach (DataRow row in originalDs.Tables[0].Rows)
                     {
-                        RunQuery(CreateSQLTransaction(queries));
-                        MessageBox.Show($"S'han efectuat {queries.Count} canvis a la base de dades");
+                        if (newDs.Tables[0]
+                            .Select($@"{newDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
+                            .Length == 0) // condició en la que es determina que el codi de row no està a la taula
+                        {
+                            queries.Add(
+                                $"DELETE FROM {tableName} WHERE {newDs.Tables[0].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)};");
+                        }
                     }
-                    // MessageBox.Show(CreateSQLTransaction(queries));
                 }
+
+                if (queries.Count > 0)
+                {
+                    var queriesStr = CreateSQLTransaction(queries);
+                    MessageBox.Show(queriesStr);
+                    // MessageBox.Show($"S'han efectuat {queries.Count.ToString()} canvis a la base de dades");
+                }
+                // }
 
                 else
                 {
@@ -245,15 +241,21 @@ namespace LibreriaClases
         {
             var finalStr = "";
             var index = 0;
+            string str;
             
-            foreach (var str in dr.ItemArray)
+            foreach (var obj in dr.ItemArray)
             {
-                if (str is string)
-                    finalStr = $"{finalStr}'{str}'";
+                if (!Regex.IsMatch(obj.ToString(), @"^\d+$"))
                 {
-                    finalStr = $"{finalStr}{str}";
+                    str = $"'{obj}'";
                 }
-                if (index != (dr.ItemArray.Length - 1)) finalStr = $"{finalStr},";
+                else
+                {
+                    str = $"{obj}";
+                }
+                if (index != (dr.ItemArray.Length - 1)) str = $"{str}, ";
+                
+                finalStr = $"{finalStr}{str}";
                 index++;
             }
 
@@ -263,7 +265,7 @@ namespace LibreriaClases
         // TODO
         private static string CreateSQLTransaction(List<string> queries)
         {
-            return $@"BEGIN TRANSACTION; {String.Join(" ", queries)} COMMIT;";
+            return $@"BEGIN TRANSACTION; {string.Join(" ", queries)} COMMIT;";
         }
 
         private void ErrorMessage(Exception e, string message, string title)
