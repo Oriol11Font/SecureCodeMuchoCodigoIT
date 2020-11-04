@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using LibreriaClases;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
+using LibreriaControles;
 
 namespace ProvaClasse
 {
@@ -17,7 +18,8 @@ namespace ProvaClasse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new splash());
+            // Application.Run(new splash());
+            Application.Run(new SearchForm());
         }
         
         // TODO: PROVES DE LA BASE DE DADES. BORRAR QUAN S'ACABI

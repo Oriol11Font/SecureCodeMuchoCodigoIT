@@ -141,12 +141,12 @@ namespace LibreriaClases
         // runs the query that is sent to it by params on the database
         public void RunQuery(string query)
         {
-            var cm = new SqlCommand(query, _conn);
-
             try
             {
                 ConnectDb();
 
+                var cm = new SqlCommand(query, _conn);
+                
                 _conn.Open();
 
                 cm.ExecuteNonQuery();
@@ -273,16 +273,6 @@ namespace LibreriaClases
             if (message == null) message = "Error";
             if (title == null) title = "Error no fatal ";
             MessageBox.Show($"{message}: Excepció {e}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        // TODO: BORRAR
-        public void TestConnection()
-        {
-            ConnectDb();
-            if (_conn != null)
-                MessageBox.Show("CONNECTAT");
-            else
-                MessageBox.Show("ME CAGO EN TODOOOO");
         }
 
         #endregion

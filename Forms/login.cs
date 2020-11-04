@@ -7,8 +7,7 @@ namespace ProvaClasse
 {
     public partial class login : Form
     {
-        int intentos = 0;
-        DataAccessClass _dac;
+        int _intentos = 0;
         public login()
         {
             InitializeComponent();
@@ -51,7 +50,7 @@ namespace ProvaClasse
                 }
                 else
                 {
-                    intentos++;
+                    _intentos++;
 
                     btn_login.Visible = true;
                     usernameLabel.Visible = true;
@@ -63,7 +62,7 @@ namespace ProvaClasse
                     loginBar.Visible = false;
                     timer1.Enabled = false;
 
-                    if (intentos >= 3)
+                    if (_intentos >= 3)
                     {
                         //Abrir nuevo formulario con mensaje AMENAZADDOR
                         AlertScreen amenaza = new AlertScreen();
