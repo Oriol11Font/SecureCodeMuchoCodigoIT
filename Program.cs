@@ -15,14 +15,18 @@ namespace ProvaClasse
         [STAThread]
         static void Main()
         {
+            /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new splash());
+            */
         }
         
         // TODO: PROVES DE LA BASE DE DADES. BORRAR QUAN S'ACABI
         private static void DbTest()
         {
+            DataAccessClass dtb = new DataAccessClass();
+            /* 
             var dac = new DataAccessClass();
             var query = "SELECT * FROM Agencies";
             var ds = dac.GetByQuery(query);
@@ -37,6 +41,8 @@ namespace ProvaClasse
             dr2[2] = "AAAAAAAAAAAAAAAAAAAA";
             ds.Tables[0].Rows.Add(dr2);
             dac.UpdateDb(query, ds);
+            */
+            dtb.TestConnection();
         }
     }
 }
