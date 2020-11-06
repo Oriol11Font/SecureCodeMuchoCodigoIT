@@ -161,9 +161,35 @@ namespace LibreriaClases
             }
         }
 
-        // function that receives a DataSet and updates the database with the new changes
-        public void UpdateDb(string query, DataSet newDs)
+        public int UpdateDb(string query, DataSet newDs)
         {
+            int changes = 0;
+            try
+            {
+                ConnectDb();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+                SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+
+                if (newDs.HasChanges())
+                {
+                    changes = adapter.Update(newDs.Tables[0]);
+                }
+            }
+            catch (Exception e)
+            {
+                _conn?.Close();
+            }
+            finally
+            {
+                _conn?.Close();
+            }
+            return changes;
+        }
+
+        // function that receives a DataSet and updates the database with the new changes
+        public int UpdateDb(DataSet newDs)
+        {
+            int changes = 0;
             try
             {
                 var originalDs = GetTable(newDs.Tables[0].TableName);
@@ -202,10 +228,10 @@ namespace LibreriaClases
                     if (queries.Count > 0)
                     {
                         RunQuery(CreateSQLTransaction(queries));
-                        MessageBox.Show($"S'han efectuat {queries.Count.ToString()} canvis a la base de dades");
+                        changes = queries.Count;
+                        // MessageBox.Show($"S'han efectuat {queries.Count.ToString()} canvis a la base de dades");
                     }
                 }
-
                 else
                 {
                     // not an Exception. If there is no changes in the DataSet, this message will be shown.
@@ -223,6 +249,8 @@ namespace LibreriaClases
                 // we use the null propagation value to close the connection to the DB, only if it exists
                 _conn?.Close();
             }
+
+            return changes;
         }
 
         private static string GetColumnNames(DataTable dt)

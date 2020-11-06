@@ -18,27 +18,26 @@ namespace ProvaClasse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new splash());
-            Application.Run(new SearchForm());
+            Application.Run(new splash());
         }
         
         // TODO: PROVES DE LA BASE DE DADES. BORRAR QUAN S'ACABI
         private static void DbTest()
         {
             var dac = new DataAccessClass();
-            var query = "SELECT * FROM Agencies";
-            var ds = dac.GetByQuery(query);
+            var ds = dac.GetTable("Agencies");
             DataRow dr = ds.Tables[0].NewRow();
             DataRow dr2 = ds.Tables[0].NewRow();
-            dr[0] = 6;
+            /*dr[0] = 6;
             dr[1] = "23D";
             dr[2] = "PRUEBA HAJJAJAJAJJA";
             ds.Tables[0].Rows.Add(dr);
             dr2[0] = 123;
             dr2[1] = "45J";
             dr2[2] = "AAAAAAAAAAAAAAAAAAAA";
-            ds.Tables[0].Rows.Add(dr2);
-            dac.UpdateDb(query, ds);
+            ds.Tables[0].Rows.Add(dr2);*/
+            ds.Tables[0].Rows[0].Delete();
+            dac.UpdateDb(ds);
         }
     }
 }
