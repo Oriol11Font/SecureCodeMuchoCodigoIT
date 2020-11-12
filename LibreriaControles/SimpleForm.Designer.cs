@@ -35,10 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.swTextBox1 = new ControlsMC.SWTextBox();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
-            this.swTextBox3 = new ControlsMC.SWTextBox();
-            this.swTextBox4 = new ControlsMC.SWTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,61 +105,21 @@
             // 
             // swTextBox1
             // 
-            this.swTextBox1.AllowEmpty = true;
-            this.swTextBox1.CampoBBDD = null;
-            this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox1.Foranea = false;
-            this.swTextBox1.Location = new System.Drawing.Point(106, 120);
-            this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.Size = new System.Drawing.Size(170, 26);
-            this.swTextBox1.TabIndex = 26;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Numero;
             // 
             // swTextBox2
             // 
-            this.swTextBox2.AllowEmpty = true;
-            this.swTextBox2.CampoBBDD = null;
-            this.swTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox2.Foranea = false;
-            this.swTextBox2.Location = new System.Drawing.Point(106, 175);
-            this.swTextBox2.Name = "swTextBox2";
-            this.swTextBox2.Size = new System.Drawing.Size(170, 26);
-            this.swTextBox2.TabIndex = 27;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Numero;
             // 
             // swTextBox3
             // 
-            this.swTextBox3.AllowEmpty = true;
-            this.swTextBox3.CampoBBDD = null;
-            this.swTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox3.Foranea = false;
-            this.swTextBox3.Location = new System.Drawing.Point(392, 120);
-            this.swTextBox3.Name = "swTextBox3";
-            this.swTextBox3.Size = new System.Drawing.Size(170, 26);
-            this.swTextBox3.TabIndex = 28;
-            this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Numero;
             // 
             // swTextBox4
             // 
-            this.swTextBox4.AllowEmpty = true;
-            this.swTextBox4.CampoBBDD = null;
-            this.swTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox4.Foranea = false;
-            this.swTextBox4.Location = new System.Drawing.Point(392, 178);
-            this.swTextBox4.Name = "swTextBox4";
-            this.swTextBox4.Size = new System.Drawing.Size(170, 26);
-            this.swTextBox4.TabIndex = 29;
-            this.swTextBox4.Tipus = ControlsMC.SWTextBox.TipusDada.Numero;
             // 
             // SimpleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 606);
-            this.Controls.Add(this.swTextBox4);
-            this.Controls.Add(this.swTextBox3);
-            this.Controls.Add(this.swTextBox2);
-            this.Controls.Add(this.swTextBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -181,10 +137,6 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.swTextBox1, 0);
-            this.Controls.SetChildIndex(this.swTextBox2, 0);
-            this.Controls.SetChildIndex(this.swTextBox3, 0);
-            this.Controls.SetChildIndex(this.swTextBox4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,9 +152,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private ControlsMC.SWTextBox swTextBox1;
-        private ControlsMC.SWTextBox swTextBox2;
-        private ControlsMC.SWTextBox swTextBox3;
-        private ControlsMC.SWTextBox swTextBox4;
+
     }
 }

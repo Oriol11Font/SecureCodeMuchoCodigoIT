@@ -24,7 +24,7 @@ namespace ProvaClasse
         // TODO: PROVES DE LA BASE DE DADES. BORRAR QUAN S'ACABI
         private static void DbTest()
         {
-            var dtb = new DataAccessClass();
+            /*var dtb = new DataAccessClass();
             var query = "Select * From Agencies";
             var ds = dac.GetByQuery(query);
             DataRow dr = ds.Tables[0].NewRow();
@@ -39,6 +39,7 @@ namespace ProvaClasse
             ds.Tables[0].Rows.Add(dr2);
             ds.Tables[0].Rows[0].Delete();
             dac.UpdateDb(query, ds);
+            */
         }
     }
 }
