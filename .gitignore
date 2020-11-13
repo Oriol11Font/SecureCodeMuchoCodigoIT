@@ -27,9 +27,11 @@ x86/
 build/
 bld/
 bin/
+Debug/
 [Bb]in/
 [Oo]bj/
 [Oo]ut/
 msbuild.log
 msbuild.err
 msbuild.wrn
+/DLL

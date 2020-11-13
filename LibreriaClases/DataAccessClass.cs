@@ -16,9 +16,7 @@ namespace LibreriaClases
         private SqlConnection _conn;
 
         // TODO: guardar la connection string en el app.config
-        private static readonly string ConnectionString =
-            $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
-
+        private static string _connectionString;
         private static readonly Configuration Config =
             ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
@@ -26,6 +24,16 @@ namespace LibreriaClases
 
         #region methods
 
+        public DataAccessClass()
+        {
+            _connectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
+        }
+        
+        public DataAccessClass(String dbName, String username, String password)
+        {
+            _connectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog={dbName};Integrated Security=SSPI;User Id={username};Password={password}";
+        }
+        
         public void EncryptConnString()
         {
             Config.ConnectionStrings.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
@@ -36,7 +44,7 @@ namespace LibreriaClases
             // TODO: connection to the database with the specified connectionString stored encrypted in the app.config file
             try
             {
-                _conn = new SqlConnection(ConnectionString);
+                _conn = new SqlConnection(_connectionString);
             }
             catch (Exception e)
             {

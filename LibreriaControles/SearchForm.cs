@@ -1,5 +1,5 @@
-﻿using System.Data;
-using System.Diagnostics.PerformanceData;
+﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using LibreriaClases;
@@ -9,23 +9,42 @@ namespace LibreriaControles
     public sealed partial class SearchForm : BaseForm
     {
         private readonly DataAccessClass _dac = new DataAccessClass();
-        public SearchForm()
+        private String _searchText;
+        private DataTable _dt;
+        private DataTable _formattedDt;
+        public SearchForm(DataSet ds)
         {
             InitializeComponent();
-            SetData();
+            SetData(ds);
             ApplyStyle();
             DoubleBuffered = true;
         }
 
-        private void SetData()
+        private void SetData(DataSet ds)
         {
-            var ds = _dac.GetTable("Agencies");
-            this.dataGrid.DataSource = ds.Tables[0];
+            _dt = ds.Tables[0];
+            _formattedDt = _dt;
+            dataGrid.DataSource = _dt;
         }
 
         private void ApplyStyle()
         {
             dataGrid.ForeColor = Color.Black;
         }
+
+        private void HandleSearch()
+        {
+            _searchText = searchTextBox.Text;
+            foreach (DataColumn dtColumn in _dt.Columns)
+            {
+                listColumns.Items.Add(dtColumn.ColumnName);
+            }
+        }
+
+        private void HandleTextBoxKey(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) HandleSearch();   
+        }
+        
     }
 }
