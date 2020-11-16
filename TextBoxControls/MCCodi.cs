@@ -173,6 +173,21 @@ namespace TextBoxControls
             if (e.KeyCode == Keys.F2)
             {
                 MessageBox.Show("Has obert la Taula de Cerca! :)");
+                Assembly ensamblat = Assembly.LoadFrom(ClasseCS);
+
+                //Declarem les variables
+                Object dllBD;
+                Type tipus;
+
+                //recuperem el tipus de la classe que volem instanciar
+                tipus = ensamblat.GetType(FormCS);
+
+                //instanciem l’objecte   
+                dllBD = Activator.CreateInstance(tipus);
+
+                //el mostrem assumint que es tracta d’un form 
+                // i per això fem un cast amb (Form) 
+                ((Form)dllBD).Show();
             }
         }
 
