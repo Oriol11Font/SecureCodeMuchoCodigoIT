@@ -20,7 +20,7 @@ namespace ProvaClasse
             Application.SetCompatibleTextRenderingDefault(false);
             var dtb = new DataAccessClass();
             var ds = dtb.GetTable("Agencies");
-            Application.Run(new TestSimple());
+            Application.Run(new SimpleForm());
         }
     }
 }

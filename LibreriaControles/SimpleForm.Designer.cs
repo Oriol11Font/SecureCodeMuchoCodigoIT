@@ -54,10 +54,10 @@
             // btn_actualitzar
             // 
             this.btn_actualitzar.ForeColor = System.Drawing.Color.Black;
-            this.btn_actualitzar.Location = new System.Drawing.Point(993, 475);
+            this.btn_actualitzar.Location = new System.Drawing.Point(993, 476);
             this.btn_actualitzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualitzar.Name = "btn_actualitzar";
-            this.btn_actualitzar.Size = new System.Drawing.Size(144, 24);
+            this.btn_actualitzar.Size = new System.Drawing.Size(144, 30);
             this.btn_actualitzar.TabIndex = 20;
             this.btn_actualitzar.Text = "Actualitzar";
             this.btn_actualitzar.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@
             // btn_datagrid
             // 
             this.btn_datagrid.ForeColor = System.Drawing.Color.Black;
-            this.btn_datagrid.Location = new System.Drawing.Point(993, 516);
+            this.btn_datagrid.Location = new System.Drawing.Point(993, 510);
             this.btn_datagrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_datagrid.Name = "btn_datagrid";
-            this.btn_datagrid.Size = new System.Drawing.Size(144, 24);
+            this.btn_datagrid.Size = new System.Drawing.Size(144, 30);
             this.btn_datagrid.TabIndex = 21;
             this.btn_datagrid.Text = "Veure DataSet";
             this.btn_datagrid.UseVisualStyleBackColor = true;
@@ -76,10 +76,10 @@
             // conn
             // 
             this.conn.ForeColor = System.Drawing.Color.Black;
-            this.conn.Location = new System.Drawing.Point(993, 430);
+            this.conn.Location = new System.Drawing.Point(993, 140);
             this.conn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.conn.Name = "conn";
-            this.conn.Size = new System.Drawing.Size(144, 24);
+            this.conn.Size = new System.Drawing.Size(144, 40);
             this.conn.TabIndex = 22;
             this.conn.Text = "Conectar";
             this.conn.UseVisualStyleBackColor = true;
