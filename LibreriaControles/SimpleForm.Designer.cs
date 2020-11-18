@@ -93,7 +93,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListBox listColumns;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_actualitzar;
         private System.Windows.Forms.Button btn_datagrid;

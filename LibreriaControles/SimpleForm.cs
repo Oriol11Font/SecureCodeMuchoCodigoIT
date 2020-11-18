@@ -11,7 +11,6 @@ namespace LibreriaControles
     public partial class SimpleForm : BaseForm
     {
         private DataAccessClass dtb = new DataAccessClass();
-        private String _searchText;
         private DataTable _dt;
         private DataTable _formattedDt;
 
