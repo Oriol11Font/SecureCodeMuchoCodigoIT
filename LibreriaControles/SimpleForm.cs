@@ -6,28 +6,30 @@ namespace LibreriaControles
 {
     public partial class SimpleForm : BaseForm
     {
-        private readonly DataAccessClass dtb = new DataAccessClass();
-        private DataTable _dt;
+        private DataSet dts;
 
         public SimpleForm()
         {
             InitializeComponent();
-
-            DataSet ds = dtb.GetTable("Agencies");
-            SetData(ds);
-            ApplyStyle();
-            DoubleBuffered = true;
         }
 
-        private void SetData(DataSet ds)
+        private string _Taula = "Agencies";
+        public string Taula
         {
-            _dt = ds.Tables[0];
-            dataGridView1.DataSource = _dt;
+            get { return _Taula; }
+            set
+            {
+                _Taula = value;
+            }
         }
 
-        private void ApplyStyle()
+        private void conn_Click(object sender, System.EventArgs e)
         {
-            dataGridView1.ForeColor = Color.Black;
+            DataAccessClass dtb = new DataAccessClass();
+            string query = "select * from "+Taula;
+            dts = dtb.GetByQuery(query);
+            dtg.DataSource = dts.Tables[0];
+            dtg.ForeColor = Color.Black;
         }
     }
 }

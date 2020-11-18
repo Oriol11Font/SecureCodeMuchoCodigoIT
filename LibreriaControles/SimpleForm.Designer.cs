@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtg = new System.Windows.Forms.DataGridView();
             this.btn_actualitzar = new System.Windows.Forms.Button();
             this.btn_datagrid = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.conn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtg
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1194, 140);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(20, 100, 20, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 400);
-            this.dataGridView1.TabIndex = 19;
+            this.dtg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtg.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dtg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg.Location = new System.Drawing.Point(1194, 140);
+            this.dtg.Margin = new System.Windows.Forms.Padding(20, 100, 20, 20);
+            this.dtg.Name = "dtg";
+            this.dtg.RowHeadersWidth = 62;
+            this.dtg.Size = new System.Drawing.Size(700, 400);
+            this.dtg.TabIndex = 19;
             // 
             // btn_actualitzar
             // 
@@ -72,31 +73,45 @@
             this.btn_datagrid.Text = "Veure DataSet";
             this.btn_datagrid.UseVisualStyleBackColor = true;
             // 
+            // conn
+            // 
+            this.conn.ForeColor = System.Drawing.Color.Black;
+            this.conn.Location = new System.Drawing.Point(993, 430);
+            this.conn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.conn.Name = "conn";
+            this.conn.Size = new System.Drawing.Size(144, 24);
+            this.conn.TabIndex = 22;
+            this.conn.Text = "Conectar";
+            this.conn.UseVisualStyleBackColor = true;
+            this.conn.Click += new System.EventHandler(this.conn_Click);
+            // 
             // SimpleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1923, 1102);
+            this.Controls.Add(this.conn);
             this.Controls.Add(this.btn_datagrid);
             this.Controls.Add(this.btn_actualitzar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtg);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "SimpleForm";
             this.Text = "Form2";
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.dtg, 0);
             this.Controls.SetChildIndex(this.btn_actualitzar, 0);
             this.Controls.SetChildIndex(this.btn_datagrid, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Controls.SetChildIndex(this.conn, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtg;
         private System.Windows.Forms.Button btn_actualitzar;
         private System.Windows.Forms.Button btn_datagrid;
-
+        private System.Windows.Forms.Button conn;
     }
 }
