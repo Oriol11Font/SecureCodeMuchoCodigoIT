@@ -1,6 +1,7 @@
-﻿namespace ProvaClasse.Forms
+﻿
+namespace ProvaClasse.Forms
 {
-    partial class TestOriol
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +31,17 @@
         {
             this.SuspendLayout();
             // 
-            // TestOriol
+            // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Name = "TestOriol";
-            this.Text = "TestOriol";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1243, 672);
+            this.Name = "Form1";
+            this.NomColumn = new string[] {
+        "Codi Fabrica",
+        "Descripcio Fabrica"};
+            this.Taula = "Factories";
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

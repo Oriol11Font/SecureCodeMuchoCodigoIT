@@ -42,7 +42,6 @@
             this.CodiBox.Name = "CodiBox";
             this.CodiBox.Size = new System.Drawing.Size(75, 26);
             this.CodiBox.TabIndex = 0;
-            this.CodiBox.TextChanged += new System.EventHandler(this.CodiBox_TextChanged);
             this.CodiBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ObreCS);
             this.CodiBox.Leave += new System.EventHandler(this.ValidacioCodi);
             // 

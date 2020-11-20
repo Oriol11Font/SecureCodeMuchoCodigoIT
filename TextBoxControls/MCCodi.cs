@@ -173,7 +173,8 @@ namespace TextBoxControls
             if (e.KeyCode == Keys.F2)
             {
                 MessageBox.Show("Has obert la Taula de Cerca! :)");
-                Assembly ensamblat = Assembly.LoadFrom(ClasseCS);
+                /*Sha de mirar*/
+                /*Assembly ensamblat = Assembly.LoadFrom(ClasseCS);
 
                 //Declarem les variables
                 Object dllBD;
@@ -187,13 +188,8 @@ namespace TextBoxControls
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
-                ((Form)dllBD).Show();
+                ((Form)dllBD).Show();*/
             }
-        }
-
-        private void CodiBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

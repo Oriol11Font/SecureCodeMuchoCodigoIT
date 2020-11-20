@@ -298,7 +298,6 @@
             this.ClientSize = new System.Drawing.Size(1659, 1102);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Menu";
             this.Text = "Form3";
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
