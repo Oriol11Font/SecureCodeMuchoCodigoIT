@@ -55,7 +55,7 @@ namespace ProvaClasse
                     btn_login.Visible = true;
                     usernameLabel.Visible = true;
                     passwordLabel.Visible = true;
-                    messageLoginLabel.Visible = true; // todo
+                    messageLoginLabel.Visible = false; // todo
                     messageLoginLabel.Text = @"El usuario y/o la contraseña son incorrectos! Inténtelo de nuevo";
                     mtxt_password.Visible = true;
                     txt_username.Visible = true;
@@ -81,7 +81,7 @@ namespace ProvaClasse
             messageLoginLabel.Visible = false;
             mtxt_password.Visible = true;
             txt_username.Visible = true;
-            loginBar.Visible = false;
+            loginBar.Visible = true;
             timer1.Enabled = false;
         }
 
@@ -116,7 +116,7 @@ namespace ProvaClasse
             var login = false;
             try
             {
-                var dt = dac.GetByQuery("SELECT * FROM Users WHERE UserName = 'Guti Stormlight';").Tables[0];
+                var dt = dac.GetByQuery("SELECT * FROM Users WHERE UserName = '"+username+"';").Tables[0];
 
                 login = (dt.Rows.Count == 1) && ((string) dt.Rows[0].ItemArray[2] == username && (string) dt.Rows[0].ItemArray[4] == password);
             }

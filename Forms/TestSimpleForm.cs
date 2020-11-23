@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ProvaClasse.Forms
 {
-    public partial class Form1 : SimpleForm
+    public partial class TestSimpleForm : SimpleForm
     {
-        public Form1()
+        public TestSimpleForm()
         {
             InitializeComponent();
         }

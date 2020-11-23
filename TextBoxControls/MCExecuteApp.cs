@@ -17,13 +17,23 @@ namespace TextBoxControls
             InitializeComponent();
         }
 
-        private String _From;
-        public String Form
+        /*private String _Text;
+        public String Text
         {
-            get { return _From; }
+            get { return _Text; }
             set
             {
-                _From = value;
+                _Text = value;
+            }
+        }*/
+
+        private String _Form;
+        public String Form
+        {
+            get { return _Form; }
+            set
+            {
+                _Form = value;
             }
         }
 
@@ -39,6 +49,7 @@ namespace TextBoxControls
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show("Has obert el formulari " + Form + " i la classe " + Classe);
         }
     }

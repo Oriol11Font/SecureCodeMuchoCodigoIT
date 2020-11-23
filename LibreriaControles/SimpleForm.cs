@@ -60,10 +60,10 @@ namespace LibreriaControles
             int cont = 0;
             if (!(NomColumn is null))
             {
-                for (int i = 1; i < dts.Tables[0].Columns.Count; i++)
+                for (int i = 1; (i < dts.Tables[0].Columns.Count); i++)
                 {
-                    dtg.Columns[i].HeaderText = NomColumn[cont];
-                    cont++;
+                        dtg.Columns[i].HeaderText = NomColumn[cont];
+                        cont++;
                 }
             }
         }

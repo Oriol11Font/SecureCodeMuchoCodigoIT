@@ -35,7 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.userName = new System.Windows.Forms.Label();
             this.logoutLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -102,6 +102,7 @@
             this.btn_minimize.TabIndex = 2;
             this.btn_minimize.Text = "-";
             this.btn_minimize.UseVisualStyleBackColor = false;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
             // 
             // btn_exit
             // 
@@ -121,31 +122,33 @@
             this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // label7
+            // userName
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(1788, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 24);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "test";
+            this.userName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Nasalization", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName.ForeColor = System.Drawing.Color.White;
+            this.userName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.userName.Location = new System.Drawing.Point(1642, 24);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(188, 17);
+            this.userName.TabIndex = 16;
+            this.userName.Text = "UserNamellarg";
             // 
             // logoutLabel
             // 
             this.logoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutLabel.AutoSize = true;
-            this.logoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutLabel.Font = new System.Drawing.Font("Nasalization", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.logoutLabel.LinkColor = System.Drawing.Color.White;
-            this.logoutLabel.Location = new System.Drawing.Point(1765, 41);
+            this.logoutLabel.Location = new System.Drawing.Point(1752, 41);
             this.logoutLabel.Name = "logoutLabel";
-            this.logoutLabel.Size = new System.Drawing.Size(65, 18);
+            this.logoutLabel.Size = new System.Drawing.Size(78, 13);
             this.logoutLabel.TabIndex = 17;
             this.logoutLabel.TabStop = true;
             this.logoutLabel.Text = "Log out";
+            this.logoutLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
             // 
             // pictureBox3
             // 
@@ -165,7 +168,7 @@
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.logoutLabel);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.userName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
@@ -187,6 +190,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BaseForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.BaseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -208,7 +212,7 @@
         private System.Windows.Forms.Label AppTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel logoutLabel;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label userName;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
     }
