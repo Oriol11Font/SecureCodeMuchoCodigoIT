@@ -16,19 +16,19 @@ namespace ProvaClasse
 {
     public partial class Menu : BaseForm
     {
-        public Menu(string user)
+        public Menu()
         {
             InitializeComponent();
-            initMenu(user);
         }
-        
-        private void initMenu(string user)
+
+        private String _user;
+        public String user
         {
-            DateTime now = DateTime.Now;
-            //System.DateTime tiempo = new System.DateTime();
-            user = getUpperCaseStr(user);
-            setWelcomeLabel(now, user);
-            this.WindowState = FormWindowState.Maximized;
+            get { return _user; }
+            set
+            {
+                _user = value;
+            }
         }
 
         private void setWelcomeLabel(DateTime tiempo, string user)
@@ -52,7 +52,6 @@ namespace ProvaClasse
 
             String hora = "\nSon les " + tiempo.Hour + ":" + tiempo.Minute;
             this.welcomeText.Text = $"{momentDia} {user} {hora}";
-            UserName = user;
         }
 
         static string getUpperCaseStr(string str)
@@ -87,15 +86,26 @@ namespace ProvaClasse
             //panel3.Size = new Size(443, 385);
         }
 
-        private void welcomeText_Click(object sender, EventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
+            //System.DateTime tiempo = new System.DateTime();
+            user = getUpperCaseStr(user);
+            setWelcomeLabel(now, user);
+            this.WindowState = FormWindowState.Maximized;
+            UserName = user;
+
             for (int i = 0; i < 5; i++)
             {
-                MCExecuteApp btn = new MCExecuteApp();
-                btn.Text = "Botó " + i;
-                tblMenu.Controls.Add(btn);
+                exeButton menubtn = new exeButton();
+                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + "settings.png";
+                menubtn.SizeMode = PictureBoxSizeMode.Zoom;
+                //menubtn.Width = (tblMenu.Width / 5);
+                //menubtn.Height = (tblMenu.Height / 3);
+                menubtn.Margin = new Padding(50);
+                menubtn.Dock = DockStyle.Fill;
+                tblMenu.Controls.Add(menubtn);
             }
-            
         }
     }
 }

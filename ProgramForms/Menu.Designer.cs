@@ -99,7 +99,7 @@
             this.welcomeText.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.welcomeText.AutoSize = true;
             this.welcomeText.Font = new System.Drawing.Font("Nasalization", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeText.Location = new System.Drawing.Point(207, 258);
+            this.welcomeText.Location = new System.Drawing.Point(207, 230);
             this.welcomeText.Name = "welcomeText";
             this.welcomeText.Size = new System.Drawing.Size(139, 35);
             this.welcomeText.TabIndex = 0;
@@ -115,14 +115,14 @@
             this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblMenu.Controls.Add(this.welcomeText, 0, 0);
             this.tblMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMenu.Location = new System.Drawing.Point(0, 0);
+            this.tblMenu.Location = new System.Drawing.Point(0, 111);
             this.tblMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblMenu.Name = "tblMenu";
             this.tblMenu.RowCount = 2;
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMenu.Size = new System.Drawing.Size(1659, 1102);
+            this.tblMenu.Size = new System.Drawing.Size(1659, 991);
             this.tblMenu.TabIndex = 19;
             // 
             // Menu

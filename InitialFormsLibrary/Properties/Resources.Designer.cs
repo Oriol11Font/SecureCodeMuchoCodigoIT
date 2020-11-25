@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TextBoxControls.Properties {
+namespace InitialFormsLibrary.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace TextBoxControls.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TextBoxControls.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InitialFormsLibrary.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,16 +57,6 @@ namespace TextBoxControls.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap alertRequisit {
-            get {
-                object obj = ResourceManager.GetObject("alertRequisit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -93,19 +83,9 @@ namespace TextBoxControls.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg_image1 {
+        internal static System.Drawing.Bitmap logo_login {
             get {
-                object obj = ResourceManager.GetObject("bg_image1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap company {
-            get {
-                object obj = ResourceManager.GetObject("company", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

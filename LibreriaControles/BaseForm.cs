@@ -36,26 +36,12 @@ namespace LibreriaControles
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            userName.Text = UserName;
+            userName.Text = "Oriol Font";
         }
 
         private void logoutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Assembly ensamblat = Assembly.LoadFrom("ProvaClasse.exe");
-
-            //Declarem les variables
-            Object dllBD;
-            Type tipus;
-
-            //recuperem el tipus de la classe que volem instanciar
-            tipus = ensamblat.GetType("login.cs");
-
-            //instanciem l’objecte   
-            dllBD = Activator.CreateInstance(tipus);
-
-            //el mostrem assumint que es tracta d’un form 
-            // i per això fem un cast amb (Form) 
-            ((Form)dllBD).Show();
+            this.Close();
         }
     }
 }

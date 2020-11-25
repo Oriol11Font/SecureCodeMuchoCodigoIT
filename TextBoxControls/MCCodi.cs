@@ -36,13 +36,13 @@ namespace TextBoxControls
             }
         }
 
-        private String _ClasseCS;
-        public String ClasseCS
+        private String _dll;
+        public String dll
         {
-            get { return _ClasseCS; }
+            get { return _dll; }
             set
             {
-                _ClasseCS = value;
+                _dll = value;
             }
         }
 
@@ -172,9 +172,9 @@ namespace TextBoxControls
         {
             if (e.KeyCode == Keys.F2)
             {
-                MessageBox.Show("Has obert la Taula de Cerca! :)");
+                //MessageBox.Show("Has obert la Taula de Cerca! :)");
                 /*Sha de mirar*/
-                /*Assembly ensamblat = Assembly.LoadFrom(ClasseCS);
+                Assembly ensamblat = Assembly.LoadFrom(dll);
 
                 //Declarem les variables
                 Object dllBD;
@@ -188,7 +188,7 @@ namespace TextBoxControls
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
-                ((Form)dllBD).Show();*/
+                ((Form)dllBD).Show();
             }
         }
     }

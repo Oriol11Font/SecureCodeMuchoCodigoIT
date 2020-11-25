@@ -1,7 +1,7 @@
-﻿using ProvaClasse.Forms;
+﻿using LibreriaClases;
+using ProvaClasse.Forms;
 using System;
 using System.Windows.Forms;
-using LibreriaClases;
 
 namespace ProvaClasse
 {
@@ -44,9 +44,20 @@ namespace ProvaClasse
                 // TODO: ARREGLAR FUNCION LOGEAR USUARIOS; ME DA PALO SEGUIR MAS; ME DUELE LA CABEZA
                 if (ValidateUser(username, password))
                 {
-                    Menu Menu = new Menu(username);
+                    Menu Menu = new Menu();
+                    Menu.user = username;
                     Menu.Show();
-                    this.Close();
+                    //this.Close();
+                    btn_login.Visible = true;
+                    usernameLabel.Visible = true;
+                    passwordLabel.Visible = true;
+                    messageLoginLabel.Visible = false;
+                    mtxt_password.Visible = true;
+                    txt_username.Visible = true;
+                    loginBar.Visible = false;
+                    timer1.Enabled = false;
+                    txt_username.Text = "";
+                    mtxt_password.Text = "";
                 }
                 else
                 {

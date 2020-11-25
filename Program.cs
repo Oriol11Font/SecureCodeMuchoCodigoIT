@@ -1,10 +1,6 @@
-﻿using ProvaClasse.Forms;
+﻿using LibreriaControles;
 using System;
 using System.Windows.Forms;
-using LibreriaClases;
-using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using LibreriaControles;
 
 namespace ProvaClasse
 {
@@ -18,8 +14,6 @@ namespace ProvaClasse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var dtb = new DataAccessClass();
-            var ds = dtb.GetTable("Agencies");
             Application.Run(new splash());
         }
     }

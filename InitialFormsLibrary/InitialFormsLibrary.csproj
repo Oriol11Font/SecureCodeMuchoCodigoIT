@@ -4,10 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FB17DE15-0B06-41FC-96AA-3A53D9F7B289}</ProjectGuid>
+    <ProjectGuid>{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TextBoxControls</RootNamespace>
-    <AssemblyName>TextBoxControls</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InitialFormsLibrary</RootNamespace>
+    <AssemblyName>InitialFormsLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -16,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>DLL\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,49 +33,79 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertScreen.Designer.cs">
+      <DependentUpon>AlertScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="MCCodi.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MCCodi.Designer.cs">
-      <DependentUpon>MCCodi.cs</DependentUpon>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="exeButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="exeButton.Designer.cs">
-      <DependentUpon>exeButton.cs</DependentUpon>
-    </Compile>
-    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AlertScreen.resx">
+      <DependentUpon>AlertScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="MCCodi.resx">
-      <DependentUpon>MCCodi.cs</DependentUpon>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\alertRequisit.png" />
+    <None Include="Resources\bg_image.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertscreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlsMC\ControlsMC.csproj">
+      <Project>{a203bbc8-00f3-4cea-acb9-b7d6a9b028e8}</Project>
+      <Name>ControlsMC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibreriaClases\LibreriaClases.csproj">
       <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
       <Name>LibreriaClases</Name>
@@ -83,18 +114,10 @@
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
       <Name>BasicForms</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\alertscreen.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg_image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg_image1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\company.png" />
+    <ProjectReference Include="..\TextBoxControls\CustomControlsMC.csproj">
+      <Project>{fb17de15-0b06-41fc-96aa-3a53d9f7b289}</Project>
+      <Name>CustomControlsMC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

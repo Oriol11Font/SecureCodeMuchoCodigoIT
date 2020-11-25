@@ -71,7 +71,7 @@
             this.AppTitle.AutoSize = true;
             this.AppTitle.Location = new System.Drawing.Point(43, 12);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(467, 17);
+            this.AppTitle.Size = new System.Drawing.Size(367, 13);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCode - Rebel Alliance System Upgrade";
             // 
@@ -124,30 +124,30 @@
             // 
             // userName
             // 
-            this.userName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.userName.AutoSize = true;
+            this.userName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.userName.Font = new System.Drawing.Font("Nasalization", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userName.ForeColor = System.Drawing.Color.White;
             this.userName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.userName.Location = new System.Drawing.Point(1642, 24);
+            this.userName.Location = new System.Drawing.Point(1683, 17);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(188, 17);
+            this.userName.Size = new System.Drawing.Size(147, 13);
             this.userName.TabIndex = 16;
             this.userName.Text = "UserNamellarg";
+            this.userName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // logoutLabel
             // 
-            this.logoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoutLabel.AutoSize = true;
+            this.logoutLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.logoutLabel.Font = new System.Drawing.Font("Nasalization", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.logoutLabel.LinkColor = System.Drawing.Color.White;
-            this.logoutLabel.Location = new System.Drawing.Point(1752, 41);
+            this.logoutLabel.Location = new System.Drawing.Point(1766, 41);
             this.logoutLabel.Name = "logoutLabel";
-            this.logoutLabel.Size = new System.Drawing.Size(78, 13);
+            this.logoutLabel.Size = new System.Drawing.Size(64, 11);
             this.logoutLabel.TabIndex = 17;
             this.logoutLabel.TabStop = true;
             this.logoutLabel.Text = "Log out";
+            this.logoutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.logoutLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
             // 
             // pictureBox3
@@ -177,7 +177,7 @@
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1920, 1055);
@@ -197,7 +197,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
