@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using TextBoxControls;
 
 namespace LibreriaControles
 {
@@ -91,6 +92,16 @@ namespace LibreriaControles
                         txt1.DataBindings.Add("Text", dts.Tables[0], txt1.CampoBBDD);
                     }
                 }
+
+                /*foreach (Control txt in this.Controls)
+                {
+                    if (txt.GetType() == typeof(MCCodi))
+                    {
+                        MCCodi txt1 = (MCCodi)txt;
+                        txt1.DataBindings.Clear();
+                        txt1.DataBindings.Add("Text", dts.Tables[0], txt1.NomCodi);
+                    }
+                }*/
             }
             catch (Exception e)
             {
@@ -98,30 +109,9 @@ namespace LibreriaControles
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void backbtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        /*private void dtgStart ()
-        {
-            try
-            {
-                DataAccessClass dtb = new DataAccessClass();
-                string query = "select * from " + Taula;
-                dts = dtb.GetByQuery(query);
-
-                dtg.DataSource = dts.Tables[0];
-                dtg.Columns[0].Visible = false;
-                dtg.ForeColor = Color.Black;
-
-                NomColumnes();
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error connection with DataBase " + e.Message);
-            }
-        }*/
     }
 }

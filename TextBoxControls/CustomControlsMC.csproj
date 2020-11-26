@@ -82,10 +82,6 @@
       <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
       <Name>LibreriaClases</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LibreriaControles\BasicForms.csproj">
-      <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
-      <Name>BasicForms</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\alertscreen.gif" />
