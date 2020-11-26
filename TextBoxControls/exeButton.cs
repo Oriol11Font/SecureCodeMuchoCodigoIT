@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,16 +38,23 @@ namespace TextBoxControls
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void exeButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Has obert el formulari " + Form + " i la classe " + Classe);
-        }
+            Assembly ensamblat = Assembly.LoadFrom(Classe);
 
-        private void button1_Paint(object sender, PaintEventArgs e)
-        {
-            //btnimgexe.Text = Text;
-            //button1.BackgroundImage = TextBoxControls.Properties.Resources.bg_image;
-            //this.SizeMode = PictureBoxSizeMode.Zoom;
+            //Declarem les variables
+            Object dllBD;
+            Type tipus;
+
+            //recuperem el tipus de la classe que volem instanciar
+            tipus = ensamblat.GetType(Form);
+
+            //instanciem l’objecte   
+            dllBD = Activator.CreateInstance(tipus);
+
+            //el mostrem assumint que es tracta d’un form 
+            // i per això fem un cast amb (Form) 
+            ((Form)dllBD).Show();
         }
     }
 }

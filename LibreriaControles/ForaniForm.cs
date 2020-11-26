@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace LibreriaControles
 {
-    public partial class SimpleForm : BaseForm
+    public partial class ForaniForm : BaseForm
     {
         public DataSet dts;
 
-        public SimpleForm()
+        public ForaniForm()
         {
             InitializeComponent();
         }

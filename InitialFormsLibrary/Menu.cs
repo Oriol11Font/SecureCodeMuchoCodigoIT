@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Drawing.Text;
 using LibreriaControles;
 using TextBoxControls;
+using LibreriaClases;
 
 namespace ProvaClasse
 {
@@ -95,15 +96,29 @@ namespace ProvaClasse
             this.WindowState = FormWindowState.Maximized;
             UserName = user;
 
-            for (int i = 0; i < 5; i++)
+            
+
+            DataAccessClass data = new DataAccessClass();
+            String sql = "SELECT * FROM MenuOptions";
+
+            DataSet sqldata = data.GetByQuery(sql);
+
+            for (int i = 0; i < sqldata.Tables[0].Rows.Count; i++)
             {
+                
+
+                DataRow dr = sqldata.Tables[0].Rows[i];
+
                 exeButton menubtn = new exeButton();
-                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + "settings.png";
+
+                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2).ToString(); ;
                 menubtn.SizeMode = PictureBoxSizeMode.Zoom;
-                //menubtn.Width = (tblMenu.Width / 5);
-                //menubtn.Height = (tblMenu.Height / 3);
+
+                menubtn.Form = dr.ItemArray.GetValue(3).ToString();
+                menubtn.Classe = dr.ItemArray.GetValue(4).ToString();
                 menubtn.Margin = new Padding(50);
                 menubtn.Dock = DockStyle.Fill;
+
                 tblMenu.Controls.Add(menubtn);
             }
         }

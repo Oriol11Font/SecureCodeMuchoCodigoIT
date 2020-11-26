@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="InitialFormsLibrary">
+      <HintPath>..\DLL\InitialFormsLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +50,12 @@
     </Compile>
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForaniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForaniForm.Designer.cs">
+      <DependentUpon>ForaniForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SimpleForm.cs">
       <SubType>Form</SubType>
@@ -79,6 +88,9 @@
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ForaniForm.resx">
+      <DependentUpon>ForaniForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SimpleForm.resx">
       <DependentUpon>SimpleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +102,10 @@
     <None Include="Resources\logo_app.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ControlsMC\ControlsMC.csproj">
+      <Project>{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}</Project>
+      <Name>ControlsMC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibreriaClases\LibreriaClases.csproj">
       <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
       <Name>LibreriaClases</Name>

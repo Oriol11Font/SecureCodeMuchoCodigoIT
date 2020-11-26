@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProvaClasse.Forms
 {
-    public partial class TestSimpleForm : SimpleForm
+    public partial class TestSimpleForm : ForaniForm
     {
         public TestSimpleForm()
         {

@@ -1,6 +1,6 @@
 ﻿namespace LibreriaControles
 {
-    partial class SimpleForm
+    partial class ForaniForm
     {
         /// <summary>
         /// Required designer variable.

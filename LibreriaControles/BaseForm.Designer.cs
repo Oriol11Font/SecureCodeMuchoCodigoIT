@@ -71,7 +71,7 @@
             this.AppTitle.AutoSize = true;
             this.AppTitle.Location = new System.Drawing.Point(43, 12);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(367, 13);
+            this.AppTitle.Size = new System.Drawing.Size(467, 17);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCode - Rebel Alliance System Upgrade";
             // 
@@ -137,13 +137,13 @@
             // 
             // logoutLabel
             // 
-            this.logoutLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.logoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutLabel.Font = new System.Drawing.Font("Nasalization", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.logoutLabel.LinkColor = System.Drawing.Color.White;
-            this.logoutLabel.Location = new System.Drawing.Point(1766, 41);
+            this.logoutLabel.Location = new System.Drawing.Point(1683, 44);
             this.logoutLabel.Name = "logoutLabel";
-            this.logoutLabel.Size = new System.Drawing.Size(64, 11);
+            this.logoutLabel.Size = new System.Drawing.Size(144, 14);
             this.logoutLabel.TabIndex = 17;
             this.logoutLabel.TabStop = true;
             this.logoutLabel.Text = "Log out";
@@ -177,7 +177,7 @@
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1920, 1055);
