@@ -37,10 +37,9 @@
             // 
             // CodiBox
             // 
-            this.CodiBox.Location = new System.Drawing.Point(40, 4);
-            this.CodiBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CodiBox.Location = new System.Drawing.Point(36, 3);
             this.CodiBox.Name = "CodiBox";
-            this.CodiBox.Size = new System.Drawing.Size(75, 26);
+            this.CodiBox.Size = new System.Drawing.Size(67, 22);
             this.CodiBox.TabIndex = 0;
             this.CodiBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ObreCS);
             this.CodiBox.Leave += new System.EventHandler(this.ValidacioCodi);
@@ -48,20 +47,18 @@
             // DescBox
             // 
             this.DescBox.Enabled = false;
-            this.DescBox.Location = new System.Drawing.Point(123, 4);
-            this.DescBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DescBox.Location = new System.Drawing.Point(109, 3);
             this.DescBox.Name = "DescBox";
             this.DescBox.ReadOnly = true;
-            this.DescBox.Size = new System.Drawing.Size(266, 26);
+            this.DescBox.Size = new System.Drawing.Size(237, 22);
             this.DescBox.TabIndex = 1;
             // 
             // AttentionRequerit
             // 
             this.AttentionRequerit.Image = global::TextBoxControls.Properties.Resources.alertRequisit;
-            this.AttentionRequerit.Location = new System.Drawing.Point(4, 4);
-            this.AttentionRequerit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AttentionRequerit.Location = new System.Drawing.Point(4, 3);
             this.AttentionRequerit.Name = "AttentionRequerit";
-            this.AttentionRequerit.Size = new System.Drawing.Size(29, 28);
+            this.AttentionRequerit.Size = new System.Drawing.Size(26, 22);
             this.AttentionRequerit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AttentionRequerit.TabIndex = 2;
             this.AttentionRequerit.TabStop = false;
@@ -70,22 +67,23 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(396, 3);
+            this.textBox1.Location = new System.Drawing.Point(352, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(36, 26);
+            this.textBox1.Size = new System.Drawing.Size(32, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // MCCodi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.AttentionRequerit);
             this.Controls.Add(this.DescBox);
             this.Controls.Add(this.CodiBox);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MCCodi";
-            this.Size = new System.Drawing.Size(445, 35);
+            this.Size = new System.Drawing.Size(396, 28);
             ((System.ComponentModel.ISupportInitialize)(this.AttentionRequerit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

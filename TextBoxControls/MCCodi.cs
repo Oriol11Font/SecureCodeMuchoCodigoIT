@@ -92,6 +92,7 @@ namespace TextBoxControls
             set
             {
                 _ControlID = value;
+                ;
             }
         }
 
@@ -189,6 +190,18 @@ namespace TextBoxControls
                 // i per això fem un cast amb (Form) 
                 ((Form)dllBD).Show();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            String sql = "Select "  + NomCodi + ", " + NomDesc + " from " + NomTaula + " where " + NomId + "='" + ControlID + "'";
+
+            DataAccessClass data = new DataAccessClass();
+            DataSet sqldata = data.GetByQuery(sql);
+            DataRow dr = sqldata.Tables[0].Rows[0];
+
+            CodiBox.Text = dr.ItemArray.GetValue(0).ToString();
+            DescBox.Text = dr.ItemArray.GetValue(1).ToString();
         }
     }
 }

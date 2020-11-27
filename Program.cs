@@ -1,6 +1,8 @@
-﻿using LibreriaControles;
+﻿using LibreriaClases;
+using LibreriaControles;
 using ProvaClasse.Forms;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ProvaClasse
@@ -15,7 +17,7 @@ namespace ProvaClasse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestOriol());
+            Application.Run(new TestSimpleForm());
         }
     }
 }

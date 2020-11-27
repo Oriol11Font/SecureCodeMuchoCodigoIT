@@ -47,7 +47,7 @@ namespace LibreriaControles
             } catch (Exception e)
             {
                 btn_actualitzar.ForeColor = Color.Red;
-                MessageBox.Show("Error updating DataBase with actual information " + e.Message);
+                MessageBox.Show("Error updating DataBase with actual information: " + e.Message);
             }
         }
 
@@ -59,7 +59,7 @@ namespace LibreriaControles
         private void NomColumnes()
         {
             int cont = 0;
-            if (!(NomColumn is null))
+            if (!(NomColumn.Length == 0))
             {
                 for (int i = 1; (i < dts.Tables[0].Columns.Count); i++)
                 {
@@ -81,7 +81,7 @@ namespace LibreriaControles
                 dtg.Columns[0].Visible = false;
                 dtg.ForeColor = Color.Black;
                 NomColumnes();
-
+                
                 foreach (Control txt in this.Controls)
                 {
                     if (txt.GetType()==typeof(SWTextBox))
@@ -94,7 +94,7 @@ namespace LibreriaControles
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error connection with DataBase " + e.Message);
+                MessageBox.Show("Error connection with DataBase: " + e.Message);
             }
         }
 
@@ -103,25 +103,23 @@ namespace LibreriaControles
             this.Close();
         }
 
-        /*private void dtgStart ()
+        private void createbtn_Click(object sender, EventArgs eA)
         {
             try
             {
-                DataAccessClass dtb = new DataAccessClass();
-                string query = "select * from " + Taula;
-                dts = dtb.GetByQuery(query);
-
-                dtg.DataSource = dts.Tables[0];
-                dtg.Columns[0].Visible = false;
-                dtg.ForeColor = Color.Black;
-
-                NomColumnes();
-
+                dts.Tables[0].Rows.Add();
+                createbtn.ForeColor = Color.LawnGreen;
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error connection with DataBase " + e.Message);
+                createbtn.ForeColor = Color.Red;
+                MessageBox.Show("Error creating new row: " + e.Message);
             }
-        }*/
+        }
+
+        private void createbtn_Leave(object sender, EventArgs e)
+        {
+            createbtn.ForeColor = Color.White;
+        }
     }
 }

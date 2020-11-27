@@ -32,6 +32,7 @@
             this.btn_actualitzar = new System.Windows.Forms.Button();
             this.btn_datagrid = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.createbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             // 
             this.btn_actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_actualitzar.ForeColor = System.Drawing.Color.White;
-            this.btn_actualitzar.Location = new System.Drawing.Point(1245, 592);
+            this.btn_actualitzar.Location = new System.Drawing.Point(1353, 592);
             this.btn_actualitzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualitzar.Name = "btn_actualitzar";
             this.btn_actualitzar.Size = new System.Drawing.Size(180, 40);
@@ -68,7 +69,7 @@
             // 
             this.btn_datagrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_datagrid.ForeColor = System.Drawing.Color.White;
-            this.btn_datagrid.Location = new System.Drawing.Point(1445, 592);
+            this.btn_datagrid.Location = new System.Drawing.Point(1580, 592);
             this.btn_datagrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_datagrid.Name = "btn_datagrid";
             this.btn_datagrid.Size = new System.Drawing.Size(180, 40);
@@ -89,24 +90,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ForaniForm
+            // createbtn
+            // 
+            this.createbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createbtn.ForeColor = System.Drawing.Color.White;
+            this.createbtn.Location = new System.Drawing.Point(1122, 592);
+            this.createbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.createbtn.Name = "createbtn";
+            this.createbtn.Size = new System.Drawing.Size(180, 40);
+            this.createbtn.TabIndex = 23;
+            this.createbtn.Text = "Afegir";
+            this.createbtn.UseVisualStyleBackColor = true;
+            this.createbtn.Click += new System.EventHandler(this.createbtn_Click);
+            this.createbtn.Leave += new System.EventHandler(this.createbtn_Leave);
+            // 
+            // SimpleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1923, 1080);
+            this.Controls.Add(this.createbtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_datagrid);
             this.Controls.Add(this.btn_actualitzar);
             this.Controls.Add(this.dtg);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3);
-            this.Name = "ForaniForm";
+            this.Name = "SimpleForm";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.SimpleForm_Load);
             this.Controls.SetChildIndex(this.dtg, 0);
             this.Controls.SetChildIndex(this.btn_actualitzar, 0);
             this.Controls.SetChildIndex(this.btn_datagrid, 0);
             this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.createbtn, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,5 +135,6 @@
         private System.Windows.Forms.Button btn_actualitzar;
         private System.Windows.Forms.Button btn_datagrid;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button createbtn;
     }
 }

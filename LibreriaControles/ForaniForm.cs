@@ -41,14 +41,15 @@ namespace LibreriaControles
         {
             try
             {
-                    string query = "select * from " + Taula;
-                    DataAccessClass dtb = new DataAccessClass();
-                    dtb.UpdateDb(query, dts);
-                    btn_actualitzar.ForeColor = Color.LawnGreen;
-            } catch (Exception e)
+                string query = "select * from " + Taula;
+                DataAccessClass dtb = new DataAccessClass();
+                dtb.UpdateDb(query, dts);
+                btn_actualitzar.ForeColor = Color.LawnGreen;
+            }
+            catch (Exception e)
             {
                 btn_actualitzar.ForeColor = Color.Red;
-                MessageBox.Show("Error updating DataBase with actual information " + e.Message);
+                MessageBox.Show("Error updating DataBase with actual information: " + e.Message);
             }
         }
 
@@ -60,12 +61,12 @@ namespace LibreriaControles
         private void NomColumnes()
         {
             int cont = 0;
-            if (!(NomColumn is null))
+            if (!(NomColumn.Length == 0))
             {
                 for (int i = 1; (i < dts.Tables[0].Columns.Count); i++)
                 {
-                        dtg.Columns[i].HeaderText = NomColumn[cont];
-                        cont++;
+                    dtg.Columns[i].HeaderText = NomColumn[cont];
+                    cont++;
                 }
             }
         }
@@ -85,33 +86,46 @@ namespace LibreriaControles
 
                 foreach (Control txt in this.Controls)
                 {
-                    if (txt.GetType()==typeof(SWTextBox))
+                    if (txt.GetType() == typeof(SWTextBox))
                     {
                         SWTextBox txt1 = (SWTextBox)txt;
                         txt1.DataBindings.Clear();
                         txt1.DataBindings.Add("Text", dts.Tables[0], txt1.CampoBBDD);
-                    }
-                }
-
-                /*foreach (Control txt in this.Controls)
-                {
-                    if (txt.GetType() == typeof(MCCodi))
-                    {
+                    } else if (txt.GetType() == typeof(MCCodi)) {
                         MCCodi txt1 = (MCCodi)txt;
                         txt1.DataBindings.Clear();
-                        txt1.DataBindings.Add("Text", dts.Tables[0], txt1.NomCodi);
+                        txt1.DataBindings.Add("ControlID", dts.Tables[0], txt1.NomId);
                     }
-                }*/
+                }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error connection with DataBase " + e.Message);
+                //MessageBox.Show("Error connection with DataBase: " + e.Message);
             }
         }
 
-        private void backbtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void createbtn_Click(object sender, EventArgs eA)
+        {
+            try
+            {
+                dts.Tables[0].Rows.Add();
+                createbtn.ForeColor = Color.LawnGreen;
+            }
+            catch (Exception e)
+            {
+                createbtn.ForeColor = Color.Red;
+                MessageBox.Show("Error creating new row: " + e.Message);
+            }
+        }
+
+        private void createbtn_Leave(object sender, EventArgs e)
+        {
+            createbtn.ForeColor = Color.White;
         }
     }
 }
