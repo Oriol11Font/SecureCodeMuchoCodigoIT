@@ -80,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::ProvaClasse.Properties.Resources.bg_image;
+            this.BackgroundImage = global::InitialFormsLibrary.Properties.Resources.bg_image;
             this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.splashBar1);
             this.Controls.Add(this.lbl_progressCarga);

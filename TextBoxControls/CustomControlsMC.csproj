@@ -54,24 +54,24 @@
     <Compile Include="MCCodi.Designer.cs">
       <DependentUpon>MCCodi.cs</DependentUpon>
     </Compile>
-    <Compile Include="MCExecuteApp.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="exeButton.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MCExecuteApp.Designer.cs">
-      <DependentUpon>MCExecuteApp.cs</DependentUpon>
+    <Compile Include="exeButton.Designer.cs">
+      <DependentUpon>exeButton.cs</DependentUpon>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="exeButton.resx">
+      <DependentUpon>exeButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MCCodi.resx">
       <DependentUpon>MCCodi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MCExecuteApp.resx">
-      <DependentUpon>MCExecuteApp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -82,10 +82,18 @@
       <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
       <Name>LibreriaClases</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LibreriaControles\BasicForms.csproj">
-      <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
-      <Name>BasicForms</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertscreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,8 +42,12 @@
             this.CodiBox.Name = "CodiBox";
             this.CodiBox.Size = new System.Drawing.Size(75, 26);
             this.CodiBox.TabIndex = 0;
+<<<<<<< HEAD
             this.CodiBox.TextChanged += new System.EventHandler(this.CodiBox_TextChanged);
             this.CodiBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ObreCs);
+=======
+            this.CodiBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ObreCS);
+>>>>>>> b91467d0016be5a888474066fbaa0b16d6fafd67
             this.CodiBox.Leave += new System.EventHandler(this.ValidacioCodi);
             // 
             // DescBox

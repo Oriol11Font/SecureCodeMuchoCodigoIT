@@ -1,6 +1,11 @@
-﻿namespace TextBoxControls
+﻿
+namespace TextBoxControls
 {
+<<<<<<< HEAD:TextBoxControls/MCExecuteApp.Designer.cs
     partial class McExecuteApp
+=======
+    partial class exeButton
+>>>>>>> b91467d0016be5a888474066fbaa0b16d6fafd67:TextBoxControls/exeButton.Designer.cs
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,11 +33,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // exeButton
             // 
+<<<<<<< HEAD:TextBoxControls/MCExecuteApp.Designer.cs
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 44);
@@ -49,12 +55,14 @@
             this.Controls.Add(this.button1);
             this.Name = "McExecuteApp";
             this.Size = new System.Drawing.Size(117, 43);
+=======
+            this.Click += new System.EventHandler(this.exeButton_Click);
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+>>>>>>> b91467d0016be5a888474066fbaa0b16d6fafd67:TextBoxControls/exeButton.Designer.cs
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using LibreriaControles;
+using TextBoxControls;
 
 namespace ProvaClasse
 {
@@ -51,6 +52,7 @@ namespace ProvaClasse
 
             String hora = "\nSon les " + tiempo.Hour + ":" + tiempo.Minute;
             this.welcomeText.Text = $"{momentDia} {user} {hora}";
+            UserName = user;
         }
 
         static string GetUpperCaseStr(string str)
@@ -80,14 +82,24 @@ namespace ProvaClasse
             this.Close();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void panel3_MouseHover(object sender, EventArgs e)
         {
-
+            //panel3.Size = new Size(443, 385);
         }
 
-        private void welcomeLabel_Click(object sender, EventArgs e)
+        private void welcomeText_Click(object sender, EventArgs e)
         {
-
+           for (int i = 0; i < 5; i++)
+           {
+                exeButton menubtn = new exeButton();
+                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + "settings.png";
+                menubtn.SizeMode = PictureBoxSizeMode.Zoom;
+                //menubtn.Width = (tblMenu.Width / 5);
+                //menubtn.Height = (tblMenu.Height / 3);
+                menubtn.Margin = new Padding(50);
+                menubtn.Dock = DockStyle.Fill;
+                tblMenu.Controls.Add(menubtn);
+           }
         }
     }
 }

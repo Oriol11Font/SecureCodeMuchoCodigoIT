@@ -4,40 +4,32 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using TextBoxControls;
 
 namespace LibreriaControles
 {
-    public partial class SimpleForm : BaseForm
+    public partial class ForaniForm : BaseForm
     {
-<<<<<<< HEAD
-        private DataSet _dts;
-=======
         public DataSet dts;
->>>>>>> b91467d0016be5a888474066fbaa0b16d6fafd67
 
-        public SimpleForm()
+        public ForaniForm()
         {
             InitializeComponent();
         }
 
-        private string _taula = "Agencies";
-
+        private string _Taula = "Agencies";
         public string Taula
         {
-            get { return _taula; }
-            set => _taula = value;
+            get { return _Taula; }
+            set
+            {
+                _Taula = value;
+            }
         }
 
         private string[] _NomColumn;
         public string[] NomColumn
         {
-<<<<<<< HEAD
-            DataAccessClass dtb = new DataAccessClass();
-            string query = "select * from " + Taula;
-            _dts = dtb.GetByQuery(query);
-            dtg.DataSource = _dts.Tables[0];
-            dtg.ForeColor = Color.Black;
-=======
             get { return _NomColumn; }
             set
             {
@@ -100,6 +92,16 @@ namespace LibreriaControles
                         txt1.DataBindings.Add("Text", dts.Tables[0], txt1.CampoBBDD);
                     }
                 }
+
+                /*foreach (Control txt in this.Controls)
+                {
+                    if (txt.GetType() == typeof(MCCodi))
+                    {
+                        MCCodi txt1 = (MCCodi)txt;
+                        txt1.DataBindings.Clear();
+                        txt1.DataBindings.Add("Text", dts.Tables[0], txt1.NomCodi);
+                    }
+                }*/
             }
             catch (Exception e)
             {
@@ -107,31 +109,9 @@ namespace LibreriaControles
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void backbtn_Click(object sender, EventArgs e)
         {
             this.Close();
->>>>>>> b91467d0016be5a888474066fbaa0b16d6fafd67
         }
-
-        /*private void dtgStart ()
-        {
-            try
-            {
-                DataAccessClass dtb = new DataAccessClass();
-                string query = "select * from " + Taula;
-                dts = dtb.GetByQuery(query);
-
-                dtg.DataSource = dts.Tables[0];
-                dtg.Columns[0].Visible = false;
-                dtg.ForeColor = Color.Black;
-
-                NomColumnes();
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error connection with DataBase " + e.Message);
-            }
-        }*/
     }
 }

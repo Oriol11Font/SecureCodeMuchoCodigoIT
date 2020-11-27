@@ -36,6 +36,7 @@ namespace TextBoxControls
             }
         }
 
+<<<<<<< HEAD
         private String _classeCs;
         public String ClasseCs
         {
@@ -43,6 +44,15 @@ namespace TextBoxControls
             set
             {
                 _classeCs = value;
+=======
+        private String _dll;
+        public String dll
+        {
+            get { return _dll; }
+            set
+            {
+                _dll = value;
+>>>>>>> b91467d0016be5a888474066fbaa0b16d6fafd67
             }
         }
 
@@ -172,8 +182,14 @@ namespace TextBoxControls
         {
             if (e.KeyCode == Keys.F2)
             {
+<<<<<<< HEAD
                 MessageBox.Show(@"Has obert la Taula de Cerca! :)");
                 Assembly ensamblat = Assembly.LoadFrom(ClasseCs);
+=======
+                //MessageBox.Show("Has obert la Taula de Cerca! :)");
+                /*Sha de mirar*/
+                Assembly ensamblat = Assembly.LoadFrom(dll);
+>>>>>>> b91467d0016be5a888474066fbaa0b16d6fafd67
 
                 //Declarem les variables
                 Object dllBd;
@@ -189,11 +205,6 @@ namespace TextBoxControls
                 // i per això fem un cast amb (Form) 
                 ((Form)dllBd).Show();
             }
-        }
-
-        private void CodiBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
