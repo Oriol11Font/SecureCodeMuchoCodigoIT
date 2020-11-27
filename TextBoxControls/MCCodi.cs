@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using LibreriaClases;
 using System.Text.RegularExpressions;
 using System.Reflection;
-using LibreriaControles;
 
 namespace TextBoxControls
 {
