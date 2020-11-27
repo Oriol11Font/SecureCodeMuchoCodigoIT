@@ -37,12 +37,12 @@
             this.btn_exit = new System.Windows.Forms.Button();
             this.userName = new System.Windows.Forms.Label();
             this.logoutLabel = new System.Windows.Forms.LinkLabel();
-            this.userimg = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -150,23 +150,23 @@
             this.logoutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.logoutLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
             // 
-            // userimg
+            // pictureBox3
             // 
-            this.userimg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.userimg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userimg.Image = global::LibreriaControles.Properties.Resources.profile_img;
-            this.userimg.InitialImage = global::LibreriaControles.Properties.Resources.profile_img;
-            this.userimg.Location = new System.Drawing.Point(1836, 3);
-            this.userimg.Name = "userimg";
-            this.userimg.Size = new System.Drawing.Size(72, 65);
-            this.userimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userimg.TabIndex = 15;
-            this.userimg.TabStop = false;
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Image = global::LibreriaControles.Properties.Resources.profile_img;
+            this.pictureBox3.InitialImage = global::LibreriaControles.Properties.Resources.profile_img;
+            this.pictureBox3.Location = new System.Drawing.Point(1836, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 65);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.userimg);
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.logoutLabel);
             this.panel2.Controls.Add(this.userName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -195,7 +195,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,7 +212,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel logoutLabel;
         private System.Windows.Forms.Label userName;
-        private System.Windows.Forms.PictureBox userimg;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
     }
 }

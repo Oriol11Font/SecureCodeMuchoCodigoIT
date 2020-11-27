@@ -105,6 +105,8 @@ namespace ProvaClasse
 
             for (int i = 0; i < sqldata.Tables[0].Rows.Count; i++)
             {
+                
+
                 DataRow dr = sqldata.Tables[0].Rows[i];
 
                 exeButton menubtn = new exeButton();
