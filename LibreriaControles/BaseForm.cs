@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LibreriaClases;
+using System;
+using System.Data;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -42,7 +44,15 @@ namespace LibreriaControles
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            userName.Text = "Oriol Font";
+            DataAccessClass data = new DataAccessClass();
+            String sql = "SELECT * FROM Users WHERE CodeUser = '" + UserName + "'";
+
+            DataSet sqldata = data.GetByQuery(sql);
+
+            DataRow dr = sqldata.Tables[0].Rows[0];
+
+            userName.Text = dr.ItemArray.GetValue(2).ToString();
+            userimg.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(7).ToString();
         }
 
         private void logoutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
