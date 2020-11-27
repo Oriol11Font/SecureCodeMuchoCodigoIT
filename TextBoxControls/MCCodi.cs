@@ -88,11 +88,13 @@ namespace TextBoxControls
         private int _ControlID;
         public int ControlID
         {
-            get { return _ControlID; }
+            get {
+               // controltxt.Text = _ControlID.ToString();
+                return _ControlID; }
             set
             {
                 _ControlID = value;
-                ;
+                controltxt.Text = _ControlID.ToString();
             }
         }
 
@@ -194,14 +196,25 @@ namespace TextBoxControls
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            String sql = "Select "  + NomCodi + ", " + NomDesc + " from " + NomTaula + " where " + NomId + "='" + ControlID + "'";
+            String sql = "SELECT * FROM "+ NomTaula +" WHERE "+ NomId +" = " + controltxt.Text;
 
             DataAccessClass data = new DataAccessClass();
-            DataSet sqldata = data.GetByQuery(sql);
-            DataRow dr = sqldata.Tables[0].Rows[0];
 
-            CodiBox.Text = dr.ItemArray.GetValue(0).ToString();
-            DescBox.Text = dr.ItemArray.GetValue(1).ToString();
+            if (!(NomTaula == "" && NomId == ""))
+            {
+                DataSet sqldata = data.GetByQuery(sql);
+
+                if (!(sqldata == null))
+                {
+                    if (sqldata.Tables[0].Rows.Count > 0)
+                    {
+                        DataRow dr = sqldata.Tables[0].Rows[0];
+
+                        CodiBox.Text = dr.ItemArray.GetValue(1).ToString();
+                        DescBox.Text = dr.ItemArray.GetValue(2).ToString();
+                    }
+                }
+            }
         }
     }
 }

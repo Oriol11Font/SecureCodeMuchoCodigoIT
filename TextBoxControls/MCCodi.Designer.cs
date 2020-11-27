@@ -31,15 +31,15 @@
             this.CodiBox = new System.Windows.Forms.TextBox();
             this.DescBox = new System.Windows.Forms.TextBox();
             this.AttentionRequerit = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.controltxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AttentionRequerit)).BeginInit();
             this.SuspendLayout();
             // 
             // CodiBox
             // 
-            this.CodiBox.Location = new System.Drawing.Point(36, 3);
+            this.CodiBox.Location = new System.Drawing.Point(3, 3);
             this.CodiBox.Name = "CodiBox";
-            this.CodiBox.Size = new System.Drawing.Size(67, 22);
+            this.CodiBox.Size = new System.Drawing.Size(109, 22);
             this.CodiBox.TabIndex = 0;
             this.CodiBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ObreCS);
             this.CodiBox.Leave += new System.EventHandler(this.ValidacioCodi);
@@ -47,16 +47,16 @@
             // DescBox
             // 
             this.DescBox.Enabled = false;
-            this.DescBox.Location = new System.Drawing.Point(109, 3);
+            this.DescBox.Location = new System.Drawing.Point(118, 3);
             this.DescBox.Name = "DescBox";
             this.DescBox.ReadOnly = true;
-            this.DescBox.Size = new System.Drawing.Size(237, 22);
+            this.DescBox.Size = new System.Drawing.Size(321, 22);
             this.DescBox.TabIndex = 1;
             // 
             // AttentionRequerit
             // 
             this.AttentionRequerit.Image = global::TextBoxControls.Properties.Resources.alertRequisit;
-            this.AttentionRequerit.Location = new System.Drawing.Point(4, 3);
+            this.AttentionRequerit.Location = new System.Drawing.Point(445, 3);
             this.AttentionRequerit.Name = "AttentionRequerit";
             this.AttentionRequerit.Size = new System.Drawing.Size(26, 22);
             this.AttentionRequerit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -64,26 +64,27 @@
             this.AttentionRequerit.TabStop = false;
             this.AttentionRequerit.Visible = false;
             // 
-            // textBox1
+            // controltxt
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(352, 2);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(32, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.controltxt.Location = new System.Drawing.Point(440, 3);
+            this.controltxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.controltxt.Name = "controltxt";
+            this.controltxt.Size = new System.Drawing.Size(32, 22);
+            this.controltxt.TabIndex = 3;
+            this.controltxt.Visible = false;
+            this.controltxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // MCCodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.controltxt);
             this.Controls.Add(this.AttentionRequerit);
             this.Controls.Add(this.DescBox);
             this.Controls.Add(this.CodiBox);
             this.Name = "MCCodi";
-            this.Size = new System.Drawing.Size(396, 28);
+            this.Size = new System.Drawing.Size(506, 28);
             ((System.ComponentModel.ISupportInitialize)(this.AttentionRequerit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -95,6 +96,6 @@
         private System.Windows.Forms.TextBox CodiBox;
         private System.Windows.Forms.TextBox DescBox;
         private System.Windows.Forms.PictureBox AttentionRequerit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox controltxt;
     }
 }

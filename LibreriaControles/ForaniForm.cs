@@ -91,16 +91,19 @@ namespace LibreriaControles
                         SWTextBox txt1 = (SWTextBox)txt;
                         txt1.DataBindings.Clear();
                         txt1.DataBindings.Add("Text", dts.Tables[0], txt1.CampoBBDD);
+
                     } else if (txt.GetType() == typeof(MCCodi)) {
+
                         MCCodi txt1 = (MCCodi)txt;
                         txt1.DataBindings.Clear();
                         txt1.DataBindings.Add("ControlID", dts.Tables[0], txt1.NomId);
+
                     }
                 }
             }
             catch (Exception e)
             {
-                //MessageBox.Show("Error connection with DataBase: " + e.Message);
+                MessageBox.Show("Error connection with DataBase: " + e.Message);
             }
         }
 
