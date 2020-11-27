@@ -11,9 +11,9 @@ using LibreriaControles;
 
 namespace ProvaClasse.Forms
 {
-    public partial class test : BaseForm
+    public partial class Test : BaseForm
     {
-        public test()
+        public Test()
         {
             InitializeComponent();
         }

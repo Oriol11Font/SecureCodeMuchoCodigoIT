@@ -5,10 +5,10 @@ using LibreriaClases;
 
 namespace ProvaClasse
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
         int _intentos = 0;
-        public login()
+        public Login()
         {
             InitializeComponent();
         }
@@ -44,8 +44,8 @@ namespace ProvaClasse
                 // TODO: ARREGLAR FUNCION LOGEAR USUARIOS; ME DA PALO SEGUIR MAS; ME DUELE LA CABEZA
                 if (ValidateUser(username, password))
                 {
-                    Menu Menu = new Menu(username);
-                    Menu.Show();
+                    Menu menu = new Menu(username);
+                    menu.Show();
                     this.Close();
                 }
                 else
@@ -122,7 +122,7 @@ namespace ProvaClasse
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Error: {e}");
+                MessageBox.Show($@"Error: {e}");
             }
 
             return login;

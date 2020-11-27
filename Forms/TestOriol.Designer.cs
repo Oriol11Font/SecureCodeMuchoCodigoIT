@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.swTextBox1 = new ControlsMC.SWTextBox();
-            this.mcCodi2 = new TextBoxControls.MCCodi();
-            this.mcCodi1 = new TextBoxControls.MCCodi();
-            this.mcExecuteApp1 = new TextBoxControls.MCExecuteApp();
+            this.swTextBox1 = new ControlsMC.SwTextBox();
+            this.mcCodi2 = new TextBoxControls.McCodi();
+            this.mcCodi1 = new TextBoxControls.McCodi();
+            this.mcExecuteApp1 = new TextBoxControls.McExecuteApp();
             this.SuspendLayout();
             // 
             // swTextBox1
             // 
             this.swTextBox1.AllowEmpty = true;
-            this.swTextBox1.CampoBBDD = null;
+            this.swTextBox1.CampoBbdd = null;
             this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox1.Foranea = false;
             this.swTextBox1.Location = new System.Drawing.Point(299, 278);
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(100, 23);
             this.swTextBox1.TabIndex = 20;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox1.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // mcCodi2
             // 
-            this.mcCodi2.ClasseCS = null;
-            this.mcCodi2.ControlID = 0;
-            this.mcCodi2.FormCS = null;
+            this.mcCodi2.ClasseCs = null;
+            this.mcCodi2.ControlId = 0;
+            this.mcCodi2.FormCs = null;
             this.mcCodi2.Location = new System.Drawing.Point(267, 212);
             this.mcCodi2.Name = "mcCodi2";
             this.mcCodi2.NomCodi = "CodeAgency";
@@ -63,9 +63,9 @@
             // 
             // mcCodi1
             // 
-            this.mcCodi1.ClasseCS = "TextBoxControls";
-            this.mcCodi1.ControlID = 0;
-            this.mcCodi1.FormCS = "Menu";
+            this.mcCodi1.ClasseCs = "TextBoxControls";
+            this.mcCodi1.ControlId = 0;
+            this.mcCodi1.FormCs = "Menu";
             this.mcCodi1.Location = new System.Drawing.Point(267, 178);
             this.mcCodi1.Name = "mcCodi1";
             this.mcCodi1.NomCodi = "CodeAgency";
@@ -110,9 +110,9 @@
 
         #endregion
 
-        private TextBoxControls.MCCodi mcCodi1;
-        private TextBoxControls.MCCodi mcCodi2;
-        private ControlsMC.SWTextBox swTextBox1;
-        private TextBoxControls.MCExecuteApp mcExecuteApp1;
+        private TextBoxControls.McCodi mcCodi1;
+        private TextBoxControls.McCodi mcCodi2;
+        private ControlsMC.SwTextBox swTextBox1;
+        private TextBoxControls.McExecuteApp mcExecuteApp1;
     }
 }

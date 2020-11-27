@@ -7,6 +7,7 @@ nupkg/
 
 # Visual Studio Code
 .vscode
+.vs/
 
 # Rider
 .idea
@@ -33,5 +34,8 @@ Debug/
 [Oo]ut/
 msbuild.log
 msbuild.err
-msbuild.wrn
-/DLL
+DLL/
+
+# Build Files
+*.dll
+*.pdb

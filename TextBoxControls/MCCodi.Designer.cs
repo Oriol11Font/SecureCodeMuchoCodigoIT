@@ -1,6 +1,6 @@
 ﻿namespace TextBoxControls
 {
-    partial class MCCodi
+    partial class McCodi
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -43,7 +43,7 @@
             this.CodiBox.Size = new System.Drawing.Size(75, 26);
             this.CodiBox.TabIndex = 0;
             this.CodiBox.TextChanged += new System.EventHandler(this.CodiBox_TextChanged);
-            this.CodiBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ObreCS);
+            this.CodiBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ObreCs);
             this.CodiBox.Leave += new System.EventHandler(this.ValidacioCodi);
             // 
             // DescBox
@@ -85,7 +85,7 @@
             this.Controls.Add(this.DescBox);
             this.Controls.Add(this.CodiBox);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MCCodi";
+            this.Name = "McCodi";
             this.Size = new System.Drawing.Size(445, 35);
             ((System.ComponentModel.ISupportInitialize)(this.AttentionRequerit)).EndInit();
             this.ResumeLayout(false);

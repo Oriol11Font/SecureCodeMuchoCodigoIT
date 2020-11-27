@@ -10,30 +10,30 @@ using System.Windows.Forms;
 
 namespace TextBoxControls
 {
-    public partial class MCExecuteApp : UserControl
+    public partial class McExecuteApp : UserControl
     {
-        public MCExecuteApp()
+        public McExecuteApp()
         {
             InitializeComponent();
         }
 
-        private String _From;
+        private String _from;
         public String Form
         {
-            get { return _From; }
+            get { return _from; }
             set
             {
-                _From = value;
+                _from = value;
             }
         }
 
-        private String _Classe;
+        private String _classe;
         public String Classe
         {
-            get { return _Classe; }
+            get { return _classe; }
             set
             {
-                _Classe = value;
+                _classe = value;
             }
         }
 

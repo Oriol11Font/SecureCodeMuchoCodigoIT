@@ -18,19 +18,19 @@ namespace ProvaClasse
         public Menu(string user)
         {
             InitializeComponent();
-            initMenu(user);
+            InitMenu(user);
         }
         
-        private void initMenu(string user)
+        private void InitMenu(string user)
         {
             DateTime now = DateTime.Now;
             //System.DateTime tiempo = new System.DateTime();
-            user = getUpperCaseStr(user);
-            setWelcomeLabel(now, user);
+            user = GetUpperCaseStr(user);
+            SetWelcomeLabel(now, user);
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void setWelcomeLabel(DateTime tiempo, string user)
+        private void SetWelcomeLabel(DateTime tiempo, string user)
         {
             string welcomeText, momentDia;
 
@@ -53,7 +53,7 @@ namespace ProvaClasse
             this.welcomeText.Text = $"{momentDia} {user} {hora}";
         }
 
-        static string getUpperCaseStr(string str)
+        static string GetUpperCaseStr(string str)
         {
             return str.Substring(0, 1).ToUpper() + str.Substring(1).ToLower();
         }
@@ -68,14 +68,14 @@ namespace ProvaClasse
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void openShipsForm(object sender, EventArgs e)
+        private void OpenShipsForm(object sender, EventArgs e)
         {
-            MessageBox.Show("Obert");
+            MessageBox.Show(@"Obert");
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            login logout = new login();
+            Login logout = new Login();
             logout.Show();
             this.Close();
         }

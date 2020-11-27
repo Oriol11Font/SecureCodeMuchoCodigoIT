@@ -1,6 +1,6 @@
 ﻿namespace ProvaClasse.Forms
 {
-    partial class test
+    partial class Test
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.swTextBox1 = new ControlsMC.SWTextBox();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
-            this.swTextBox3 = new ControlsMC.SWTextBox();
-            this.swTextBox4 = new ControlsMC.SWTextBox();
+            this.swTextBox1 = new ControlsMC.SwTextBox();
+            this.swTextBox2 = new ControlsMC.SwTextBox();
+            this.swTextBox3 = new ControlsMC.SwTextBox();
+            this.swTextBox4 = new ControlsMC.SwTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,50 +41,50 @@
             // swTextBox1
             // 
             this.swTextBox1.AllowEmpty = true;
-            this.swTextBox1.CampoBBDD = "securecode";
+            this.swTextBox1.CampoBbdd = "securecode";
             this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox1.Foranea = true;
             this.swTextBox1.Location = new System.Drawing.Point(203, 140);
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(166, 26);
             this.swTextBox1.TabIndex = 18;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Numero;
+            this.swTextBox1.Tipus = ControlsMC.SwTextBox.TipusDada.Numero;
             // 
             // swTextBox2
             // 
             this.swTextBox2.AllowEmpty = true;
-            this.swTextBox2.CampoBBDD = "";
+            this.swTextBox2.CampoBbdd = "";
             this.swTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox2.Foranea = false;
             this.swTextBox2.Location = new System.Drawing.Point(203, 205);
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(166, 26);
             this.swTextBox2.TabIndex = 19;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox2.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // swTextBox3
             // 
             this.swTextBox3.AllowEmpty = true;
-            this.swTextBox3.CampoBBDD = "";
+            this.swTextBox3.CampoBbdd = "";
             this.swTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox3.Foranea = false;
             this.swTextBox3.Location = new System.Drawing.Point(203, 266);
             this.swTextBox3.Name = "swTextBox3";
             this.swTextBox3.Size = new System.Drawing.Size(166, 26);
             this.swTextBox3.TabIndex = 20;
-            this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Data;
+            this.swTextBox3.Tipus = ControlsMC.SwTextBox.TipusDada.Data;
             // 
             // swTextBox4
             // 
             this.swTextBox4.AllowEmpty = true;
-            this.swTextBox4.CampoBBDD = "";
+            this.swTextBox4.CampoBbdd = "";
             this.swTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox4.Foranea = false;
             this.swTextBox4.Location = new System.Drawing.Point(203, 333);
             this.swTextBox4.Name = "swTextBox4";
             this.swTextBox4.Size = new System.Drawing.Size(166, 26);
             this.swTextBox4.TabIndex = 21;
-            this.swTextBox4.Tipus = ControlsMC.SWTextBox.TipusDada.Codi;
+            this.swTextBox4.Tipus = ControlsMC.SwTextBox.TipusDada.Codi;
             // 
             // label1
             // 
@@ -139,7 +139,7 @@
             this.Controls.Add(this.swTextBox3);
             this.Controls.Add(this.swTextBox2);
             this.Controls.Add(this.swTextBox1);
-            this.Name = "test";
+            this.Name = "Test";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Controls.SetChildIndex(this.swTextBox1, 0);
@@ -157,10 +157,10 @@
 
         #endregion
 
-        private ControlsMC.SWTextBox swTextBox1;
-        private ControlsMC.SWTextBox swTextBox2;
-        private ControlsMC.SWTextBox swTextBox3;
-        private ControlsMC.SWTextBox swTextBox4;
+        private ControlsMC.SwTextBox swTextBox1;
+        private ControlsMC.SwTextBox swTextBox2;
+        private ControlsMC.SwTextBox swTextBox3;
+        private ControlsMC.SwTextBox swTextBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

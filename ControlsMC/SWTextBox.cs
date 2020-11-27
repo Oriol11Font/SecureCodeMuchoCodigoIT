@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace ControlsMC
 {
-    public class SWTextBox : TextBox
+    public class SwTextBox : TextBox
     {
-        public SWTextBox()
+        public SwTextBox()
         {
             InitializeComponent();
         }
@@ -44,13 +44,13 @@ namespace ControlsMC
             Codi
         }
 
-        private TipusDada _Tipus;
+        private TipusDada _tipus;
         public TipusDada Tipus
         {
-            get { return _Tipus; }
+            get { return _tipus; }
             set
             {
-                _Tipus = value;
+                _tipus = value;
             }
         }
         private void SWTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -61,7 +61,7 @@ namespace ControlsMC
 
             if (!AllowEmpty && text.Length == 0)
             {
-                MessageBox.Show("Aquest camp és obligatori.");
+                MessageBox.Show(@"Aquest camp és obligatori.");
                 e.Cancel = true;
             }
 
@@ -76,7 +76,7 @@ namespace ControlsMC
                     }
                     else
                     {
-                        MessageBox.Show("El valor introduit no és un número, reviseu el camp.");
+                        MessageBox.Show(@"El valor introduit no és un número, reviseu el camp.");
                         e.Cancel = true;
                         this.ForeColor = Color.Red;
                     }
@@ -91,7 +91,7 @@ namespace ControlsMC
                     }
                     else
                     {
-                        MessageBox.Show("La data introduida no es correcte, reviseu que el format sigui: dd/mm/yyyy");
+                        MessageBox.Show(@"La data introduida no es correcte, reviseu que el format sigui: dd/mm/yyyy");
                         e.Cancel = true;
                         this.ForeColor = Color.Red;
                     }
@@ -105,7 +105,7 @@ namespace ControlsMC
                     }
                     else
                     {
-                        MessageBox.Show("Comproba la sintaxi del codi.");
+                        MessageBox.Show(@"Comproba la sintaxi del codi.");
                         e.Cancel = true;
                         this.ForeColor = Color.Red;
                     }
@@ -115,13 +115,13 @@ namespace ControlsMC
             }
         }
 
-        private String _CampoBBDD;
-        public String CampoBBDD
+        private String _campoBbdd;
+        public String CampoBbdd
         {
-            get { return _CampoBBDD; }
+            get { return _campoBbdd; }
             set
             {
-                _CampoBBDD = value;
+                _campoBbdd = value;
             }
         }
 
@@ -135,13 +135,13 @@ namespace ControlsMC
             }
         }
 
-        private Boolean _AllowEmpty = true;
+        private Boolean _allowEmpty = true;
         public Boolean AllowEmpty
         {
-            get { return _AllowEmpty; }
+            get { return _allowEmpty; }
             set
             {
-                _AllowEmpty = value;
+                _allowEmpty = value;
             }
         }
     }

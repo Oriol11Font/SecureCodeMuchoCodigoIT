@@ -1,10 +1,9 @@
-﻿using ProvaClasse.Forms;
-using System;
+﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using LibreriaClases;
-using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using LibreriaControles;
+using ProvaClasse.Forms;
 
 namespace ProvaClasse
 {
@@ -18,9 +17,19 @@ namespace ProvaClasse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var dtb = new DataAccessClass();
-            var ds = dtb.GetTable("Agencies");
-            Application.Run(new SimpleForm());
+            Application.Run(new Splash());
+        }
+
+        static void TestingMethod()
+        {
+            DataAccessClass dac = new DataAccessClass();
+            var ds = dac.GetTable("Agencies");
+            DataRow dr = ds.Tables[0].NewRow();
+            dr[0] = 123;
+            dr[1] = "45J";
+            dr[2] = "Hola";
+            ds.Tables[0].Rows.Add(dr);
+            dac.UpdateDb(@"SELECT * FROM Agencies", ds);
         }
     }
 }

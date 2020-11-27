@@ -43,12 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SWInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SWInput.Designer.cs">
+      <DependentUpon>SWInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="SWTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SWInput.resx">
+      <DependentUpon>SWInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SWTextBox.resx">
       <DependentUpon>SWTextBox.cs</DependentUpon>
     </EmbeddedResource>

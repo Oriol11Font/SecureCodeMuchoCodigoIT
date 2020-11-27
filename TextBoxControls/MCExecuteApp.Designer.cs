@@ -1,6 +1,6 @@
 ﻿namespace TextBoxControls
 {
-    partial class MCExecuteApp
+    partial class McExecuteApp
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.button1);
-            this.Name = "MCExecuteApp";
+            this.Name = "McExecuteApp";
             this.Size = new System.Drawing.Size(117, 43);
             this.ResumeLayout(false);
 

@@ -9,90 +9,90 @@ using LibreriaControles;
 
 namespace TextBoxControls
 {
-    public partial class MCCodi : UserControl
+    public partial class McCodi : UserControl
     {
-        public MCCodi()
+        public McCodi()
         {
             InitializeComponent();
         }
 
-        private Boolean _Requerit;
+        private Boolean _requerit;
         public Boolean Requerit
         {
-            get { return _Requerit; }
+            get { return _requerit; }
             set
             {
-                _Requerit = value;
+                _requerit = value;
             }
         }
 
-        private String _FromCS;
-        public String FormCS
+        private String _fromCs;
+        public String FormCs
         {
-            get { return _FromCS; }
+            get { return _fromCs; }
             set
             {
-                _FromCS = value;
+                _fromCs = value;
             }
         }
 
-        private String _ClasseCS;
-        public String ClasseCS
+        private String _classeCs;
+        public String ClasseCs
         {
-            get { return _ClasseCS; }
+            get { return _classeCs; }
             set
             {
-                _ClasseCS = value;
+                _classeCs = value;
             }
         }
 
-        private String _NomTaula;
+        private String _nomTaula;
         public String NomTaula
         {
-            get { return _NomTaula; }
+            get { return _nomTaula; }
             set
             {
-                _NomTaula = value;
+                _nomTaula = value;
             }
         }
 
-        private String _NomId;
+        private String _nomId;
         public String NomId
         {
-            get { return _NomId; }
+            get { return _nomId; }
             set
             {
-                _NomId = value;
+                _nomId = value;
             }
         }
 
-        private String _NomCodi;
+        private String _nomCodi;
         public String NomCodi
         {
-            get { return _NomCodi; }
+            get { return _nomCodi; }
             set
             {
-                _NomCodi = value;
+                _nomCodi = value;
             }
         }
 
-        private String _NomDesc;
+        private String _nomDesc;
         public String NomDesc
         {
-            get { return _NomDesc; }
+            get { return _nomDesc; }
             set
             {
-                _NomDesc = value;
+                _nomDesc = value;
             }
         }
 
-        private int _ControlID;
-        public int ControlID
+        private int _controlId;
+        public int ControlId
         {
-            get { return _ControlID; }
+            get { return _controlId; }
             set
             {
-                _ControlID = value;
+                _controlId = value;
             }
         }
 
@@ -100,16 +100,16 @@ namespace TextBoxControls
         {
 
             //NomTaula="dbo.Sectors";
-            String Codi = CodiBox.Text;
+            String codi = CodiBox.Text;
 
-            String sql = "Select "+NomId+", "+NomCodi+", "+NomDesc+" from " + NomTaula + " where "+NomCodi+"='" + Codi+"'";
+            String sql = "Select "+NomId+", "+NomCodi+", "+NomDesc+" from " + NomTaula + " where "+NomCodi+"='" + codi+"'";
 
             DataAccessClass data = new DataAccessClass();
             DataSet sqldata = data.GetByQuery(sql);
 
             if (Requerit)
             {
-                if (Codi.Length == 0)
+                if (codi.Length == 0)
                 {
                     CodiBox.BackColor = Color.Red;
                     AttentionRequerit.Visible = true;
@@ -121,15 +121,15 @@ namespace TextBoxControls
                     {
                         DataRow dr = sqldata.Tables[0].Rows[0];
 
-                        String CodiTaula = dr.ItemArray.GetValue(1).ToString();
+                        String codiTaula = dr.ItemArray.GetValue(1).ToString();
 
                         CodiBox.BackColor = Color.White;
                         AttentionRequerit.Visible = false;
 
-                        if (Codi == CodiTaula)
+                        if (codi == codiTaula)
                         {
                             DescBox.Text = dr.ItemArray.GetValue(2).ToString();
-                            ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
+                            ControlId = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
                             //DescBox.Text = "Salesians de Sarria";
                         }
                     }
@@ -142,17 +142,17 @@ namespace TextBoxControls
                 }
             } else
             {
-                if (Codi.Length > 0)
+                if (codi.Length > 0)
                 {
                     if (sqldata.Tables[0].Rows.Count > 0)
                     {
                         DataRow dr = sqldata.Tables[0].Rows[0];
-                        String CodiTaula = dr.ItemArray.GetValue(1).ToString();
+                        String codiTaula = dr.ItemArray.GetValue(1).ToString();
 
-                        if (Codi == CodiTaula)
+                        if (codi == codiTaula)
                         {
                             DescBox.Text = dr.ItemArray.GetValue(2).ToString();
-                            ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
+                            ControlId = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
                             //DescBox.Text = "Salesians de Sarria";
                         }
                     }
@@ -168,26 +168,26 @@ namespace TextBoxControls
             }
         }
 
-        private void ObreCS(object sender, KeyEventArgs e)
+        private void ObreCs(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2)
             {
-                MessageBox.Show("Has obert la Taula de Cerca! :)");
-                Assembly ensamblat = Assembly.LoadFrom(ClasseCS);
+                MessageBox.Show(@"Has obert la Taula de Cerca! :)");
+                Assembly ensamblat = Assembly.LoadFrom(ClasseCs);
 
                 //Declarem les variables
-                Object dllBD;
+                Object dllBd;
                 Type tipus;
 
                 //recuperem el tipus de la classe que volem instanciar
-                tipus = ensamblat.GetType(FormCS);
+                tipus = ensamblat.GetType(FormCs);
 
                 //instanciem l’objecte   
-                dllBD = Activator.CreateInstance(tipus);
+                dllBd = Activator.CreateInstance(tipus);
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
-                ((Form)dllBD).Show();
+                ((Form)dllBd).Show();
             }
         }
 

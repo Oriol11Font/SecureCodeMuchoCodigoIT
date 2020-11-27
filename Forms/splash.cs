@@ -11,13 +11,13 @@ using System.Windows.Forms.VisualStyles;
 
 namespace ProvaClasse
 {
-    public partial class splash : Form
+    public partial class Splash : Form
     {
-        int porcentaje = 0;
-        public splash()
+        int _porcentaje = 0;
+        public Splash()
         {
             InitializeComponent();
-            lbl_progressCarga.Text = porcentaje + "%";
+            lbl_progressCarga.Text = _porcentaje + "%";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,13 +34,13 @@ namespace ProvaClasse
             {
 
                 splashBar1.Value += 10;
-                porcentaje += 10;
-                lbl_progressCarga.Text = porcentaje + "%";
+                _porcentaje += 10;
+                lbl_progressCarga.Text = _porcentaje + "%";
 
             }
             else {
                
-                login f2 = new login();
+                Login f2 = new Login();
                 timer1.Enabled = false;
                 f2.Show();
                 this.Hide();
@@ -58,8 +58,8 @@ namespace ProvaClasse
 
                 timer1.Stop();
                 this.Hide();
-                login Form2 = new login();
-                Form2.Show();
+                Login form2 = new Login();
+                form2.Show();
             } else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
 
             {

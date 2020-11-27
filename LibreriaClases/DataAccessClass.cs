@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -17,6 +16,7 @@ namespace LibreriaClases
 
         // TODO: guardar la connection string en el app.config
         private static string _connectionString;
+
         private static readonly Configuration Config =
             ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
@@ -26,14 +26,16 @@ namespace LibreriaClases
 
         public DataAccessClass()
         {
-            _connectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
+            _connectionString =
+                $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
         }
-        
-        public DataAccessClass(String dbName, String username, String password)
+
+        public DataAccessClass(string dbName, string username, string password)
         {
-            _connectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog={dbName};Integrated Security=SSPI;User Id={username};Password={password}";
+            _connectionString =
+                $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog={dbName};Integrated Security=SSPI;User Id={username};Password={password}";
         }
-        
+
         public void EncryptConnString()
         {
             Config.ConnectionStrings.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
@@ -57,12 +59,37 @@ namespace LibreriaClases
             }
         }
 
+        public SqlCommand CreateParamQuery(string query, SqlParameter[] parameters)
+        {
+            SqlCommand command = null;
+            try
+            {
+                ConnectDb();
+                command = new SqlCommand(query, _conn);
+                foreach (var sqlParameter in parameters)
+                {
+                    command.Parameters.Add(sqlParameter);
+                }
+            }
+            catch (Exception e)
+            {
+                ErrorMessage(e, @"No s'ha pogut construir la comanda parametritzada SQL");
+            }
+            finally
+            {
+                _conn?.Close();
+            }
+
+            return command;
+        }
+
         public DataSet GetTable(string table)
         {
             DataSet ds;
             try
             {
-                ds = GetByQuery($"SELECT * FROM {table}");
+                if (table == null) throw new Exception(@"El nom de la taula és nul");
+                ds = GetByQuery($@"SELECT * FROM {table}");
                 ds.Tables[0].TableName = table;
             }
             catch (Exception e)
@@ -154,14 +181,14 @@ namespace LibreriaClases
                 ConnectDb();
 
                 var cm = new SqlCommand(query, _conn);
-                
+
                 _conn.Open();
 
                 cm.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                ErrorMessage(e, "L'execució de la consulta a la base de dades no s'ha executat correctament", null);
+                ErrorMessage(e, @"L'execució de la consulta a la base de dades no s'ha executat correctament", null);
             }
             finally
             {
@@ -176,8 +203,6 @@ namespace LibreriaClases
             {
                 ConnectDb();
                 SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
-                SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
-
                 if (newDs.HasChanges())
                 {
                     changes = adapter.Update(newDs.Tables[0]);
@@ -185,12 +210,14 @@ namespace LibreriaClases
             }
             catch (Exception e)
             {
+                ErrorMessage(e);
                 _conn?.Close();
             }
             finally
             {
                 _conn?.Close();
             }
+
             return changes;
         }
 
@@ -203,7 +230,7 @@ namespace LibreriaClases
                 var originalDs = GetTable(newDs.Tables[0].TableName);
                 var queries = new List<string>();
                 string tableName;
-                
+
                 // we check if the DataSet has any changes
                 if (newDs.HasChanges())
                 {
@@ -235,7 +262,7 @@ namespace LibreriaClases
 
                     if (queries.Count > 0)
                     {
-                        RunQuery(CreateSQLTransaction(queries));
+                        RunQuery(CreateSqlTransaction(queries));
                         changes = queries.Count;
                         // MessageBox.Show($"S'han efectuat {queries.Count.ToString()} canvis a la base de dades");
                     }
@@ -278,7 +305,7 @@ namespace LibreriaClases
             var finalStr = "";
             var index = 0;
             string str;
-            
+
             foreach (var obj in dr.ItemArray)
             {
                 if (!Regex.IsMatch(obj.ToString(), @"^\d+$"))
@@ -289,8 +316,9 @@ namespace LibreriaClases
                 {
                     str = $"{obj}";
                 }
+
                 if (index != (dr.ItemArray.Length - 1)) str = $"{str}, ";
-                
+
                 finalStr = $"{finalStr}{str}";
                 index++;
             }
@@ -299,15 +327,13 @@ namespace LibreriaClases
         }
 
         // TODO
-        private static string CreateSQLTransaction(List<string> queries)
+        private static string CreateSqlTransaction(List<string> queries)
         {
             return $@"BEGIN TRANSACTION; {string.Join(" ", queries)} COMMIT;";
         }
 
-        private void ErrorMessage(Exception e, string message, string title)
+        private void ErrorMessage(Exception e, string message = "Error", string title = "Error no fatal")
         {
-            if (message == null) message = "Error";
-            if (title == null) title = "Error no fatal ";
             MessageBox.Show($"{message}: Excepció {e}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
