@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Text;
 using InitialFormsLibrary;
+using LibreriaClases;
 using LibreriaControles;
 using TextBoxControls;
-using LibreriaClases;
 
 namespace ProvaClasse
 {
@@ -23,15 +14,7 @@ namespace ProvaClasse
             InitializeComponent();
         }
 
-        private String _user;
-        public String user
-        {
-            get { return _user; }
-            set
-            {
-                _user = value;
-            }
-        }
+        public string user { get; set; }
 
         private void setWelcomeLabel(DateTime tiempo, string user)
         {
@@ -39,12 +22,12 @@ namespace ProvaClasse
 
             welcomeText = this.welcomeText.Text;
 
-            switch ((int)tiempo.Hour)
+            switch (tiempo.Hour)
             {
-                case int n when (n >= 8 && n < 13):
+                case int n when n >= 8 && n < 13:
                     momentDia = "Bon dia";
                     break;
-                case int n when (n >= 13 && n < 20):
+                case int n when n >= 13 && n < 20:
                     momentDia = "Bona tarda";
                     break;
                 default:
@@ -52,11 +35,11 @@ namespace ProvaClasse
                     break;
             }
 
-            String hora = "\nSon les " + tiempo.Hour + ":" + tiempo.Minute;
+            var hora = "\nSon les " + tiempo.Hour + ":" + tiempo.Minute;
             this.welcomeText.Text = $"{momentDia} {user} {hora}";
         }
 
-        static string getUpperCaseStr(string str)
+        private static string getUpperCaseStr(string str)
         {
             return str.Substring(0, 1).ToUpper() + str.Substring(1).ToLower();
         }
@@ -68,7 +51,7 @@ namespace ProvaClasse
 
         private void btn_minimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void openShipsForm(object sender, EventArgs e)
@@ -78,9 +61,9 @@ namespace ProvaClasse
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login logout = new Login();
+            var logout = new Login();
             logout.Show();
-            this.Close();
+            Close();
         }
 
         private void panel3_MouseHover(object sender, EventArgs e)
@@ -90,29 +73,26 @@ namespace ProvaClasse
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
             //System.DateTime tiempo = new System.DateTime();
             user = getUpperCaseStr(user);
             setWelcomeLabel(now, user);
-            this.WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Maximized;
             UserName = user;
 
-            
 
-            DataAccessClass data = new DataAccessClass();
-            String sql = "SELECT * FROM MenuOptions";
+            var data = new DataAccessClass();
+            var sql = "SELECT * FROM MenuOptions";
 
-            DataSet sqldata = data.GetByQuery(sql);
+            var sqldata = data.GetByQuery(sql);
 
-            for (int i = 0; i < sqldata.Tables[0].Rows.Count; i++)
+            for (var i = 0; i < sqldata.Tables[0].Rows.Count; i++)
             {
-                
+                var dr = sqldata.Tables[0].Rows[i];
 
-                DataRow dr = sqldata.Tables[0].Rows[i];
+                var menubtn = new exeButton();
 
-                exeButton menubtn = new exeButton();
-
-                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2).ToString();
+                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2);
                 menubtn.SizeMode = PictureBoxSizeMode.Zoom;
 
                 menubtn.Form = dr.ItemArray.GetValue(3).ToString();
@@ -125,4 +105,3 @@ namespace ProvaClasse
         }
     }
 }
-

@@ -58,14 +58,14 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pic_logo_login = new System.Windows.Forms.PictureBox();
             this.trademark.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MCimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.MCimg)).BeginInit();
             this.topbar.SuspendLayout();
             this.inputsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.validImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.password_warning)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username_warning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.validImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.password_warning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.username_warning)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo_login)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_logo_login)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -76,9 +76,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(188, 188);
+            this.label1.Location = new System.Drawing.Point(259, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(494, 73);
             this.label1.TabIndex = 10;
@@ -89,8 +89,8 @@
             // 
             this.poweredby.AutoSize = true;
             this.poweredby.BackColor = System.Drawing.Color.Transparent;
-            this.poweredby.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.poweredby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.poweredby.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.poweredby.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (232)))), ((int) (((byte) (31)))));
             this.poweredby.Location = new System.Drawing.Point(8, 34);
             this.poweredby.Name = "poweredby";
             this.poweredby.Size = new System.Drawing.Size(73, 13);
@@ -99,7 +99,7 @@
             // 
             // trademark
             // 
-            this.trademark.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.trademark.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trademark.Controls.Add(this.secureVersion);
             this.trademark.Controls.Add(this.MCimg);
             this.trademark.Controls.Add(this.poweredby);
@@ -113,7 +113,7 @@
             // 
             this.secureVersion.AutoSize = true;
             this.secureVersion.BackColor = System.Drawing.Color.Transparent;
-            this.secureVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secureVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.secureVersion.ForeColor = System.Drawing.Color.Gray;
             this.secureVersion.Location = new System.Drawing.Point(37, 21);
             this.secureVersion.Name = "secureVersion";
@@ -123,7 +123,7 @@
             // 
             // MCimg
             // 
-            this.MCimg.Image = ((System.Drawing.Image)(resources.GetObject("MCimg.Image")));
+            this.MCimg.Image = ((System.Drawing.Image) (resources.GetObject("MCimg.Image")));
             this.MCimg.Location = new System.Drawing.Point(108, 5);
             this.MCimg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MCimg.Name = "MCimg";
@@ -197,7 +197,7 @@
             this.minimizebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.minimizebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.minimizebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.minimizebtn.ForeColor = System.Drawing.Color.Yellow;
             this.minimizebtn.Location = new System.Drawing.Point(916, -1);
             this.minimizebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -218,7 +218,7 @@
             this.closebtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.closebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.closebtn.ForeColor = System.Drawing.Color.Red;
             this.closebtn.Location = new System.Drawing.Point(971, 0);
             this.closebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -235,7 +235,7 @@
             // 
             this.loginBar.BackColor = System.Drawing.Color.Red;
             this.loginBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loginBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.loginBar.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (232)))), ((int) (((byte) (31)))));
             this.loginBar.Location = new System.Drawing.Point(8, 612);
             this.loginBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBar.Name = "loginBar";
@@ -248,8 +248,8 @@
             this.usernameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (232)))), ((int) (((byte) (31)))));
             this.usernameLabel.Location = new System.Drawing.Point(189, 14);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(55, 20);
@@ -262,8 +262,8 @@
             this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (232)))), ((int) (((byte) (31)))));
             this.passwordLabel.Location = new System.Drawing.Point(163, 74);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(99, 20);
@@ -274,21 +274,22 @@
             // txt_username
             // 
             this.txt_username.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txt_username.Location = new System.Drawing.Point(113, 41);
             this.txt_username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(241, 22);
+            this.txt_username.Size = new System.Drawing.Size(241, 23);
             this.txt_username.TabIndex = 1;
             // 
             // mtxt_password
             // 
             this.mtxt_password.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mtxt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.mtxt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.mtxt_password.Location = new System.Drawing.Point(113, 101);
             this.mtxt_password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtxt_password.Name = "mtxt_password";
             this.mtxt_password.PasswordChar = '*';
-            this.mtxt_password.Size = new System.Drawing.Size(241, 20);
+            this.mtxt_password.Size = new System.Drawing.Size(241, 23);
             this.mtxt_password.TabIndex = 2;
             this.mtxt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtxt_password_KeyDown);
             // 
@@ -300,7 +301,7 @@
             this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_login.ForeColor = System.Drawing.Color.Yellow;
             this.btn_login.Location = new System.Drawing.Point(156, 134);
             this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -313,10 +314,10 @@
             // 
             // messageLoginLabel
             // 
-            this.messageLoginLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.messageLoginLabel.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.messageLoginLabel.BackColor = System.Drawing.Color.Transparent;
-            this.messageLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageLoginLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.messageLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.messageLoginLabel.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (232)))), ((int) (((byte) (31)))));
             this.messageLoginLabel.Location = new System.Drawing.Point(9, 203);
             this.messageLoginLabel.Name = "messageLoginLabel";
             this.messageLoginLabel.Size = new System.Drawing.Size(456, 53);
@@ -329,7 +330,7 @@
             // 
             this.incorrectlbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.incorrectlbl.BackColor = System.Drawing.Color.Transparent;
-            this.incorrectlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incorrectlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.incorrectlbl.ForeColor = System.Drawing.Color.Red;
             this.incorrectlbl.Location = new System.Drawing.Point(11, 207);
             this.incorrectlbl.Name = "incorrectlbl";
@@ -341,7 +342,8 @@
             // 
             // inputsPanel
             // 
-            this.inputsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.inputsPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.inputsPanel.Controls.Add(this.validImg);
             this.inputsPanel.Controls.Add(this.password_warning);
             this.inputsPanel.Controls.Add(this.username_warning);
             this.inputsPanel.Controls.Add(this.incorrectlbl);
@@ -359,9 +361,9 @@
             // 
             // validImg
             // 
-            this.validImg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.validImg.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.validImg.Image = global::InitialFormsLibrary.Properties.Resources.loginvalidation;
-            this.validImg.Location = new System.Drawing.Point(677, 33);
+            this.validImg.Location = new System.Drawing.Point(70, 18);
             this.validImg.Margin = new System.Windows.Forms.Padding(4);
             this.validImg.Name = "validImg";
             this.validImg.Size = new System.Drawing.Size(316, 185);
@@ -372,13 +374,13 @@
             // password_warning
             // 
             this.password_warning.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.password_warning.Image = ((System.Drawing.Image)(resources.GetObject("password_warning.Image")));
-            this.password_warning.InitialImage = ((System.Drawing.Image)(resources.GetObject("password_warning.InitialImage")));
-            this.password_warning.Location = new System.Drawing.Point(82, 101);
+            this.password_warning.Image = ((System.Drawing.Image) (resources.GetObject("password_warning.Image")));
+            this.password_warning.InitialImage = ((System.Drawing.Image) (resources.GetObject("password_warning.InitialImage")));
+            this.password_warning.Location = new System.Drawing.Point(85, 101);
             this.password_warning.Margin = new System.Windows.Forms.Padding(4);
             this.password_warning.Name = "password_warning";
-            this.password_warning.Size = new System.Drawing.Size(25, 20);
-            this.password_warning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.password_warning.Size = new System.Drawing.Size(23, 23);
+            this.password_warning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.password_warning.TabIndex = 21;
             this.password_warning.TabStop = false;
             this.password_warning.Visible = false;
@@ -387,11 +389,11 @@
             // 
             this.username_warning.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.username_warning.Image = global::InitialFormsLibrary.Properties.Resources.warning;
-            this.username_warning.InitialImage = ((System.Drawing.Image)(resources.GetObject("username_warning.InitialImage")));
-            this.username_warning.Location = new System.Drawing.Point(82, 41);
+            this.username_warning.InitialImage = ((System.Drawing.Image) (resources.GetObject("username_warning.InitialImage")));
+            this.username_warning.Location = new System.Drawing.Point(85, 41);
             this.username_warning.Margin = new System.Windows.Forms.Padding(4);
             this.username_warning.Name = "username_warning";
-            this.username_warning.Size = new System.Drawing.Size(25, 22);
+            this.username_warning.Size = new System.Drawing.Size(23, 23);
             this.username_warning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.username_warning.TabIndex = 20;
             this.username_warning.TabStop = false;
@@ -399,7 +401,6 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.validImg);
             this.panel7.Controls.Add(this.inputsPanel);
             this.panel7.Controls.Add(this.trademark);
             this.panel7.Controls.Add(this.label1);
@@ -410,13 +411,14 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1032, 563);
             this.panel7.TabIndex = 22;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // pic_logo_login
             // 
-            this.pic_logo_login.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pic_logo_login.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_logo_login.BackColor = System.Drawing.Color.Transparent;
-            this.pic_logo_login.Image = ((System.Drawing.Image)(resources.GetObject("pic_logo_login.Image")));
-            this.pic_logo_login.InitialImage = ((System.Drawing.Image)(resources.GetObject("pic_logo_login.InitialImage")));
+            this.pic_logo_login.Image = ((System.Drawing.Image) (resources.GetObject("pic_logo_login.Image")));
+            this.pic_logo_login.InitialImage = ((System.Drawing.Image) (resources.GetObject("pic_logo_login.InitialImage")));
             this.pic_logo_login.Location = new System.Drawing.Point(413, 2);
             this.pic_logo_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_logo_login.Name = "pic_logo_login";
@@ -440,7 +442,7 @@
             this.Controls.Add(this.borderTop);
             this.ForeColor = System.Drawing.Color.DarkRed;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -448,19 +450,18 @@
             this.Load += new System.EventHandler(this.Init);
             this.trademark.ResumeLayout(false);
             this.trademark.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MCimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.MCimg)).EndInit();
             this.topbar.ResumeLayout(false);
             this.inputsPanel.ResumeLayout(false);
             this.inputsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.validImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.password_warning)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.username_warning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.validImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.password_warning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.username_warning)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo_login)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pic_logo_login)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

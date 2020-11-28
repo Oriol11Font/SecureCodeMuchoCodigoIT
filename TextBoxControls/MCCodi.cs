@@ -1,96 +1,39 @@
 ﻿using System;
-using System.Data;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using LibreriaClases;
-using System.Text.RegularExpressions;
-using System.Reflection;
 
 namespace TextBoxControls
 {
     public partial class MCCodi : UserControl
     {
+        private int _ControlID;
+
         public MCCodi()
         {
             InitializeComponent();
         }
 
-        private Boolean _Requerit;
-        public Boolean Requerit
-        {
-            get { return _Requerit; }
-            set
-            {
-                _Requerit = value;
-            }
-        }
+        public bool Requerit { get; set; }
 
-        private String _FromCS;
-        public String FormCS
-        {
-            get { return _FromCS; }
-            set
-            {
-                _FromCS = value;
-            }
-        }
+        public string FormCS { get; set; }
 
-        private String _dll;
-        public String dll
-        {
-            get { return _dll; }
-            set
-            {
-                _dll = value;
-            }
-        }
+        public string dll { get; set; }
 
-        private String _NomTaula;
-        public String NomTaula
-        {
-            get { return _NomTaula; }
-            set
-            {
-                _NomTaula = value;
-            }
-        }
+        public string NomTaula { get; set; }
 
-        private String _NomId;
-        public String NomId
-        {
-            get { return _NomId; }
-            set
-            {
-                _NomId = value;
-            }
-        }
+        public string NomId { get; set; }
 
-        private String _NomCodi;
-        public String NomCodi
-        {
-            get { return _NomCodi; }
-            set
-            {
-                _NomCodi = value;
-            }
-        }
+        public string NomCodi { get; set; }
 
-        private String _NomDesc;
-        public String NomDesc
-        {
-            get { return _NomDesc; }
-            set
-            {
-                _NomDesc = value;
-            }
-        }
+        public string NomDesc { get; set; }
 
-        private int _ControlID;
         public int ControlID
         {
-            get {
-               // controltxt.Text = _ControlID.ToString();
-                return _ControlID; }
+            get =>
+                // controltxt.Text = _ControlID.ToString();
+                _ControlID;
             set
             {
                 _ControlID = value;
@@ -100,14 +43,14 @@ namespace TextBoxControls
 
         private void ValidacioCodi(object sender, EventArgs e)
         {
-
             //NomTaula="dbo.Sectors";
-            String Codi = CodiBox.Text;
+            var Codi = CodiBox.Text;
 
-            String sql = "Select "+NomId+", "+NomCodi+", "+NomDesc+" from " + NomTaula + " where "+NomCodi+"='" + Codi+"'";
+            var sql = "Select " + NomId + ", " + NomCodi + ", " + NomDesc + " from " + NomTaula + " where " + NomCodi +
+                      "='" + Codi + "'";
 
-            DataAccessClass data = new DataAccessClass();
-            DataSet sqldata = data.GetByQuery(sql);
+            var data = new DataAccessClass();
+            var sqldata = data.GetByQuery(sql);
 
             if (Requerit)
             {
@@ -121,9 +64,9 @@ namespace TextBoxControls
                 {
                     if (sqldata.Tables[0].Rows.Count > 0)
                     {
-                        DataRow dr = sqldata.Tables[0].Rows[0];
+                        var dr = sqldata.Tables[0].Rows[0];
 
-                        String CodiTaula = dr.ItemArray.GetValue(1).ToString();
+                        var CodiTaula = dr.ItemArray.GetValue(1).ToString();
 
                         CodiBox.BackColor = Color.White;
                         AttentionRequerit.Visible = false;
@@ -131,7 +74,7 @@ namespace TextBoxControls
                         if (Codi == CodiTaula)
                         {
                             DescBox.Text = dr.ItemArray.GetValue(2).ToString();
-                            ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
+                            ControlID = int.Parse(dr.ItemArray.GetValue(0).ToString());
                             //DescBox.Text = "Salesians de Sarria";
                         }
                     }
@@ -142,19 +85,20 @@ namespace TextBoxControls
                         DescBox.Text = "Unknown data";
                     }
                 }
-            } else
+            }
+            else
             {
                 if (Codi.Length > 0)
                 {
                     if (sqldata.Tables[0].Rows.Count > 0)
                     {
-                        DataRow dr = sqldata.Tables[0].Rows[0];
-                        String CodiTaula = dr.ItemArray.GetValue(1).ToString();
+                        var dr = sqldata.Tables[0].Rows[0];
+                        var CodiTaula = dr.ItemArray.GetValue(1).ToString();
 
                         if (Codi == CodiTaula)
                         {
                             DescBox.Text = dr.ItemArray.GetValue(2).ToString();
-                            ControlID = Int32.Parse(dr.ItemArray.GetValue(0).ToString());
+                            ControlID = int.Parse(dr.ItemArray.GetValue(0).ToString());
                             //DescBox.Text = "Salesians de Sarria";
                         }
                     }
@@ -176,10 +120,10 @@ namespace TextBoxControls
             {
                 //MessageBox.Show("Has obert la Taula de Cerca! :)");
                 /*Sha de mirar*/
-                Assembly ensamblat = Assembly.LoadFrom(dll);
+                var ensamblat = Assembly.LoadFrom(dll);
 
                 //Declarem les variables
-                Object dllBD;
+                object dllBD;
                 Type tipus;
 
                 //recuperem el tipus de la classe que volem instanciar
@@ -190,30 +134,28 @@ namespace TextBoxControls
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
-                ((Form)dllBD).Show();
+                ((Form) dllBD).Show();
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            String sql = "SELECT * FROM Factories WHERE IdFactory = " + controltxt.Text;
+            var sql = "SELECT * FROM Factories WHERE IdFactory = " + controltxt.Text;
 
-            DataAccessClass data = new DataAccessClass();
+            var data = new DataAccessClass();
 
             if (!(NomTaula == "" && NomId == ""))
             {
-                DataSet sqldata = data.GetByQuery(sql);
+                var sqldata = data.GetByQuery(sql);
 
                 if (!(sqldata == null))
-                {
                     if (sqldata.Tables[0].Rows.Count > 0)
                     {
-                        DataRow dr = sqldata.Tables[0].Rows[0];
+                        var dr = sqldata.Tables[0].Rows[0];
 
                         CodiBox.Text = dr.ItemArray.GetValue(1).ToString();
                         DescBox.Text = dr.ItemArray.GetValue(2).ToString();
                     }
-                }
             }
         }
     }

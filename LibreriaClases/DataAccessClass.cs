@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -17,6 +16,7 @@ namespace LibreriaClases
 
         // TODO: guardar la connection string en el app.config
         private static string _connectionString;
+
         private static readonly Configuration Config =
             ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
@@ -26,14 +26,16 @@ namespace LibreriaClases
 
         public DataAccessClass()
         {
-            _connectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
+            _connectionString =
+                $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
         }
-        
-        public DataAccessClass(String dbName, String username, String password)
+
+        public DataAccessClass(string dbName, string username, string password)
         {
-            _connectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog={dbName};Integrated Security=SSPI;User Id={username};Password={password}";
+            _connectionString =
+                $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog={dbName};Integrated Security=SSPI;User Id={username};Password={password}";
         }
-        
+
         public void EncryptConnString()
         {
             Config.ConnectionStrings.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
@@ -154,7 +156,7 @@ namespace LibreriaClases
                 ConnectDb();
 
                 var cm = new SqlCommand(query, _conn);
-                
+
                 _conn.Open();
 
                 cm.ExecuteNonQuery();
@@ -171,17 +173,14 @@ namespace LibreriaClases
 
         public int UpdateDb(string query, DataSet newDs)
         {
-            int changes = 0;
+            var changes = 0;
             try
             {
                 ConnectDb();
-                SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
-                SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
+                var adapter = new SqlDataAdapter(query, _conn);
+                var cmdBuilder = new SqlCommandBuilder(adapter);
 
-                if (newDs.HasChanges())
-                {
-                    changes = adapter.Update(newDs.Tables[0]);
-                }
+                if (newDs.HasChanges()) changes = adapter.Update(newDs.Tables[0]);
             }
             catch (Exception e)
             {
@@ -191,19 +190,20 @@ namespace LibreriaClases
             {
                 _conn?.Close();
             }
+
             return changes;
         }
 
         // function that receives a DataSet and updates the database with the new changes
         public int UpdateDb(DataSet newDs)
         {
-            int changes = 0;
+            var changes = 0;
             try
             {
                 var originalDs = GetTable(newDs.Tables[0].TableName);
                 var queries = new List<string>();
                 string tableName;
-                
+
                 // we check if the DataSet has any changes
                 if (newDs.HasChanges())
                 {
@@ -211,26 +211,18 @@ namespace LibreriaClases
                     {
                         tableName = originalDs.Tables[i].TableName;
                         foreach (DataRow row in newDs.Tables[i].Rows)
-                        {
                             if (originalDs.Tables[i]
                                 .Select($@"{originalDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
                                 .Length == 0) // condició en la que es determina que el codi de row no està a la taula
-                            {
                                 queries.Add(
                                     $"SET IDENTITY_INSERT {tableName} ON; INSERT INTO {tableName} ({GetColumnNames(originalDs.Tables[0])}) VALUES ({GetValues(row)}); SET IDENTITY_INSERT {tableName} OFF;");
-                            }
-                        }
 
                         foreach (DataRow row in originalDs.Tables[0].Rows)
-                        {
                             if (newDs.Tables[i]
                                 .Select($@"{newDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
                                 .Length == 0) // condició en la que es determina que el codi de row no està a la taula
-                            {
                                 queries.Add(
                                     $"DELETE FROM {tableName} WHERE {newDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)};");
-                            }
-                        }
                     }
 
                     if (queries.Count > 0)
@@ -263,14 +255,11 @@ namespace LibreriaClases
 
         private static string GetColumnNames(DataTable dt)
         {
-            string[] ls = new string[dt.Columns.Count];
+            var ls = new string[dt.Columns.Count];
 
-            for (var i = 0; i < dt.Columns.Count; i++)
-            {
-                ls[i] = dt.Columns[i].ColumnName;
-            }
+            for (var i = 0; i < dt.Columns.Count; i++) ls[i] = dt.Columns[i].ColumnName;
 
-            return String.Join(", ", ls);
+            return string.Join(", ", ls);
         }
 
         private static string GetValues(DataRow dr)
@@ -278,19 +267,15 @@ namespace LibreriaClases
             var finalStr = "";
             var index = 0;
             string str;
-            
+
             foreach (var obj in dr.ItemArray)
             {
                 if (!Regex.IsMatch(obj.ToString(), @"^\d+$"))
-                {
                     str = $"'{obj}'";
-                }
                 else
-                {
                     str = $"{obj}";
-                }
-                if (index != (dr.ItemArray.Length - 1)) str = $"{str}, ";
-                
+                if (index != dr.ItemArray.Length - 1) str = $"{str}, ";
+
                 finalStr = $"{finalStr}{str}";
                 index++;
             }

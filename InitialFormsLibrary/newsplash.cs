@@ -1,20 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using InitialFormsLibrary;
 
 namespace ProvaClasse
 {
     public partial class newsplash : Form
     {
-        int porcentaje = 0;
+        private int porcentaje;
 
         public newsplash()
         {
@@ -41,7 +34,7 @@ namespace ProvaClasse
             }
             else
             {
-                this.Hide();
+                Hide();
                 timer1.Enabled = false;
 
                 var f2 = new Login();
@@ -55,7 +48,7 @@ namespace ProvaClasse
 
             {
                 timer1.Stop();
-                this.Hide();
+                Hide();
                 var Form2 = new Login();
                 Form2.Show();
             }

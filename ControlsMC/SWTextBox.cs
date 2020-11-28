@@ -1,41 +1,13 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-
 
 namespace ControlsMC
 {
     public class SWTextBox : TextBox
     {
-        public SWTextBox()
-        {
-            InitializeComponent();
-        }
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // SWTextBox
-            // 
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Enter += new System.EventHandler(this.SWTextbox_Enter);
-            this.Leave += new System.EventHandler(this.SWTextbox_Leave);
-            this.Validating += new System.ComponentModel.CancelEventHandler(this.SWTextBox_Validating);
-            this.ResumeLayout(false);
-
-        }
-
-        private void SWTextbox_Leave(object sender, EventArgs e)
-        {
-            this.BackColor = Color.White;
-        }
-
-        private void SWTextbox_Enter(object sender, EventArgs e)
-        {
-            this.BackColor = Color.LightGray;
-        }
-
         public enum TipusDada
         {
             Numero,
@@ -44,20 +16,47 @@ namespace ControlsMC
             Codi
         }
 
-        private TipusDada _Tipus;
-        public TipusDada Tipus
+        public SWTextBox()
         {
-            get { return _Tipus; }
-            set
-            {
-                _Tipus = value;
-            }
+            InitializeComponent();
         }
-        private void SWTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+
+        public TipusDada Tipus { get; set; }
+
+        public string CampoBBDD { get; set; }
+
+        public bool Foranea { get; set; }
+
+        public bool AllowEmpty { get; set; } = true;
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // SWTextBox
+            // 
+            Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Enter += SWTextbox_Enter;
+            Leave += SWTextbox_Leave;
+            Validating += SWTextBox_Validating;
+            ResumeLayout(false);
+        }
+
+        private void SWTextbox_Leave(object sender, EventArgs e)
+        {
+            BackColor = Color.White;
+        }
+
+        private void SWTextbox_Enter(object sender, EventArgs e)
+        {
+            BackColor = Color.LightGray;
+        }
+
+        private void SWTextBox_Validating(object sender, CancelEventArgs e)
         {
             //Declaració de variables
-            String nombre = this.Name;
-            String text = this.Text;
+            var nombre = Name;
+            var text = Text;
 
             if (!AllowEmpty && text.Length == 0)
             {
@@ -66,20 +65,21 @@ namespace ControlsMC
             }
 
             //
-            switch (this.Tipus)
+            switch (Tipus)
             {
                 case TipusDada.Numero:
                     if (Regex.IsMatch(text, @"^\d+$"))
                     {
                         e.Cancel = false;
-                        this.ForeColor = Color.Black;
+                        ForeColor = Color.Black;
                     }
                     else
                     {
                         MessageBox.Show("El valor introduit no és un número, reviseu el camp.");
                         e.Cancel = true;
-                        this.ForeColor = Color.Red;
+                        ForeColor = Color.Red;
                     }
+
                     break;
                 case TipusDada.Text:
                     break;
@@ -87,61 +87,31 @@ namespace ControlsMC
                     if (Regex.IsMatch(text, @"^(0?[1-9]|[12][0-9]|3[01])[- /.](0?[1-9]|1[012])[- /.](18|19|20)\d\d$"))
                     {
                         e.Cancel = false;
-                        this.ForeColor = Color.Black;
+                        ForeColor = Color.Black;
                     }
                     else
                     {
                         MessageBox.Show("La data introduida no es correcte, reviseu que el format sigui: dd/mm/yyyy");
                         e.Cancel = true;
-                        this.ForeColor = Color.Red;
+                        ForeColor = Color.Red;
                     }
+
                     break;
                 case TipusDada.Codi:
                     //   /*
                     if (Regex.IsMatch(text, @"^([A-Z][A-Z][A-Z][A-Z])[-]([0-9][0-9][0-9])[/][13579][AEIOU]$"))
                     {
                         e.Cancel = false;
-                        this.ForeColor = Color.Black;
+                        ForeColor = Color.Black;
                     }
                     else
                     {
                         MessageBox.Show("Comproba la sintaxi del codi.");
                         e.Cancel = true;
-                        this.ForeColor = Color.Red;
+                        ForeColor = Color.Red;
                     }
+
                     break;
-                default:
-                    break;
-            }
-        }
-
-        private String _CampoBBDD;
-        public String CampoBBDD
-        {
-            get { return _CampoBBDD; }
-            set
-            {
-                _CampoBBDD = value;
-            }
-        }
-
-        private Boolean _foranea;
-        public Boolean Foranea
-        {
-            get { return _foranea; }
-            set
-            {
-                _foranea = value;
-            }
-        }
-
-        private Boolean _AllowEmpty = true;
-        public Boolean AllowEmpty
-        {
-            get { return _AllowEmpty; }
-            set
-            {
-                _AllowEmpty = value;
             }
         }
     }

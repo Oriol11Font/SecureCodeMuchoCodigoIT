@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using LibreriaClases;
@@ -9,9 +8,10 @@ namespace LibreriaControles
     public sealed partial class SearchForm : BaseForm
     {
         private readonly DataAccessClass _dac = new DataAccessClass();
-        private String _searchText;
         private DataTable _dt;
         private DataTable _formattedDt;
+        private string _searchText;
+
         public SearchForm(DataSet ds)
         {
             InitializeComponent();
@@ -35,16 +35,12 @@ namespace LibreriaControles
         private void HandleSearch()
         {
             _searchText = searchTextBox.Text;
-            foreach (DataColumn dtColumn in _dt.Columns)
-            {
-                listColumns.Items.Add(dtColumn.ColumnName);
-            }
+            foreach (DataColumn dtColumn in _dt.Columns) listColumns.Items.Add(dtColumn.ColumnName);
         }
 
         private void HandleTextBoxKey(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) HandleSearch();   
+            if (e.KeyCode == Keys.Enter) HandleSearch();
         }
-        
     }
 }

@@ -34,3 +34,5 @@ Debug/
 msbuild.log
 msbuild.err
 msbuild.wrn
+*.exe
+*.exe.config

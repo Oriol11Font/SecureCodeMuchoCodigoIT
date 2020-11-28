@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TextBoxControls
@@ -18,32 +11,16 @@ namespace TextBoxControls
             InitializeComponent();
         }
 
-        private String _Form;
-        public String Form
-        {
-            get { return _Form; }
-            set
-            {
-                _Form = value;
-            }
-        }
+        public string Form { get; set; }
 
-        private String _Classe;
-        public String Classe
-        {
-            get { return _Classe; }
-            set
-            {
-                _Classe = value;
-            }
-        }
+        public string Classe { get; set; }
 
         private void exeButton_Click(object sender, EventArgs e)
         {
-            Assembly ensamblat = Assembly.LoadFrom(Classe);
+            var ensamblat = Assembly.LoadFrom(Classe);
 
             //Declarem les variables
-            Object dllBD;
+            object dllBD;
             Type tipus;
 
             //recuperem el tipus de la classe que volem instanciar
@@ -54,18 +31,17 @@ namespace TextBoxControls
 
             //el mostrem assumint que es tracta d’un form 
             // i per això fem un cast amb (Form) 
-            ((Form)dllBD).Show();
+            ((Form) dllBD).Show();
         }
 
         private void exeButton_MouseHover(object sender, EventArgs e)
         {
-            this.Margin = new Padding(35);
+            Margin = new Padding(35);
         }
 
         private void exeButton_MouseLeave(object sender, EventArgs e)
         {
-            this.Margin = new Padding(50);
+            Margin = new Padding(50);
         }
     }
 }
-

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProvaClasse.Forms
@@ -20,7 +14,7 @@ namespace ProvaClasse.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(progressBar1.Value < 100)
+            if (progressBar1.Value < 100)
             {
                 progressBar1.Value = progressBar1.Value + 5;
             }
@@ -29,7 +23,6 @@ namespace ProvaClasse.Forms
                 timer1.Enabled = false;
                 Application.Exit();
             }
-           
         }
 
         private void AlertScreen_Load(object sender, EventArgs e)
@@ -46,7 +39,6 @@ namespace ProvaClasse.Forms
             alert4.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "alertsign.gif");
             alert4.SizeMode = PictureBoxSizeMode.StretchImage;
             alert4.Enabled = true;
-
         }
     }
 }

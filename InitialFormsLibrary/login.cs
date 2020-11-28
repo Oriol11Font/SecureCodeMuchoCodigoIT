@@ -9,10 +9,10 @@ namespace InitialFormsLibrary
 {
     public partial class Login : Form
     {
-        int _intentosDefault = 3;
-        int _intentos;
-        private bool _mouseDown;
+        private readonly int _intentosDefault = 3;
+        private int _intentos;
         private Point _lastLocation;
+        private bool _mouseDown;
 
         public Login()
         {
@@ -35,10 +35,10 @@ namespace InitialFormsLibrary
             if (_mouseDown)
             {
                 ChangeBorderColor(Color.Red);
-                this.Location = new Point(
-                    (this.Location.X - _lastLocation.X) + e.X, (this.Location.Y - _lastLocation.Y) + e.Y);
+                Location = new Point(
+                    Location.X - _lastLocation.X + e.X, Location.Y - _lastLocation.Y + e.Y);
 
-                this.Update();
+                Update();
             }
         }
 
@@ -114,9 +114,9 @@ namespace InitialFormsLibrary
                     if (_intentos == 0)
                     {
                         //Abrir nuevo formulario con mensaje AMENAZADDOR
-                        AlertScreen amenaza = new AlertScreen();
+                        var amenaza = new AlertScreen();
                         amenaza.Show();
-                        this.Close();
+                        Close();
                     }
                 }
             }
@@ -156,11 +156,7 @@ namespace InitialFormsLibrary
 
         private void mtxt_password_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-
-            {
-                btn_login_Click(null, null);
-            }
+            if (e.KeyCode == Keys.Enter) btn_login_Click(null, null);
         }
 
         private static bool ValidateUser(string username, string password)
@@ -171,8 +167,8 @@ namespace InitialFormsLibrary
             {
                 var dt = dac.GetByQuery("SELECT * FROM Users WHERE UserName = '" + username + "';").Tables[0];
 
-                login = (dt.Rows.Count == 1) && ((string) dt.Rows[0].ItemArray[2] == username &&
-                                                 (string) dt.Rows[0].ItemArray[4] == password);
+                login = dt.Rows.Count == 1 && (string) dt.Rows[0].ItemArray[2] == username &&
+                        (string) dt.Rows[0].ItemArray[4] == password;
             }
             catch (Exception e)
             {
@@ -184,7 +180,7 @@ namespace InitialFormsLibrary
 
         private void minimizebtn_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void closebtn_Click(object sender, EventArgs e)
@@ -214,7 +210,13 @@ namespace InitialFormsLibrary
 
         private void validImg_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            label1.Anchor = AnchorStyles.Top;
+            label1.Location = new Point(panel7.Bounds.Width / 5, label1.Location.Y);
         }
     }
 }

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using ProvaClasse;
 
 namespace InitialFormsLibrary
 {
     public partial class Splash : Form
     {
-        int _porcentaje = 0;
+        private int _porcentaje;
 
         public Splash()
         {
@@ -30,10 +29,10 @@ namespace InitialFormsLibrary
             }
             else
             {
-                Login f2 = new Login();
+                var f2 = new Login();
                 timer1.Enabled = false;
                 f2.Show();
-                this.Hide();
+                Hide();
             }
         }
 
@@ -43,8 +42,8 @@ namespace InitialFormsLibrary
 
             {
                 timer1.Stop();
-                this.Hide();
-                Login form2 = new Login();
+                Hide();
+                var form2 = new Login();
                 form2.Show();
             }
             else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
