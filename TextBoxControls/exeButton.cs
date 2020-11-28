@@ -56,6 +56,16 @@ namespace TextBoxControls
             // i per això fem un cast amb (Form) 
             ((Form)dllBD).Show();
         }
+
+        private void exeButton_MouseHover(object sender, EventArgs e)
+        {
+            this.Margin = new Padding(35);
+        }
+
+        private void exeButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.Margin = new Padding(50);
+        }
     }
 }
 

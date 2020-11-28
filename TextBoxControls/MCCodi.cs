@@ -196,7 +196,7 @@ namespace TextBoxControls
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            String sql = "SELECT * FROM "+ NomTaula +" WHERE "+ NomId +" = " + controltxt.Text;
+            String sql = "SELECT * FROM Factories WHERE IdFactory = " + controltxt.Text;
 
             DataAccessClass data = new DataAccessClass();
 

@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>DLL\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -67,6 +67,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="newsplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newsplash.Designer.cs">
+      <DependentUpon>newsplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newsplash.resx">
+      <DependentUpon>newsplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
@@ -114,10 +123,36 @@
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
       <Name>BasicForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestsForms\TestsForms.csproj">
+      <Project>{69a78b2a-0b72-4877-bed4-9c24dffa74df}</Project>
+      <Name>TestsForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TextBoxControls\CustomControlsMC.csproj">
       <Project>{fb17de15-0b06-41fc-96aa-3a53d9f7b289}</Project>
       <Name>CustomControlsMC</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_app.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

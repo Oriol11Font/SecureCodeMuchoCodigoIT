@@ -34,7 +34,11 @@ namespace TextBoxControls
             // 
             // exeButton
             // 
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Click += new System.EventHandler(this.exeButton_Click);
+            this.MouseLeave += new System.EventHandler(this.exeButton_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.exeButton_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

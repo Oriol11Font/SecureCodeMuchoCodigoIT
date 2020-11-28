@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlsMC", "TextBox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialFormsLibrary", "InitialFormsLibrary\InitialFormsLibrary.csproj", "{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsForms", "TestsForms\TestsForms.csproj", "{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

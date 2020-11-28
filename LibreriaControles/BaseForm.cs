@@ -6,8 +6,6 @@ namespace LibreriaControles
 {
     public partial class BaseForm: Form
     {
-        public bool FontSize { get; set; }
-
         private string _UserName;
         public string UserName
         {
@@ -15,6 +13,16 @@ namespace LibreriaControles
             set
             {
                 _UserName = value;
+            }
+        }
+
+        private string _FormTitle;
+        public string FormTitle
+        {
+            get { return _FormTitle; }
+            set
+            {
+                _FormTitle = value;
             }
         }
 
@@ -42,7 +50,7 @@ namespace LibreriaControles
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            userName.Text = "Oriol Font";
+            username.Text = "Oriol Font";
         }
 
         private void logoutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

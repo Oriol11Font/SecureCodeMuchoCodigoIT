@@ -31,5 +31,22 @@ namespace ProvaClasse.Forms
             }
            
         }
+
+        private void AlertScreen_Load(object sender, EventArgs e)
+        {
+            alert1.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "alertsign.gif");
+            alert1.SizeMode = PictureBoxSizeMode.StretchImage;
+            alert1.Enabled = true;
+            alert2.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "alertsign.gif");
+            alert2.SizeMode = PictureBoxSizeMode.StretchImage;
+            alert2.Enabled = true;
+            alert3.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "alertsign.gif");
+            alert3.SizeMode = PictureBoxSizeMode.StretchImage;
+            alert3.Enabled = true;
+            alert4.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "alertsign.gif");
+            alert4.SizeMode = PictureBoxSizeMode.StretchImage;
+            alert4.Enabled = true;
+
+        }
     }
 }

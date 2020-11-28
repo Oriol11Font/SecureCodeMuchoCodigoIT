@@ -111,7 +111,7 @@ namespace ProvaClasse
 
                 exeButton menubtn = new exeButton();
 
-                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2).ToString(); ;
+                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2).ToString();
                 menubtn.SizeMode = PictureBoxSizeMode.Zoom;
 
                 menubtn.Form = dr.ItemArray.GetValue(3).ToString();

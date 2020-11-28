@@ -27,7 +27,7 @@ namespace LibreriaControles
             }
         }
 
-        private string[] _NomColumn;
+        private string[] _NomColumn = { };
         public string[] NomColumn
         {
             get { return _NomColumn; }
@@ -49,7 +49,7 @@ namespace LibreriaControles
             catch (Exception e)
             {
                 btn_actualitzar.ForeColor = Color.Red;
-                MessageBox.Show("Error updating DataBase with actual information: " + e.Message);
+                MessageBox.Show("ForaniForm - Error updating DataBase with actual information: " + e.Message);
             }
         }
 
@@ -103,7 +103,7 @@ namespace LibreriaControles
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error connection with DataBase: " + e.Message);
+                MessageBox.Show("ForaniForm - Error connection with DataBase: " + e.Message);
             }
         }
 
@@ -122,13 +122,18 @@ namespace LibreriaControles
             catch (Exception e)
             {
                 createbtn.ForeColor = Color.Red;
-                MessageBox.Show("Error creating new row: " + e.Message);
+                MessageBox.Show("ForaniForm - Error creating new row: " + e.Message);
             }
         }
 
         private void createbtn_Leave(object sender, EventArgs e)
         {
             createbtn.ForeColor = Color.White;
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

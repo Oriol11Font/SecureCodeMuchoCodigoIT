@@ -1,6 +1,7 @@
 ﻿using LibreriaClases;
 using ProvaClasse.Forms;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProvaClasse
@@ -13,17 +14,6 @@ namespace ProvaClasse
             InitializeComponent();
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             timer1.Enabled = true;
@@ -32,7 +22,7 @@ namespace ProvaClasse
             if (loginBar.Value < 100)
             {
 
-                loginBar.Value += 10;
+                loginBar.Value += 2;
 
             }
             else
@@ -47,7 +37,11 @@ namespace ProvaClasse
                     Menu Menu = new Menu();
                     Menu.user = username;
                     Menu.Show();
+                    
+                    //this.Hide();
                     //this.Close();
+                    _intentos = 0;
+                    incorrectlbl.Visible = false;
                     btn_login.Visible = true;
                     usernameLabel.Visible = true;
                     passwordLabel.Visible = true;
@@ -58,11 +52,14 @@ namespace ProvaClasse
                     timer1.Enabled = false;
                     txt_username.Text = "";
                     mtxt_password.Text = "";
+                    validImg.Visible = false;
                 }
                 else
                 {
                     _intentos++;
 
+                    validImg.Visible = false;
+                    incorrectlbl.Visible = true;
                     btn_login.Visible = true;
                     usernameLabel.Visible = true;
                     passwordLabel.Visible = true;
@@ -101,11 +98,15 @@ namespace ProvaClasse
             btn_login.Visible = false;
             usernameLabel.Visible = false;
             passwordLabel.Visible = false;
-            messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar...\r\n";
+            messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar unos minutos...\r\n";
             messageLoginLabel.Visible = true;
             mtxt_password.Visible = false;
             txt_username.Visible = false;
             loginBar.Visible = true;
+            validImg.Visible = true;
+            validImg.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "loginvalidation.gif");
+            validImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            validImg.Enabled = true;
 
             loginBar.Value = 0;
 
@@ -137,6 +138,16 @@ namespace ProvaClasse
             }
 
             return login;
+        }
+
+        private void minimizebtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

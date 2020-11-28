@@ -35,15 +35,23 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.userName = new System.Windows.Forms.Label();
-            this.logoutLabel = new System.Windows.Forms.LinkLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.TitleForm = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.profileimg = new System.Windows.Forms.PictureBox();
+            this.logoutlink = new System.Windows.Forms.LinkLabel();
+            this.username = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profileimg)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -53,8 +61,7 @@
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.Yellow;
             this.panel1.Controls.Add(this.AppTitle);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_minimize);
@@ -63,15 +70,16 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 40);
+            this.panel1.Size = new System.Drawing.Size(1774, 40);
             this.panel1.TabIndex = 0;
             // 
             // AppTitle
             // 
             this.AppTitle.AutoSize = true;
+            this.AppTitle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AppTitle.Location = new System.Drawing.Point(43, 12);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(467, 17);
+            this.AppTitle.Size = new System.Drawing.Size(367, 13);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCode - Rebel Alliance System Upgrade";
             // 
@@ -91,11 +99,12 @@
             // 
             this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_minimize.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn_minimize.BackColor = System.Drawing.Color.Transparent;
             this.btn_minimize.FlatAppearance.BorderSize = 0;
             this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_minimize.Location = new System.Drawing.Point(1787, 0);
+            this.btn_minimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_minimize.Location = new System.Drawing.Point(1641, 0);
             this.btn_minimize.Margin = new System.Windows.Forms.Padding(0);
             this.btn_minimize.Name = "btn_minimize";
             this.btn_minimize.Size = new System.Drawing.Size(66, 40);
@@ -108,12 +117,12 @@
             // 
             this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_exit.BackColor = System.Drawing.Color.Red;
+            this.btn_exit.BackColor = System.Drawing.Color.Transparent;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_exit.Location = new System.Drawing.Point(1851, 0);
+            this.btn_exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_exit.Location = new System.Drawing.Point(1705, 0);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(0);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(69, 40);
@@ -122,65 +131,115 @@
             this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
-            // userName
+            // panel3
             // 
-            this.userName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.userName.Font = new System.Drawing.Font("Nasalization", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userName.ForeColor = System.Drawing.Color.White;
-            this.userName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.userName.Location = new System.Drawing.Point(1683, 17);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(147, 13);
-            this.userName.TabIndex = 16;
-            this.userName.Text = "UserNamellarg";
-            this.userName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // logoutLabel
-            // 
-            this.logoutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoutLabel.Font = new System.Drawing.Font("Nasalization", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.logoutLabel.LinkColor = System.Drawing.Color.White;
-            this.logoutLabel.Location = new System.Drawing.Point(1683, 44);
-            this.logoutLabel.Name = "logoutLabel";
-            this.logoutLabel.Size = new System.Drawing.Size(144, 14);
-            this.logoutLabel.TabIndex = 17;
-            this.logoutLabel.TabStop = true;
-            this.logoutLabel.Text = "Log out";
-            this.logoutLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.logoutLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::LibreriaControles.Properties.Resources.profile_img;
-            this.pictureBox3.InitialImage = global::LibreriaControles.Properties.Resources.profile_img;
-            this.pictureBox3.Location = new System.Drawing.Point(1836, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 65);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.Yellow;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(10, 1051);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1754, 10);
+            this.panel3.TabIndex = 14;
             // 
             // panel2
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.logoutLabel);
-            this.panel2.Controls.Add(this.userName);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.BackColor = System.Drawing.Color.Yellow;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1920, 71);
-            this.panel2.TabIndex = 18;
+            this.panel2.Size = new System.Drawing.Size(10, 1021);
+            this.panel2.TabIndex = 15;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Yellow;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1764, 40);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 1021);
+            this.panel4.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(10, 40);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1754, 125);
+            this.panel5.TabIndex = 17;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.TitleForm);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1377, 125);
+            this.panel7.TabIndex = 4;
+            // 
+            // TitleForm
+            // 
+            this.TitleForm.AutoSize = true;
+            this.TitleForm.Font = new System.Drawing.Font("Nasalization", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleForm.Location = new System.Drawing.Point(38, 33);
+            this.TitleForm.Name = "TitleForm";
+            this.TitleForm.Size = new System.Drawing.Size(690, 57);
+            this.TitleForm.TabIndex = 0;
+            this.TitleForm.Text = "Titulo Formulario";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.profileimg);
+            this.panel6.Controls.Add(this.logoutlink);
+            this.panel6.Controls.Add(this.username);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(1403, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(351, 125);
+            this.panel6.TabIndex = 3;
+            // 
+            // profileimg
+            // 
+            this.profileimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.profileimg.Image = global::LibreriaControles.Properties.Resources.profile_img;
+            this.profileimg.Location = new System.Drawing.Point(223, 9);
+            this.profileimg.Name = "profileimg";
+            this.profileimg.Size = new System.Drawing.Size(125, 110);
+            this.profileimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.profileimg.TabIndex = 0;
+            this.profileimg.TabStop = false;
+            // 
+            // logoutlink
+            // 
+            this.logoutlink.Font = new System.Drawing.Font("Nasalization", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutlink.LinkColor = System.Drawing.Color.White;
+            this.logoutlink.Location = new System.Drawing.Point(59, 70);
+            this.logoutlink.Name = "logoutlink";
+            this.logoutlink.Size = new System.Drawing.Size(198, 20);
+            this.logoutlink.TabIndex = 2;
+            this.logoutlink.TabStop = true;
+            this.logoutlink.Text = "Cerrar sesión";
+            this.logoutlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
+            // 
+            // username
+            // 
+            this.username.Font = new System.Drawing.Font("Nasalization", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(67, 36);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(188, 28);
+            this.username.TabIndex = 1;
+            this.username.Text = "UserName";
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1055);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1774, 1061);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,10 +254,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.profileimg)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -210,9 +271,15 @@
         private System.Windows.Forms.Button btn_minimize;
         private System.Windows.Forms.Label AppTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel logoutLabel;
-        private System.Windows.Forms.Label userName;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.LinkLabel logoutlink;
+        private System.Windows.Forms.Label username;
+        private System.Windows.Forms.PictureBox profileimg;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label TitleForm;
     }
 }
