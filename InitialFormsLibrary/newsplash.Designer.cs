@@ -72,7 +72,6 @@
             this.splashimg.Size = new System.Drawing.Size(398, 297);
             this.splashimg.TabIndex = 4;
             this.splashimg.TabStop = false;
-            this.splashimg.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 

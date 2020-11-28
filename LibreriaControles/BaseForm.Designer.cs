@@ -45,13 +45,13 @@
             this.profileimg = new System.Windows.Forms.PictureBox();
             this.logoutlink = new System.Windows.Forms.LinkLabel();
             this.username = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.fileSystemWatcher1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profileimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.profileimg)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -77,17 +77,17 @@
             // 
             this.AppTitle.AutoSize = true;
             this.AppTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AppTitle.Location = new System.Drawing.Point(43, 12);
+            this.AppTitle.Location = new System.Drawing.Point(48, 14);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(367, 13);
+            this.AppTitle.Size = new System.Drawing.Size(364, 13);
             this.AppTitle.TabIndex = 3;
-            this.AppTitle.Text = "MuchoCodigoIT - SecureCode - Rebel Alliance System Upgrade";
+            this.AppTitle.Text = "MuchoCodigoIT - SecureCore - Rebel Alliance System Upgrade";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LibreriaControles.Properties.Resources.logo_app;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
@@ -97,12 +97,11 @@
             // 
             // btn_minimize
             // 
-            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_minimize.BackColor = System.Drawing.Color.Transparent;
             this.btn_minimize.FlatAppearance.BorderSize = 0;
             this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_minimize.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_minimize.Location = new System.Drawing.Point(1641, 0);
             this.btn_minimize.Margin = new System.Windows.Forms.Padding(0);
@@ -115,12 +114,11 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_exit.BackColor = System.Drawing.Color.Transparent;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_exit.Location = new System.Drawing.Point(1705, 0);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(0);
@@ -181,10 +179,10 @@
             // TitleForm
             // 
             this.TitleForm.AutoSize = true;
-            this.TitleForm.Font = new System.Drawing.Font("Nasalization", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.TitleForm.Location = new System.Drawing.Point(38, 33);
             this.TitleForm.Name = "TitleForm";
-            this.TitleForm.Size = new System.Drawing.Size(690, 57);
+            this.TitleForm.Size = new System.Drawing.Size(529, 73);
             this.TitleForm.TabIndex = 0;
             this.TitleForm.Text = "Titulo Formulario";
             // 
@@ -212,7 +210,7 @@
             // 
             // logoutlink
             // 
-            this.logoutlink.Font = new System.Drawing.Font("Nasalization", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.logoutlink.LinkColor = System.Drawing.Color.White;
             this.logoutlink.Location = new System.Drawing.Point(59, 70);
             this.logoutlink.Name = "logoutlink";
@@ -224,7 +222,7 @@
             // 
             // username
             // 
-            this.username.Font = new System.Drawing.Font("Nasalization", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.username.Location = new System.Drawing.Point(67, 36);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(188, 28);
@@ -242,25 +240,24 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BaseForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.BaseForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.fileSystemWatcher1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.profileimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.profileimg)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

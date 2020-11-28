@@ -1,17 +1,59 @@
-﻿using LibreriaClases;
-using ProvaClasse.Forms;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using LibreriaClases;
+using ProvaClasse.Forms;
+using Menu = ProvaClasse.Menu;
 
-namespace ProvaClasse
+namespace InitialFormsLibrary
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
-        int _intentos = 0;
-        public login()
+        int _intentosDefault = 3;
+        int _intentos;
+        private bool _mouseDown;
+        private Point _lastLocation;
+
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void Init(object sender, EventArgs e)
+        {
+            _intentos = _intentosDefault;
+        }
+
+        private void topbar_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseDown = true;
+            _lastLocation = e.Location;
+        }
+
+        private void topbar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_mouseDown)
+            {
+                ChangeBorderColor(Color.Red);
+                this.Location = new Point(
+                    (this.Location.X - _lastLocation.X) + e.X, (this.Location.Y - _lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void topbar_MouseUp(object sender, MouseEventArgs e)
+        {
+            _mouseDown = false;
+            ChangeBorderColor(Color.Yellow);
+        }
+
+        private void ChangeBorderColor(Color color)
+        {
+            borderTop.BackColor = color;
+            borderRight.BackColor = color;
+            borderBottom.BackColor = color;
+            borderLeft.BackColor = color;
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
@@ -21,9 +63,7 @@ namespace ProvaClasse
 
             if (loginBar.Value < 100)
             {
-
                 loginBar.Value += 2;
-
             }
             else
             {
@@ -31,16 +71,14 @@ namespace ProvaClasse
                 var username = txt_username.Text.Trim();
                 var password = mtxt_password.Text.Trim();
 
-                // TODO: ARREGLAR FUNCION LOGEAR USUARIOS; ME DA PALO SEGUIR MAS; ME DUELE LA CABEZA
+                // validamos usuario
                 if (ValidateUser(username, password))
                 {
-                    Menu Menu = new Menu();
-                    Menu.user = username;
-                    Menu.Show();
-                    
-                    //this.Hide();
-                    //this.Close();
-                    _intentos = 0;
+                    var menu = new Menu();
+                    menu.user = username;
+                    menu.Show();
+                    Init(null, null);
+
                     incorrectlbl.Visible = false;
                     btn_login.Visible = true;
                     usernameLabel.Visible = true;
@@ -56,21 +94,24 @@ namespace ProvaClasse
                 }
                 else
                 {
-                    _intentos++;
+                    _intentos--;
 
+                    txt_username.Text = "";
+                    mtxt_password.Text = "";
                     validImg.Visible = false;
                     incorrectlbl.Visible = true;
                     btn_login.Visible = true;
                     usernameLabel.Visible = true;
                     passwordLabel.Visible = true;
                     messageLoginLabel.Visible = false; // todo
-                    messageLoginLabel.Text = @"El usuario y/o la contraseña son incorrectos! Inténtelo de nuevo";
+                    incorrectlbl.Text = $@"El usuario y/o la contraseña son incorrectos!
+{_intentos} intentos hasta el bloqueo de la aplicación";
                     mtxt_password.Visible = true;
                     txt_username.Visible = true;
                     loginBar.Visible = false;
                     timer1.Enabled = false;
 
-                    if (_intentos >= 3)
+                    if (_intentos == 0)
                     {
                         //Abrir nuevo formulario con mensaje AMENAZADDOR
                         AlertScreen amenaza = new AlertScreen();
@@ -81,36 +122,36 @@ namespace ProvaClasse
             }
         }
 
-        private void ToggleVisibility()
-        {
-            btn_login.Visible = true;
-            usernameLabel.Visible = true;
-            passwordLabel.Visible = true;
-            messageLoginLabel.Visible = false;
-            mtxt_password.Visible = true;
-            txt_username.Visible = true;
-            loginBar.Visible = true;
-            timer1.Enabled = false;
-        }
-
         private void btn_login_Click(object sender, EventArgs e)
         {
-            btn_login.Visible = false;
-            usernameLabel.Visible = false;
-            passwordLabel.Visible = false;
-            messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar unos minutos...\r\n";
-            messageLoginLabel.Visible = true;
-            mtxt_password.Visible = false;
-            txt_username.Visible = false;
-            loginBar.Visible = true;
-            validImg.Visible = true;
-            validImg.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "loginvalidation.gif");
-            validImg.SizeMode = PictureBoxSizeMode.StretchImage;
-            validImg.Enabled = true;
+            username_warning.Visible = false;
+            password_warning.Visible = false;
 
-            loginBar.Value = 0;
+            if (txt_username.Text != "" && mtxt_password.Text != "")
+            {
+                btn_login.Visible = false;
+                usernameLabel.Visible = false;
+                passwordLabel.Visible = false;
+                incorrectlbl.Visible = false;
+                messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar unos minutos...\r\n";
+                messageLoginLabel.Visible = true;
+                mtxt_password.Visible = false;
+                txt_username.Visible = false;
+                loginBar.Visible = true;
+                validImg.Visible = true;
+                validImg.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "loginvalidation.gif");
+                validImg.SizeMode = PictureBoxSizeMode.StretchImage;
+                validImg.Enabled = true;
 
-            timer1_Tick_1(sender, e);
+                loginBar.Value = 0;
+
+                timer1_Tick_1(sender, e);
+            }
+            else
+            {
+                if (txt_username.Text == "" && !username_warning.Visible) username_warning.Visible = true;
+                if (mtxt_password.Text == "" && !password_warning.Visible) password_warning.Visible = true;
+            }
         }
 
         private void mtxt_password_KeyDown(object sender, KeyEventArgs e)
@@ -128,13 +169,14 @@ namespace ProvaClasse
             var login = false;
             try
             {
-                var dt = dac.GetByQuery("SELECT * FROM Users WHERE UserName = '"+username+"';").Tables[0];
+                var dt = dac.GetByQuery("SELECT * FROM Users WHERE UserName = '" + username + "';").Tables[0];
 
-                login = (dt.Rows.Count == 1) && ((string) dt.Rows[0].ItemArray[2] == username && (string) dt.Rows[0].ItemArray[4] == password);
+                login = (dt.Rows.Count == 1) && ((string) dt.Rows[0].ItemArray[2] == username &&
+                                                 (string) dt.Rows[0].ItemArray[4] == password);
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Error: {e}");
+                MessageBox.Show($@"Error: {e}");
             }
 
             return login;
@@ -148,6 +190,31 @@ namespace ProvaClasse
         private void closebtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void closebtn_MouseHover(object sender, EventArgs e)
+        {
+            closebtn.ForeColor = Color.White;
+        }
+
+        private void closebtn_MouseLeave(object sender, EventArgs e)
+        {
+            closebtn.ForeColor = Color.Red;
+        }
+
+        private void minimizebtn_MouseHover(object sender, EventArgs e)
+        {
+            minimizebtn.ForeColor = Color.White;
+        }
+
+        private void minimizebtn_MouseLeave(object sender, EventArgs e)
+        {
+            minimizebtn.ForeColor = Color.Yellow;
+        }
+
+        private void validImg_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

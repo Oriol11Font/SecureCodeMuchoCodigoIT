@@ -1,9 +1,6 @@
-﻿using LibreriaClases;
-using LibreriaControles;
-using ProvaClasse.Forms;
-using System;
-using System.Data;
+﻿using System;
 using System.Windows.Forms;
+using InitialFormsLibrary;
 
 namespace ProvaClasse
 {

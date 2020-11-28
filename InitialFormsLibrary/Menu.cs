@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using InitialFormsLibrary;
 using LibreriaControles;
 using TextBoxControls;
 using LibreriaClases;
@@ -77,7 +78,7 @@ namespace ProvaClasse
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            login logout = new login();
+            Login logout = new Login();
             logout.Show();
             this.Close();
         }

@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using InitialFormsLibrary;
 
 namespace ProvaClasse
 {
     public partial class newsplash : Form
     {
         int porcentaje = 0;
+
         public newsplash()
         {
             InitializeComponent();
@@ -27,33 +29,24 @@ namespace ProvaClasse
             splashimg.Enabled = true;
             timer1.Enabled = true;
             timer1.Interval = 200;
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-
             if (splashBar1.Value < 100)
             {
-
                 splashBar1.Value += 6;
                 porcentaje += 6;
                 lbl_progressCarga.Text = porcentaje + "%";
-
             }
-            else {
-
+            else
+            {
                 this.Hide();
                 timer1.Enabled = false;
 
-                login f2 = new login();
+                var f2 = new Login();
                 f2.Show();
-                
             }
-
-            
-            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -61,21 +54,16 @@ namespace ProvaClasse
             if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.F2)
 
             {
-
                 timer1.Stop();
                 this.Hide();
-                login Form2 = new login();
+                var Form2 = new Login();
                 Form2.Show();
-            } else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
+            }
+            else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
 
             {
-                timer1.Stop();   
+                timer1.Stop();
             }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

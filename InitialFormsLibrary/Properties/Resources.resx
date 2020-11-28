@@ -121,13 +121,61 @@
   <data name="alertscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alertscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alertsign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alertsign.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bg_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bqsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bqsplash.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bqsplashwarp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bqsplashwarp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="casco_piloto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\casco_piloto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="company" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\company.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginvalidation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginvalidation.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo_app" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_app.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuOption1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuOption1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuOption2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuOption2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuOption3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuOption3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuOption4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuOption4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuOption5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuOption5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oriol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oriol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ship1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ship1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squadron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\squadron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

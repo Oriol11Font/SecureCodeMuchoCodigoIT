@@ -1,23 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
+using ProvaClasse;
 
-namespace ProvaClasse
+namespace InitialFormsLibrary
 {
-    public partial class splash : Form
+    public partial class Splash : Form
     {
-        int porcentaje = 0;
-        public splash()
+        int _porcentaje = 0;
+
+        public Splash()
         {
             InitializeComponent();
-            lbl_progressCarga.Text = porcentaje + "%";
+            lbl_progressCarga.Text = $@"{_porcentaje}%";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,26 +22,19 @@ namespace ProvaClasse
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-
             if (splashBar1.Value < 100)
             {
-
                 splashBar1.Value += 10;
-                porcentaje += 10;
-                lbl_progressCarga.Text = porcentaje + "%";
-
+                _porcentaje += 10;
+                lbl_progressCarga.Text = $@"{_porcentaje}%";
             }
-            else {
-               
-                login f2 = new login();
+            else
+            {
+                Login f2 = new Login();
                 timer1.Enabled = false;
                 f2.Show();
                 this.Hide();
             }
-
-            
-            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -55,15 +42,15 @@ namespace ProvaClasse
             if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.F2)
 
             {
-
                 timer1.Stop();
                 this.Hide();
-                login Form2 = new login();
-                Form2.Show();
-            } else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
+                Login form2 = new Login();
+                form2.Show();
+            }
+            else if (e.Modifiers == Keys.Alt && e.KeyCode == Keys.Enter)
 
             {
-                timer1.Stop();   
+                timer1.Stop();
             }
         }
     }
