@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace ControlsMC
+namespace Controls
 {
     public class SWTextBox : TextBox
     {

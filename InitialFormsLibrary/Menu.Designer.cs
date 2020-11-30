@@ -1,4 +1,6 @@
+
 ﻿namespace TestForms
+
 {
     partial class Menu
     {

@@ -57,7 +57,6 @@
             this.username_warning = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pic_logo_login = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.trademark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MCimg)).BeginInit();
             this.topbar.SuspendLayout();
@@ -356,7 +355,7 @@
             this.inputsPanel.Controls.Add(this.passwordLabel);
             this.inputsPanel.Controls.Add(this.mtxt_password);
             this.inputsPanel.Location = new System.Drawing.Point(279, 271);
-            this.inputsPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.inputsPanel.Name = "inputsPanel";
             this.inputsPanel.Size = new System.Drawing.Size(465, 266);
             this.inputsPanel.TabIndex = 21;
@@ -366,7 +365,7 @@
             this.validImg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.validImg.Image = global::InitialFormsLibrary.Properties.Resources.loginvalidation;
             this.validImg.Location = new System.Drawing.Point(76, 4);
-            this.validImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.validImg.Margin = new System.Windows.Forms.Padding(4);
             this.validImg.Name = "validImg";
             this.validImg.Size = new System.Drawing.Size(316, 185);
             this.validImg.TabIndex = 20;
@@ -379,7 +378,7 @@
             this.password_warning.Image = ((System.Drawing.Image)(resources.GetObject("password_warning.Image")));
             this.password_warning.InitialImage = ((System.Drawing.Image)(resources.GetObject("password_warning.InitialImage")));
             this.password_warning.Location = new System.Drawing.Point(76, 101);
-            this.password_warning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password_warning.Margin = new System.Windows.Forms.Padding(4);
             this.password_warning.Name = "password_warning";
             this.password_warning.Size = new System.Drawing.Size(31, 28);
             this.password_warning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -393,7 +392,7 @@
             this.username_warning.Image = global::InitialFormsLibrary.Properties.Resources.warning;
             this.username_warning.InitialImage = ((System.Drawing.Image)(resources.GetObject("username_warning.InitialImage")));
             this.username_warning.Location = new System.Drawing.Point(76, 41);
-            this.username_warning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.username_warning.Margin = new System.Windows.Forms.Padding(4);
             this.username_warning.Name = "username_warning";
             this.username_warning.Size = new System.Drawing.Size(31, 28);
             this.username_warning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -403,14 +402,13 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.inputsPanel);
             this.panel7.Controls.Add(this.trademark);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.pic_logo_login);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(8, 49);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1032, 553);
             this.panel7.TabIndex = 22;
@@ -430,15 +428,6 @@
             this.pic_logo_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_logo_login.TabIndex = 6;
             this.pic_logo_login.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(871, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -506,6 +495,5 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox username_warning;
         private System.Windows.Forms.PictureBox password_warning;
-        private System.Windows.Forms.Button button1;
     }
 }

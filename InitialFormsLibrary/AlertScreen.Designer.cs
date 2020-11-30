@@ -1,3 +1,4 @@
+
 ﻿namespace TestForms.Forms
 {
     partial class AlertScreen

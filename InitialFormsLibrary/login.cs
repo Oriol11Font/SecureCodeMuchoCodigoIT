@@ -6,6 +6,7 @@ using LibreriaControles;
 using TestForms.Forms;
 using Menu = TestForms.Menu;
 
+
 namespace InitialFormsLibrary
 {
     public partial class Login : Form
@@ -76,7 +77,8 @@ namespace InitialFormsLibrary
                 if (ValidateUser(username, password))
                 {
                     var menu = new Menu();
-                    menu.UserName = username;
+                    menu.UserName = username.ToString().Trim();
+                    menu.FormTitle = "Menú";
                     menu.Show();
                     Init(null, null);
 

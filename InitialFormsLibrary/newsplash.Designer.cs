@@ -1,4 +1,7 @@
+
 ﻿namespace TestForms
+
+
 {
     partial class newsplash
     {

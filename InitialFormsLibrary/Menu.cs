@@ -70,7 +70,6 @@ namespace TestForms
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            FormTitle = "Menú";
             WindowState = FormWindowState.Maximized;
             setWelcomeLabel();
             UserName = UserName;
