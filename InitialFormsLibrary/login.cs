@@ -75,7 +75,7 @@ namespace InitialFormsLibrary
                 if (ValidateUser(username, password))
                 {
                     var menu = new Menu();
-                    menu.user = username;
+                    menu.UserName = username;
                     menu.Show();
                     Init(null, null);
 
@@ -126,6 +126,7 @@ namespace InitialFormsLibrary
         {
             username_warning.Visible = false;
             password_warning.Visible = false;
+            loginBar.BackgroundImage = Image.FromFile(Application.StartupPath + "\\images\\" + "lightsaber.png");
 
             if (txt_username.Text != "" && mtxt_password.Text != "")
             {

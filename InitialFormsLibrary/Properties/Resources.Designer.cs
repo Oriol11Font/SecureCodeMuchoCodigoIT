@@ -133,6 +133,16 @@ namespace InitialFormsLibrary.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lightsaber {
+            get {
+                object obj = ResourceManager.GetObject("lightsaber", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginvalidation {
             get {
                 object obj = ResourceManager.GetObject("loginvalidation", resourceCulture);

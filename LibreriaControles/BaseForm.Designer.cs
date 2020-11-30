@@ -173,7 +173,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1377, 125);
+            this.panel7.Size = new System.Drawing.Size(1397, 125);
             this.panel7.TabIndex = 4;
             // 
             // TitleForm
@@ -212,9 +212,9 @@
             // 
             this.logoutlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.logoutlink.LinkColor = System.Drawing.Color.White;
-            this.logoutlink.Location = new System.Drawing.Point(59, 70);
+            this.logoutlink.Location = new System.Drawing.Point(108, 34);
             this.logoutlink.Name = "logoutlink";
-            this.logoutlink.Size = new System.Drawing.Size(198, 20);
+            this.logoutlink.Size = new System.Drawing.Size(109, 20);
             this.logoutlink.TabIndex = 2;
             this.logoutlink.TabStop = true;
             this.logoutlink.Text = "Cerrar sesión";
@@ -222,10 +222,11 @@
             // 
             // username
             // 
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.username.Location = new System.Drawing.Point(67, 36);
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.username.Location = new System.Drawing.Point(29, 9);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(188, 28);
+            this.username.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.username.Size = new System.Drawing.Size(188, 45);
             this.username.TabIndex = 1;
             this.username.Text = "UserName";
             // 

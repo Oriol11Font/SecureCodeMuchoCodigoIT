@@ -10,8 +10,6 @@ namespace LibreriaClases
 {
     public class DataAccessClass
     {
-        #region publicVariables
-
         private SqlConnection _conn;
 
         // TODO: guardar la connection string en el app.config
@@ -19,8 +17,6 @@ namespace LibreriaClases
 
         private static readonly Configuration Config =
             ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-
-        #endregion
 
         #region methods
 

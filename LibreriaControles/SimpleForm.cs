@@ -28,6 +28,7 @@ namespace LibreriaControles
                 var dtb = new DataAccessClass();
                 dtb.UpdateDb(query, dts);
                 btn_actualitzar.ForeColor = Color.LawnGreen;
+                Unsaved = false;
             }
             catch (Exception e)
             {
@@ -90,6 +91,7 @@ namespace LibreriaControles
             {
                 dts.Tables[0].Rows.Add();
                 createbtn.ForeColor = Color.LawnGreen;
+                Unsaved = true;
             }
             catch (Exception e)
             {

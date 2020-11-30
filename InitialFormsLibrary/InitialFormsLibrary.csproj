@@ -202,5 +202,8 @@
   <ItemGroup>
     <None Include="Resources\bqsplashwarp.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightsaber.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

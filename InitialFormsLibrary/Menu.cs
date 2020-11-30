@@ -14,15 +14,12 @@ namespace ProvaClasse
             InitializeComponent();
         }
 
-        public string user { get; set; }
-
-        private void setWelcomeLabel(DateTime tiempo, string user)
+        private void setWelcomeLabel()
         {
-            string welcomeText, momentDia;
+            string momentDia;
+            var time = new DateTime();
 
-            welcomeText = this.welcomeText.Text;
-
-            switch (tiempo.Hour)
+            switch (time.Hour)
             {
                 case int n when n >= 8 && n < 13:
                     momentDia = "Bon dia";
@@ -35,8 +32,8 @@ namespace ProvaClasse
                     break;
             }
 
-            var hora = "\nSon les " + tiempo.Hour + ":" + tiempo.Minute;
-            this.welcomeText.Text = $"{momentDia} {user} {hora}";
+           // var hora = "\nSón les " + time.Hour + ":" + tiempo.Minute;
+            this.welcomeText.Text = $"{momentDia} {this.UserName}";
         }
 
         private static string getUpperCaseStr(string str)
@@ -73,13 +70,9 @@ namespace ProvaClasse
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            var now = DateTime.Now;
-            //System.DateTime tiempo = new System.DateTime();
-            user = getUpperCaseStr(user);
-            setWelcomeLabel(now, user);
+            FormTitle = "Menú";
             WindowState = FormWindowState.Maximized;
-            UserName = user;
-
+            setWelcomeLabel();
 
             var data = new DataAccessClass();
             var sql = "SELECT * FROM MenuOptions";
