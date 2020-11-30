@@ -103,7 +103,7 @@
             this.trademark.Controls.Add(this.secureVersion);
             this.trademark.Controls.Add(this.MCimg);
             this.trademark.Controls.Add(this.poweredby);
-            this.trademark.Location = new System.Drawing.Point(847, 494);
+            this.trademark.Location = new System.Drawing.Point(847, 507);
             this.trademark.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trademark.Name = "trademark";
             this.trademark.Size = new System.Drawing.Size(183, 55);
@@ -236,10 +236,10 @@
             this.loginBar.BackColor = System.Drawing.Color.Red;
             this.loginBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.loginBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.loginBar.Location = new System.Drawing.Point(8, 602);
+            this.loginBar.Location = new System.Drawing.Point(8, 615);
             this.loginBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBar.Name = "loginBar";
-            this.loginBar.Size = new System.Drawing.Size(1032, 20);
+            this.loginBar.Size = new System.Drawing.Size(1032, 7);
             this.loginBar.TabIndex = 18;
             this.loginBar.Visible = false;
             // 
@@ -354,7 +354,7 @@
             this.inputsPanel.Controls.Add(this.txt_username);
             this.inputsPanel.Controls.Add(this.passwordLabel);
             this.inputsPanel.Controls.Add(this.mtxt_password);
-            this.inputsPanel.Location = new System.Drawing.Point(279, 271);
+            this.inputsPanel.Location = new System.Drawing.Point(279, 284);
             this.inputsPanel.Margin = new System.Windows.Forms.Padding(4);
             this.inputsPanel.Name = "inputsPanel";
             this.inputsPanel.Size = new System.Drawing.Size(465, 266);
@@ -410,7 +410,7 @@
             this.panel7.Location = new System.Drawing.Point(8, 49);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1032, 553);
+            this.panel7.Size = new System.Drawing.Size(1032, 566);
             this.panel7.TabIndex = 22;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 

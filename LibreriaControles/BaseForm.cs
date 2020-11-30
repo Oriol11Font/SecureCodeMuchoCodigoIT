@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace LibreriaControles
+namespace BasicForms
 {
     public partial class BaseForm : Form
     {

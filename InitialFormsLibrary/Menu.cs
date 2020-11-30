@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using InitialFormsLibrary;
 using LibreriaClases;
-using LibreriaControles;
+using BasicForms;
 using TextBoxControls;
 
 namespace TestForms

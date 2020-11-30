@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using Controls;
 using LibreriaClases;
 
-namespace LibreriaControles
+namespace BasicForms
 {
     public partial class SimpleForm : BaseForm
     {

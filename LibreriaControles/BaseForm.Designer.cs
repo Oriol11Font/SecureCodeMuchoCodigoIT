@@ -1,4 +1,4 @@
-﻿namespace LibreriaControles
+﻿namespace BasicForms
 {
     partial class BaseForm
     {
@@ -89,7 +89,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LibreriaControles.Properties.Resources.logo_app;
+            this.pictureBox1.Image = global::BasicForms.Properties.Resources.logo_app;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(9, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
@@ -211,7 +211,7 @@
             // 
             this.profileimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.profileimg.Dock = System.Windows.Forms.DockStyle.Right;
-            this.profileimg.Image = global::LibreriaControles.Properties.Resources.profile_img;
+            this.profileimg.Image = global::BasicForms.Properties.Resources.profile_img;
             this.profileimg.Location = new System.Drawing.Point(373, 0);
             this.profileimg.Name = "profileimg";
             this.profileimg.Size = new System.Drawing.Size(125, 110);

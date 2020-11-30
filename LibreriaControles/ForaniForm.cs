@@ -6,7 +6,7 @@ using Controls;
 using LibreriaClases;
 using TextBoxControls;
 
-namespace LibreriaControles
+namespace BasicForms
 {
     public partial class ForaniForm : BaseForm
     {

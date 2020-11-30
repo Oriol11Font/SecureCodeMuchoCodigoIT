@@ -5,10 +5,11 @@ using System.Windows.Forms;
 
 
 namespace TestForms
-
 {
     public partial class newsplash : Form
     {
+        int cont;
+
         private int porcentaje;
 
         public newsplash()
@@ -28,6 +29,7 @@ namespace TestForms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             if (splashBar1.Value < 100)
             {
                 splashBar1.Value += 6;

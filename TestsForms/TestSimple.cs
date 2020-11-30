@@ -1,4 +1,4 @@
-﻿using LibreriaControles;
+﻿using BasicForms;
 using System.Windows.Forms;
 
 namespace TestsForms

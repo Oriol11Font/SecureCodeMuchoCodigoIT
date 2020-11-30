@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace LibreriaControles
+namespace BasicForms
 {
     sealed partial class SearchForm
     {

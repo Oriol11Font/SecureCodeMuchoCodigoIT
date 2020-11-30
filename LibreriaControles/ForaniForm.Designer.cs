@@ -1,4 +1,4 @@
-﻿namespace LibreriaControles
+﻿namespace BasicForms
 {
     partial class ForaniForm
     {

@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using LibreriaClases;
 
-namespace LibreriaControles
+namespace BasicForms
 {
     public sealed partial class SearchForm : BaseForm
     {

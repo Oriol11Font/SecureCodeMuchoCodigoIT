@@ -64,6 +64,7 @@
             this.splashBar1.Maximum = 102;
             this.splashBar1.Name = "splashBar1";
             this.splashBar1.Size = new System.Drawing.Size(711, 7);
+            this.splashBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.splashBar1.TabIndex = 2;
             // 
             // splashimg
@@ -71,10 +72,11 @@
             this.splashimg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splashimg.Location = new System.Drawing.Point(197, 38);
+            this.splashimg.Location = new System.Drawing.Point(173, 69);
             this.splashimg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splashimg.Name = "splashimg";
-            this.splashimg.Size = new System.Drawing.Size(349, 263);
+            this.splashimg.Size = new System.Drawing.Size(349, 251);
+            this.splashimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.splashimg.TabIndex = 4;
             this.splashimg.TabStop = false;
             // 
