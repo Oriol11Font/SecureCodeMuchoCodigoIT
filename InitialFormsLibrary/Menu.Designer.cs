@@ -1,4 +1,4 @@
-﻿namespace ProvaClasse
+﻿namespace TestForms
 {
     partial class Menu
     {

@@ -5,7 +5,7 @@ using LibreriaClases;
 using LibreriaControles;
 using TextBoxControls;
 
-namespace ProvaClasse
+namespace TestForms
 {
     public partial class Menu : BaseForm
     {
@@ -73,6 +73,7 @@ namespace ProvaClasse
             FormTitle = "Menú";
             WindowState = FormWindowState.Maximized;
             setWelcomeLabel();
+            UserName = UserName;
 
             var data = new DataAccessClass();
             var sql = "SELECT * FROM MenuOptions";

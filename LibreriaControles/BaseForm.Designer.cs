@@ -45,13 +45,13 @@
             this.profileimg = new System.Windows.Forms.PictureBox();
             this.logoutlink = new System.Windows.Forms.LinkLabel();
             this.username = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize) (this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.profileimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileimg)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -79,7 +79,7 @@
             this.AppTitle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AppTitle.Location = new System.Drawing.Point(48, 14);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(364, 13);
+            this.AppTitle.Size = new System.Drawing.Size(464, 17);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCore - Rebel Alliance System Upgrade";
             // 
@@ -97,11 +97,12 @@
             // 
             // btn_minimize
             // 
-            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_minimize.BackColor = System.Drawing.Color.Transparent;
             this.btn_minimize.FlatAppearance.BorderSize = 0;
             this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_minimize.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_minimize.Location = new System.Drawing.Point(1641, 0);
             this.btn_minimize.Margin = new System.Windows.Forms.Padding(0);
@@ -114,11 +115,12 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_exit.BackColor = System.Drawing.Color.Transparent;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_exit.Location = new System.Drawing.Point(1705, 0);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(0);
@@ -133,7 +135,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Yellow;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 1051);
+            this.panel3.Location = new System.Drawing.Point(10, 1045);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1754, 10);
             this.panel3.TabIndex = 14;
@@ -144,7 +146,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 1021);
+            this.panel2.Size = new System.Drawing.Size(10, 1015);
             this.panel2.TabIndex = 15;
             // 
             // panel4
@@ -153,7 +155,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(1764, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 1021);
+            this.panel4.Size = new System.Drawing.Size(10, 1015);
             this.panel4.TabIndex = 16;
             // 
             // panel5
@@ -179,10 +181,10 @@
             // TitleForm
             // 
             this.TitleForm.AutoSize = true;
-            this.TitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.TitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleForm.Location = new System.Drawing.Point(38, 33);
             this.TitleForm.Name = "TitleForm";
-            this.TitleForm.Size = new System.Drawing.Size(529, 73);
+            this.TitleForm.Size = new System.Drawing.Size(650, 91);
             this.TitleForm.TabIndex = 0;
             this.TitleForm.Text = "Titulo Formulario";
             // 
@@ -210,55 +212,58 @@
             // 
             // logoutlink
             // 
-            this.logoutlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.logoutlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutlink.LinkColor = System.Drawing.Color.White;
-            this.logoutlink.Location = new System.Drawing.Point(108, 34);
+            this.logoutlink.Location = new System.Drawing.Point(0, 54);
             this.logoutlink.Name = "logoutlink";
-            this.logoutlink.Size = new System.Drawing.Size(109, 20);
+            this.logoutlink.Size = new System.Drawing.Size(217, 20);
             this.logoutlink.TabIndex = 2;
             this.logoutlink.TabStop = true;
             this.logoutlink.Text = "Cerrar sesión";
+            this.logoutlink.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.logoutlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
             // 
             // username
             // 
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.username.Location = new System.Drawing.Point(29, 9);
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(3, 9);
             this.username.Name = "username";
-            this.username.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.username.Size = new System.Drawing.Size(188, 45);
+            this.username.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.username.Size = new System.Drawing.Size(217, 45);
             this.username.TabIndex = 1;
             this.username.Text = "UserName";
+            this.username.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1774, 1061);
+            this.ClientSize = new System.Drawing.Size(1774, 1055);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "BaseForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.BaseForm_Load);
-            ((System.ComponentModel.ISupportInitialize) (this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.profileimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileimg)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProvaClasse.Properties
+namespace TestForms.Properties
 {
 
 

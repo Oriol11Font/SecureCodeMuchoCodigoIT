@@ -42,43 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\TestOriol.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TestOriol.Designer.cs">
-      <DependentUpon>TestOriol.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\TestSimpleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TestSimpleForm.Designer.cs">
-      <DependentUpon>TestSimpleForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestSimple.Designer.cs">
+      <DependentUpon>TestSimple.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Forms\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TestOriol.resx">
-      <DependentUpon>TestOriol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TestSimpleForm.resx">
-      <DependentUpon>TestSimpleForm.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControlsMC\ControlsMC.csproj">
@@ -97,6 +68,11 @@
       <Project>{fb17de15-0b06-41fc-96aa-3a53d9f7b289}</Project>
       <Name>CustomControlsMC</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TestSimple.resx">
+      <DependentUpon>TestSimple.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

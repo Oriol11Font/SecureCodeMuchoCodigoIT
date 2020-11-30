@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using InitialFormsLibrary;
 
-namespace ProvaClasse
+namespace TestForms
 {
     public partial class newsplash : Form
     {

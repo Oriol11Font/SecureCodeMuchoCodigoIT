@@ -1,4 +1,4 @@
-﻿namespace ProvaClasse.Forms
+﻿namespace TestForms.Forms
 {
     partial class AlertScreen
     {

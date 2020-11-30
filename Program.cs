@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ProvaClasse
+namespace TestForms
 {
     internal static class Program
     {

@@ -2,8 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 using LibreriaClases;
-using ProvaClasse.Forms;
-using Menu = ProvaClasse.Menu;
+using LibreriaControles;
+using TestForms.Forms;
+using Menu = TestForms.Menu;
 
 namespace InitialFormsLibrary
 {
