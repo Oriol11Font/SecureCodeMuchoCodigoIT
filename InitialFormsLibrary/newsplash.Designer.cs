@@ -49,10 +49,9 @@
             this.lbl_progressCarga.AutoSize = true;
             this.lbl_progressCarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_progressCarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.lbl_progressCarga.Location = new System.Drawing.Point(249, 231);
-            this.lbl_progressCarga.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_progressCarga.Location = new System.Drawing.Point(332, 284);
             this.lbl_progressCarga.Name = "lbl_progressCarga";
-            this.lbl_progressCarga.Size = new System.Drawing.Size(0, 29);
+            this.lbl_progressCarga.Size = new System.Drawing.Size(0, 36);
             this.lbl_progressCarga.TabIndex = 1;
             // 
             // splashBar1
@@ -60,35 +59,37 @@
             this.splashBar1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.splashBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splashBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.splashBar1.Location = new System.Drawing.Point(0, 274);
-            this.splashBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splashBar1.Location = new System.Drawing.Point(0, 352);
+            this.splashBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splashBar1.Maximum = 102;
             this.splashBar1.Name = "splashBar1";
-            this.splashBar1.Size = new System.Drawing.Size(533, 18);
+            this.splashBar1.Size = new System.Drawing.Size(711, 7);
             this.splashBar1.TabIndex = 2;
             // 
             // splashimg
             // 
-            this.splashimg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splashimg.Location = new System.Drawing.Point(0, 0);
-            this.splashimg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splashimg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splashimg.Location = new System.Drawing.Point(197, 38);
+            this.splashimg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splashimg.Name = "splashimg";
-            this.splashimg.Size = new System.Drawing.Size(533, 274);
+            this.splashimg.Size = new System.Drawing.Size(349, 263);
             this.splashimg.TabIndex = 4;
             this.splashimg.TabStop = false;
             // 
             // newsplash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(711, 359);
             this.Controls.Add(this.splashimg);
             this.Controls.Add(this.splashBar1);
             this.Controls.Add(this.lbl_progressCarga);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "newsplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
