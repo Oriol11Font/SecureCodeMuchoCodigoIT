@@ -1,4 +1,4 @@
-﻿namespace ProvaClasse
+﻿namespace InitialFormsLibrary
 {
     partial class Menu
     {

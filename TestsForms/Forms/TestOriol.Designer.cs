@@ -1,4 +1,6 @@
-﻿namespace ProvaClasse.Forms
+﻿using Controls;
+
+namespace TestsForms.Forms
 {
     partial class TestOriol
     {
@@ -82,10 +84,10 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt2 = new ControlsMC.SWTextBox();
-            this.txt1 = new ControlsMC.SWTextBox();
+            this.txt2 = new SWTextBox();
+            this.txt1 = new SWTextBox();
             this.mcCodi1 = new TextBoxControls.MCCodi();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
+            this.swTextBox2 = new SWTextBox();
             this.SuspendLayout();
             // 
             // dataGridViewTextBoxColumn52
@@ -561,7 +563,7 @@
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(515, 20);
             this.txt2.TabIndex = 23;
-            this.txt2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.txt2.Tipus = SWTextBox.TipusDada.Text;
             // 
             // txt1
             // 
@@ -574,7 +576,7 @@
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(300, 20);
             this.txt1.TabIndex = 24;
-            this.txt1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.txt1.Tipus = SWTextBox.TipusDada.Text;
             // 
             // mcCodi1
             // 
@@ -604,7 +606,7 @@
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(200, 20);
             this.swTextBox2.TabIndex = 27;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox2.Tipus = SWTextBox.TipusDada.Text;
             // 
             // TestOriol
             // 
@@ -655,8 +657,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private ControlsMC.SWTextBox txt2;
-        private ControlsMC.SWTextBox txt1;
+        private SWTextBox txt2;
+        private SWTextBox txt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
@@ -679,7 +681,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
-        private ControlsMC.SWTextBox swTextBox2;
+        private SWTextBox swTextBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;

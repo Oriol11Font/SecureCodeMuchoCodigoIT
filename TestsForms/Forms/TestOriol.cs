@@ -1,6 +1,6 @@
 ﻿using LibreriaControles;
 
-namespace ProvaClasse.Forms
+namespace TestsForms.Forms
 {
     public partial class TestOriol : SimpleForm
     {

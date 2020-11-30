@@ -2,7 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using ControlsMC;
+using Controls;
 using LibreriaClases;
 
 namespace LibreriaControles

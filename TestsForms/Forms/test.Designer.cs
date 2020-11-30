@@ -1,4 +1,6 @@
-﻿namespace ProvaClasse.Forms
+﻿using Controls;
+
+namespace TestsForms.Forms
 {
     partial class test
     {
@@ -28,10 +30,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.swTextBox1 = new ControlsMC.SWTextBox();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
-            this.swTextBox3 = new ControlsMC.SWTextBox();
-            this.swTextBox4 = new ControlsMC.SWTextBox();
+            this.swTextBox1 = new SWTextBox();
+            this.swTextBox2 = new SWTextBox();
+            this.swTextBox3 = new SWTextBox();
+            this.swTextBox4 = new SWTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +52,7 @@
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(150, 23);
             this.swTextBox1.TabIndex = 18;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Numero;
+            this.swTextBox1.Tipus = SWTextBox.TipusDada.Numero;
             // 
             // swTextBox2
             // 
@@ -63,7 +65,7 @@
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(150, 23);
             this.swTextBox2.TabIndex = 19;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox2.Tipus = SWTextBox.TipusDada.Text;
             // 
             // swTextBox3
             // 
@@ -76,7 +78,7 @@
             this.swTextBox3.Name = "swTextBox3";
             this.swTextBox3.Size = new System.Drawing.Size(150, 23);
             this.swTextBox3.TabIndex = 20;
-            this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Data;
+            this.swTextBox3.Tipus = SWTextBox.TipusDada.Data;
             // 
             // swTextBox4
             // 
@@ -89,7 +91,7 @@
             this.swTextBox4.Name = "swTextBox4";
             this.swTextBox4.Size = new System.Drawing.Size(150, 23);
             this.swTextBox4.TabIndex = 21;
-            this.swTextBox4.Tipus = ControlsMC.SWTextBox.TipusDada.Codi;
+            this.swTextBox4.Tipus = SWTextBox.TipusDada.Codi;
             // 
             // label1
             // 
@@ -182,10 +184,10 @@
 
         #endregion
 
-        private ControlsMC.SWTextBox swTextBox1;
-        private ControlsMC.SWTextBox swTextBox2;
-        private ControlsMC.SWTextBox swTextBox3;
-        private ControlsMC.SWTextBox swTextBox4;
+        private SWTextBox swTextBox1;
+        private SWTextBox swTextBox2;
+        private SWTextBox swTextBox3;
+        private SWTextBox swTextBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

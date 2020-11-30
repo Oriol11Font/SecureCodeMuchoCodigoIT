@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using InitialFormsLibrary;
 
-namespace ProvaClasse
+namespace InitialFormsLibrary
 {
     public partial class newsplash : Form
     {

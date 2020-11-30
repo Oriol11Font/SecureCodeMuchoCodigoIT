@@ -1,5 +1,7 @@
 ﻿
-namespace ProvaClasse.Forms
+using Controls;
+
+namespace TestsForms.Forms
 {
     partial class TestSimpleForm
     {
@@ -71,11 +73,11 @@ namespace ProvaClasse.Forms
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
+            this.swTextBox2 = new SWTextBox();
             this.mcCodi1 = new TextBoxControls.MCCodi();
-            this.txt1 = new ControlsMC.SWTextBox();
-            this.txt2 = new ControlsMC.SWTextBox();
-            this.swTextBox1 = new ControlsMC.SWTextBox();
+            this.txt1 = new SWTextBox();
+            this.txt2 = new SWTextBox();
+            this.swTextBox1 = new SWTextBox();
             this.SuspendLayout();
             // 
             // dataGridViewTextBoxColumn40
@@ -469,7 +471,7 @@ namespace ProvaClasse.Forms
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(256, 23);
             this.swTextBox2.TabIndex = 31;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox2.Tipus = SWTextBox.TipusDada.Text;
             // 
             // mcCodi1
             // 
@@ -499,7 +501,7 @@ namespace ProvaClasse.Forms
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(256, 23);
             this.txt1.TabIndex = 29;
-            this.txt1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.txt1.Tipus = SWTextBox.TipusDada.Text;
             // 
             // txt2
             // 
@@ -512,7 +514,7 @@ namespace ProvaClasse.Forms
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(256, 23);
             this.txt2.TabIndex = 28;
-            this.txt2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.txt2.Tipus = SWTextBox.TipusDada.Text;
             // 
             // swTextBox1
             // 
@@ -525,7 +527,7 @@ namespace ProvaClasse.Forms
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(256, 23);
             this.swTextBox1.TabIndex = 32;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox1.Tipus = SWTextBox.TipusDada.Text;
             // 
             // TestSimpleForm
             // 
@@ -583,14 +585,14 @@ namespace ProvaClasse.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private ControlsMC.SWTextBox swTextBox2;
+        private SWTextBox swTextBox2;
         private TextBoxControls.MCCodi mcCodi1;
-        private ControlsMC.SWTextBox txt1;
-        private ControlsMC.SWTextBox txt2;
+        private SWTextBox txt1;
+        private SWTextBox txt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private ControlsMC.SWTextBox swTextBox1;
+        private SWTextBox swTextBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;

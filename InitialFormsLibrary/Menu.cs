@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
-using InitialFormsLibrary;
 using LibreriaClases;
 using LibreriaControles;
 using TextBoxControls;
 
-namespace ProvaClasse
+namespace InitialFormsLibrary
 {
     public partial class Menu : BaseForm
     {
@@ -70,7 +69,6 @@ namespace ProvaClasse
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            FormTitle = "Menú";
             WindowState = FormWindowState.Maximized;
             setWelcomeLabel();
 

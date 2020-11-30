@@ -1,7 +1,7 @@
 ﻿using System;
 using LibreriaControles;
 
-namespace ProvaClasse.Forms
+namespace TestsForms.Forms
 {
     public partial class test : BaseForm
     {
