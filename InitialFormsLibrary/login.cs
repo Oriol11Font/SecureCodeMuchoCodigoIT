@@ -2,8 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using LibreriaClases;
-using ProvaClasse.Forms;
-using Menu = ProvaClasse.Menu;
+using Menu = InitialFormsLibrary.Menu;
 
 namespace InitialFormsLibrary
 {
@@ -75,7 +74,8 @@ namespace InitialFormsLibrary
                 if (ValidateUser(username, password))
                 {
                     var menu = new Menu();
-                    menu.UserName = username;
+                    menu.UserName = username.ToString().Trim();
+                    menu.FormTitle = "Menú";
                     menu.Show();
                     Init(null, null);
 
