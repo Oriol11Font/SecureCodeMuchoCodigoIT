@@ -32,7 +32,6 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AppTitle = new System.Windows.Forms.Label();
-            this.appImg = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,13 +44,14 @@
             this.username = new System.Windows.Forms.Label();
             this.logoutlink = new System.Windows.Forms.LinkLabel();
             this.profileimg = new System.Windows.Forms.PictureBox();
+            this.appImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.appImg)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appImg)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -82,17 +82,6 @@
             this.AppTitle.Size = new System.Drawing.Size(464, 17);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCore - Rebel Alliance System Upgrade";
-            // 
-            // appImg
-            // 
-            this.appImg.InitialImage = null;
-            this.appImg.Location = new System.Drawing.Point(0, 0);
-            this.appImg.Margin = new System.Windows.Forms.Padding(0);
-            this.appImg.Name = "appImg";
-            this.appImg.Size = new System.Drawing.Size(40, 40);
-            this.appImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.appImg.TabIndex = 1;
-            this.appImg.TabStop = false;
             // 
             // btn_minimize
             // 
@@ -231,12 +220,25 @@
             // 
             this.profileimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.profileimg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profileimg.ErrorImage = global::LibreriaControles.Properties.Resources.Guti;
+            this.profileimg.InitialImage = global::LibreriaControles.Properties.Resources.Guti;
             this.profileimg.Location = new System.Drawing.Point(392, 7);
             this.profileimg.Name = "profileimg";
             this.profileimg.Size = new System.Drawing.Size(100, 100);
             this.profileimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.profileimg.TabIndex = 0;
             this.profileimg.TabStop = false;
+            // 
+            // appImg
+            // 
+            this.appImg.InitialImage = null;
+            this.appImg.Location = new System.Drawing.Point(0, 0);
+            this.appImg.Margin = new System.Windows.Forms.Padding(0);
+            this.appImg.Name = "appImg";
+            this.appImg.Size = new System.Drawing.Size(40, 40);
+            this.appImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.appImg.TabIndex = 1;
+            this.appImg.TabStop = false;
             // 
             // BaseForm
             // 
@@ -260,12 +262,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.appImg)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profileimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appImg)).EndInit();
             this.ResumeLayout(false);
 
         }
