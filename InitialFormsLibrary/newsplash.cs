@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 
-namespace TestForms
+namespace SecureCoreMain
 {
     public partial class newsplash : Form
     {

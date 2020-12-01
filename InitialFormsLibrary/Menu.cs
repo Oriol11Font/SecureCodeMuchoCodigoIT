@@ -4,17 +4,25 @@ using InitialFormsLibrary;
 using LibreriaClases;
 using BasicForms;
 using TextBoxControls;
+using System.Data;
 
-namespace TestForms
+namespace SecureCoreMain
 {
     public partial class Menu : BaseForm
     {
-        public Menu()
+        DataAccessClass data = new DataAccessClass();
+
+        public Menu(String sql)
         {
+            FormTitle = "MENU PRINCIPAL";
+            var sqldataUser = data.GetByQuery(sql);
+            var drUser = sqldataUser.Tables[0].Rows[0];
+            UserName = drUser.ItemArray.GetValue(2).ToString();
+            profileImg = drUser.ItemArray.GetValue(7).ToString();
             InitializeComponent();
         }
 
-        private void setWelcomeLabel()
+        private void setWelcomeLabel(String UserName)
         {
             string momentDia;
             var time = new DateTime();
@@ -36,47 +44,12 @@ namespace TestForms
             this.welcomeText.Text = $"{momentDia} {this.UserName}";
         }
 
-        private static string getUpperCaseStr(string str)
-        {
-            return str.Substring(0, 1).ToUpper() + str.Substring(1).ToLower();
-        }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void openShipsForm(object sender, EventArgs e)
-        {
-            MessageBox.Show("Obert");
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            var logout = new Login();
-            logout.Show();
-            Close();
-        }
-
-        private void panel3_MouseHover(object sender, EventArgs e)
-        {
-            //panel3.Size = new Size(443, 385);
-        }
-
         private void Menu_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-            setWelcomeLabel();
-            UserName = UserName;
+            setWelcomeLabel(UserName);
 
-            var data = new DataAccessClass();
             var sql = "SELECT * FROM MenuOptions";
-
             var sqldata = data.GetByQuery(sql);
 
             for (var i = 0; i < sqldata.Tables[0].Rows.Count; i++)
@@ -85,7 +58,9 @@ namespace TestForms
 
                 var menubtn = new exeButton();
 
-                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2);
+                menubtn.ImageLocation1 = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".png";
+                menubtn.ImageLocation2 = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".gif";
+                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".png";
                 menubtn.SizeMode = PictureBoxSizeMode.Zoom;
 
                 menubtn.Form = dr.ItemArray.GetValue(3).ToString();

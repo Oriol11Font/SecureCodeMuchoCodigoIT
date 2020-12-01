@@ -1,5 +1,5 @@
 
-﻿namespace TestForms.Forms
+﻿namespace SecureCoreMain.Forms
 {
     partial class AlertScreen
     {

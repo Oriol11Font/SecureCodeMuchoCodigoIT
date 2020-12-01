@@ -1,5 +1,5 @@
 
-﻿namespace TestForms
+﻿namespace SecureCoreMain
 
 
 {
@@ -72,10 +72,10 @@
             this.splashimg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splashimg.Location = new System.Drawing.Point(173, 69);
+            this.splashimg.Location = new System.Drawing.Point(187, 51);
             this.splashimg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splashimg.Name = "splashimg";
-            this.splashimg.Size = new System.Drawing.Size(349, 251);
+            this.splashimg.Size = new System.Drawing.Size(335, 269);
             this.splashimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.splashimg.TabIndex = 4;
             this.splashimg.TabStop = false;

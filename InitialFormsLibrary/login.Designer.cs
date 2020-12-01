@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.AppTitle = new System.Windows.Forms.Label();
             this.poweredby = new System.Windows.Forms.Label();
             this.trademark = new System.Windows.Forms.Panel();
             this.secureVersion = new System.Windows.Forms.Label();
@@ -72,18 +72,18 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // label1
+            // AppTitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(265, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(613, 91);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "SECURECORE";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AppTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.AppTitle.AutoSize = true;
+            this.AppTitle.Font = new System.Drawing.Font("Nasalization", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppTitle.ForeColor = System.Drawing.Color.Gold;
+            this.AppTitle.Location = new System.Drawing.Point(253, 209);
+            this.AppTitle.Name = "AppTitle";
+            this.AppTitle.Size = new System.Drawing.Size(548, 71);
+            this.AppTitle.TabIndex = 10;
+            this.AppTitle.Text = "SECURECORE";
+            this.AppTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // poweredby
             // 
@@ -304,7 +304,7 @@
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.Yellow;
-            this.btn_login.Location = new System.Drawing.Point(156, 134);
+            this.btn_login.Location = new System.Drawing.Point(152, 155);
             this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(157, 33);
@@ -404,7 +404,7 @@
             // 
             this.panel7.Controls.Add(this.inputsPanel);
             this.panel7.Controls.Add(this.trademark);
-            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.AppTitle);
             this.panel7.Controls.Add(this.pic_logo_login);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(8, 49);
@@ -416,15 +416,14 @@
             // 
             // pic_logo_login
             // 
-            this.pic_logo_login.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_logo_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_logo_login.BackColor = System.Drawing.Color.Transparent;
             this.pic_logo_login.Image = ((System.Drawing.Image)(resources.GetObject("pic_logo_login.Image")));
             this.pic_logo_login.InitialImage = ((System.Drawing.Image)(resources.GetObject("pic_logo_login.InitialImage")));
-            this.pic_logo_login.Location = new System.Drawing.Point(413, 2);
+            this.pic_logo_login.Location = new System.Drawing.Point(370, 4);
             this.pic_logo_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_logo_login.Name = "pic_logo_login";
-            this.pic_logo_login.Size = new System.Drawing.Size(195, 183);
+            this.pic_logo_login.Size = new System.Drawing.Size(283, 265);
             this.pic_logo_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_logo_login.TabIndex = 6;
             this.pic_logo_login.TabStop = false;
@@ -470,7 +469,7 @@
         #endregion
         private System.Windows.Forms.PictureBox pic_logo_login;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label AppTitle;
         private System.Windows.Forms.Label poweredby;
         private System.Windows.Forms.Panel trademark;
         private System.Windows.Forms.PictureBox MCimg;

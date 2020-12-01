@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace TestForms.Forms
+namespace SecureCoreMain.Forms
 {
     public partial class AlertScreen : Form
     {

@@ -15,6 +15,10 @@ namespace TextBoxControls
 
         public string Classe { get; set; }
 
+        public string ImageLocation1 { get; set; }
+
+        public string ImageLocation2 { get; set; }
+
         private void exeButton_Click(object sender, EventArgs e)
         {
             var ensamblat = Assembly.LoadFrom(Classe);
@@ -37,11 +41,13 @@ namespace TextBoxControls
         private void exeButton_MouseHover(object sender, EventArgs e)
         {
             Margin = new Padding(35);
+            ImageLocation = ImageLocation2;
         }
 
         private void exeButton_MouseLeave(object sender, EventArgs e)
         {
             Margin = new Padding(50);
+            ImageLocation = ImageLocation1; 
         }
     }
 }

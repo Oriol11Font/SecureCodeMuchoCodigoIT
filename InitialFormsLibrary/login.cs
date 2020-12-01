@@ -3,9 +3,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using LibreriaClases;
 using BasicForms;
-using TestForms.Forms;
-using Menu = TestForms.Menu;
-
+using SecureCoreMain.Forms;
+using Menu = SecureCoreMain.Menu;
+using System.Data;
 
 namespace InitialFormsLibrary
 {
@@ -65,7 +65,7 @@ namespace InitialFormsLibrary
 
             if (loginBar.Value < 100)
             {
-                loginBar.Value += 2;
+                loginBar.Value += 10; //2
             }
             else
             {
@@ -76,9 +76,8 @@ namespace InitialFormsLibrary
                 // validamos usuario
                 if (ValidateUser(username, password))
                 {
-                    var menu = new Menu();
-                    menu.UserName = username.ToString().Trim();
-                    menu.FormTitle = "Menú";
+                    var sql = "SELECT* FROM Users WHERE UserName = '" + username + "'; ";
+                    var menu = new Menu(sql);
                     menu.Show();
                     Init(null, null);
 
@@ -129,7 +128,6 @@ namespace InitialFormsLibrary
         {
             username_warning.Visible = false;
             password_warning.Visible = false;
-            loginBar.BackgroundImage = Image.FromFile(Application.StartupPath + "\\images\\" + "lightsaber.png");
 
             if (txt_username.Text != "" && mtxt_password.Text != "")
             {
@@ -173,6 +171,8 @@ namespace InitialFormsLibrary
 
                 login = dt.Rows.Count == 1 && (string) dt.Rows[0].ItemArray[2] == username &&
                         (string) dt.Rows[0].ItemArray[4] == password;
+
+                
             }
             catch (Exception e)
             {
@@ -219,8 +219,8 @@ namespace InitialFormsLibrary
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
-            label1.Anchor = AnchorStyles.Top;
-            label1.Location = new Point(panel7.Bounds.Width / 5, label1.Location.Y);
+            AppTitle.Anchor = AnchorStyles.Top;
+            AppTitle.Location = new Point(panel7.Bounds.Width / 5, AppTitle.Location.Y);
         }
     }
 }

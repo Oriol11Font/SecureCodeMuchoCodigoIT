@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using InitialFormsLibrary;
 
-namespace TestForms
+namespace SecureCoreMain
 {
     internal static class Program
     {

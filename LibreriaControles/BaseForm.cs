@@ -9,17 +9,13 @@ namespace BasicForms
 
         public string FormTitle { get; set; } = "Form Title";
 
+        public string profileImg { get; set; } = "Form Title";
+
         public bool Unsaved { get; set; }
 
         public BaseForm()
         {
             InitializeComponent();
-        }
-
-        private void BaseForm_Load(object sender, EventArgs e)
-        {
-            username.Text = UserName;
-            TitleForm.Text = FormTitle;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -42,10 +38,17 @@ Es perdran tots els canvis no guardats",
         {
             WindowState = FormWindowState.Minimized;
         }
-
         private void logoutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Close();
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            appImg.ImageLocation = Application.StartupPath + "\\images\\" + "logo_app.png";
+            username.Text = UserName;
+            TitleForm.Text = FormTitle;
+            profileimg.ImageLocation = Application.StartupPath + "\\images\\" + profileImg;
         }
     }
 }
