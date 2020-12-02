@@ -15,7 +15,7 @@ namespace SecureCoreMain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestSimple());
+            Application.Run(new TestForani());
         }
     }
 }

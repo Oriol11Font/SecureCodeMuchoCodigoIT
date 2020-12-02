@@ -79,7 +79,7 @@
             this.AppTitle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AppTitle.Location = new System.Drawing.Point(43, 12);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(364, 13);
+            this.AppTitle.Size = new System.Drawing.Size(464, 17);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCore - Rebel Alliance System Upgrade";
             // 
@@ -208,7 +208,7 @@
             this.logoutlink.Location = new System.Drawing.Point(13, 66);
             this.logoutlink.Name = "logoutlink";
             this.logoutlink.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.logoutlink.Size = new System.Drawing.Size(373, 44);
+            this.logoutlink.Size = new System.Drawing.Size(373, 41);
             this.logoutlink.TabIndex = 2;
             this.logoutlink.TabStop = true;
             this.logoutlink.Text = "Cerrar sesión";
@@ -241,7 +241,7 @@
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1774, 1055);
