@@ -55,8 +55,6 @@ namespace BasicForms
 
         private void SimpleForm_Load(object sender, EventArgs eA)
         {
-            // TODO: esta línea de código carga datos en la tabla 'secureCoreDataSet.Agencies' Puede moverla o quitarla según sea necesario.
-            this.agenciesTableAdapter.Fill(this.secureCoreDataSet.Agencies);
             try
             {
                 var dtb = new DataAccessClass();
