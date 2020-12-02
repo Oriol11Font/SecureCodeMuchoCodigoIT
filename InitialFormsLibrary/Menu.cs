@@ -35,8 +35,11 @@ namespace SecureCoreMain
                 case int n when n >= 13 && n < 20:
                     momentDia = "Bona tarda";
                     break;
-                default:
+                case int n when n >= 20 && n < 8:
                     momentDia = "Bona nit";
+                    break;
+                default:
+                    momentDia = "Benvingut";
                     break;
             }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
@@ -9,6 +10,10 @@ namespace TextBoxControls
     public partial class MCCodi : UserControl
     {
         private int _ControlID;
+
+        DataAccessClass data = new DataAccessClass();
+
+        DataSet sqldata;
 
         public MCCodi()
         {
@@ -49,8 +54,7 @@ namespace TextBoxControls
             var sql = "Select " + NomId + ", " + NomCodi + ", " + NomDesc + " from " + NomTaula + " where " + NomCodi +
                       "='" + Codi + "'";
 
-            var data = new DataAccessClass();
-            var sqldata = data.GetByQuery(sql);
+            sqldata = data.GetByQuery(sql);
 
             if (Requerit)
             {
@@ -118,6 +122,10 @@ namespace TextBoxControls
         {
             if (e.KeyCode == Keys.F2)
             {
+                var sql = "Select * from " + NomTaula + ";";
+
+                sqldata = data.GetByQuery(sql);
+
                 //MessageBox.Show("Has obert la Taula de Cerca! :)");
                 /*Sha de mirar*/
                 var ensamblat = Assembly.LoadFrom(dll);
@@ -129,8 +137,12 @@ namespace TextBoxControls
                 //recuperem el tipus de la classe que volem instanciar
                 tipus = ensamblat.GetType(FormCS);
 
+                //Declarem un array d’objectes I l’omplim amb
+                //els nostres paràmetres
+                Object[] args = { sqldata };
+
                 //instanciem l’objecte   
-                dllBD = Activator.CreateInstance(tipus);
+                dllBD = Activator.CreateInstance(tipus, args);
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
@@ -138,7 +150,7 @@ namespace TextBoxControls
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void controltxt_TextChanged(object sender, EventArgs e)
         {
             var sql = "SELECT * FROM Factories WHERE IdFactory = " + controltxt.Text;
 

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Controls;
+using ControlsMC;
 using LibreriaClases;
 
 namespace BasicForms
