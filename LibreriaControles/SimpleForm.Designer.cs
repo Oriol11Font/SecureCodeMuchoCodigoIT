@@ -38,12 +38,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.createbtn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.secureCoreDataSet = new LibreriaControles.SecureCoreDataSet();
             this.agenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agenciesTableAdapter = new LibreriaControles.SecureCoreDataSetTableAdapters.AgenciesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.secureCoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agenciesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,19 +146,9 @@
             this.panel8.Size = new System.Drawing.Size(1921, 700);
             this.panel8.TabIndex = 24;
             // 
-            // secureCoreDataSet
-            // 
-            this.secureCoreDataSet.DataSetName = "SecureCoreDataSet";
-            this.secureCoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // agenciesBindingSource
             // 
             this.agenciesBindingSource.DataMember = "Agencies";
-            this.agenciesBindingSource.DataSource = this.secureCoreDataSet;
-            // 
-            // agenciesTableAdapter
-            // 
-            this.agenciesTableAdapter.ClearBeforeFill = true;
             // 
             // SimpleForm
             // 
@@ -179,7 +166,6 @@
             this.Controls.SetChildIndex(this.panel8, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.secureCoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agenciesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -192,8 +178,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button createbtn;
         private System.Windows.Forms.Panel panel8;
-        private LibreriaControles.SecureCoreDataSet secureCoreDataSet;
         private System.Windows.Forms.BindingSource agenciesBindingSource;
-        private LibreriaControles.SecureCoreDataSetTableAdapters.AgenciesTableAdapter agenciesTableAdapter;
     }
 }
