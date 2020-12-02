@@ -49,6 +49,12 @@
     <Compile Include="TestForani.Designer.cs">
       <DependentUpon>TestForani.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestSearch.Designer.cs">
+      <DependentUpon>TestSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestSimple.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -122,7 +122,7 @@ namespace TextBoxControls
         {
             if (e.KeyCode == Keys.F2)
             {
-                var sql = "Select * from " + NomTaula + ";";
+                var sql = "Select * from Agencies;";
 
                 sqldata = data.GetByQuery(sql);
 
