@@ -65,7 +65,8 @@ namespace SecureCoreMain
                 menubtn.ImageLocation2 = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".gif";
                 menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".png";
                 menubtn.SizeMode = PictureBoxSizeMode.Zoom;
-
+                menubtn.userName = UserName;
+                menubtn.imgProfile = profileImg;
                 menubtn.Form = dr.ItemArray.GetValue(3).ToString();
                 menubtn.Classe = dr.ItemArray.GetValue(4).ToString();
                 menubtn.Margin = new Padding(50);

@@ -29,6 +29,9 @@ namespace TestsForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +66,31 @@ namespace TestsForms
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "idAgency";
+            this.dataGridViewTextBoxColumn25.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn25.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "CodeAgency";
+            this.dataGridViewTextBoxColumn26.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "DescAgency";
+            this.dataGridViewTextBoxColumn27.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.DataPropertyName = "idAgency";
@@ -71,6 +99,7 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             this.dataGridViewTextBoxColumn22.ReadOnly = true;
             this.dataGridViewTextBoxColumn22.Visible = false;
+            this.dataGridViewTextBoxColumn22.Width = 125;
             // 
             // dataGridViewTextBoxColumn23
             // 
@@ -79,6 +108,7 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Width = 125;
             // 
             // dataGridViewTextBoxColumn24
             // 
@@ -87,6 +117,7 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.Width = 125;
             // 
             // dataGridViewTextBoxColumn19
             // 
@@ -315,7 +346,7 @@ namespace TestsForms
             this.mcCodi1.BackColor = System.Drawing.Color.Transparent;
             this.mcCodi1.ControlID = 0;
             this.mcCodi1.dll = "LibreriaControles.dll";
-            this.mcCodi1.FormCS = "LibreriaControles.SearchForm";
+            this.mcCodi1.FormCS = "BasicForms.SearchForm";
             this.mcCodi1.Location = new System.Drawing.Point(1340, 314);
             this.mcCodi1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mcCodi1.Name = "mcCodi1";
@@ -332,7 +363,7 @@ namespace TestsForms
             this.mcCodi2.BackColor = System.Drawing.Color.Transparent;
             this.mcCodi2.ControlID = 0;
             this.mcCodi2.dll = "LibreriaControles.dll";
-            this.mcCodi2.FormCS = "LibreriaControles.SearchForm";
+            this.mcCodi2.FormCS = "BasicForms.SearchForm";
             this.mcCodi2.Location = new System.Drawing.Point(814, 314);
             this.mcCodi2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mcCodi2.Name = "mcCodi2";
@@ -449,5 +480,8 @@ namespace TestsForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
     }
 }

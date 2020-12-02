@@ -19,6 +19,10 @@ namespace TextBoxControls
 
         public string ImageLocation2 { get; set; }
 
+        public string imgProfile { get; set; }
+
+        public string userName { get; set; }
+
         private void exeButton_Click(object sender, EventArgs e)
         {
             var ensamblat = Assembly.LoadFrom(Classe);
@@ -30,8 +34,10 @@ namespace TextBoxControls
             //recuperem el tipus de la classe que volem instanciar
             tipus = ensamblat.GetType(Form);
 
+            Object[] args = { this.userName, this.imgProfile };
+
             //instanciem l’objecte   
-            dllBD = Activator.CreateInstance(tipus);
+            dllBD = Activator.CreateInstance(tipus, args);
 
             //el mostrem assumint que es tracta d’un form 
             // i per això fem un cast amb (Form) 

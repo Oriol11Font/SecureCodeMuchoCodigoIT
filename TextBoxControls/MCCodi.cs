@@ -37,7 +37,7 @@ namespace TextBoxControls
         public int ControlID
         {
             get =>
-                // controltxt.Text = _ControlID.ToString();
+                //controltxt.Text = _ControlID.ToString();
                 _ControlID;
             set
             {
@@ -139,7 +139,7 @@ namespace TextBoxControls
 
                 //Declarem un array d’objectes I l’omplim amb
                 //els nostres paràmetres
-                Object[] args = { sqldata };
+                Object[] args = { this.sqldata };
 
                 //instanciem l’objecte   
                 dllBD = Activator.CreateInstance(tipus, args);
@@ -152,22 +152,25 @@ namespace TextBoxControls
 
         private void controltxt_TextChanged(object sender, EventArgs e)
         {
-            var sql = "SELECT * FROM Factories WHERE IdFactory = " + controltxt.Text;
+            var sql = "SELECT * FROM "+NomTaula+" WHERE "+NomId+" = " + controltxt.Text;
 
-            var data = new DataAccessClass();
-
-            if (!(NomTaula == "" && NomId == ""))
+            if (!(NomTaula == null || NomId == null))
             {
-                var sqldata = data.GetByQuery(sql);
+                var data = new DataAccessClass();
 
-                if (!(sqldata == null))
-                    if (sqldata.Tables[0].Rows.Count > 0)
-                    {
-                        var dr = sqldata.Tables[0].Rows[0];
+                if (!(NomTaula == "" && NomId == ""))
+                {
+                    var sqldata = data.GetByQuery(sql);
 
-                        CodiBox.Text = dr.ItemArray.GetValue(1).ToString();
-                        DescBox.Text = dr.ItemArray.GetValue(2).ToString();
-                    }
+                    if (!(sqldata == null))
+                        if (sqldata.Tables[0].Rows.Count > 0)
+                        {
+                            var dr = sqldata.Tables[0].Rows[0];
+
+                            CodiBox.Text = dr.ItemArray.GetValue(1).ToString();
+                            DescBox.Text = dr.ItemArray.GetValue(2).ToString();
+                        }
+                }
             }
         }
     }

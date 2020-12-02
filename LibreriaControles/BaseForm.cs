@@ -5,11 +5,11 @@ namespace BasicForms
 {
     public partial class BaseForm : Form
     {
-        public string UserName { get; set; } = "Username";
+        public string UserName { get; set; }
 
         public string FormTitle { get; set; } = "Form Title";
 
-        public string profileImg { get; set; } = "Form Title";
+        public string profileImg { get; set; }
 
         public bool Unsaved { get; set; }
 
