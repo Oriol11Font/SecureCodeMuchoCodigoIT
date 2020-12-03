@@ -81,7 +81,6 @@ namespace BasicForms
             this.searchTextBox.Size = new System.Drawing.Size(290, 50);
             this.searchTextBox.TabIndex = 21;
             this.searchTextBox.Text = "";
-            this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HandleTextBoxKey);
             // 
             // listColumns
             // 
