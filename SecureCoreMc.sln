@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialFormsLibrary", "Init
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsForms", "TestsForms\TestsForms.csproj", "{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "species", "species\species.csproj", "{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

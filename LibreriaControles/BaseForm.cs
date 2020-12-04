@@ -14,8 +14,6 @@ namespace BasicForms
 
         public bool Unsaved { get; set; }
 
-        public Object dllBD { get; set; }
-
         public BaseForm()
         {
             InitializeComponent();
