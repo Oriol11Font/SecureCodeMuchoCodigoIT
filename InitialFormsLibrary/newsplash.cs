@@ -8,14 +8,9 @@ namespace SecureCoreMain
 {
     public partial class newsplash : Form
     {
-        int cont;
-
-        private int porcentaje;
-
         public newsplash()
         {
             InitializeComponent();
-            lbl_progressCarga.Text = porcentaje + "%";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,8 +28,6 @@ namespace SecureCoreMain
             if (splashBar1.Value < 100)
             {
                 splashBar1.Value += 6;
-                porcentaje += 6;
-                lbl_progressCarga.Text = porcentaje + "%";
             }
             else
             {

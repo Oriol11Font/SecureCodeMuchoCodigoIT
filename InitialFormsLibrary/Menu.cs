@@ -53,8 +53,7 @@ namespace SecureCoreMain
             WindowState = FormWindowState.Maximized;
             setWelcomeLabel(UserName);
 
-            var sql = "SELECT * FROM MenuOptions";
-            var sqldata = data.GetByQuery(sql);
+            var sqldata = data.CarregarMenu();
 
             for (var i = 0; i < sqldata.Tables[0].Rows.Count; i++)
             {

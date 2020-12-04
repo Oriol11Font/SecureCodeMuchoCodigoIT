@@ -180,7 +180,7 @@ namespace LibreriaClases
             }
             catch (Exception e)
             {
-                _conn?.Close();
+                ErrorMessage(e, "L'execució de la consulta a la base de dades no s'ha executat correctament", null);
             }
             finally
             {
@@ -290,6 +290,27 @@ namespace LibreriaClases
             if (message == null) message = "Error";
             if (title == null) title = "Error no fatal ";
             MessageBox.Show($"{message}: Excepció {e}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public DataSet CarregarMenu()
+        {
+            DataSet ds;
+            try
+            {
+                String sql = "SELECT * FROM MenuOptions";
+                ds = GetByQuery(sql);
+            }
+            catch (Exception e)
+            {
+                ErrorMessage(e, @"La petició de dades d'una taula no s'ha pogut realitzar", null);
+                ds = null;
+            }
+            finally
+            {
+                _conn?.Close();
+            }
+
+            return ds;
         }
 
         #endregion
