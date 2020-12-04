@@ -58,7 +58,7 @@
             this.dtg.ColumnHeadersHeight = 29;
             this.dtg.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtg.EnableHeadersVisualStyles = false;
-            this.dtg.Location = new System.Drawing.Point(0, 100);
+            this.dtg.Location = new System.Drawing.Point(0, 60);
             this.dtg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtg.Name = "dtg";
             this.dtg.ReadOnly = true;
@@ -76,17 +76,17 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg.RowTemplate.Height = 30;
-            this.dtg.Size = new System.Drawing.Size(1900, 600);
+            this.dtg.Size = new System.Drawing.Size(1900, 540);
             this.dtg.TabIndex = 19;
             // 
             // btn_actualitzar
             // 
             this.btn_actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_actualitzar.ForeColor = System.Drawing.Color.White;
-            this.btn_actualitzar.Location = new System.Drawing.Point(26, 27);
+            this.btn_actualitzar.Location = new System.Drawing.Point(208, 2);
             this.btn_actualitzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualitzar.Name = "btn_actualitzar";
-            this.btn_actualitzar.Size = new System.Drawing.Size(200, 49);
+            this.btn_actualitzar.Size = new System.Drawing.Size(180, 39);
             this.btn_actualitzar.TabIndex = 20;
             this.btn_actualitzar.Text = "Actualitzar";
             this.btn_actualitzar.UseVisualStyleBackColor = true;
@@ -97,10 +97,10 @@
             // 
             this.btn_datagrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_datagrid.ForeColor = System.Drawing.Color.White;
-            this.btn_datagrid.Location = new System.Drawing.Point(439, 27);
+            this.btn_datagrid.Location = new System.Drawing.Point(394, 2);
             this.btn_datagrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_datagrid.Name = "btn_datagrid";
-            this.btn_datagrid.Size = new System.Drawing.Size(200, 49);
+            this.btn_datagrid.Size = new System.Drawing.Size(180, 39);
             this.btn_datagrid.TabIndex = 21;
             this.btn_datagrid.Text = "Veure DataSet";
             this.btn_datagrid.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(36, 172);
+            this.button1.Location = new System.Drawing.Point(32, 176);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 49);
+            this.button1.Size = new System.Drawing.Size(180, 39);
             this.button1.TabIndex = 22;
             this.button1.Text = "Tornar al Menú";
             this.button1.UseVisualStyleBackColor = true;
@@ -122,10 +122,10 @@
             // 
             this.createbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createbtn.ForeColor = System.Drawing.Color.White;
-            this.createbtn.Location = new System.Drawing.Point(232, 27);
+            this.createbtn.Location = new System.Drawing.Point(22, 2);
             this.createbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createbtn.Name = "createbtn";
-            this.createbtn.Size = new System.Drawing.Size(200, 49);
+            this.createbtn.Size = new System.Drawing.Size(180, 39);
             this.createbtn.TabIndex = 23;
             this.createbtn.Text = "Afegir";
             this.createbtn.UseVisualStyleBackColor = true;
@@ -140,10 +140,10 @@
             this.panel8.Controls.Add(this.btn_actualitzar);
             this.panel8.Controls.Add(this.btn_datagrid);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(10, 370);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel8.Location = new System.Drawing.Point(10, 470);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1900, 700);
+            this.panel8.Size = new System.Drawing.Size(1900, 600);
             this.panel8.TabIndex = 24;
             // 
             // agenciesBindingSource
@@ -152,7 +152,7 @@
             // 
             // SimpleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel8);

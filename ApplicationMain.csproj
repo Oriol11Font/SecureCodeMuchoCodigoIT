@@ -115,6 +115,10 @@
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
       <Name>BasicForms</Name>
     </ProjectReference>
+    <ProjectReference Include="planets\planets.csproj">
+      <Project>{60a5add6-0cdf-4ebb-8eec-9620d6b31fde}</Project>
+      <Name>planets</Name>
+    </ProjectReference>
     <ProjectReference Include="species\species.csproj">
       <Project>{3129a7ca-477b-48e6-82b3-f7b6d0fe8de8}</Project>
       <Name>species</Name>
