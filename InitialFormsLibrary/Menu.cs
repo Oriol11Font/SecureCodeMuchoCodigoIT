@@ -5,6 +5,7 @@ using LibreriaClases;
 using BasicForms;
 using TextBoxControls;
 using System.Data;
+using System.Reflection;
 
 namespace SecureCoreMain
 {
@@ -73,6 +74,7 @@ namespace SecureCoreMain
                 menubtn.Dock = DockStyle.Fill;
 
                 tblMenu.Controls.Add(menubtn);
+
             }
         }
     }

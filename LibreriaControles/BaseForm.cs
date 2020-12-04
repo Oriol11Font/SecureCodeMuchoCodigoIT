@@ -1,4 +1,6 @@
-﻿using System;
+﻿using InitialFormsLibrary;
+using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace BasicForms
@@ -12,6 +14,8 @@ namespace BasicForms
         public string profileImg { get; set; }
 
         public bool Unsaved { get; set; }
+
+        public Object dllBD { get; set; }
 
         public BaseForm()
         {
@@ -40,7 +44,7 @@ Es perdran tots els canvis no guardats",
         }
         private void logoutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Close();
+            Application.Restart();
         }
 
         private void BaseForm_Load(object sender, EventArgs e)

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureCoreMain", "SecureCoreMain.csproj", "{5DA0EAC1-8C60-42BF-94D6-ABD50746D743}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationMain", "ApplicationMain.csproj", "{5DA0EAC1-8C60-42BF-94D6-ABD50746D743}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicForms", "LibreriaControles\BasicForms.csproj", "{F986A883-16EE-4A84-85A6-AA7DED000265}"
 EndProject
