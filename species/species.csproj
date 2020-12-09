@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MantenimentSpecies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimentSpecies.Designer.cs">
+      <DependentUpon>MantenimentSpecies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +64,11 @@
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
       <Name>BasicForms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MantenimentSpecies.resx">
+      <DependentUpon>MantenimentSpecies.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
