@@ -84,7 +84,8 @@ namespace BasicForms
                     {
                         var txt1 = (Label) txt;
                         txt1.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
-                        txt1.ForeColor = Color.White; 
+                        txt1.ForeColor = Color.White;
+                        txt1.BackColor = Color.Transparent;
                     }
             }
             catch (Exception e)
