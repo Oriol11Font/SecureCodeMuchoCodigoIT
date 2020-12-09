@@ -20,10 +20,5 @@ namespace planets
             profileImg = imgProfile;
             InitializeComponent();
         }
-
-        private void MantenimentPlanets_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
