@@ -29,6 +29,9 @@ namespace TestsForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,59 +71,94 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swTextBox1 = new ControlsMC.SWTextBox();
+            this.swtxt = new ControlsMC.SWTextBox();
             this.swTextBox3 = new ControlsMC.SWTextBox();
-            this.mcCodi1 = new TextBoxControls.MCCodi();
-            this.mcCodi2 = new TextBoxControls.MCCodi();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "idAgency";
+            this.dataGridViewTextBoxColumn40.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn40.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            this.dataGridViewTextBoxColumn40.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "CodeAgency";
+            this.dataGridViewTextBoxColumn41.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn41.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "DescAgency";
+            this.dataGridViewTextBoxColumn42.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn42.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn37
             // 
             this.dataGridViewTextBoxColumn37.DataPropertyName = "idAgency";
             this.dataGridViewTextBoxColumn37.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn37.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
             this.dataGridViewTextBoxColumn37.ReadOnly = true;
             this.dataGridViewTextBoxColumn37.Visible = false;
+            this.dataGridViewTextBoxColumn37.Width = 125;
             // 
             // dataGridViewTextBoxColumn38
             // 
             this.dataGridViewTextBoxColumn38.DataPropertyName = "CodeAgency";
             this.dataGridViewTextBoxColumn38.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn38.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
             this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            this.dataGridViewTextBoxColumn38.Width = 125;
             // 
             // dataGridViewTextBoxColumn39
             // 
             this.dataGridViewTextBoxColumn39.DataPropertyName = "DescAgency";
             this.dataGridViewTextBoxColumn39.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn39.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
             this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            this.dataGridViewTextBoxColumn39.Width = 125;
             // 
             // dataGridViewTextBoxColumn34
             // 
             this.dataGridViewTextBoxColumn34.DataPropertyName = "idAgency";
             this.dataGridViewTextBoxColumn34.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn34.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
             this.dataGridViewTextBoxColumn34.ReadOnly = true;
             this.dataGridViewTextBoxColumn34.Visible = false;
+            this.dataGridViewTextBoxColumn34.Width = 125;
             // 
             // dataGridViewTextBoxColumn35
             // 
             this.dataGridViewTextBoxColumn35.DataPropertyName = "CodeAgency";
             this.dataGridViewTextBoxColumn35.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn35.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
             this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            this.dataGridViewTextBoxColumn35.Width = 125;
             // 
             // dataGridViewTextBoxColumn36
             // 
             this.dataGridViewTextBoxColumn36.DataPropertyName = "DescAgency";
             this.dataGridViewTextBoxColumn36.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn36.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
             this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            this.dataGridViewTextBoxColumn36.Width = 125;
             // 
             // dataGridViewTextBoxColumn31
             // 
@@ -130,6 +168,7 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
             this.dataGridViewTextBoxColumn31.ReadOnly = true;
             this.dataGridViewTextBoxColumn31.Visible = false;
+            this.dataGridViewTextBoxColumn31.Width = 125;
             // 
             // dataGridViewTextBoxColumn32
             // 
@@ -138,6 +177,7 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn32.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
             this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            this.dataGridViewTextBoxColumn32.Width = 125;
             // 
             // dataGridViewTextBoxColumn33
             // 
@@ -146,6 +186,7 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn33.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
             this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            this.dataGridViewTextBoxColumn33.Width = 125;
             // 
             // dataGridViewTextBoxColumn28
             // 
@@ -427,74 +468,39 @@ namespace TestsForms
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // swTextBox1
+            // swtxt
             // 
-            this.swTextBox1.AllowEmpty = true;
-            this.swTextBox1.CampoBBDD = "codeOrder";
-            this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox1.Foranea = false;
-            this.swTextBox1.Location = new System.Drawing.Point(23, 259);
-            this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.Size = new System.Drawing.Size(234, 26);
-            this.swTextBox1.TabIndex = 25;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swtxt.AllowEmpty = true;
+            this.swtxt.CampoBBDD = "CodePlanet";
+            this.swtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxt.Foranea = false;
+            this.swtxt.Location = new System.Drawing.Point(30, 319);
+            this.swtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.swtxt.Name = "swtxt";
+            this.swtxt.Size = new System.Drawing.Size(300, 30);
+            this.swtxt.TabIndex = 25;
+            this.swtxt.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // swTextBox3
             // 
             this.swTextBox3.AllowEmpty = true;
-            this.swTextBox3.CampoBBDD = "dateOrder";
+            this.swTextBox3.CampoBBDD = "DescPlanet";
             this.swTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox3.Foranea = false;
-            this.swTextBox3.Location = new System.Drawing.Point(262, 259);
+            this.swTextBox3.Location = new System.Drawing.Point(337, 319);
+            this.swTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.swTextBox3.Name = "swTextBox3";
-            this.swTextBox3.Size = new System.Drawing.Size(234, 26);
+            this.swTextBox3.Size = new System.Drawing.Size(300, 30);
             this.swTextBox3.TabIndex = 27;
             this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
-            // 
-            // mcCodi1
-            // 
-            this.mcCodi1.BackColor = System.Drawing.Color.Transparent;
-            this.mcCodi1.ControlID = 0;
-            this.mcCodi1.dll = "LibreriaControles.dll";
-            this.mcCodi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mcCodi1.FormCS = "BasicForms.SearchForm";
-            this.mcCodi1.Location = new System.Drawing.Point(1001, 262);
-            this.mcCodi1.Margin = new System.Windows.Forms.Padding(2);
-            this.mcCodi1.Name = "mcCodi1";
-            this.mcCodi1.NomCodi = "codeFactory";
-            this.mcCodi1.NomDesc = "DescFactory";
-            this.mcCodi1.NomId = "IdFactory";
-            this.mcCodi1.NomTaula = "Factories";
-            this.mcCodi1.Requerit = true;
-            this.mcCodi1.Size = new System.Drawing.Size(467, 23);
-            this.mcCodi1.TabIndex = 28;
-            // 
-            // mcCodi2
-            // 
-            this.mcCodi2.BackColor = System.Drawing.Color.Transparent;
-            this.mcCodi2.ControlID = 0;
-            this.mcCodi2.dll = "LibreriaControles.dll";
-            this.mcCodi2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mcCodi2.FormCS = "BasicForms.SearchForm";
-            this.mcCodi2.Location = new System.Drawing.Point(501, 259);
-            this.mcCodi2.Margin = new System.Windows.Forms.Padding(2);
-            this.mcCodi2.Name = "mcCodi2";
-            this.mcCodi2.NomCodi = "CodePriority";
-            this.mcCodi2.NomDesc = "DescPriority";
-            this.mcCodi2.NomId = "IdPriority";
-            this.mcCodi2.NomTaula = "Priority";
-            this.mcCodi2.Requerit = true;
-            this.mcCodi2.Size = new System.Drawing.Size(467, 23);
-            this.mcCodi2.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 230);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(23, 283);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 26);
+            this.label1.Size = new System.Drawing.Size(87, 32);
             this.label1.TabIndex = 30;
             this.label1.Text = "Codi:";
             // 
@@ -502,10 +508,9 @@ namespace TestsForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(257, 230);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(330, 283);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 26);
+            this.label2.Size = new System.Drawing.Size(88, 32);
             this.label2.TabIndex = 31;
             this.label2.Text = "Data:";
             // 
@@ -513,10 +518,9 @@ namespace TestsForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(530, 230);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(681, 283);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 26);
+            this.label3.Size = new System.Drawing.Size(132, 32);
             this.label3.TabIndex = 32;
             this.label3.Text = "Prioritat:";
             // 
@@ -524,35 +528,30 @@ namespace TestsForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1001, 230);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(1287, 283);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 26);
+            this.label4.Size = new System.Drawing.Size(126, 32);
             this.label4.TabIndex = 33;
             this.label4.Text = "Fabrica:";
             // 
             // TestForani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1493, 878);
+            this.ClientSize = new System.Drawing.Size(1920, 1081);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.mcCodi2);
-            this.Controls.Add(this.mcCodi1);
             this.Controls.Add(this.swTextBox3);
-            this.Controls.Add(this.swTextBox1);
+            this.Controls.Add(this.swtxt);
             this.FormTitle = "ForaniForm TEST";
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "TestForani";
-            this.Taula = "Orders";
+            this.Taula = "Planets";
             this.Text = "TestForani";
-            this.Controls.SetChildIndex(this.swTextBox1, 0);
+            this.Controls.SetChildIndex(this.swtxt, 0);
             this.Controls.SetChildIndex(this.swTextBox3, 0);
-            this.Controls.SetChildIndex(this.mcCodi1, 0);
-            this.Controls.SetChildIndex(this.mcCodi2, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
@@ -570,16 +569,14 @@ namespace TestsForms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private ControlsMC.SWTextBox swTextBox1;
+        private ControlsMC.SWTextBox swtxt;
         private ControlsMC.SWTextBox swTextBox3;
-        private TextBoxControls.MCCodi mcCodi1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private TextBoxControls.MCCodi mcCodi2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
@@ -611,5 +608,8 @@ namespace TestsForms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
     }
 }
