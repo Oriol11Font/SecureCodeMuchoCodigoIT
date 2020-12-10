@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0E14A562-ABFC-4ED3-A95E-2D96A976C12A}</ProjectGuid>
+    <ProjectGuid>{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibreriaClases</RootNamespace>
-    <AssemblyName>LibreriaClases</AssemblyName>
+    <RootNamespace>species</RootNamespace>
+    <AssemblyName>species</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,8 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>
-    </CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,8 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,8 +43,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccessClass.cs" />
+    <Compile Include="MantenimentSpecies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimentSpecies.Designer.cs">
+      <DependentUpon>MantenimentSpecies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlsMC\ControlsMC.csproj">
+      <Project>{a203bbc8-00f3-4cea-acb9-b7d6a9b028e8}</Project>
+      <Name>ControlsMC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibreriaClases\LibreriaClases.csproj">
+      <Project>{0e14a562-abfc-4ed3-a95e-2d96a976c12a}</Project>
+      <Name>LibreriaClases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibreriaControles\BasicForms.csproj">
+      <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
+      <Name>BasicForms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MantenimentSpecies.resx">
+      <DependentUpon>MantenimentSpecies.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

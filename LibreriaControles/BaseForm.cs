@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace BasicForms
@@ -40,7 +41,7 @@ Es perdran tots els canvis no guardats",
         }
         private void logoutLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Close();
+            Application.Restart();
         }
 
         private void BaseForm_Load(object sender, EventArgs e)

@@ -70,8 +70,16 @@ namespace BasicForms
                     if (txt.GetType() == typeof(SWTextBox))
                     {
                         var txt1 = (SWTextBox) txt;
+                        txt1.Font = new Font("Microsoft Sans Serif", 12);
                         txt1.DataBindings.Clear();
                         txt1.DataBindings.Add("Text", dts.Tables[0], txt1.CampoBBDD);
+                    }
+                    else if (txt.GetType() == typeof(Label))
+                    {
+                        var txt1 = (Label)txt;
+                        txt1.Font = new Font("Microsoft Sans Serif",  16, FontStyle.Bold);
+                        txt1.ForeColor = Color.White;
+                        txt1.BackColor = Color.Transparent;
                     }
             }
             catch (Exception e)

@@ -79,6 +79,7 @@ namespace InitialFormsLibrary
                     var sql = "SELECT* FROM Users WHERE UserName = '" + username + "'; ";
                     var menu = new Menu(sql);
                     menu.Show();
+                    this.Hide();
                     Init(null, null);
 
                     incorrectlbl.Visible = false;

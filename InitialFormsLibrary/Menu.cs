@@ -5,6 +5,7 @@ using LibreriaClases;
 using BasicForms;
 using TextBoxControls;
 using System.Data;
+using System.Reflection;
 
 namespace SecureCoreMain
 {
@@ -12,7 +13,7 @@ namespace SecureCoreMain
     {
         DataAccessClass data = new DataAccessClass();
 
-        public Menu(String sql)
+        public Menu(string sql)
         {
             FormTitle = "MENU PRINCIPAL";
             var sqldataUser = data.GetByQuery(sql);
@@ -52,8 +53,7 @@ namespace SecureCoreMain
             WindowState = FormWindowState.Maximized;
             setWelcomeLabel(UserName);
 
-            var sql = "SELECT * FROM MenuOptions";
-            var sqldata = data.GetByQuery(sql);
+            var sqldata = data.CarregarMenu();
 
             for (var i = 0; i < sqldata.Tables[0].Rows.Count; i++)
             {
@@ -73,6 +73,7 @@ namespace SecureCoreMain
                 menubtn.Dock = DockStyle.Fill;
 
                 tblMenu.Controls.Add(menubtn);
+
             }
         }
     }

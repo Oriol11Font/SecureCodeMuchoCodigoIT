@@ -14,7 +14,7 @@ namespace SecureCoreMain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuOptions());
+            Application.Run(new Menu("SELECT* FROM Users WHERE UserName = 'Pau Colomè'"));
         }
     }
 }
