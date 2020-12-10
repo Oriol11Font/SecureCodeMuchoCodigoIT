@@ -8,8 +8,6 @@ namespace SecureCoreMain
 {
     public partial class newsplash : Form
     {
-        int cont;
-
         private int porcentaje;
 
         public newsplash()
