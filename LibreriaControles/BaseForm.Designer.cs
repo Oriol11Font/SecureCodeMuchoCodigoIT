@@ -170,7 +170,7 @@
             // 
             this.TitleForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.TitleForm.Font = new System.Drawing.Font("Nasalization", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleForm.Location = new System.Drawing.Point(20, 26);
             this.TitleForm.Name = "TitleForm";
             this.TitleForm.Size = new System.Drawing.Size(1230, 66);
