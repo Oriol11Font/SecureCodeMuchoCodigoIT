@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using BasicForms;
+using System;
 
 namespace TestsForms
 {
-    public partial class TestSearch : Form
+    public partial class TestSearch : SearchForm
     {
         public TestSearch()
         {
+            FormTitle = "Cerca";
+            DtName = "Agencies";
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SearchStrings.Add("idAgency", textBox3.Text);
+            SearchStrings.Add("DescAgency", textBox4.Text);
+            HandleSearch();
         }
     }
 }

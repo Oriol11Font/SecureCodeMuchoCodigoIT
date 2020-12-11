@@ -13,7 +13,7 @@ namespace SecureCoreMain
     {
         DataAccessClass data = new DataAccessClass();
 
-        public Menu(String sql)
+        public Menu(string sql)
         {
             FormTitle = "MENU PRINCIPAL";
             var sqldataUser = data.GetByQuery(sql);

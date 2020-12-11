@@ -2,7 +2,7 @@
 
 namespace BasicForms
 {
-    sealed partial class SearchForm
+    partial class SearchForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,94 +32,158 @@ namespace BasicForms
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.searchTextBox = new System.Windows.Forms.RichTextBox();
-            this.listColumns = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGrid)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchForm));
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dtg = new System.Windows.Forms.DataGridView();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dtg)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGrid
+            // panel8
             // 
-            this.dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGrid.Location = new System.Drawing.Point(0, 302);
-            this.dataGrid.Name = "dataGrid";
-            this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(1923, 800);
-            this.dataGrid.TabIndex = 19;
+            this.panel8.AutoScroll = true;
+            this.panel8.AutoSize = true;
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(10, 150);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1900, 920);
+            this.panel8.TabIndex = 25;
             // 
-            // searchButton
+            // panel9
             // 
-            this.searchButton.AutoSize = true;
-            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.searchButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.searchButton.Location = new System.Drawing.Point(753, 141);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Padding = new System.Windows.Forms.Padding(5);
-            this.searchButton.Size = new System.Drawing.Size(120, 50);
-            this.searchButton.TabIndex = 20;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.dtg);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1900, 920);
+            this.panel9.TabIndex = 22;
             // 
-            // searchTextBox
+            // panel10
             // 
-            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.searchTextBox.Location = new System.Drawing.Point(443, 141);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.searchTextBox.Size = new System.Drawing.Size(290, 50);
-            this.searchTextBox.TabIndex = 21;
-            this.searchTextBox.Text = "";
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.button1);
+            this.panel10.Controls.Add(this.button2);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1900, 220);
+            this.panel10.TabIndex = 25;
             // 
-            // listColumns
+            // panel11
             // 
-            this.listColumns.FormattingEnabled = true;
-            this.listColumns.ItemHeight = 16;
-            this.listColumns.Location = new System.Drawing.Point(27, 141);
-            this.listColumns.Name = "listColumns";
-            this.listColumns.Size = new System.Drawing.Size(396, 68);
-            this.listColumns.TabIndex = 22;
+            this.panel11.Location = new System.Drawing.Point(11, 54);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(995, 106);
+            this.panel11.TabIndex = 27;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(11, 165);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 39);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(11, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 39);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Tornar al Menú";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_click);
+            // 
+            // dtg
+            // 
+            this.dtg.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dtg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtg.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dtg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtg.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtg.ColumnHeadersHeight = 29;
+            this.dtg.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtg.EnableHeadersVisualStyles = false;
+            this.dtg.Location = new System.Drawing.Point(0, 280);
+            this.dtg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtg.Name = "dtg";
+            this.dtg.ReadOnly = true;
+            this.dtg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtg.RowHeadersWidth = 20;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtg.RowTemplate.Height = 30;
+            this.dtg.Size = new System.Drawing.Size(1900, 640);
+            this.dtg.TabIndex = 24;
             // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1923, 1102);
-            this.Controls.Add(this.listColumns);
-            this.Controls.Add(this.searchTextBox);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.dataGrid);
-            this.Location = new System.Drawing.Point(0, 0);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panel8);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "SearchForm";
             this.Text = "SearchForm";
-            this.Controls.SetChildIndex(this.dataGrid, 0);
-            this.Controls.SetChildIndex(this.searchButton, 0);
-            this.Controls.SetChildIndex(this.searchTextBox, 0);
-            this.Controls.SetChildIndex(this.listColumns, 0);
-            ((System.ComponentModel.ISupportInitialize) (this.dataGrid)).EndInit();
+            this.Controls.SetChildIndex(this.panel8, 0);
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dtg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.ListBox listColumns;
+        private System.Windows.Forms.Panel panel11;
 
-        private System.Windows.Forms.RichTextBox searchTextBox;
+        private System.Windows.Forms.Panel panel10;
 
-        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.DataGridView dtg;
 
-        private System.Windows.Forms.DataGridView dataGrid;
+        private System.Windows.Forms.Button button2;
 
         #endregion
+
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Panel panel9;
+        public System.Windows.Forms.Button button1;
     }
 }
