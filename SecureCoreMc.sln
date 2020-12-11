@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "planets", "planets\planets.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Categories", "Categories\Categories.csproj", "{B59EB7AF-F3E3-41BF-BC62-E92603C51985}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{B9301DFC-024A-4547-8FCE-FBE7F9F73980}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{B59EB7AF-F3E3-41BF-BC62-E92603C51985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B59EB7AF-F3E3-41BF-BC62-E92603C51985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B59EB7AF-F3E3-41BF-BC62-E92603C51985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9301DFC-024A-4547-8FCE-FBE7F9F73980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9301DFC-024A-4547-8FCE-FBE7F9F73980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9301DFC-024A-4547-8FCE-FBE7F9F73980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9301DFC-024A-4547-8FCE-FBE7F9F73980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
