@@ -1,13 +1,9 @@
 ﻿using BasicForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Categories
 {
@@ -15,6 +11,11 @@ namespace Categories
     {
         public UserCategories(String username, String imgProfile)
         {
+            SqlConnectionStringBuilder CategoriesEntities = new SqlConnectionStringBuilder();
+
+            //Console.WriteLine(builder.WriteLine);
+            CategoriesEntities.ConnectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
+
             FormTitle = "Categories dels Usuaris";
             UserName = username;
             profileImg = imgProfile;
