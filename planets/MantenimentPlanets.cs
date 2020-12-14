@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace planets
     {
         public MantenimentPlanets(String username, String imgProfile)
         {
+            SqlConnectionStringBuilder UserEntities = new SqlConnectionStringBuilder();
+
+            //Console.WriteLine(builder.WriteLine);
+            UserEntities.ConnectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
+            
             FormTitle = "Manteniment Planetes";
             UserName = username;
             profileImg = imgProfile;
