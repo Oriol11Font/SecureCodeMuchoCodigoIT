@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +82,31 @@
             this.swTextBox2 = new ControlsMC.SWTextBox();
             this.SuspendLayout();
             // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "idAgency";
+            this.dataGridViewTextBoxColumn46.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn46.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            this.dataGridViewTextBoxColumn46.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "CodeAgency";
+            this.dataGridViewTextBoxColumn47.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn47.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "DescAgency";
+            this.dataGridViewTextBoxColumn48.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn48.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn43
             // 
             this.dataGridViewTextBoxColumn43.DataPropertyName = "idAgency";
@@ -87,6 +115,7 @@
             this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
             this.dataGridViewTextBoxColumn43.ReadOnly = true;
             this.dataGridViewTextBoxColumn43.Visible = false;
+            this.dataGridViewTextBoxColumn43.Width = 150;
             // 
             // dataGridViewTextBoxColumn44
             // 
@@ -95,6 +124,7 @@
             this.dataGridViewTextBoxColumn44.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
             this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            this.dataGridViewTextBoxColumn44.Width = 150;
             // 
             // dataGridViewTextBoxColumn45
             // 
@@ -103,6 +133,7 @@
             this.dataGridViewTextBoxColumn45.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
             this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            this.dataGridViewTextBoxColumn45.Width = 150;
             // 
             // dataGridViewTextBoxColumn40
             // 
@@ -513,18 +544,18 @@
             this.lbl_1.AutoSize = true;
             this.lbl_1.Location = new System.Drawing.Point(160, 386);
             this.lbl_1.Name = "lbl_1";
-            this.lbl_1.Size = new System.Drawing.Size(116, 20);
+            this.lbl_1.Size = new System.Drawing.Size(150, 20);
             this.lbl_1.TabIndex = 26;
-            this.lbl_1.Text = "Code Specie:";
+            this.lbl_1.Text = "Codi de l\'espècie:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(975, 386);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 20);
+            this.label4.Size = new System.Drawing.Size(198, 20);
             this.label4.TabIndex = 27;
-            this.label4.Text = "DescSpecie:";
+            this.label4.Text = "Descripció de l\'espècie:";
             // 
             // swTextBox2
             // 
@@ -613,5 +644,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
     }
 }

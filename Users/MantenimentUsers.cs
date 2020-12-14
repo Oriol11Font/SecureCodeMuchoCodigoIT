@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TextBoxControls;
 
 namespace Users
 {
@@ -48,6 +49,13 @@ namespace Users
                     txt1.Font = new Font("Microsoft Sans Serif", 12);
                     txt1.DataBindings.Clear();
                     txt1.DataBindings.Add("Text", usr, txt1.CampoBBDD);
+                }
+                else if (txt.GetType() == typeof(MCCodi))
+                {
+                    var txt1 = (MCCodi)txt;
+                    txt1.Font = new Font("Microsoft Sans Serif", 12);
+                    txt1.DataBindings.Clear();
+                    txt1.DataBindings.Add("ControlID", usr, txt1.NomId);
                 }
                 else if (txt.GetType() == typeof(Label))
                 {

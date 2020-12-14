@@ -37,6 +37,10 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="LibreriaClases, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LibreriaClases\DLL\LibreriaClases.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -114,6 +118,10 @@
     <ProjectReference Include="..\LibreriaControles\BasicForms.csproj">
       <Project>{F986A883-16EE-4A84-85A6-AA7DED000265}</Project>
       <Name>BasicForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextBoxControls\CustomControlsMC.csproj">
+      <Project>{FB17DE15-0B06-41FC-96AA-3A53D9F7B289}</Project>
+      <Name>CustomControlsMC</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
