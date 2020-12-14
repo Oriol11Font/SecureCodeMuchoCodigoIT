@@ -1,4 +1,5 @@
 ﻿using BasicForms;
+using ControlsMC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,8 @@ namespace Users
         private void MantenimentUsers_Load(object sender, EventArgs e)
         {
             CarregaDades();
+            FerBiding();
+            
         }
 
         private void CarregaDades()
@@ -34,6 +37,25 @@ namespace Users
             db = new UserEntities();
             usr = db.Users.ToList();
             dtg.DataSource = usr;
+            dtg.Columns[0].Visible = false;
+        }
+        private void FerBiding()
+        {
+            foreach (Control txt in Controls)
+                if (txt.GetType() == typeof(SWTextBox))
+                {
+                    var txt1 = (SWTextBox)txt;
+                    txt1.Font = new Font("Microsoft Sans Serif", 12);
+                    txt1.DataBindings.Clear();
+                    txt1.DataBindings.Add("Text", usr, txt1.CampoBBDD);
+                }
+                else if (txt.GetType() == typeof(Label))
+                {
+                    var txt1 = (Label)txt;
+                    txt1.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
+                    txt1.ForeColor = Color.White;
+                    txt1.BackColor = Color.Transparent;
+                }    
         }
     }
 }

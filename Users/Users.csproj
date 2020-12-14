@@ -107,6 +107,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ControlsMC\ControlsMC.csproj">
+      <Project>{A203BBC8-00F3-4CEA-ACB9-B7D6A9B028E8}</Project>
+      <Name>ControlsMC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibreriaControles\BasicForms.csproj">
       <Project>{F986A883-16EE-4A84-85A6-AA7DED000265}</Project>
       <Name>BasicForms</Name>
