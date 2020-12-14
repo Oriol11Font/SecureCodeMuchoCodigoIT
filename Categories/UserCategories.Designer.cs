@@ -50,18 +50,18 @@ namespace Categories
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swTextBox1 = new ControlsMC.SWTextBox();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
-            this.swTextBox3 = new ControlsMC.SWTextBox();
+            this.CodiCategory = new ControlsMC.SWTextBox();
+            this.DescCategory = new ControlsMC.SWTextBox();
+            this.LvlCategory = new ControlsMC.SWTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.dtgCategories = new System.Windows.Forms.DataGridView();
             this.createbtn = new System.Windows.Forms.Button();
             this.btn_actualitzar = new System.Windows.Forms.Button();
             this.btn_datagrid = new System.Windows.Forms.Button();
             this.backbtn = new System.Windows.Forms.Button();
-            this.dtgCategories = new System.Windows.Forms.DataGridView();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCategories)).BeginInit();
             this.SuspendLayout();
@@ -234,66 +234,69 @@ namespace Categories
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // swTextBox1
+            // CodiCategory
             // 
-            this.swTextBox1.AllowEmpty = true;
-            this.swTextBox1.CampoBBDD = "CodeCategory";
-            this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox1.Foranea = false;
-            this.swTextBox1.Location = new System.Drawing.Point(99, 327);
-            this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.Size = new System.Drawing.Size(400, 23);
-            this.swTextBox1.TabIndex = 27;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.CodiCategory.AllowEmpty = true;
+            this.CodiCategory.CampoBBDD = "CodeCategory";
+            this.CodiCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodiCategory.Foranea = false;
+            this.CodiCategory.Location = new System.Drawing.Point(99, 327);
+            this.CodiCategory.Name = "CodiCategory";
+            this.CodiCategory.Size = new System.Drawing.Size(400, 23);
+            this.CodiCategory.TabIndex = 27;
+            this.CodiCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
-            // swTextBox2
+            // DescCategory
             // 
-            this.swTextBox2.AllowEmpty = true;
-            this.swTextBox2.CampoBBDD = "DescCategory";
-            this.swTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox2.Foranea = false;
-            this.swTextBox2.Location = new System.Drawing.Point(574, 327);
-            this.swTextBox2.Name = "swTextBox2";
-            this.swTextBox2.Size = new System.Drawing.Size(400, 23);
-            this.swTextBox2.TabIndex = 28;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.DescCategory.AllowEmpty = true;
+            this.DescCategory.CampoBBDD = "DescCategory";
+            this.DescCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescCategory.Foranea = false;
+            this.DescCategory.Location = new System.Drawing.Point(574, 327);
+            this.DescCategory.Name = "DescCategory";
+            this.DescCategory.Size = new System.Drawing.Size(400, 23);
+            this.DescCategory.TabIndex = 28;
+            this.DescCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
-            // swTextBox3
+            // LvlCategory
             // 
-            this.swTextBox3.AllowEmpty = true;
-            this.swTextBox3.CampoBBDD = "AccessLevel";
-            this.swTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox3.Foranea = false;
-            this.swTextBox3.Location = new System.Drawing.Point(1057, 327);
-            this.swTextBox3.Name = "swTextBox3";
-            this.swTextBox3.Size = new System.Drawing.Size(400, 23);
-            this.swTextBox3.TabIndex = 29;
-            this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.LvlCategory.AllowEmpty = true;
+            this.LvlCategory.CampoBBDD = "AccessLevel";
+            this.LvlCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LvlCategory.Foranea = false;
+            this.LvlCategory.Location = new System.Drawing.Point(1057, 327);
+            this.LvlCategory.Name = "LvlCategory";
+            this.LvlCategory.Size = new System.Drawing.Size(400, 23);
+            this.LvlCategory.TabIndex = 29;
+            this.LvlCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(96, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 17);
+            this.label1.Size = new System.Drawing.Size(294, 32);
             this.label1.TabIndex = 30;
             this.label1.Text = "Codi de la Categoria";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(571, 286);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(158, 32);
             this.label2.TabIndex = 31;
             this.label2.Text = "Descripció";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1054, 286);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.Size = new System.Drawing.Size(205, 32);
             this.label3.TabIndex = 32;
             this.label3.Text = "Nivell d\'Accés";
             // 
@@ -308,6 +311,42 @@ namespace Categories
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1900, 600);
             this.panel8.TabIndex = 33;
+            // 
+            // dtgCategories
+            // 
+            this.dtgCategories.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dtgCategories.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgCategories.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgCategories.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dtgCategories.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dtgCategories.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgCategories.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtgCategories.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgCategories.ColumnHeadersHeight = 29;
+            this.dtgCategories.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgCategories.EnableHeadersVisualStyles = false;
+            this.dtgCategories.Location = new System.Drawing.Point(0, 60);
+            this.dtgCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgCategories.Name = "dtgCategories";
+            this.dtgCategories.ReadOnly = true;
+            this.dtgCategories.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCategories.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgCategories.RowHeadersWidth = 20;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgCategories.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgCategories.Size = new System.Drawing.Size(1900, 540);
+            this.dtgCategories.TabIndex = 27;
             // 
             // createbtn
             // 
@@ -356,41 +395,7 @@ namespace Categories
             this.backbtn.TabIndex = 27;
             this.backbtn.Text = "Tornar al Menú";
             this.backbtn.UseVisualStyleBackColor = true;
-            // 
-            // dtgCategories
-            // 
-            this.dtgCategories.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-            this.dtgCategories.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgCategories.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgCategories.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dtgCategories.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dtgCategories.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgCategories.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dtgCategories.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgCategories.ColumnHeadersHeight = 29;
-            this.dtgCategories.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgCategories.EnableHeadersVisualStyles = false;
-            this.dtgCategories.Location = new System.Drawing.Point(0, 60);
-            this.dtgCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgCategories.Name = "dtgCategories";
-            this.dtgCategories.ReadOnly = true;
-            this.dtgCategories.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCategories.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgCategories.RowHeadersWidth = 20;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtgCategories.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgCategories.Size = new System.Drawing.Size(1900, 540);
-            this.dtgCategories.TabIndex = 27;
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
             // 
             // UserCategories
             // 
@@ -402,16 +407,16 @@ namespace Categories
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.swTextBox3);
-            this.Controls.Add(this.swTextBox2);
-            this.Controls.Add(this.swTextBox1);
+            this.Controls.Add(this.LvlCategory);
+            this.Controls.Add(this.DescCategory);
+            this.Controls.Add(this.CodiCategory);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "UserCategories";
             this.Text = "UserCategories";
             this.Load += new System.EventHandler(this.UserCategories_Load);
-            this.Controls.SetChildIndex(this.swTextBox1, 0);
-            this.Controls.SetChildIndex(this.swTextBox2, 0);
-            this.Controls.SetChildIndex(this.swTextBox3, 0);
+            this.Controls.SetChildIndex(this.CodiCategory, 0);
+            this.Controls.SetChildIndex(this.DescCategory, 0);
+            this.Controls.SetChildIndex(this.LvlCategory, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
@@ -432,9 +437,9 @@ namespace Categories
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private ControlsMC.SWTextBox swTextBox1;
-        private ControlsMC.SWTextBox swTextBox2;
-        private ControlsMC.SWTextBox swTextBox3;
+        private ControlsMC.SWTextBox CodiCategory;
+        private ControlsMC.SWTextBox DescCategory;
+        private ControlsMC.SWTextBox LvlCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

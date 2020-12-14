@@ -30,11 +30,35 @@ namespace Categories
 
             cat = db.UserCategories.ToList();
 
+
             dtgCategories.DataSource = cat;
+            dtgCategories.Columns[0].Visible = false;
         }
         private void UserCategories_Load(object sender, EventArgs e)
         {
             CarregaDades();
+
+            GenerarBinding();
+        }
+
+        private void GenerarBinding()
+        {
+            CodiCategory.Font = new Font("Microsoft Sans Serif", 12);
+            CodiCategory.DataBindings.Clear();
+            CodiCategory.DataBindings.Add("Text", cat, CodiCategory.CampoBBDD);
+
+            DescCategory.Font = new Font("Microsoft Sans Serif", 12);
+            DescCategory.DataBindings.Clear();
+            DescCategory.DataBindings.Add("Text", cat, DescCategory.CampoBBDD);
+
+            LvlCategory.Font = new Font("Microsoft Sans Serif", 12);
+            LvlCategory.DataBindings.Clear();
+            LvlCategory.DataBindings.Add("Text", cat, LvlCategory.CampoBBDD);
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

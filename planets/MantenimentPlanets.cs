@@ -18,6 +18,7 @@ namespace planets
             FormTitle = "Manteniment Planetes";
             UserName = username;
             profileImg = imgProfile;
+            ids = new int[] {0, 3, 7, 8};
             InitializeComponent();
         }
     }

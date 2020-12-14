@@ -12,6 +12,8 @@ namespace BasicForms
     {
         public DataSet dts;
 
+        public int[] ids = {0};
+
         public ForaniForm()
         {
             InitializeComponent();
@@ -62,7 +64,12 @@ namespace BasicForms
                 dts = dtb.GetByQuery(query);
 
                 dtg.DataSource = dts.Tables[0];
-                dtg.Columns[0].Visible = false;
+
+                for (int i = 0; i < ids.Length; i++)
+                {
+                    dtg.Columns[ids[i]].Visible = false;
+                }
+
                 dtg.ForeColor = Color.Black;
                 NomColumnes();
 
