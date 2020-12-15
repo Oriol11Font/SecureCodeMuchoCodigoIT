@@ -11,7 +11,9 @@ namespace SecureCoreMain
 {
     public partial class Menu : BaseForm
     {
-        DataAccessClass data = new DataAccessClass();
+        readonly DataAccessClass data = new DataAccessClass();
+
+        int _accessLevel;
 
         public Menu(string sql)
         {
@@ -44,8 +46,18 @@ namespace SecureCoreMain
                     break;
             }
 
-           // var hora = "\nSón les " + time.Hour + ":" + tiempo.Minute;
+            // var hora = "\nSón les " + time.Hour + ":" + tiempo.Minute;
             this.welcomeText.Text = $"{momentDia} {this.UserName}";
+        }
+
+        private void SetUserRank()
+        {
+            var userCategory = (int) data
+                .GetByQuery($@"SELECT idUsercategory FROM Users WHERE UserName = '{UserName}';").Tables[0].Rows[0]
+                .ItemArray[0];
+            _accessLevel = (int) data
+                .GetByQuery($@"SELECT AccessLevel FROM UserCategories WHERE idUserCategory = '{userCategory}';")
+                .Tables[0].Rows[0].ItemArray[0];
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -53,27 +65,31 @@ namespace SecureCoreMain
             WindowState = FormWindowState.Maximized;
             setWelcomeLabel(UserName);
 
+            SetUserRank();
+
             var sqldata = data.CarregarMenu();
 
-            for (var i = 0; i < sqldata.Tables[0].Rows.Count; i++)
+            foreach (DataRow dr in sqldata.Tables[0].Rows)
             {
-                var dr = sqldata.Tables[0].Rows[i];
+                // si no té un nivell d'accés igual o superior no podrà veure els botons del menú que requereixin d'un accés superior
+                if (_accessLevel >= (int) dr.ItemArray[5])
+                {
+                    exeButton menubtn = new exeButton
+                    {
+                        ImageLocation1 = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".png",
+                        ImageLocation2 = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".gif",
+                        ImageLocation = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".png",
+                        SizeMode = PictureBoxSizeMode.Zoom,
+                        userName = UserName,
+                        imgProfile = profileImg,
+                        Form = dr.ItemArray[3].ToString(),
+                        Classe = dr.ItemArray[2].ToString(),
+                        Margin = new Padding(50),
+                        Dock = DockStyle.Fill
+                    };
 
-                var menubtn = new exeButton();
-
-                menubtn.ImageLocation1 = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".png";
-                menubtn.ImageLocation2 = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".gif";
-                menubtn.ImageLocation = Application.StartupPath + "\\images\\" + dr.ItemArray.GetValue(2) + ".png";
-                menubtn.SizeMode = PictureBoxSizeMode.Zoom;
-                menubtn.userName = UserName;
-                menubtn.imgProfile = profileImg;
-                menubtn.Form = dr.ItemArray.GetValue(3).ToString();
-                menubtn.Classe = dr.ItemArray.GetValue(4).ToString();
-                menubtn.Margin = new Padding(50);
-                menubtn.Dock = DockStyle.Fill;
-
-                tblMenu.Controls.Add(menubtn);
-
+                    tblMenu.Controls.Add(menubtn);
+                }
             }
         }
     }

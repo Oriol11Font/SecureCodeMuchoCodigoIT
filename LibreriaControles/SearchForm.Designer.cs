@@ -38,7 +38,6 @@ namespace BasicForms
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dtg = new System.Windows.Forms.DataGridView();
@@ -46,7 +45,7 @@ namespace BasicForms
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dtg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.SuspendLayout();
             // 
             // panel8
@@ -57,9 +56,8 @@ namespace BasicForms
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(10, 150);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1900, 920);
+            this.panel8.Size = new System.Drawing.Size(1473, 718);
             this.panel8.TabIndex = 25;
             // 
             // panel9
@@ -68,36 +66,30 @@ namespace BasicForms
             this.panel9.Controls.Add(this.dtg);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1900, 920);
+            this.panel9.Size = new System.Drawing.Size(1473, 718);
             this.panel9.TabIndex = 22;
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.button1);
             this.panel10.Controls.Add(this.button2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1900, 220);
+            this.panel10.Size = new System.Drawing.Size(1473, 179);
             this.panel10.TabIndex = 25;
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(11, 54);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(995, 106);
-            this.panel11.TabIndex = 27;
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(11, 165);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(9, 134);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 39);
+            this.button1.Size = new System.Drawing.Size(140, 32);
             this.button1.TabIndex = 26;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -106,10 +98,10 @@ namespace BasicForms
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(11, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(9, 8);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 39);
+            this.button2.Size = new System.Drawing.Size(140, 32);
             this.button2.TabIndex = 23;
             this.button2.Text = "Tornar al Menú";
             this.button2.UseVisualStyleBackColor = true;
@@ -129,14 +121,14 @@ namespace BasicForms
             this.dtg.ColumnHeadersHeight = 29;
             this.dtg.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtg.EnableHeadersVisualStyles = false;
-            this.dtg.Location = new System.Drawing.Point(0, 280);
-            this.dtg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtg.Location = new System.Drawing.Point(0, 198);
+            this.dtg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtg.Name = "dtg";
             this.dtg.ReadOnly = true;
             this.dtg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -147,31 +139,31 @@ namespace BasicForms
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg.RowTemplate.Height = 30;
-            this.dtg.Size = new System.Drawing.Size(1900, 640);
+            this.dtg.Size = new System.Drawing.Size(1473, 520);
             this.dtg.TabIndex = 24;
             // 
             // SearchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1493, 878);
             this.Controls.Add(this.panel8);
-            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "SearchForm";
             this.Text = "SearchForm";
             this.Controls.SetChildIndex(this.panel8, 0);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.dtg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-        }
 
-        private System.Windows.Forms.Panel panel11;
+        }
 
         private System.Windows.Forms.Panel panel10;
 

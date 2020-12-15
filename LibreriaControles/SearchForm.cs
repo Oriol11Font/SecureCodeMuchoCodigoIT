@@ -52,13 +52,9 @@ namespace BasicForms
                     foreach (var searchString in SearchStrings)
                         if (!string.IsNullOrEmpty(searchString.Value))
                         {
-                            var dv = new DataView(_formattedDt)
-                            {
-                                RowFilter = $"{searchString.Key} LIKE '%{searchString.Value}%'"
-                            };
-                            _formattedDt = dv.ToTable();
-                            _formattedDt.Clear();
-                            _formattedDt = dv.ToTable();
+                            _formattedDt = _formattedDt.AsEnumerable()
+                                .Where(x => x[searchString.Key].ToString().Contains(searchString.Value))
+                                .CopyToDataTable();
                         }
 
                     dtg.DataSource = _formattedDt;
