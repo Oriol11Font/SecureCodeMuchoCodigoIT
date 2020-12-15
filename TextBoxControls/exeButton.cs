@@ -31,6 +31,9 @@ namespace TextBoxControls
             object dllBD;
             Type tipus;
 
+
+            
+
             //recuperem el tipus de la classe que volem instanciar
             tipus = ensamblat.GetType(Form);
 

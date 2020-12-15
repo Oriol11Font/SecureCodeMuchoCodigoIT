@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace planets
             FormTitle = "Manteniment Planetes";
             UserName = username;
             profileImg = imgProfile;
+            ids = new int[] {0, 3, 7, 8};
             InitializeComponent();
         }
     }

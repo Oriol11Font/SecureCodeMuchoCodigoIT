@@ -78,7 +78,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg.RowTemplate.Height = 30;
-            this.dtg.Size = new System.Drawing.Size(1900, 540);
+            this.dtg.Size = new System.Drawing.Size(1728, 540);
             this.dtg.TabIndex = 19;
             // 
             // btn_actualitzar
@@ -142,10 +142,10 @@
             this.panel8.Controls.Add(this.btn_actualitzar);
             this.panel8.Controls.Add(this.btn_datagrid);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(10, 470);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Location = new System.Drawing.Point(10, 272);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1900, 600);
+            this.panel8.Size = new System.Drawing.Size(1728, 600);
             this.panel8.TabIndex = 24;
             // 
             // agenciesBindingSource
@@ -171,18 +171,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1748, 882);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SimpleForm";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.SimpleForm_Load);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.panel8, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.agenciesBindingSource)).EndInit();
