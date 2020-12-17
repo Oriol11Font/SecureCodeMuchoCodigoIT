@@ -5,6 +5,7 @@ using LibreriaClases;
 using BasicForms;
 using TextBoxControls;
 using System.Data;
+using System.IO;
 using System.Reflection;
 
 namespace SecureCoreMain
@@ -52,10 +53,10 @@ namespace SecureCoreMain
 
         private void SetUserRank()
         {
-            var userCategory = (int) data
+            var userCategory = (int)data
                 .GetByQuery($@"SELECT idUsercategory FROM Users WHERE UserName = '{UserName}';").Tables[0].Rows[0]
                 .ItemArray[0];
-            _accessLevel = (int) data
+            _accessLevel = (int)data
                 .GetByQuery($@"SELECT AccessLevel FROM UserCategories WHERE idUserCategory = '{userCategory}';")
                 .Tables[0].Rows[0].ItemArray[0];
         }
@@ -72,23 +73,31 @@ namespace SecureCoreMain
             foreach (DataRow dr in sqldata.Tables[0].Rows)
             {
                 // si no té un nivell d'accés igual o superior no podrà veure els botons del menú que requereixin d'un accés superior
-                if (_accessLevel >= (int) dr.ItemArray[5])
+                if (_accessLevel >= (int)dr.ItemArray[5])
                 {
-                    exeButton menubtn = new exeButton
+                    try
                     {
-                        ImageLocation1 = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".png",
-                        ImageLocation2 = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".gif",
-                        ImageLocation = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".png",
-                        SizeMode = PictureBoxSizeMode.Zoom,
-                        userName = UserName,
-                        imgProfile = profileImg,
-                        Form = dr.ItemArray[3].ToString(),
-                        Classe = dr.ItemArray[2].ToString(),
-                        Margin = new Padding(50),
-                        Dock = DockStyle.Fill
-                    };
+                        var menubtn = new exeButton
+                        {
+                            ImageLocation1 = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".png",
+                            ImageLocation2 = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".gif",
+                            ImageLocation = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".png",
+                            SizeMode = PictureBoxSizeMode.Zoom,
+                            userName = UserName,
+                            imgProfile = profileImg,
+                            Form = dr.ItemArray[3].ToString(),
+                            Classe = dr.ItemArray[2].ToString(),
+                            Margin = new Padding(50),
+                            Dock = DockStyle.Fill
+                        };
 
-                    tblMenu.Controls.Add(menubtn);
+                        tblMenu.Controls.Add(menubtn);
+                    }
+                    catch (FileNotFoundException)
+                    {
+                        MessageBox.Show($@"No s'ha trobat la imatge {dr.ItemArray[2]}");
+                    }
+
                 }
             }
         }

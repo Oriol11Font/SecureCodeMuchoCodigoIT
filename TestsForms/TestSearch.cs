@@ -1,6 +1,13 @@
-﻿using BasicForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using BasicForms;
 
 namespace TestsForms
 {
@@ -8,15 +15,13 @@ namespace TestsForms
     {
         public TestSearch()
         {
-            FormTitle = @"Cerca";
-            DtName = @"Agencies";
-            SearchStrings = new Dictionary<string, string>();
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void createbtn_Click(object sender, EventArgs e)
         {
-            SearchStrings.Add(@"idAgency", "1");
+            SearchStrings.Add("idAgency", textBox1.Text);
+            SearchStrings.Add("CodeAgency", textBox2.Text);
             HandleSearch();
         }
     }

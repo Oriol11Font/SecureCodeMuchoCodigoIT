@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using InitialFormsLibrary;
+using TestsForms;
 
 namespace SecureCoreMain
 {
@@ -14,7 +15,7 @@ namespace SecureCoreMain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu("SELECT* FROM Users WHERE UserName = 'Pau Colomè'"));
+            Application.Run(new newsplash());
         }
     }
 }

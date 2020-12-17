@@ -13,24 +13,12 @@ namespace LibreriaClases
         private SqlConnection _conn;
 
         // TODO: guardar la connection string en el app.config
-        private static string _connectionString;
+        private static string _connectionString = @"Data Source=34.77.100.91;Initial Catalog=securecode;User ID=sqlserver;Password=gutinomola";
 
         private static readonly Configuration Config =
             ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
         #region methods
-
-        public DataAccessClass()
-        {
-            _connectionString =
-                $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
-        }
-
-        public DataAccessClass(string dbName, string username, string password)
-        {
-            _connectionString =
-                $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog={dbName};Integrated Security=SSPI;User Id={username};Password={password}";
-        }
 
         public void EncryptConnString()
         {

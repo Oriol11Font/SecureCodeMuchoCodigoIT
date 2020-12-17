@@ -12,7 +12,7 @@ namespace BasicForms
         private DataTable _dt;
         private DataTable _formattedDt;
         public string DtName { get; set; } = "Agencies";
-        public Dictionary<string, string> SearchStrings { get; set; }
+        public Dictionary<string, string> SearchStrings { get; set; } = new Dictionary<string, string>();
 
         public SearchForm()
         {
@@ -68,6 +68,9 @@ namespace BasicForms
                 _ = MessageBox.Show(error.ToString());
                 _formattedDt = _dt;
                 dtg.DataSource = _formattedDt;
+            } finally
+            {
+                ClearSearch();
             }
         }
 
@@ -88,6 +91,7 @@ namespace BasicForms
         {
             try
             {
+                SearchStrings.Clear();
                 _formattedDt = _dt;
                 dtg.DataSource = _formattedDt;
             }
@@ -100,6 +104,15 @@ namespace BasicForms
         private void button2_click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (Control cnt in Controls)
+            {
+                if (cnt.GetType() == typeof(TextBox)) cnt.Text = "";
+            }
+            ClearSearch();
         }
     }
 }
