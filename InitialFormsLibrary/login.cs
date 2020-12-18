@@ -1,11 +1,9 @@
-﻿using System;
+﻿using LibreriaClases;
+using SecureCoreMain.Forms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using LibreriaClases;
-using BasicForms;
-using SecureCoreMain.Forms;
 using Menu = SecureCoreMain.Menu;
-using System.Data;
 
 namespace InitialFormsLibrary
 {
@@ -170,10 +168,10 @@ namespace InitialFormsLibrary
             {
                 var dt = dac.GetByQuery("SELECT * FROM Users WHERE UserName = '" + username + "';").Tables[0];
 
-                login = dt.Rows.Count == 1 && (string) dt.Rows[0].ItemArray[2] == username &&
-                        (string) dt.Rows[0].ItemArray[4] == password;
+                login = dt.Rows.Count == 1 && (string)dt.Rows[0].ItemArray[2] == username &&
+                        (string)dt.Rows[0].ItemArray[4] == password;
 
-                
+
             }
             catch (Exception e)
             {

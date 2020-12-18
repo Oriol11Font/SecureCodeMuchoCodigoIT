@@ -24,7 +24,7 @@ namespace SecureCoreMain
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
             if (splashBar1.Value < 100)
             {
                 splashBar1.Value += 6;

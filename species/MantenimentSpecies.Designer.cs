@@ -598,8 +598,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+#pragma warning disable CS0169 // El campo 'MantenimentSpecies.label1' nunca se usa
         private System.Windows.Forms.Label label1;
+#pragma warning restore CS0169 // El campo 'MantenimentSpecies.label1' nunca se usa
+#pragma warning disable CS0169 // El campo 'MantenimentSpecies.label2' nunca se usa
         private System.Windows.Forms.Label label2;
+#pragma warning restore CS0169 // El campo 'MantenimentSpecies.label2' nunca se usa
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -609,7 +613,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+#pragma warning disable CS0169 // El campo 'MantenimentSpecies.label3' nunca se usa
         private System.Windows.Forms.Label label3;
+#pragma warning restore CS0169 // El campo 'MantenimentSpecies.label3' nunca se usa
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;

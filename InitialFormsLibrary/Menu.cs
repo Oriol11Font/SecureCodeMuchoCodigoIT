@@ -1,12 +1,10 @@
-﻿using System;
-using System.Windows.Forms;
-using InitialFormsLibrary;
+﻿using BasicForms;
 using LibreriaClases;
-using BasicForms;
-using TextBoxControls;
+using System;
 using System.Data;
 using System.IO;
-using System.Reflection;
+using System.Windows.Forms;
+using TextBoxControls;
 
 namespace SecureCoreMain
 {

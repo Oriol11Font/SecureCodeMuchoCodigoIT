@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace BasicForms
@@ -29,7 +28,8 @@ Es perdran tots els canvis no guardats",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes) Application.Exit();
-            } else
+            }
+            else
             {
                 Application.Exit();
             }

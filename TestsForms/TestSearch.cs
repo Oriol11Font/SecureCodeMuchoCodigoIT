@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BasicForms;
+﻿using BasicForms;
+using System;
 
 namespace TestsForms
 {
     public partial class TestSearch : SearchForm
     {
-        public TestSearch()
+        public TestSearch(string username, string imatge)
         {
+            DtName = "Agencies";
+            UserName = username;
+            profileImg = imatge;
             InitializeComponent();
         }
 
@@ -22,6 +17,7 @@ namespace TestsForms
         {
             SearchStrings.Add("idAgency", textBox1.Text);
             SearchStrings.Add("CodeAgency", textBox2.Text);
+            SearchStrings.Add("DescAgency", textBox3.Text);
             HandleSearch();
         }
     }

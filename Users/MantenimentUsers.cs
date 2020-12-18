@@ -2,12 +2,8 @@
 using ControlsMC;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TextBoxControls;
 
@@ -24,12 +20,12 @@ namespace Users
         }
 
         UserEntities db;
-        List<User> usr; 
+        List<User> usr;
         private void MantenimentUsers_Load(object sender, EventArgs e)
         {
             CarregaDades();
             FerBiding();
-            
+
         }
 
         private void CarregaDades()
@@ -63,7 +59,7 @@ namespace Users
                     txt1.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
                     txt1.ForeColor = Color.White;
                     txt1.BackColor = Color.Transparent;
-                }    
+                }
         }
     }
 }

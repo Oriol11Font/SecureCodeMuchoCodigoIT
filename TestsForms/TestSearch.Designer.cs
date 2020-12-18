@@ -33,11 +33,12 @@ namespace TestsForms
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // createbtn
             // 
-            this.createbtn.Text = "Buscar";
             this.createbtn.Click += new System.EventHandler(this.createbtn_Click);
             // 
             // panel8
@@ -80,11 +81,31 @@ namespace TestsForms
             this.textBox2.Size = new System.Drawing.Size(300, 30);
             this.textBox2.TabIndex = 35;
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(697, 306);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(300, 30);
+            this.textBox3.TabIndex = 37;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(692, 275);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(297, 29);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Descripció de l\'agència";
+            // 
             // TestSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -99,6 +120,8 @@ namespace TestsForms
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.textBox3, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +133,7 @@ namespace TestsForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
     }
 }
