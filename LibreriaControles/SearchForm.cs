@@ -1,9 +1,10 @@
-﻿using System;
+﻿using LibreriaClases;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
-using LibreriaClases;
 
 namespace BasicForms
 {
@@ -11,16 +12,16 @@ namespace BasicForms
     {
         private DataTable _dt;
         private DataTable _formattedDt;
-        public string DtName { get; set; } = "Agencies";
-        public Dictionary<string, string> SearchStrings { get; set; } = new Dictionary<string, string>();
+        protected string DtName { get; set; } = "Agencies";
+        protected Dictionary<string, string> SearchStrings { get; set; } = new Dictionary<string, string>();
 
-        public SearchForm()
+        protected SearchForm()
         {
             InitializeComponent();
             Init();
         }
 
-        public void Init()
+        private void Init()
         {
             try
             {
@@ -31,9 +32,10 @@ namespace BasicForms
                     AutoSizeMode = AutoSizeMode.GrowOnly;
                     ApplyStyle();
                     SetData(dac.GetTable(DtName));
-                } else
+                }
+                else
                 {
-                    throw new Exception("El nom de la taula no s'ha declarat");
+                    throw new Exception(@"El nom de la taula no s'ha declarat");
                 }
             }
             catch (Exception e)
@@ -42,11 +44,12 @@ namespace BasicForms
             }
         }
 
-        public void HandleSearch()
+        protected void HandleSearch()
         {
             try
             {
-                if (SearchStrings != null)
+                errLabel.Visible = false;
+                if (SearchStrings != null && SearchStrings.Count > 0)
                 {
                     _formattedDt = _dt;
                     foreach (var searchString in SearchStrings)
@@ -58,19 +61,27 @@ namespace BasicForms
                         }
 
                     dtg.DataSource = _formattedDt;
-                } else
+                }
+                else
                 {
                     throw new Exception("No hi ha paraules per filtrar");
                 }
             }
             catch (Exception error)
             {
-                _ = MessageBox.Show(error.ToString());
-                _formattedDt = _dt;
-                dtg.DataSource = _formattedDt;
-            } finally
+                if (error is InvalidOperationException)
+                {
+                    errLabel.Text = @"No hi ha dades que s'assemblin a la teva consulta";
+                }
+                else
+                {
+                    errLabel.Text = @"No s'ha pogut filtrar la teva consulta";
+                }
+                errLabel.Visible = true;
+            }
+            finally
             {
-                ClearSearch();
+                SearchStrings.Clear();
             }
         }
 
@@ -87,13 +98,15 @@ namespace BasicForms
             dtg.Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height / 3 * 2);
         }
 
-        public void ClearSearch()
+        protected void ClearSearch()
         {
             try
             {
+                errLabel.Visible = false;
                 SearchStrings.Clear();
                 _formattedDt = _dt;
                 dtg.DataSource = _formattedDt;
+                ClearControls(null, null);
             }
             catch (Exception error)
             {
@@ -101,18 +114,17 @@ namespace BasicForms
             }
         }
 
-        private void button2_click(object sender, EventArgs e)
+        private void ClearControls(object sender, EventArgs e)
         {
-            Close();
+            Controls
+                .OfType<TextBox>()
+                .ToList()
+                .ForEach(textBox =>
+                {
+                    textBox.Text = @"";
+                });
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            foreach (Control cnt in Controls)
-            {
-                if (cnt.GetType() == typeof(TextBox)) cnt.Text = "";
-            }
-            ClearSearch();
-        }
+        private void Close(object sender, EventArgs e) => Close();
     }
 }

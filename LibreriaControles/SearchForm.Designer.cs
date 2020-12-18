@@ -41,6 +41,7 @@ namespace BasicForms
             this.createbtn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.errLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +55,9 @@ namespace BasicForms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 39);
             this.button2.TabIndex = 30;
-            this.button2.Text = "Tornar al Menú";
+            this.button2.Text = "Torna enrere";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Close);
             // 
             // dtg
             // 
@@ -101,7 +103,7 @@ namespace BasicForms
             this.createbtn.Name = "createbtn";
             this.createbtn.Size = new System.Drawing.Size(180, 39);
             this.createbtn.TabIndex = 23;
-            this.createbtn.Text = "Afegir";
+            this.createbtn.Text = "Buscar";
             this.createbtn.UseVisualStyleBackColor = true;
             // 
             // panel8
@@ -126,7 +128,18 @@ namespace BasicForms
             this.button3.TabIndex = 32;
             this.button3.Text = "Buidar cerca";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.ClearControls);
+            // 
+            // errLabel
+            // 
+            this.errLabel.AutoSize = true;
+            this.errLabel.ForeColor = System.Drawing.Color.Red;
+            this.errLabel.Location = new System.Drawing.Point(437, 417);
+            this.errLabel.Name = "errLabel";
+            this.errLabel.Size = new System.Drawing.Size(45, 17);
+            this.errLabel.TabIndex = 33;
+            this.errLabel.Text = "Error";
+            this.errLabel.Visible = false;
             // 
             // SearchForm
             // 
@@ -135,6 +148,7 @@ namespace BasicForms
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1920, 1081);
+            this.Controls.Add(this.errLabel);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.createbtn);
@@ -147,9 +161,11 @@ namespace BasicForms
             this.Controls.SetChildIndex(this.createbtn, 0);
             this.Controls.SetChildIndex(this.panel8, 0);
             this.Controls.SetChildIndex(this.button3, 0);
+            this.Controls.SetChildIndex(this.errLabel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -160,5 +176,6 @@ namespace BasicForms
         public System.Windows.Forms.Button createbtn;
         public System.Windows.Forms.Panel panel8;
         public System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label errLabel;
     }
 }

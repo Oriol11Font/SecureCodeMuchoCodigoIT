@@ -98,15 +98,15 @@
             // 
             // welcomeText
             // 
-            this.welcomeText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.welcomeText.AutoSize = true;
+            this.welcomeText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeText.Location = new System.Drawing.Point(169, 0);
-            this.welcomeText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.welcomeText.Location = new System.Drawing.Point(3, 0);
             this.welcomeText.Name = "welcomeText";
-            this.welcomeText.Size = new System.Drawing.Size(157, 37);
+            this.welcomeText.Size = new System.Drawing.Size(634, 470);
             this.welcomeText.TabIndex = 0;
             this.welcomeText.Text = "Welcome";
+            this.welcomeText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tblMenu
             // 
@@ -119,25 +119,24 @@
             this.tblMenu.Controls.Add(this.welcomeText, 0, 0);
             this.tblMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblMenu.Location = new System.Drawing.Point(10, 150);
-            this.tblMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.tblMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblMenu.Name = "tblMenu";
             this.tblMenu.RowCount = 2;
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tblMenu.Size = new System.Drawing.Size(1490, 734);
+            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblMenu.Size = new System.Drawing.Size(1921, 940);
             this.tblMenu.TabIndex = 19;
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1510, 894);
+            this.ClientSize = new System.Drawing.Size(1941, 1100);
             this.Controls.Add(this.tblMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Menu";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Menu_Load);
