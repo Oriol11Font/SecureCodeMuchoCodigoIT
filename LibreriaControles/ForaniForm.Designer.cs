@@ -37,10 +37,8 @@
             this.backbtn = new System.Windows.Forms.Button();
             this.createbtn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtg
@@ -145,21 +143,6 @@
             this.panel8.Size = new System.Drawing.Size(1922, 600);
             this.panel8.TabIndex = 24;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.ErrorImage = global::LibreriaControles.Properties.Resources.Guti;
-            this.pictureBox1.Image = global::LibreriaControles.Properties.Resources.logo_login;
-            this.pictureBox1.InitialImage = global::LibreriaControles.Properties.Resources.Guti;
-            this.pictureBox1.Location = new System.Drawing.Point(1530, 173);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
             // ForaniForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -167,18 +150,15 @@
             this.ClientSize = new System.Drawing.Size(1942, 1102);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.backbtn);
-            this.Controls.Add(this.pictureBox1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ForaniForm";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.SimpleForm_Load);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.backbtn, 0);
             this.Controls.SetChildIndex(this.panel8, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,6 +170,5 @@
         private System.Windows.Forms.Button backbtn;
         private System.Windows.Forms.Button createbtn;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

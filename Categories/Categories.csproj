@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>DLL\</OutputPath>
+    <OutputPath>..\DLL\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -73,9 +73,6 @@
     </Compile>
     <Compile Include="UserCategories.Designer.cs">
       <DependentUpon>UserCategories.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserCategory.cs">
-      <DependentUpon>ModelCategories.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

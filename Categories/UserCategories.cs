@@ -11,11 +11,6 @@ namespace Categories
     {
         public UserCategories(String username, String imgProfile)
         {
-            SqlConnectionStringBuilder CategoriesEntities = new SqlConnectionStringBuilder();
-
-            //Console.WriteLine(builder.WriteLine);
-            CategoriesEntities.ConnectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
-
             FormTitle = "Categories dels Usuaris";
             UserName = username;
             profileImg = imgProfile;
@@ -23,7 +18,9 @@ namespace Categories
         }
 
         CategoriesEntities db;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'UserCategory' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         List<UserCategory> cat;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'UserCategory' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
 
         private void CarregaDades()
         {

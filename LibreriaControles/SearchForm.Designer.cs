@@ -55,7 +55,7 @@ namespace BasicForms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 39);
             this.button2.TabIndex = 30;
-            this.button2.Text = "Tornar al Menú";
+            this.button2.Text = "Torna enrere";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Close);
             // 

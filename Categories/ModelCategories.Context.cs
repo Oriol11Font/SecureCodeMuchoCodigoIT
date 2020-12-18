@@ -25,6 +25,8 @@ namespace Categories
             throw new UnintentionalCodeFirstException();
         }
     
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'UserCategory' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         public virtual DbSet<UserCategory> UserCategories { get; set; }
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'UserCategory' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
     }
 }

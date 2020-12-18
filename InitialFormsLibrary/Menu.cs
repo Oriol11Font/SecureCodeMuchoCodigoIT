@@ -84,7 +84,7 @@ namespace SecureCoreMain
                             userName = UserName,
                             imgProfile = profileImg,
                             Form = dr.ItemArray[3].ToString(),
-                            Classe = dr.ItemArray[2].ToString(),
+                            Classe = dr.ItemArray[4].ToString(),
                             Margin = new Padding(50),
                             Dock = DockStyle.Fill
                         };
