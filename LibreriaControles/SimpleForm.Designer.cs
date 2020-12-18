@@ -39,11 +39,9 @@
             this.createbtn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.agenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agenciesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtg
@@ -78,7 +76,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg.RowTemplate.Height = 30;
-            this.dtg.Size = new System.Drawing.Size(1728, 540);
+            this.dtg.Size = new System.Drawing.Size(1900, 540);
             this.dtg.TabIndex = 19;
             // 
             // btn_actualitzar
@@ -142,37 +140,21 @@
             this.panel8.Controls.Add(this.btn_actualitzar);
             this.panel8.Controls.Add(this.btn_datagrid);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(10, 272);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Location = new System.Drawing.Point(10, 470);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1728, 600);
+            this.panel8.Size = new System.Drawing.Size(1900, 600);
             this.panel8.TabIndex = 24;
             // 
             // agenciesBindingSource
             // 
             this.agenciesBindingSource.DataMember = "Agencies";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.ErrorImage = global::LibreriaControles.Properties.Resources.Guti;
-            this.pictureBox1.Image = global::LibreriaControles.Properties.Resources.logo_login;
-            this.pictureBox1.InitialImage = global::LibreriaControles.Properties.Resources.Guti;
-            this.pictureBox1.Location = new System.Drawing.Point(1510, 193);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 270);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
-            // 
             // SimpleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1748, 882);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.button1);
             this.Location = new System.Drawing.Point(0, 0);
@@ -182,11 +164,9 @@
             this.Load += new System.EventHandler(this.SimpleForm_Load);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.panel8, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.agenciesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +179,5 @@
         private System.Windows.Forms.Button createbtn;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.BindingSource agenciesBindingSource;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
