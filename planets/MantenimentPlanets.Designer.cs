@@ -29,6 +29,9 @@ namespace planets
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +124,31 @@ namespace planets
             this.swTextBox1 = new ControlsMC.SWTextBox();
             this.SuspendLayout();
             // 
+            // dataGridViewTextBoxColumn67
+            // 
+            this.dataGridViewTextBoxColumn67.DataPropertyName = "idAgency";
+            this.dataGridViewTextBoxColumn67.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn67.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
+            this.dataGridViewTextBoxColumn67.ReadOnly = true;
+            this.dataGridViewTextBoxColumn67.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn68
+            // 
+            this.dataGridViewTextBoxColumn68.DataPropertyName = "CodeAgency";
+            this.dataGridViewTextBoxColumn68.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn68.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
+            this.dataGridViewTextBoxColumn68.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn69
+            // 
+            this.dataGridViewTextBoxColumn69.DataPropertyName = "DescAgency";
+            this.dataGridViewTextBoxColumn69.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn69.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
+            this.dataGridViewTextBoxColumn69.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn64
             // 
             this.dataGridViewTextBoxColumn64.DataPropertyName = "idAgency";
@@ -129,6 +157,7 @@ namespace planets
             this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
             this.dataGridViewTextBoxColumn64.ReadOnly = true;
             this.dataGridViewTextBoxColumn64.Visible = false;
+            this.dataGridViewTextBoxColumn64.Width = 125;
             // 
             // dataGridViewTextBoxColumn65
             // 
@@ -137,6 +166,7 @@ namespace planets
             this.dataGridViewTextBoxColumn65.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
             this.dataGridViewTextBoxColumn65.ReadOnly = true;
+            this.dataGridViewTextBoxColumn65.Width = 125;
             // 
             // dataGridViewTextBoxColumn66
             // 
@@ -145,6 +175,7 @@ namespace planets
             this.dataGridViewTextBoxColumn66.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
             this.dataGridViewTextBoxColumn66.ReadOnly = true;
+            this.dataGridViewTextBoxColumn66.Width = 125;
             // 
             // dataGridViewTextBoxColumn61
             // 
@@ -797,8 +828,8 @@ namespace planets
             // 
             this.txtBoxSectors.BackColor = System.Drawing.Color.Transparent;
             this.txtBoxSectors.ControlID = 0;
-            this.txtBoxSectors.dll = null;
-            this.txtBoxSectors.FormCS = null;
+            this.txtBoxSectors.dll = "planets.dll";
+            this.txtBoxSectors.FormCS = "planets.CercaSector";
             this.txtBoxSectors.Location = new System.Drawing.Point(596, 283);
             this.txtBoxSectors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxSectors.Name = "txtBoxSectors";
@@ -1161,5 +1192,8 @@ namespace planets
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn65;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn66;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn68;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn69;
     }
 }

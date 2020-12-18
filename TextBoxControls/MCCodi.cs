@@ -122,10 +122,6 @@ namespace TextBoxControls
         {
             if (e.KeyCode == Keys.F2)
             {
-                var sql = "Select * from Agencies;";
-
-                sqldata = data.GetByQuery(sql);
-
                 //MessageBox.Show("Has obert la Taula de Cerca! :)");
                 /*Sha de mirar*/
                 var ensamblat = Assembly.LoadFrom(dll);
@@ -137,12 +133,8 @@ namespace TextBoxControls
                 //recuperem el tipus de la classe que volem instanciar
                 tipus = ensamblat.GetType(FormCS);
 
-                //Declarem un array d’objectes I l’omplim amb
-                //els nostres paràmetres
-                Object[] args = { this.sqldata };
-
                 //instanciem l’objecte   
-                dllBD = Activator.CreateInstance(tipus, args);
+                dllBD = Activator.CreateInstance(tipus);
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
