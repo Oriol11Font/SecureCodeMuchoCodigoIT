@@ -11,11 +11,6 @@ namespace Categories
     {
         public UserCategories(String username, String imgProfile)
         {
-            SqlConnectionStringBuilder CategoriesEntities = new SqlConnectionStringBuilder();
-
-            //Console.WriteLine(builder.WriteLine);
-            CategoriesEntities.ConnectionString = $"Data Source={Environment.MachineName}\\SQLEXPRESS;Initial Catalog=SecureCore;Integrated Security=SSPI;User Id=secureCoreApplication;Password=test123456789";
-
             FormTitle = "Categories dels Usuaris";
             UserName = username;
             profileImg = imgProfile;
