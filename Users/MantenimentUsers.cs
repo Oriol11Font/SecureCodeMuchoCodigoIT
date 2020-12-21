@@ -2,12 +2,8 @@
 using ControlsMC;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TextBoxControls;
 
@@ -24,7 +20,8 @@ namespace Users
         }
 
         UserEntities db;
-        List<User> usr; 
+        List<User> usr;
+        bool EsNou = false;
         private void MantenimentUsers_Load(object sender, EventArgs e)
         {
             CarregaDades();
@@ -39,6 +36,25 @@ namespace Users
             usr = db.Users.ToList();
             dtg.DataSource = usr;
             dtg.Columns[0].Visible = false;
+        }
+
+        private void TreureBinding()
+        {
+            foreach (Control txt in Controls)
+                if (txt.GetType() == typeof(SWTextBox))
+                {
+                    var txt1 = (SWTextBox)txt;
+                    txt1.Font = new Font("Microsoft Sans Serif", 12);
+                    txt1.DataBindings.Clear();
+                    txt1.DataBindings.Add("Text", usr, txt1.CampoBBDD);
+                }
+                else if (txt.GetType() == typeof(MCCodi))
+                {
+                    var txt1 = (MCCodi)txt;
+                    txt1.Font = new Font("Microsoft Sans Serif", 12);
+                    txt1.DataBindings.Clear();
+                    txt1.DataBindings.Add("ControlID", usr, txt1.NomId);
+                }
         }
         private void FerBiding()
         {
@@ -69,6 +85,19 @@ namespace Users
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_actualitzar_Click(object sender, EventArgs e)
+        {
+            db.SaveChanges();
+            CarregaDades();
+            FerBiding();
+        }
+
+        private void createbtn_Click(object sender, EventArgs e)
+        {
+            EsNou = true;
+            TreureBinding();
         }
     }
 }
