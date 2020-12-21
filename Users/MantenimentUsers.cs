@@ -46,14 +46,14 @@ namespace Users
                     var txt1 = (SWTextBox)txt;
                     txt1.Font = new Font("Microsoft Sans Serif", 12);
                     txt1.DataBindings.Clear();
-                    txt1.DataBindings.Add("Text", usr, txt1.CampoBBDD);
+                    txt1.Text = "";
                 }
                 else if (txt.GetType() == typeof(MCCodi))
                 {
                     var txt1 = (MCCodi)txt;
                     txt1.Font = new Font("Microsoft Sans Serif", 12);
                     txt1.DataBindings.Clear();
-                    txt1.DataBindings.Add("ControlID", usr, txt1.NomId);
+                    txt1.Text = "";
                 }
         }
         private void FerBiding()
@@ -89,6 +89,16 @@ namespace Users
 
         private void btn_actualitzar_Click(object sender, EventArgs e)
         {
+
+            
+            if (EsNou)
+            {
+                User newuser = new User()
+                {
+                    CodeUser = swTextBox1.Text
+                };
+                db.Users.Add(newuser);
+            }
             db.SaveChanges();
             CarregaDades();
             FerBiding();
