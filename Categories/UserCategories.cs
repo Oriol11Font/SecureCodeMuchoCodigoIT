@@ -65,6 +65,9 @@ namespace Categories
                        select c).ToList();
 
                 db.SaveChanges();
+                CarregaDades();
+                GenerarBinding();
+
                 btn_actualitzar.ForeColor = Color.LawnGreen;
             }
             catch (Exception ex)
