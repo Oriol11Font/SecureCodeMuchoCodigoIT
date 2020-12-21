@@ -95,7 +95,10 @@ namespace Users
             {
                 User newuser = new User()
                 {
-                    CodeUser = swTextBox1.Text
+                    CodeUser = swTextBox3.Text,
+                    UserName = swTextBox2.Text,
+                    Login = swTextBox5.Text,
+                    Password = swTextBox4.Text
                 };
                 db.Users.Add(newuser);
             }
