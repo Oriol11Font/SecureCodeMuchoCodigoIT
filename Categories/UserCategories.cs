@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace Categories
 {
@@ -25,7 +26,6 @@ namespace Categories
             db = new CategoriesEntities();
 
             cat = db.UserCategories.ToList();
-
 
             dtgCategories.DataSource = cat;
             dtgCategories.Columns[0].Visible = false;
@@ -55,6 +55,30 @@ namespace Categories
         private void backbtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_actualitzar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cat = (from c in db.UserCategories
+                       select c).ToList();
+
+                db.SaveChanges();
+                CarregaDades();
+                GenerarBinding();
+
+                btn_actualitzar.ForeColor = Color.LawnGreen;
+            }
+            catch (Exception ex)
+            {
+                btn_actualitzar.ForeColor = Color.Red;
+                MessageBox.Show("SimpleForm - Error creating new row: " + ex.Message);
+            }
+
+            
+
+            //GenerarBinding();
         }
     }
 }
