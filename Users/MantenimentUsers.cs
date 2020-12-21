@@ -102,6 +102,7 @@ namespace Users
                 };
                 db.Users.Add(newuser);
             }
+            EsNou = false;
             db.SaveChanges();
             CarregaDades();
             FerBiding();
