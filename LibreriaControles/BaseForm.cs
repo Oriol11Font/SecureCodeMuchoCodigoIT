@@ -46,10 +46,10 @@ Es perdran tots els canvis no guardats",
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            appImg.ImageLocation = Application.StartupPath + "\\images\\" + "logo_app.png";
+            appImg.ImageLocation = "..\\LibreriaControles\\Resources\\logo_app.png";
             username.Text = UserName;
             TitleForm.Text = FormTitle;
-            profileimg.ImageLocation = Application.StartupPath + "\\images\\" + profileImg;
+            profileimg.ImageLocation = "..\\LibreriaControles\\Resources\\" + profileImg;
         }
     }
 }

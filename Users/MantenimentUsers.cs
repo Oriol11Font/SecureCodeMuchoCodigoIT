@@ -204,7 +204,7 @@ namespace Users
 
         private void carregarfoto(string foto)
         {
-            pbox_user.ImageLocation = Application.StartupPath + "\\images\\" + foto;
+            pbox_user.ImageLocation = "..\\Users\\Resources\\" + foto;
         }
     }
 }

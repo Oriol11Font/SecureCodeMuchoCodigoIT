@@ -219,8 +219,8 @@
             // 
             this.profileimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.profileimg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileimg.ErrorImage = global::LibreriaControles.Properties.Resources.Guti;
-            this.profileimg.InitialImage = global::LibreriaControles.Properties.Resources.Guti;
+            this.profileimg.ErrorImage = global::LibreriaControles.Properties.Resources.noimageprofile;
+            this.profileimg.InitialImage = global::LibreriaControles.Properties.Resources.noimageprofile1;
             this.profileimg.Location = new System.Drawing.Point(392, 7);
             this.profileimg.Name = "profileimg";
             this.profileimg.Size = new System.Drawing.Size(100, 100);

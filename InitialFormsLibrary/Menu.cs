@@ -79,9 +79,10 @@ namespace SecureCoreMain
                     {
                         var menubtn = new exeButton
                         {
-                            ImageLocation1 = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".png",
-                            ImageLocation2 = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".gif",
-                            ImageLocation = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".png",
+                            ImageLocation1 = "..\\TextBoxControls\\Resources\\" + dr.ItemArray[2].ToString() + ".png", 
+                            ImageLocation2 = "..\\TextBoxControls\\Resources\\" + dr.ItemArray[2].ToString() + ".gif",
+                            ImageLocation = "..\\TextBoxControls\\Resources\\" +  dr.ItemArray[2].ToString() + ".png",
+                            
                             SizeMode = PictureBoxSizeMode.Zoom,
                             userName = UserName,
                             imgProfile = profileImg,
