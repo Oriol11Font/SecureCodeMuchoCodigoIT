@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CategoriesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ModelCategories.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="UserCategories">
           <Key>
             <PropertyRef Name="idUserCategory" />
@@ -14,14 +14,14 @@
           <Property Name="DescCategory" Type="nvarchar" MaxLength="50" />
           <Property Name="AccessLevel" Type="int" />
         </EntityType>
-        <EntityContainer Name="CategoriesModelStoreContainer">
+        <EntityContainer Name="ModelCategoriesStoreContainer">
           <EntitySet Name="UserCategories" EntityType="Self.UserCategories" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CategoriesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ModelCategories" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="UserCategory">
           <Key>
             <PropertyRef Name="idUserCategory" />
@@ -31,7 +31,7 @@
           <Property Name="DescCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="AccessLevel" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="CategoriesEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CaregoriesEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="UserCategories" EntityType="Self.UserCategory" />
         </EntityContainer>
       </Schema>
@@ -39,9 +39,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CategoriesModelStoreContainer" CdmEntityContainer="CategoriesEntities">
+        <EntityContainerMapping StorageEntityContainer="ModelCategoriesStoreContainer" CdmEntityContainer="CaregoriesEntities">
           <EntitySetMapping Name="UserCategories">
-            <EntityTypeMapping TypeName="CategoriesModel.UserCategory">
+            <EntityTypeMapping TypeName="ModelCategories.UserCategory">
               <MappingFragment StoreEntitySet="UserCategories">
                 <ScalarProperty Name="idUserCategory" ColumnName="idUserCategory" />
                 <ScalarProperty Name="CodeCategory" ColumnName="CodeCategory" />

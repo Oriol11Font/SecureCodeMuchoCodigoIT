@@ -18,12 +18,12 @@ namespace Categories
             InitializeComponent();
         }
 
-        CategoriesEntities db;
+        CaregoriesEntities db;
         List<UserCategory> cat;
 
         private void CarregaDades()
         {
-            db = new CategoriesEntities();
+            db = new CaregoriesEntities();
 
             cat = db.UserCategories.ToList();
 
@@ -41,15 +41,15 @@ namespace Categories
         {
             CodiCategory.Font = new Font("Microsoft Sans Serif", 12);
             CodiCategory.DataBindings.Clear();
-            CodiCategory.DataBindings.Add("Text", cat, CodiCategory.CampoBBDD);
+            CodiCategory.DataBindings.Add("Text", dtgCategories.DataSource, CodiCategory.CampoBBDD, true);
 
             DescCategory.Font = new Font("Microsoft Sans Serif", 12);
             DescCategory.DataBindings.Clear();
-            DescCategory.DataBindings.Add("Text", cat, DescCategory.CampoBBDD);
+            DescCategory.DataBindings.Add("Text", dtgCategories.DataSource, DescCategory.CampoBBDD, true);
 
             LvlCategory.Font = new Font("Microsoft Sans Serif", 12);
             LvlCategory.DataBindings.Clear();
-            LvlCategory.DataBindings.Add("Text", cat, LvlCategory.CampoBBDD);
+            LvlCategory.DataBindings.Add("Text", dtgCategories.DataSource, LvlCategory.CampoBBDD, true);
         }
 
         private void backbtn_Click(object sender, EventArgs e)
@@ -61,8 +61,8 @@ namespace Categories
         {
             try
             {
-                cat = (from c in db.UserCategories
-                       select c).ToList();
+                //cat = (from c in db.UserCategories
+                //   select c).ToList();
 
                 db.SaveChanges();
                 CarregaDades();
