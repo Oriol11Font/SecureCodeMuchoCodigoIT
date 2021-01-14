@@ -15,7 +15,6 @@ namespace SecureCoreMain
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            splashimg.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "bqsplash.gif");
             splashimg.SizeMode = PictureBoxSizeMode.StretchImage;
             splashimg.Enabled = true;
             timer1.Enabled = true;

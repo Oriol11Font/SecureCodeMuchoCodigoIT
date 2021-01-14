@@ -72,6 +72,7 @@
             this.splashimg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.splashimg.Image = global::InitialFormsLibrary.Properties.Resources.bqsplash;
             this.splashimg.Location = new System.Drawing.Point(187, 51);
             this.splashimg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splashimg.Name = "splashimg";

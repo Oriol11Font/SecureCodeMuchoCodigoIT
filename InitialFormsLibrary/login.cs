@@ -127,34 +127,34 @@ namespace InitialFormsLibrary
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            username_warning.Visible = false;
-            password_warning.Visible = false;
+                username_warning.Visible = false;
+                password_warning.Visible = false;
 
-            if (txt_username.Text != "" && mtxt_password.Text != "")
-            {
-                btn_login.Visible = false;
-                usernameLabel.Visible = false;
-                passwordLabel.Visible = false;
-                incorrectlbl.Visible = false;
-                messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar unos minutos...\r\n";
-                messageLoginLabel.Visible = true;
-                mtxt_password.Visible = false;
-                txt_username.Visible = false;
-                loginBar.Visible = true;
-                validImg.Visible = true;
-                validImg.Image = Image.FromFile(Application.StartupPath + "\\images\\" + "loginvalidation.gif");
-                validImg.SizeMode = PictureBoxSizeMode.StretchImage;
-                validImg.Enabled = true;
+                if (txt_username.Text != "" && mtxt_password.Text != "")
+                {
+                    btn_login.Visible = false;
+                    usernameLabel.Visible = false;
+                    passwordLabel.Visible = false;
+                    incorrectlbl.Visible = false;
+                    messageLoginLabel.Text = "Estamos validando sus datos!\r\nEsto puede tardar unos minutos...\r\n";
+                    messageLoginLabel.Visible = true;
+                    mtxt_password.Visible = false;
+                    txt_username.Visible = false;
+                    loginBar.Visible = true;
+                    validImg.Visible = true;
+                    validImg.Image = Image.FromFile("..\\InitialFormsLibrary\\Resources\\loginvalidation.gif");
+                    validImg.SizeMode = PictureBoxSizeMode.StretchImage;
+                    validImg.Enabled = true;
 
-                loginBar.Value = 0;
+                    loginBar.Value = 0;
 
-                timer1_Tick_1(sender, e);
-            }
-            else
-            {
-                if (txt_username.Text == "" && !username_warning.Visible) username_warning.Visible = true;
-                if (mtxt_password.Text == "" && !password_warning.Visible) password_warning.Visible = true;
-            }
+                    timer1_Tick_1(sender, e);
+                }
+                else
+                {
+                    if (txt_username.Text == "" && !username_warning.Visible) username_warning.Visible = true;
+                    if (mtxt_password.Text == "" && !password_warning.Visible) password_warning.Visible = true;
+                }
         }
 
         private void mtxt_password_KeyDown(object sender, KeyEventArgs e)
