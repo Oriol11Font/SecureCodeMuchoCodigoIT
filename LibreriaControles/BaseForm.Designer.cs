@@ -32,6 +32,7 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AppTitle = new System.Windows.Forms.Label();
+            this.appImg = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,16 +43,15 @@
             this.TitleForm = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.logoutlink = new System.Windows.Forms.LinkLabel();
-            this.username = new System.Windows.Forms.Label();
             this.profileimg = new System.Windows.Forms.PictureBox();
-            this.appImg = new System.Windows.Forms.PictureBox();
+            this.username = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.appImg)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileimg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appImg)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -79,9 +79,20 @@
             this.AppTitle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AppTitle.Location = new System.Drawing.Point(43, 12);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(464, 17);
+            this.AppTitle.Size = new System.Drawing.Size(514, 20);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCore - Rebel Alliance System Upgrade";
+            // 
+            // appImg
+            // 
+            this.appImg.InitialImage = null;
+            this.appImg.Location = new System.Drawing.Point(0, 0);
+            this.appImg.Margin = new System.Windows.Forms.Padding(0);
+            this.appImg.Name = "appImg";
+            this.appImg.Size = new System.Drawing.Size(40, 40);
+            this.appImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.appImg.TabIndex = 1;
+            this.appImg.TabStop = false;
             // 
             // btn_minimize
             // 
@@ -198,22 +209,10 @@
             this.logoutlink.Name = "logoutlink";
             this.logoutlink.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.logoutlink.Size = new System.Drawing.Size(373, 41);
-            this.logoutlink.TabIndex = 2;
-            this.logoutlink.TabStop = true;
+            this.logoutlink.TabIndex = 30;
             this.logoutlink.Text = "Cerrar sesión";
             this.logoutlink.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.logoutlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
-            // 
-            // username
-            // 
-            this.username.Font = new System.Drawing.Font("Nasalization", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(13, 7);
-            this.username.Name = "username";
-            this.username.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.username.Size = new System.Drawing.Size(373, 56);
-            this.username.TabIndex = 1;
-            this.username.Text = "UserName";
-            this.username.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // profileimg
             // 
@@ -228,20 +227,20 @@
             this.profileimg.TabIndex = 0;
             this.profileimg.TabStop = false;
             // 
-            // appImg
+            // username
             // 
-            this.appImg.InitialImage = null;
-            this.appImg.Location = new System.Drawing.Point(0, 0);
-            this.appImg.Margin = new System.Windows.Forms.Padding(0);
-            this.appImg.Name = "appImg";
-            this.appImg.Size = new System.Drawing.Size(40, 40);
-            this.appImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.appImg.TabIndex = 1;
-            this.appImg.TabStop = false;
+            this.username.Font = new System.Drawing.Font("Nasalization", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(13, 7);
+            this.username.Name = "username";
+            this.username.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.username.Size = new System.Drawing.Size(373, 56);
+            this.username.TabIndex = 1;
+            this.username.Text = "UserName";
+            this.username.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1774, 1055);
@@ -261,11 +260,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.appImg)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profileimg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appImg)).EndInit();
             this.ResumeLayout(false);
 
         }

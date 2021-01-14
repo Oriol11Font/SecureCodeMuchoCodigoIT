@@ -75,9 +75,6 @@ namespace Categories
                 btn_actualitzar.ForeColor = Color.Red;
                 MessageBox.Show("SimpleForm - Error creating new row: " + ex.Message);
             }
-
-            
-
             //GenerarBinding();
         }
     }

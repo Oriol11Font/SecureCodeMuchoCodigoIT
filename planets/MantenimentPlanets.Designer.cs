@@ -29,6 +29,9 @@ namespace planets
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +124,31 @@ namespace planets
             this.swTextBox1 = new ControlsMC.SWTextBox();
             this.SuspendLayout();
             // 
+            // dataGridViewTextBoxColumn67
+            // 
+            this.dataGridViewTextBoxColumn67.DataPropertyName = "idAgency";
+            this.dataGridViewTextBoxColumn67.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn67.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
+            this.dataGridViewTextBoxColumn67.ReadOnly = true;
+            this.dataGridViewTextBoxColumn67.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn68
+            // 
+            this.dataGridViewTextBoxColumn68.DataPropertyName = "CodeAgency";
+            this.dataGridViewTextBoxColumn68.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn68.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
+            this.dataGridViewTextBoxColumn68.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn69
+            // 
+            this.dataGridViewTextBoxColumn69.DataPropertyName = "DescAgency";
+            this.dataGridViewTextBoxColumn69.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn69.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
+            this.dataGridViewTextBoxColumn69.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn64
             // 
             this.dataGridViewTextBoxColumn64.DataPropertyName = "idAgency";
@@ -129,6 +157,7 @@ namespace planets
             this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
             this.dataGridViewTextBoxColumn64.ReadOnly = true;
             this.dataGridViewTextBoxColumn64.Visible = false;
+            this.dataGridViewTextBoxColumn64.Width = 150;
             // 
             // dataGridViewTextBoxColumn65
             // 
@@ -137,6 +166,7 @@ namespace planets
             this.dataGridViewTextBoxColumn65.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
             this.dataGridViewTextBoxColumn65.ReadOnly = true;
+            this.dataGridViewTextBoxColumn65.Width = 150;
             // 
             // dataGridViewTextBoxColumn66
             // 
@@ -145,6 +175,7 @@ namespace planets
             this.dataGridViewTextBoxColumn66.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
             this.dataGridViewTextBoxColumn66.ReadOnly = true;
+            this.dataGridViewTextBoxColumn66.Width = 150;
             // 
             // dataGridViewTextBoxColumn61
             // 
@@ -740,11 +771,11 @@ namespace planets
             this.txtBoxDesc.CampoBBDD = "DescPlanet";
             this.txtBoxDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDesc.Foranea = false;
-            this.txtBoxDesc.Location = new System.Drawing.Point(57, 378);
-            this.txtBoxDesc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxDesc.Location = new System.Drawing.Point(63, 472);
+            this.txtBoxDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxDesc.Name = "txtBoxDesc";
-            this.txtBoxDesc.Size = new System.Drawing.Size(462, 30);
-            this.txtBoxDesc.TabIndex = 27;
+            this.txtBoxDesc.Size = new System.Drawing.Size(513, 35);
+            this.txtBoxDesc.TabIndex = 3;
             this.txtBoxDesc.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // txtBoxCodi
@@ -753,20 +784,20 @@ namespace planets
             this.txtBoxCodi.CampoBBDD = "CodePlanet";
             this.txtBoxCodi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCodi.Foranea = false;
-            this.txtBoxCodi.Location = new System.Drawing.Point(57, 283);
-            this.txtBoxCodi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxCodi.Location = new System.Drawing.Point(63, 354);
+            this.txtBoxCodi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxCodi.Name = "txtBoxCodi";
-            this.txtBoxCodi.Size = new System.Drawing.Size(462, 30);
-            this.txtBoxCodi.TabIndex = 26;
+            this.txtBoxCodi.Size = new System.Drawing.Size(513, 35);
+            this.txtBoxCodi.TabIndex = 1;
             this.txtBoxCodi.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 247);
+            this.label1.Location = new System.Drawing.Point(57, 309);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 32);
+            this.label1.Size = new System.Drawing.Size(271, 38);
             this.label1.TabIndex = 28;
             this.label1.Text = "Codi del Planeta";
             // 
@@ -774,9 +805,9 @@ namespace planets
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 342);
+            this.label2.Location = new System.Drawing.Point(57, 428);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 32);
+            this.label2.Size = new System.Drawing.Size(181, 38);
             this.label2.TabIndex = 30;
             this.label2.Text = "Descripció";
             // 
@@ -786,11 +817,11 @@ namespace planets
             this.txtBoxLong.CampoBBDD = "long";
             this.txtBoxLong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxLong.Foranea = false;
-            this.txtBoxLong.Location = new System.Drawing.Point(1136, 237);
-            this.txtBoxLong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxLong.Location = new System.Drawing.Point(1262, 296);
+            this.txtBoxLong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxLong.Name = "txtBoxLong";
-            this.txtBoxLong.Size = new System.Drawing.Size(150, 30);
-            this.txtBoxLong.TabIndex = 29;
+            this.txtBoxLong.Size = new System.Drawing.Size(166, 35);
+            this.txtBoxLong.TabIndex = 5;
             this.txtBoxLong.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // txtBoxSectors
@@ -799,7 +830,7 @@ namespace planets
             this.txtBoxSectors.ControlID = 0;
             this.txtBoxSectors.dll = null;
             this.txtBoxSectors.FormCS = null;
-            this.txtBoxSectors.Location = new System.Drawing.Point(596, 283);
+            this.txtBoxSectors.Location = new System.Drawing.Point(662, 354);
             this.txtBoxSectors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxSectors.Name = "txtBoxSectors";
             this.txtBoxSectors.NomCodi = "CodeSector";
@@ -807,15 +838,15 @@ namespace planets
             this.txtBoxSectors.NomId = "idSector";
             this.txtBoxSectors.NomTaula = "Sectors";
             this.txtBoxSectors.Requerit = false;
-            this.txtBoxSectors.Size = new System.Drawing.Size(462, 30);
-            this.txtBoxSectors.TabIndex = 31;
+            this.txtBoxSectors.Size = new System.Drawing.Size(513, 38);
+            this.txtBoxSectors.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(593, 252);
+            this.label3.Location = new System.Drawing.Point(659, 315);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
+            this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 32;
             this.label3.Text = "Sector";
             // 
@@ -825,11 +856,11 @@ namespace planets
             this.txtBoxImgPlanet.CampoBBDD = "PlanetPicture";
             this.txtBoxImgPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxImgPlanet.Foranea = false;
-            this.txtBoxImgPlanet.Location = new System.Drawing.Point(1352, 314);
-            this.txtBoxImgPlanet.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxImgPlanet.Location = new System.Drawing.Point(1502, 392);
+            this.txtBoxImgPlanet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxImgPlanet.Name = "txtBoxImgPlanet";
-            this.txtBoxImgPlanet.Size = new System.Drawing.Size(200, 30);
-            this.txtBoxImgPlanet.TabIndex = 33;
+            this.txtBoxImgPlanet.Size = new System.Drawing.Size(222, 35);
+            this.txtBoxImgPlanet.TabIndex = 8;
             this.txtBoxImgPlanet.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // txtBoxIpPlanet
@@ -838,11 +869,11 @@ namespace planets
             this.txtBoxIpPlanet.CampoBBDD = "IPPlanet";
             this.txtBoxIpPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxIpPlanet.Foranea = false;
-            this.txtBoxIpPlanet.Location = new System.Drawing.Point(1352, 409);
-            this.txtBoxIpPlanet.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxIpPlanet.Location = new System.Drawing.Point(1502, 511);
+            this.txtBoxIpPlanet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxIpPlanet.Name = "txtBoxIpPlanet";
-            this.txtBoxIpPlanet.Size = new System.Drawing.Size(200, 30);
-            this.txtBoxIpPlanet.TabIndex = 34;
+            this.txtBoxIpPlanet.Size = new System.Drawing.Size(222, 35);
+            this.txtBoxIpPlanet.TabIndex = 11;
             this.txtBoxIpPlanet.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // txtBoxPortPlanet
@@ -851,11 +882,11 @@ namespace planets
             this.txtBoxPortPlanet.CampoBBDD = "PortPlanet";
             this.txtBoxPortPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPortPlanet.Foranea = false;
-            this.txtBoxPortPlanet.Location = new System.Drawing.Point(1653, 314);
-            this.txtBoxPortPlanet.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxPortPlanet.Location = new System.Drawing.Point(1837, 392);
+            this.txtBoxPortPlanet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxPortPlanet.Name = "txtBoxPortPlanet";
-            this.txtBoxPortPlanet.Size = new System.Drawing.Size(200, 30);
-            this.txtBoxPortPlanet.TabIndex = 35;
+            this.txtBoxPortPlanet.Size = new System.Drawing.Size(222, 35);
+            this.txtBoxPortPlanet.TabIndex = 9;
             this.txtBoxPortPlanet.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // txtBoxPortPlanet1
@@ -864,11 +895,11 @@ namespace planets
             this.txtBoxPortPlanet1.CampoBBDD = "PortPlanet1";
             this.txtBoxPortPlanet1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPortPlanet1.Foranea = false;
-            this.txtBoxPortPlanet1.Location = new System.Drawing.Point(1653, 409);
-            this.txtBoxPortPlanet1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxPortPlanet1.Location = new System.Drawing.Point(1837, 511);
+            this.txtBoxPortPlanet1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxPortPlanet1.Name = "txtBoxPortPlanet1";
-            this.txtBoxPortPlanet1.Size = new System.Drawing.Size(200, 30);
-            this.txtBoxPortPlanet1.TabIndex = 36;
+            this.txtBoxPortPlanet1.Size = new System.Drawing.Size(222, 35);
+            this.txtBoxPortPlanet1.TabIndex = 12;
             this.txtBoxPortPlanet1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // txtBoxParsecs
@@ -877,11 +908,11 @@ namespace planets
             this.txtBoxParsecs.CampoBBDD = "parsecs";
             this.txtBoxParsecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxParsecs.Foranea = false;
-            this.txtBoxParsecs.Location = new System.Drawing.Point(1136, 409);
-            this.txtBoxParsecs.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxParsecs.Location = new System.Drawing.Point(1262, 511);
+            this.txtBoxParsecs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxParsecs.Name = "txtBoxParsecs";
-            this.txtBoxParsecs.Size = new System.Drawing.Size(150, 30);
-            this.txtBoxParsecs.TabIndex = 37;
+            this.txtBoxParsecs.Size = new System.Drawing.Size(166, 35);
+            this.txtBoxParsecs.TabIndex = 10;
             this.txtBoxParsecs.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // txtBoxLat
@@ -890,73 +921,73 @@ namespace planets
             this.txtBoxLat.CampoBBDD = "lat";
             this.txtBoxLat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxLat.Foranea = false;
-            this.txtBoxLat.Location = new System.Drawing.Point(1136, 322);
-            this.txtBoxLat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxLat.Location = new System.Drawing.Point(1262, 402);
+            this.txtBoxLat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBoxLat.Name = "txtBoxLat";
-            this.txtBoxLat.Size = new System.Drawing.Size(150, 30);
-            this.txtBoxLat.TabIndex = 38;
+            this.txtBoxLat.Size = new System.Drawing.Size(166, 35);
+            this.txtBoxLat.TabIndex = 7;
             this.txtBoxLat.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1133, 378);
+            this.label4.Location = new System.Drawing.Point(1259, 472);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 39;
             this.label4.Text = "Parsecs";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1133, 283);
+            this.label5.Location = new System.Drawing.Point(1259, 354);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
+            this.label5.Size = new System.Drawing.Size(61, 20);
             this.label5.TabIndex = 40;
             this.label5.Text = "Latitut";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1133, 202);
+            this.label6.Location = new System.Drawing.Point(1259, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 17);
+            this.label6.Size = new System.Drawing.Size(79, 20);
             this.label6.TabIndex = 41;
             this.label6.Text = "Longitud";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1349, 280);
+            this.label7.Location = new System.Drawing.Point(1499, 350);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 17);
+            this.label7.Size = new System.Drawing.Size(160, 20);
             this.label7.TabIndex = 42;
             this.label7.Text = "Imatge del Planeta";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1349, 376);
+            this.label8.Location = new System.Drawing.Point(1499, 470);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 17);
+            this.label8.Size = new System.Drawing.Size(121, 20);
             this.label8.TabIndex = 43;
             this.label8.Text = "IP del Planeta";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1650, 280);
+            this.label9.Location = new System.Drawing.Point(1833, 350);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 17);
+            this.label9.Size = new System.Drawing.Size(137, 20);
             this.label9.TabIndex = 44;
             this.label9.Text = "Port del Planeta";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1650, 376);
+            this.label10.Location = new System.Drawing.Point(1833, 470);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 17);
+            this.label10.Size = new System.Drawing.Size(152, 20);
             this.label10.TabIndex = 45;
             this.label10.Text = "Port del Planeta 2";
             // 
@@ -966,7 +997,7 @@ namespace planets
             this.txtBoxFiliation.ControlID = 0;
             this.txtBoxFiliation.dll = null;
             this.txtBoxFiliation.FormCS = null;
-            this.txtBoxFiliation.Location = new System.Drawing.Point(1352, 236);
+            this.txtBoxFiliation.Location = new System.Drawing.Point(1502, 295);
             this.txtBoxFiliation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxFiliation.Name = "txtBoxFiliation";
             this.txtBoxFiliation.NomCodi = "CodeFiliation";
@@ -974,24 +1005,24 @@ namespace planets
             this.txtBoxFiliation.NomId = "idFiliation";
             this.txtBoxFiliation.NomTaula = "Filiations";
             this.txtBoxFiliation.Requerit = false;
-            this.txtBoxFiliation.Size = new System.Drawing.Size(520, 30);
-            this.txtBoxFiliation.TabIndex = 46;
+            this.txtBoxFiliation.Size = new System.Drawing.Size(578, 38);
+            this.txtBoxFiliation.TabIndex = 6;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1349, 202);
+            this.label11.Location = new System.Drawing.Point(1499, 252);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 17);
+            this.label11.Size = new System.Drawing.Size(91, 20);
             this.label11.TabIndex = 47;
             this.label11.Text = "Afiliacions";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(593, 349);
+            this.label12.Location = new System.Drawing.Point(659, 436);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 17);
+            this.label12.Size = new System.Drawing.Size(60, 20);
             this.label12.TabIndex = 49;
             this.label12.Text = "Natius";
             // 
@@ -1001,18 +1032,18 @@ namespace planets
             this.swTextBox1.CampoBBDD = "idNatives";
             this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox1.Foranea = false;
-            this.swTextBox1.Location = new System.Drawing.Point(596, 378);
-            this.swTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.swTextBox1.Location = new System.Drawing.Point(662, 472);
+            this.swTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.Size = new System.Drawing.Size(462, 30);
-            this.swTextBox1.TabIndex = 50;
+            this.swTextBox1.Size = new System.Drawing.Size(513, 35);
+            this.swTextBox1.TabIndex = 4;
             this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // MantenimentPlanets
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(2133, 1350);
             this.Controls.Add(this.swTextBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -1161,5 +1192,8 @@ namespace planets
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn65;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn66;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn68;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn69;
     }
 }

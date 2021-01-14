@@ -113,7 +113,7 @@
             this.createbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createbtn.Name = "createbtn";
             this.createbtn.Size = new System.Drawing.Size(200, 49);
-            this.createbtn.TabIndex = 26;
+            this.createbtn.TabIndex = 10;
             this.createbtn.Text = "Afegir";
             this.createbtn.UseVisualStyleBackColor = true;
             this.createbtn.Click += new System.EventHandler(this.createbtn_Click);
@@ -126,7 +126,7 @@
             this.btn_actualitzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualitzar.Name = "btn_actualitzar";
             this.btn_actualitzar.Size = new System.Drawing.Size(200, 49);
-            this.btn_actualitzar.TabIndex = 24;
+            this.btn_actualitzar.TabIndex = 11;
             this.btn_actualitzar.Text = "Actualitzar";
             this.btn_actualitzar.UseVisualStyleBackColor = true;
             this.btn_actualitzar.Click += new System.EventHandler(this.btn_actualitzar_Click);
@@ -185,7 +185,7 @@
             this.swTextBox2.Location = new System.Drawing.Point(450, 414);
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox2.TabIndex = 32;
+            this.swTextBox2.TabIndex = 2;
             this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label2
@@ -217,7 +217,7 @@
             this.swTextBox3.Location = new System.Drawing.Point(44, 414);
             this.swTextBox3.Name = "swTextBox3";
             this.swTextBox3.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox3.TabIndex = 30;
+            this.swTextBox3.TabIndex = 1;
             this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // swTextBox4
@@ -230,7 +230,7 @@
             this.swTextBox4.Name = "swTextBox4";
             this.swTextBox4.PasswordChar = '*';
             this.swTextBox4.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox4.TabIndex = 39;
+            this.swTextBox4.TabIndex = 6;
             this.swTextBox4.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label4
@@ -252,7 +252,7 @@
             this.swTextBox5.Location = new System.Drawing.Point(44, 534);
             this.swTextBox5.Name = "swTextBox5";
             this.swTextBox5.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox5.TabIndex = 37;
+            this.swTextBox5.TabIndex = 5;
             this.swTextBox5.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label5
@@ -311,16 +311,17 @@
             this.comboBox1.Location = new System.Drawing.Point(857, 411);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 28);
-            this.comboBox1.TabIndex = 50;
+            this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ItemHeight = 20;
             this.comboBox2.Location = new System.Drawing.Point(857, 534);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(300, 28);
-            this.comboBox2.TabIndex = 51;
+            this.comboBox2.TabIndex = 7;
             this.comboBox2.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // comboBox3
@@ -329,7 +330,7 @@
             this.comboBox3.Location = new System.Drawing.Point(1261, 408);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(300, 28);
-            this.comboBox3.TabIndex = 52;
+            this.comboBox3.TabIndex = 4;
             this.comboBox3.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // comboBox4
@@ -338,7 +339,7 @@
             this.comboBox4.Location = new System.Drawing.Point(1261, 536);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(300, 28);
-            this.comboBox4.TabIndex = 53;
+            this.comboBox4.TabIndex = 8;
             this.comboBox4.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // textBox1
@@ -396,7 +397,7 @@
             this.swTextBox6.Location = new System.Drawing.Point(1643, 307);
             this.swTextBox6.Name = "swTextBox6";
             this.swTextBox6.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox6.TabIndex = 59;
+            this.swTextBox6.TabIndex = 9;
             this.swTextBox6.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // MantenimentUsers

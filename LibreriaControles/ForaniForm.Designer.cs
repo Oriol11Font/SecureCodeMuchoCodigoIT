@@ -73,7 +73,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg.Size = new System.Drawing.Size(2138, 675);
-            this.dtg.TabIndex = 19;
+            this.dtg.TabIndex = 5;
             // 
             // btn_actualitzar
             // 
@@ -83,7 +83,7 @@
             this.btn_actualitzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualitzar.Name = "btn_actualitzar";
             this.btn_actualitzar.Size = new System.Drawing.Size(200, 49);
-            this.btn_actualitzar.TabIndex = 20;
+            this.btn_actualitzar.TabIndex = 2;
             this.btn_actualitzar.Text = "Actualitzar";
             this.btn_actualitzar.UseVisualStyleBackColor = true;
             this.btn_actualitzar.Click += new System.EventHandler(this.btn_actualitzar_Click);
@@ -97,7 +97,7 @@
             this.backbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(200, 49);
-            this.backbtn.TabIndex = 22;
+            this.backbtn.TabIndex = 4;
             this.backbtn.Text = "Tornar al Menú";
             this.backbtn.UseVisualStyleBackColor = true;
             this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
@@ -110,7 +110,7 @@
             this.createbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createbtn.Name = "createbtn";
             this.createbtn.Size = new System.Drawing.Size(200, 49);
-            this.createbtn.TabIndex = 23;
+            this.createbtn.TabIndex = 3;
             this.createbtn.Text = "Afegir";
             this.createbtn.UseVisualStyleBackColor = true;
             this.createbtn.Click += new System.EventHandler(this.createbtn_Click);
