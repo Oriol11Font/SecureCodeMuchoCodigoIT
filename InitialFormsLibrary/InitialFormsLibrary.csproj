@@ -135,10 +135,6 @@
       <Project>{3129a7ca-477b-48e6-82b3-f7b6d0fe8de8}</Project>
       <Name>species</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestsForms\TestsForms.csproj">
-      <Project>{69a78b2a-0b72-4877-bed4-9c24dffa74df}</Project>
-      <Name>TestsForms</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TextBoxControls\CustomControlsMC.csproj">
       <Project>{fb17de15-0b06-41fc-96aa-3a53d9f7b289}</Project>
       <Name>CustomControlsMC</Name>
