@@ -151,6 +151,10 @@
       <Project>{b48d0718-de26-4f4f-b46f-d6b9ad7a24fd}</Project>
       <Name>FTP - Download</Name>
     </ProjectReference>
+    <ProjectReference Include="FTP\FTP.csproj">
+      <Project>{2254e209-681d-4730-be7f-395654cba26e}</Project>
+      <Name>FTP</Name>
+    </ProjectReference>
     <ProjectReference Include="InitialFormsLibrary\InitialFormsLibrary.csproj">
       <Project>{a9862e6d-08c9-4774-a8fa-aae8e48d4a36}</Project>
       <Name>InitialFormsLibrary</Name>

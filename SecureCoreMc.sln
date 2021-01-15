@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlsMC", "TextBox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialFormsLibrary", "InitialFormsLibrary\InitialFormsLibrary.csproj", "{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsForms", "TestsForms\TestsForms.csproj", "{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "species", "species\species.csproj", "{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "planets", "planets\planets.csproj", "{60A5ADD6-0CDF-4EBB-8EEC-9620D6B31FDE}"
@@ -26,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{B9301DFC-024A-4547-8FCE-FBE7F9F73980}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTP - Download", "FTP - Download\FTP - Download.csproj", "{B48D0718-DE26-4F4F-B46F-D6B9AD7A24FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTP", "FTP\FTP.csproj", "{2254E209-681D-4730-BE7F-395654CBA26E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +57,6 @@ Global
 		{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9862E6D-08C9-4774-A8FA-AAE8E48D4A36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69A78B2A-0B72-4877-BED4-9C24DFFA74DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3129A7CA-477B-48E6-82B3-F7B6D0FE8DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -81,6 +77,10 @@ Global
 		{B48D0718-DE26-4F4F-B46F-D6B9AD7A24FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B48D0718-DE26-4F4F-B46F-D6B9AD7A24FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B48D0718-DE26-4F4F-B46F-D6B9AD7A24FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2254E209-681D-4730-BE7F-395654CBA26E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2254E209-681D-4730-BE7F-395654CBA26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2254E209-681D-4730-BE7F-395654CBA26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2254E209-681D-4730-BE7F-395654CBA26E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
