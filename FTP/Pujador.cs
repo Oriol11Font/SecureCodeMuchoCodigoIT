@@ -1,4 +1,5 @@
 ﻿using BasicForms;
+using LibreriaClases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,14 +17,14 @@ namespace FTP
 {
     public partial class Pujador : BaseForm
     {
+        readonly DataAccessClass data = new DataAccessClass();
+
         public Pujador()
         {
+            UserName = "Anonymous";
+            profileImg = "Oriol.jpg";
+            FormTitle = "Registrar o Pujar comandes";
             InitializeComponent();
-        }
-
-        private void Pujador_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,17 +71,24 @@ namespace FTP
                 ftpRequest.UsePassive = true;
                 ftpRequest.UseBinary = true;
                 ftpRequest.KeepAlive = false;
+                if (filePath != null)
+                {
+                    StreamReader sourceStream = new StreamReader(filePath);
+                    byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+                    sourceStream.Close();
+                    ftpRequest.ContentLength = fileContents.Length;
 
-                StreamReader sourceStream = new StreamReader(filePath);
-                byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
-                sourceStream.Close();
-                ftpRequest.ContentLength = fileContents.Length;
+                    FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse();
 
-                Stream requestStream = ftpRequest.GetRequestStream();
-                requestStream.Write(fileContents, 0, fileContents.Length);
-                requestStream.Close();
+                    Stream requestStream = ftpRequest.GetRequestStream();
+                    requestStream.Write(fileContents, 0, fileContents.Length);
+                    requestStream.Close();
 
-                MessageBox.Show("Fitxer Pujat!");
+                    labelStatus.Text = $"File Uploaded, status {response.StatusDescription}";
+                } else
+                {
+                    labelStatus.Text = "File null";
+                }
             }
 
 

@@ -15,7 +15,7 @@ namespace SecureCoreMain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pujador());
+            Application.Run(new newsplash());
         }
     }
 }

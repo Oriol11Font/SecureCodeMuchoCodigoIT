@@ -6,6 +6,7 @@ using BasicForms;
 using SecureCoreMain.Forms;
 using Menu = SecureCoreMain.Menu;
 using System.Data;
+using FTP;
 
 namespace InitialFormsLibrary
 {
@@ -222,6 +223,13 @@ namespace InitialFormsLibrary
         {
             AppTitle.Anchor = AnchorStyles.Top;
             AppTitle.Location = new Point(panel7.Bounds.Width / 5, AppTitle.Location.Y);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var comandes = new Pujador();
+            comandes.Show();
+            Close();
         }
     }
 }
