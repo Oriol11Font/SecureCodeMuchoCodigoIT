@@ -143,6 +143,10 @@
       <Project>{fb17de15-0b06-41fc-96aa-3a53d9f7b289}</Project>
       <Name>CustomControlsMC</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Users\Users.csproj">
+      <Project>{b9301dfc-024a-4547-8fce-fbe7f9f73980}</Project>
+      <Name>Users</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
@@ -225,6 +229,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lightsaber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

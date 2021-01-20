@@ -22,48 +22,60 @@ namespace Users
 
         public ReportViewer()
         {
+            FormTitle = @"User Reports";
             InitializeComponent();
         }
 
-        private void ReportViewer_Load(object sender, EventArgs e)
+        private void MostrarReport(object sender, EventArgs e)
         {
-            
-        }
+            try
+            {
+                errorLabel.Visible = false;
+                ReportDocument cryRpt = new ReportDocument();
+                ConnectionInfo crConnectionInfo = new ConnectionInfo();
+                TableLogOnInfo crtableLogoninfo = new TableLogOnInfo();
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
+                cryRpt.Load("../Users/UserReport.rpt");
+                crConnectionInfo.ServerName = "34.77.100.91";
+                crConnectionInfo.IntegratedSecurity = false;
+                crConnectionInfo.UserID = "sqlserver";
+                crConnectionInfo.Password = "gutinomola";
+                crConnectionInfo.DatabaseName = "securecode";
+                Tables CrTables = cryRpt.Database.Tables;
+
+                foreach (Table CrTable in CrTables)
+                {
+                    crtableLogoninfo = CrTable.LogOnInfo;
+                    crtableLogoninfo.ConnectionInfo = crConnectionInfo;
+                    CrTable.ApplyLogOnInfo(crtableLogoninfo);
+                }
+
+                cryRpt.RecordSelectionFormula = "{Comando.idUser} = " + textBox1.Text + "";
+
+                crystalReportViewer1.ReportSource = cryRpt;
+                saveButton.Enabled = true;
+
+                int printerId = 0;
+                do printerId++;
+                while (PrinterSettings.InstalledPrinters[printerId] != "Microsoft Print to PDF");
+
+                cryRpt.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\pauco\Desktop\Card.pdf");
+            } catch
+            {
+                errorLabel.Text = @"Error mostrant report";
+                errorLabel.Visible = true;
+            }
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ReportDocument cryRpt = new ReportDocument();
-            ConnectionInfo crConnectionInfo = new ConnectionInfo();
-            TableLogOnInfo crtableLogoninfo = new TableLogOnInfo();
 
-            cryRpt.Load("../Users/UserReport.rpt");
-            crConnectionInfo.ServerName = "34.77.100.91";
-            crConnectionInfo.IntegratedSecurity = false;
-            crConnectionInfo.UserID = "sqlserver";
-            crConnectionInfo.Password = "gutinomola";
-            crConnectionInfo.DatabaseName = "securecode";
-            Tables CrTables = cryRpt.Database.Tables;
+        }
 
-            foreach (CrystalDecisions.CrystalReports.Engine.Table CrTable in CrTables)
-            {
-                crtableLogoninfo = CrTable.LogOnInfo;
-                crtableLogoninfo.ConnectionInfo = crConnectionInfo;
-                CrTable.ApplyLogOnInfo(crtableLogoninfo);
-            }
-
-            cryRpt.RecordSelectionFormula = "{Comando.idUser} = " + textBox1.Text + "";
-
-
-            int printerId = 0;
-            do printerId++;
-            while (PrinterSettings.InstalledPrinters[printerId] != "Microsoft Print to PDF");
-
-            cryRpt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, @"C:\Users\pauco\Desktop\Card.pdf");
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -7,6 +7,7 @@ using TextBoxControls;
 using System.Data;
 using System.IO;
 using System.Reflection;
+using Users;
 
 namespace SecureCoreMain
 {
@@ -100,6 +101,15 @@ namespace SecureCoreMain
 
                 }
             }
+        }
+
+        private void LaunchUserReports(object sender, EventArgs e)
+        {
+            ReportViewer usrReportViewer = new ReportViewer
+            {
+                UserName = UserName
+            };
+            usrReportViewer.Show();
         }
     }
 }
