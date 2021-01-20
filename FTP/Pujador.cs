@@ -12,6 +12,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibreriaClases;
 
 namespace FTP
 {
@@ -90,13 +91,99 @@ namespace FTP
                     labelStatus.Text = "File null";
                 }
             }
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Process.Start("..\\DLL\\FTP - Download");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                {
+                    openFileDialog.InitialDirectory = "c:\\";
+                    openFileDialog.Filter = "Text files (*.edi)|*.edi";
+                    openFileDialog.FilterIndex = 2;
+                    openFileDialog.RestoreDirectory = true;
+
+                    string fileContent = string.Empty;
+                    string filePath = string.Empty;
+                    string tabla = string.Empty;
+
+                    DataAccessClass db = new DataAccessClass();
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        //Get the path of specified file
+                        filePath = openFileDialog.FileName;
+
+                        //Read the contents of the file into a stream
+                        var fileStream = openFileDialog.OpenFile();
+
+                        using (StreamReader reader = new StreamReader(fileStream))
+                        {
+                            fileContent = reader.ReadToEnd();
+                        }
+
+                        string[] lines = File.ReadAllLines(filePath);
+                        /*
+                        foreach (string line in lines)
+                        {
+                            string idPriority;
+                            string codeOrder;
+                            string dateOrder;
+                            string idFactory;
+                            string idAgency;
+                            string idOperationalArea;
+
+
+                            string[] elements = line.Split('|');
+
+                            if (elements[0].Equals("ORD"))
+                            {
+
+                                string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
+                                DataSet ds = db.GetByQuery(query);
+                                DataRow dr = ds.Tables[0].Rows[0];
+
+                                idPriority = dr.ItemArray.GetValue(0).ToString();
+
+                                var cnt = new Order()
+                                {
+                                    Description = elements[1],
+                                    SystemValue = elements[2]
+                                };
+                                db.ContactSystems.Add(cnt);
+
+                            }
+                            else if (elements[0].Equals("CON"))
+                            {
+                                var cnt = new NewContact()
+                                {
+                                    Name = elements[1],
+                                    BirthDate = elements[2],
+                                    idContact = int.Parse(elements[3])
+                                };
+                                db.NewContacts.Add(cnt);
+                            }
+                            else
+                            {
+                                throw new Exception("Tabla de BBDD inexistente");
+                            }
+
+                            db.SaveChanges();
+                        }*/
+                    }
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
         }
     }
 }

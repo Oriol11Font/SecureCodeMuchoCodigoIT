@@ -15,20 +15,21 @@ namespace FTP___Download
         {
             try
             {
-                //dirDirectoryDetail
-                //dirDirectoryDetail
-                //dirDirectoryDetail
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("[BENVINGUT a MuchoCodigoConsole] --- Conectat a la consola correctament, <exit> per sortir de la sessió ---");
+                Console.ForegroundColor = ConsoleColor.White;
 
-                String input = Console.ReadLine();
+                string input = "hola";
                 while (input != "exit")
                 {
-                    if (input == "hola")
-                    {
-                        Console.WriteLine(input);
-                    }
-                    if (input == "check")
-                    {
-                        Console.WriteLine("Buscant si existeixen arxius nous dins del servidor...");
+                    input = Console.ReadLine();
+
+                    if (input == "hola"){}
+
+                    else if (input == "check") {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("[INFORMACIÓN] --- Buscant si existeixen arxius nous dins del servidor... ---");
+                        Console.ForegroundColor = ConsoleColor.White;
 
                         string fileContent = string.Empty;
                         string filePath = string.Empty;
@@ -36,38 +37,50 @@ namespace FTP___Download
                         string ftpHost = "192.168.10.1";
                         string ftpUser = "g4";
                         string ftpPW = "12345aA";
+                        string ftpFolderPath = "/home/g4/";
 
-                        String uploadserverpath = "/home/g4/";
-                        String fileName = string.Empty;
-                        string finalpath = uploadserverpath;
-                        //MessageBox.Show(finalpath);
+                        try
+                        {
+                            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, ftpFolderPath));
+                            request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
 
-                        //INICIANDO
-                        FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, uploadserverpath));
-                        request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
+                            // This example assumes the FTP site uses anonymous logon.
+                            request.Credentials = new NetworkCredential(ftpUser, ftpPW);
 
-                        // This example assumes the FTP site uses anonymous logon.
-                        request.Credentials = new NetworkCredential(ftpUser, ftpPW);
+                            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 
-                        FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+                            Stream responseStream = response.GetResponseStream();
+                            StreamReader reader = new StreamReader(responseStream);
+                            Console.WriteLine(reader.ReadToEnd());
 
-                        Stream responseStream = response.GetResponseStream();
-                        StreamReader reader = new StreamReader(responseStream);
-                        Console.WriteLine(reader.ReadToEnd());
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($"[INFORMACIÓN] --- Directory List Complete, status: {response.StatusDescription} ---");
+                            Console.ForegroundColor = ConsoleColor.White;
 
-                        Console.WriteLine($"Directory List Complete, status {response.StatusDescription}");
-                        Console.WriteLine("Choose File: ");
-                        reader.Close();
-                        response.Close();
+                            Console.WriteLine("Choose File: ");
+                            reader.Close();
+                            response.Close();
 
-                        seleccionArchivo();
+                            seleccionArchivo();
+                        } 
+                        catch (Exception err)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("[ERROR] --- Conexió al servidor FTP fallida: " + err + " ---");
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+
+                    } else if (input == "path") {
+                        Console.WriteLine("GetFolderPath: "+ "C:\\Users\\" + Environment.UserName + "\\Descargas");
                     }
-                    else
-                    {
-                        Console.WriteLine("Te jodes");
+
+                    else {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("[ERROR] --- Comando no reconocido por la consola, pueda que no exista o no este bien escrito ---");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
 
-                    input = Console.ReadLine();
+                    //input = Console.ReadLine();
                 }
             
                 
@@ -79,59 +92,56 @@ namespace FTP___Download
 
         private static void seleccionArchivo()
         {
-            String input = Console.ReadLine();
+            Console.WriteLine("Escribir nombre archivo, incluyendo la extension.");
 
-            string fileContent = string.Empty;
-            string filePath = string.Empty;
+            string input = Console.ReadLine();
 
+            string fileName = input;
             string ftpHost = "192.168.10.1";
             string ftpUser = "g4";
             string ftpPW = "12345aA";
-            string localDestinationFilePath  = "C:\\Users\\oriol\\Descargas";
-            String uploadserverpath = "/home/g4/";
-            String fileName = string.Empty;
-            string finalpath = uploadserverpath + input;
+            string ftpFolder = "/home/g4/";
+            string downloadpath = "C:\\Users\\" + Environment.UserName + "\\Downloads\\" + input;
+            string finalpath = ftpFolder + fileName;
 
-            int bytesRead = 0;
-            byte[] buffer = new byte[2048];
-            //MessageBox.Show(finalpath);
-
-            //INICIANDO
-            // Get the object used to communicate with the server.
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, finalpath));
-            request.Method = WebRequestMethods.Ftp.DownloadFile;
-
-            // This example assumes the FTP site uses anonymous logon.
-            request.Credentials = new NetworkCredential(ftpUser, ftpPW);
-
-            //FtpWebResponse response = (FtpWebResponse)request.GetResponse();
-
-            Stream reader = request.GetResponse().GetResponseStream();
-            FileStream fileStream = new FileStream(localDestinationFilePath, FileMode.Create);
-
-            while (true)
+            try
             {
-                bytesRead = reader.Read(buffer, 0, buffer.Length);
+                // Get the object used to communicate with the server.
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, finalpath));
+                request.Method = WebRequestMethods.Ftp.DownloadFile;
 
-                if (bytesRead == 0)
-                    break;
+                // This example assumes the FTP site uses anonymous logon.
+                request.Credentials = new NetworkCredential(ftpUser, ftpPW);
 
-                fileStream.Write(buffer, 0, bytesRead);
+                Stream responseStream = request.GetResponse().GetResponseStream();
+                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+                /* Destino: tiene que tener la ruta completa incluyendo el nombre de archivo y extension donde quieres grabar */
+                FileStream writeStream = new FileStream(downloadpath, FileMode.Create);
+                int Length = 1024;/*el tamaño limitado a bloques de 1024 bytes*/
+                Byte[] buffer = new Byte[Length];
+                int bytesRead = responseStream.Read(buffer, 0, Length);
+
+                while (bytesRead > 0)
+                {
+                    writeStream.Write(buffer, 0, bytesRead);
+                    bytesRead = responseStream.Read(buffer, 0, Length);
+                }
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("[INFORMACIÓN] --- Arxiu "+ fileName +" generat correctament a: "+downloadpath+" ---");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                writeStream.Close();
+                response.Close();
             }
-
-            fileStream.Close();
-
-
-            /*
-            Stream responseStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(responseStream);
-            Console.WriteLine(reader.ReadToEnd());
-
-            Console.WriteLine($"Download Complete, status {response.StatusDescription}");
-
-            reader.Close();
-            response.Close();
-            */
+            catch (Exception err)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("[ERROR] --- Ha sigut impossible descarregar l'arxiu des del servidor FTP: "+err+" ---");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            
         }
     }
 }
