@@ -181,9 +181,6 @@
     <None Include="Resources\MenuOption2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MenuOption3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\MenuOption4.png" />
   </ItemGroup>
   <ItemGroup>
