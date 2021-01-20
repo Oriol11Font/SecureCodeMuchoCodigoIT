@@ -130,56 +130,89 @@ namespace FTP
                         }
 
                         string[] lines = File.ReadAllLines(filePath);
-                        
+
                         foreach (string line in lines)
                         {
-                            int idPriority;
+                            string idPriority;
                             string codeOrder;
                             string dateOrder;
                             string idFactory;
                             string idAgency;
                             string idOperationalArea;
 
+                            /*
+                                ORD|061243444000|220|
+                                DTM|20181019|
+                                NADMS|INNER|40A|
+                                NADMR|NABOSOUTXW02|
+                                LIN|0000INRINABO|841001009689|EN|
+                                QTYLIN|21|250|
+                                DTMLIN|20181110|
+                            */
 
                             string[] elements = line.Split('|');
 
                             if (elements[0].Equals("ORD"))
                             {
+
+                                string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
+                                DataSet ds = db.GetByQuery(query);
+                                DataRow dr = ds.Tables[0].Rows[0];
+
+                                idPriority = dr.ItemArray.GetValue(0).ToString();
                                 codeOrder = elements[1];
-                                idPriority = dbb.getid("Priority", "IdPriority", "CodePriority", elements[2]);
 
-                                
+                            }
+                            else if (elements[0].Equals("DTM"))
+                            {
+                                dateOrder = elements[1].Substring(0, 4) + " - " + elements[1].Substring(3, 2) + " - " + elements[1].Substring(5, 2);
+                            }
+                            else if (elements[0].Equals("NADMS"))
+                            {
 
-                            //    string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
-                            //    DataSet ds = db.GetByQuery(query);
-                            //    DataRow dr = ds.Tables[0].Rows[0];
+                            }
+                            else if (elements[0].Equals("NADMR"))
+                            {
 
-                            //    idPriority = dr.ItemArray.GetValue(0).ToString();
+                            }
+                            else
+                            {
+                                throw new Exception("Tabla de BBDD inexistente");
+                            }
+                            /*
+                            var cnt = new Order()
+                            {
+                                Name = elements[1],
+                                BirthDate = elements[2],
+                                idContact = int.Parse(elements[3])
+                            };
+                            dbo.NewContacts.Add(cnt);
 
-                            //    var cnt = new Order()
-                            //    {
-                            //        Description = elements[1],
-                            //        SystemValue = elements[2]
-                            //    };
-                            //    db.ContactSystems.Add(cnt);
+                            */
+                            if (elements[0].Equals("LIN"))
+                            {
 
-                            //}
-                            //else if (elements[0].Equals("CON"))
-                            //{
-                            //    var cnt = new NewContact()
-                            //    {
-                            //        Name = elements[1],
-                            //        BirthDate = elements[2],
-                            //        idContact = int.Parse(elements[3])
-                            //    };
-                            //    db.NewContacts.Add(cnt);
-                            //}
-                            //else
-                            //{
-                            //    throw new Exception("Tabla de BBDD inexistente");
+                                string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
+                                DataSet ds = db.GetByQuery(query);
+                                DataRow dr = ds.Tables[0].Rows[0];
+
+                                idPriority = dr.ItemArray.GetValue(0).ToString();
+
+                            }
+                            else if (elements[0].Equals("QTYLIN"))
+                            {
+
+                            }
+                            else if (elements[0].Equals("DTMLIN"))
+                            {
+
+                            }
+                            else
+                            {
+                                throw new Exception("Tabla de BBDD inexistente");
                             }
 
-                            //db.SaveChanges();
+                            //dbo.SaveChanges();
                         }
                     }
                 }
@@ -192,3 +225,5 @@ namespace FTP
             
     }
 }
+
+
