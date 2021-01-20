@@ -114,7 +114,7 @@ namespace FTP
                     string filePath = string.Empty;
                     string tabla = string.Empty;
 
-                    DataAccessClass db = new DataAccessClass();
+                    DataAccessClass dbb = new DataAccessClass();
 
                     if (openFileDialog.ShowDialog() == DialogResult.OK)
                     {
@@ -130,10 +130,10 @@ namespace FTP
                         }
 
                         string[] lines = File.ReadAllLines(filePath);
-                        /*
+                        
                         foreach (string line in lines)
                         {
-                            string idPriority;
+                            int idPriority;
                             string codeOrder;
                             string dateOrder;
                             string idFactory;
@@ -145,38 +145,42 @@ namespace FTP
 
                             if (elements[0].Equals("ORD"))
                             {
+                                codeOrder = elements[1];
+                                idPriority = dbb.getid("Priority", "IdPriority", "CodePriority", elements[2]);
 
-                                string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
-                                DataSet ds = db.GetByQuery(query);
-                                DataRow dr = ds.Tables[0].Rows[0];
+                                
 
-                                idPriority = dr.ItemArray.GetValue(0).ToString();
+                            //    string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
+                            //    DataSet ds = db.GetByQuery(query);
+                            //    DataRow dr = ds.Tables[0].Rows[0];
 
-                                var cnt = new Order()
-                                {
-                                    Description = elements[1],
-                                    SystemValue = elements[2]
-                                };
-                                db.ContactSystems.Add(cnt);
+                            //    idPriority = dr.ItemArray.GetValue(0).ToString();
 
+                            //    var cnt = new Order()
+                            //    {
+                            //        Description = elements[1],
+                            //        SystemValue = elements[2]
+                            //    };
+                            //    db.ContactSystems.Add(cnt);
+
+                            //}
+                            //else if (elements[0].Equals("CON"))
+                            //{
+                            //    var cnt = new NewContact()
+                            //    {
+                            //        Name = elements[1],
+                            //        BirthDate = elements[2],
+                            //        idContact = int.Parse(elements[3])
+                            //    };
+                            //    db.NewContacts.Add(cnt);
+                            //}
+                            //else
+                            //{
+                            //    throw new Exception("Tabla de BBDD inexistente");
                             }
-                            else if (elements[0].Equals("CON"))
-                            {
-                                var cnt = new NewContact()
-                                {
-                                    Name = elements[1],
-                                    BirthDate = elements[2],
-                                    idContact = int.Parse(elements[3])
-                                };
-                                db.NewContacts.Add(cnt);
-                            }
-                            else
-                            {
-                                throw new Exception("Tabla de BBDD inexistente");
-                            }
 
-                            db.SaveChanges();
-                        }*/
+                            //db.SaveChanges();
+                        }
                     }
                 }
 
@@ -185,5 +189,6 @@ namespace FTP
             {
             }
         }
+            
     }
 }

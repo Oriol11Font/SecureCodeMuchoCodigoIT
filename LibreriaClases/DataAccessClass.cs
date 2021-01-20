@@ -301,6 +301,28 @@ namespace LibreriaClases
             return ds;
         }
 
+        public int getid(string nombretabla, string campoid, string campodesc, string valoredi)
+        {
+            int id;
+
+            _conn = new SqlConnection(_connectionString);
+
+            _conn.Open();
+
+            string query = "SELECT " + campoid + " FROM " + nombretabla + " WHERE " + campodesc + "= '" + valoredi + "'";
+
+            SqlCommand command = new SqlCommand(query, _conn);
+            
+            //command.CommandType = CommandType.Text;
+
+            id = Convert.ToInt32(command.ExecuteScalar());
+
+            _conn.Close();
+            _conn.Dispose();
+
+            return id;
+        }
+
         #endregion
     }
 }
