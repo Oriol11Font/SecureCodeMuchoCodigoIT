@@ -47,7 +47,7 @@ namespace TextBoxControls
 
             } catch (Exception ex)
             {
-                MessageBox.Show("Aquest botó no està operatiu");
+                MessageBox.Show("Aquest botó no està operatiu " + ex);
             }
             
         }

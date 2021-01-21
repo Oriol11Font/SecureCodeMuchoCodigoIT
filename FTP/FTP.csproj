@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory.cs">
+      <DependentUpon>ModelOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOrder.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOrder.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOrder.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>ModelOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderInfo.cs">
+      <DependentUpon>ModelOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDetail.cs">
+      <DependentUpon>ModelOrder.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pujador.cs">
@@ -66,6 +102,14 @@
     <EmbeddedResource Include="Pujador.resx">
       <DependentUpon>Pujador.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="ModelOrder.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelOrder.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelOrder.edmx.diagram">
+      <DependentUpon>ModelOrder.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +132,21 @@
       <Project>{f986a883-16ee-4a84-85a6-aa7ded000265}</Project>
       <Name>BasicForms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelOrder.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelOrder.Context.cs</LastGenOutput>
+      <DependentUpon>ModelOrder.edmx</DependentUpon>
+    </Content>
+    <Content Include="ModelOrder.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelOrder.edmx</DependentUpon>
+      <LastGenOutput>ModelOrder.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

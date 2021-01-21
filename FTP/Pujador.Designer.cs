@@ -42,6 +42,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -167,6 +172,11 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.Yellow;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.label7);
+            this.panel10.Controls.Add(this.label6);
+            this.panel10.Controls.Add(this.label5);
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.button4);
             this.panel10.Location = new System.Drawing.Point(75, 448);
@@ -180,9 +190,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(149, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 17);
+            this.label2.Size = new System.Drawing.Size(133, 17);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Console Control";
+            this.label2.Text = "OrderInfo Status:";
             // 
             // button4
             // 
@@ -209,6 +219,53 @@
             this.button5.TabIndex = 27;
             this.button5.Text = "Upload";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(149, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 17);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Order Status:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(149, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 17);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "OrderDetails Status:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(261, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 17);
+            this.label5.TabIndex = 26;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(288, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(311, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 17);
+            this.label7.TabIndex = 28;
             // 
             // Pujador
             // 
@@ -251,5 +308,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

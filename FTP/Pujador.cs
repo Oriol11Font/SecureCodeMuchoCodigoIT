@@ -1,18 +1,11 @@
 ﻿using BasicForms;
 using LibreriaClases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using LibreriaClases;
 
 namespace FTP
 {
@@ -58,11 +51,11 @@ namespace FTP
                 }
 
                 string finalpath = uploadserverpath + fileName;
-                
+
 
                 //hacer request y postear
                 FtpWebRequest ftpRequest;
-                
+
                 // Crea el objeto de conexión del servidor FTP
                 ftpRequest = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, finalpath));
                 // Asigna las credenciales
@@ -72,7 +65,7 @@ namespace FTP
                 ftpRequest.UsePassive = true;
                 ftpRequest.UseBinary = true;
                 ftpRequest.KeepAlive = false;
-                if (filePath != null)
+                if (filePath.Length > 0)
                 {
                     StreamReader sourceStream = new StreamReader(filePath);
                     byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
@@ -86,7 +79,8 @@ namespace FTP
                     requestStream.Close();
 
                     labelStatus.Text = $"File Uploaded, status {response.StatusDescription}";
-                } else
+                }
+                else
                 {
                     labelStatus.Text = "File null";
                 }
@@ -114,10 +108,12 @@ namespace FTP
                     string filePath = string.Empty;
                     string tabla = string.Empty;
 
-                    DataAccessClass dbb = new DataAccessClass();
+                    ordersEntities dbo = new ordersEntities();
 
                     if (openFileDialog.ShowDialog() == DialogResult.OK)
                     {
+                        int cont = 0;
+
                         //Get the path of specified file
                         filePath = openFileDialog.FileName;
 
@@ -131,99 +127,134 @@ namespace FTP
 
                         string[] lines = File.ReadAllLines(filePath);
 
+                        int priority = 0;
+                        string code = string.Empty;
+                        DateTime date = new DateTime();
+                        int factory = 0;
+                        int agency = 0;
+                        int operationalArea = 0;
+                        int idord = 0;
+                        int planet = 0;
+                        int reference = 0;
+                        short quantity = 0;
+                        DateTime deliveryDate = new DateTime();
+
                         foreach (string line in lines)
                         {
-                            string idPriority;
-                            string codeOrder;
-                            string dateOrder;
-                            string idFactory;
-                            string idAgency;
-                            string idOperationalArea;
-
-                            /*
-                                ORD|061243444000|220|
-                                DTM|20181019|
-                                NADMS|INNER|40A|
-                                NADMR|NABOSOUTXW02|
-                                LIN|0000INRINABO|841001009689|EN|
-                                QTYLIN|21|250|
-                                DTMLIN|20181110|
-                            */
-
                             string[] elements = line.Split('|');
 
-                            if (elements[0].Equals("ORD"))
+                            if (!(elements[0].Equals("LIN")) && cont == 0)
                             {
+                                if (elements[0].Equals("ORD"))
+                                {
+                                    //Numero de la order
+                                    code = elements[1];
 
-                                string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
-                                DataSet ds = db.GetByQuery(query);
-                                DataRow dr = ds.Tables[0].Rows[0];
+                                    //Id de la prioridad
+                                    priority = data.getid("Priority", "idPriority", "CodePriority", elements[2]);
+                                }
+                                else if (elements[0].Equals("DTM"))
+                                {
+                                    //Fecha de la order
+                                    date = DateTime.ParseExact(elements[1], "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+                                }
+                                else if (elements[0].Equals("NADMS"))
+                                {
+                                    agency = data.getid("Agencies", "idAgency", "CodeAgency", elements[2]);
 
-                                idPriority = dr.ItemArray.GetValue(0).ToString();
-                                codeOrder = elements[1];
+                                    operationalArea = data.getid("OperationalAreas", "idOperationalArea", "CodeOperationalArea", elements[1]);
+                                }
+                                else if (elements[0].Equals("NADMR"))
+                                {
+                                    factory = data.getid("Factories", "idFactory", "codeFactory", elements[1]);
+                                }
+                                else
+                                {
+                                    throw new Exception("Tabla de BBDD inexistente");
+                                }
 
-                            }
-                            else if (elements[0].Equals("DTM"))
+                            } else
                             {
-                                dateOrder = elements[1].Substring(0, 4) + " - " + elements[1].Substring(3, 2) + " - " + elements[1].Substring(5, 2);
-                            }
-                            else if (elements[0].Equals("NADMS"))
-                            {
+                                if (cont == 0)
+                                {
+                                    var ord = new Order()
+                                    {
+                                        codeOrder = code,
+                                        dateOrder = date,
+                                        IdFactory = Convert.ToInt16(factory),
+                                        IdPriority = Convert.ToInt16(priority)
+                                    };
 
-                            }
-                            else if (elements[0].Equals("NADMR"))
-                            {
+                                    
+                                    dbo.Orders.Add(ord);
+                                    dbo.SaveChanges();
+                                    label5.Text = "Order created";
 
-                            }
-                            else
-                            {
-                                throw new Exception("Tabla de BBDD inexistente");
-                            }
-                            /*
-                            var cnt = new Order()
-                            {
-                                Name = elements[1],
-                                BirthDate = elements[2],
-                                idContact = int.Parse(elements[3])
-                            };
-                            dbo.NewContacts.Add(cnt);
+                                    idord = data.getid("Orders", "idOrder", "codeOrder", code);
 
-                            */
-                            if (elements[0].Equals("LIN"))
-                            {
+                                    var ordInf = new OrderInfo()
+                                    {
+                                        idOrder = Convert.ToInt16(idord),
+                                        idAgency = Convert.ToInt16(agency),
+                                        idOperationalArea = Convert.ToInt16(operationalArea)
+                                    };
 
-                                string query = "SELECT IdPriority FROM Priority WHERE CodePriority = " + elements[2];
-                                DataSet ds = db.GetByQuery(query);
-                                DataRow dr = ds.Tables[0].Rows[0];
+                                    dbo.OrderInfoes.Add(ordInf);
+                                    dbo.SaveChanges();
+                                    label6.Text = "OrderInfo Created";
+                                    
+                                }
 
-                                idPriority = dr.ItemArray.GetValue(0).ToString();
+                                if (elements[0].Equals("LIN"))
+                                {
+                                    planet = data.getid("Planets", "idPlanet", "CodePlanet", elements[1]);
+                                    reference = data.getid("References", "idReference", "codeReference", elements[2]);
+                                }
+                                else if (elements[0].Equals("QTYLIN"))
+                                {
+                                    quantity = Convert.ToInt16(elements[2]);
+                                }
+                                else if (elements[0].Equals("DTMLIN"))
+                                {
+                                    deliveryDate = DateTime.ParseExact(elements[1], "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
 
-                            }
-                            else if (elements[0].Equals("QTYLIN"))
-                            {
+                                    var ordDet = new OrdersDetail()
+                                    {
+                                        idOrder = Convert.ToInt16(idord),
+                                        idPlanet = Convert.ToInt16(planet),
+                                        idReference = Convert.ToInt16(reference),
+                                        Quantity = quantity,
+                                        DeliveryDate = deliveryDate
+                                    };
+                                    
+                                    dbo.OrdersDetails.Add(ordDet);
+                                    dbo.SaveChanges();
 
-                            }
-                            else if (elements[0].Equals("DTMLIN"))
-                            {
-
-                            }
-                            else
-                            {
-                                throw new Exception("Tabla de BBDD inexistente");
-                            }
-
-                            //dbo.SaveChanges();
+                                    label7.Text = "OrderDetails created";
+                                }
+                                else
+                                {
+                                    throw new Exception("Tabla de BBDD inexistente");
+                                }
+                                cont++;
+                            }//FIN FOREACH
                         }
                     }
                 }
-
             }
             catch (Exception er)
             {
+                MessageBox.Show(er.ToString());
             }
         }
-            
+
     }
 }
+
+
+
+
+
+
 
 

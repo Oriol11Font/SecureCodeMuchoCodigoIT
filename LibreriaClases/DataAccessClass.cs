@@ -309,7 +309,7 @@ namespace LibreriaClases
 
             _conn.Open();
 
-            string query = "SELECT " + campoid + " FROM " + nombretabla + " WHERE " + campodesc + "= '" + valoredi + "'";
+            string query = "SELECT " + campoid + " FROM [" + nombretabla + "] WHERE " + campodesc + "= '" + valoredi + "'";
 
             SqlCommand command = new SqlCommand(query, _conn);
             

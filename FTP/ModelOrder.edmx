@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ordersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Factories">
+          <Key>
+            <PropertyRef Name="IdFactory" />
+          </Key>
+          <Property Name="IdFactory" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codeFactory" Type="nvarchar" MaxLength="12" />
+          <Property Name="DescFactory" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OrderInfo">
+          <Key>
+            <PropertyRef Name="idOrderInfo" />
+          </Key>
+          <Property Name="idOrderInfo" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idOrder" Type="smallint" Nullable="false" />
+          <Property Name="idAgency" Type="smallint" Nullable="false" />
+          <Property Name="idOperationalArea" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="idOrder" />
+          </Key>
+          <Property Name="idOrder" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codeOrder" Type="nvarchar" MaxLength="12" />
+          <Property Name="dateOrder" Type="smalldatetime" />
+          <Property Name="IdPriority" Type="smallint" Nullable="false" />
+          <Property Name="IdFactory" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrdersDetail">
+          <Key>
+            <PropertyRef Name="idOrderDetail" />
+          </Key>
+          <Property Name="idOrderDetail" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idOrder" Type="smallint" />
+          <Property Name="idPlanet" Type="int" />
+          <Property Name="idReference" Type="smallint" />
+          <Property Name="Quantity" Type="smallint" />
+          <Property Name="DeliveryDate" Type="smalldatetime" />
+        </EntityType>
+        <Association Name="FK_OrderInfo_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderInfo" Type="Self.OrderInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="OrderInfo">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Orders_Factories">
+          <End Role="Factories" Type="Self.Factories" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Factories">
+              <PropertyRef Name="IdFactory" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="IdFactory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetail_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+          <End Role="OrdersDetail" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="OrdersDetail">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ordersModelStoreContainer">
+          <EntitySet Name="Factories" EntityType="Self.Factories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderInfo" EntityType="Self.OrderInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrdersDetail" EntityType="Self.OrdersDetail" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_OrderInfo_Orders" Association="Self.FK_OrderInfo_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderInfo" EntitySet="OrderInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Orders_Factories" Association="Self.FK_Orders_Factories">
+            <End Role="Factories" EntitySet="Factories" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetail_Orders" Association="Self.FK_OrdersDetail_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrdersDetail" EntitySet="OrdersDetail" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ordersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Factory">
+          <Key>
+            <PropertyRef Name="IdFactory" />
+          </Key>
+          <Property Name="IdFactory" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codeFactory" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="DescFactory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Factories" FromRole="Factories" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="OrderInfo">
+          <Key>
+            <PropertyRef Name="idOrderInfo" />
+          </Key>
+          <Property Name="idOrderInfo" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idOrder" Type="Int16" Nullable="false" />
+          <Property Name="idAgency" Type="Int16" Nullable="false" />
+          <Property Name="idOperationalArea" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_OrderInfo_Orders" FromRole="OrderInfo" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="idOrder" />
+          </Key>
+          <Property Name="idOrder" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codeOrder" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="dateOrder" Type="DateTime" Precision="0" />
+          <Property Name="IdPriority" Type="Int16" Nullable="false" />
+          <Property Name="IdFactory" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Factory" Relationship="Self.FK_Orders_Factories" FromRole="Orders" ToRole="Factories" />
+          <NavigationProperty Name="OrderInfoes" Relationship="Self.FK_OrderInfo_Orders" FromRole="Orders" ToRole="OrderInfo" />
+          <NavigationProperty Name="OrdersDetails" Relationship="Self.FK_OrdersDetail_Orders" FromRole="Orders" ToRole="OrdersDetail" />
+        </EntityType>
+        <EntityType Name="OrdersDetail">
+          <Key>
+            <PropertyRef Name="idOrderDetail" />
+          </Key>
+          <Property Name="idOrderDetail" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idOrder" Type="Int16" />
+          <Property Name="idPlanet" Type="Int32" />
+          <Property Name="idReference" Type="Int16" />
+          <Property Name="Quantity" Type="Int16" />
+          <Property Name="DeliveryDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_OrdersDetail_Orders" FromRole="OrdersDetail" ToRole="Orders" />
+        </EntityType>
+        <Association Name="FK_Orders_Factories">
+          <End Role="Factories" Type="Self.Factory" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Factories">
+              <PropertyRef Name="IdFactory" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="IdFactory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderInfo_Orders">
+          <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderInfo" Type="Self.OrderInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="OrderInfo">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrdersDetail_Orders">
+          <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="OrdersDetail" Type="Self.OrdersDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="OrdersDetail">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ordersEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Factories" EntityType="Self.Factory" />
+          <EntitySet Name="OrderInfoes" EntityType="Self.OrderInfo" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="OrdersDetails" EntityType="Self.OrdersDetail" />
+          <AssociationSet Name="FK_Orders_Factories" Association="Self.FK_Orders_Factories">
+            <End Role="Factories" EntitySet="Factories" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderInfo_Orders" Association="Self.FK_OrderInfo_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderInfo" EntitySet="OrderInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrdersDetail_Orders" Association="Self.FK_OrdersDetail_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrdersDetail" EntitySet="OrdersDetails" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ordersModelStoreContainer" CdmEntityContainer="ordersEntities">
+          <EntitySetMapping Name="Factories">
+            <EntityTypeMapping TypeName="ordersModel.Factory">
+              <MappingFragment StoreEntitySet="Factories">
+                <ScalarProperty Name="IdFactory" ColumnName="IdFactory" />
+                <ScalarProperty Name="codeFactory" ColumnName="codeFactory" />
+                <ScalarProperty Name="DescFactory" ColumnName="DescFactory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderInfoes">
+            <EntityTypeMapping TypeName="ordersModel.OrderInfo">
+              <MappingFragment StoreEntitySet="OrderInfo">
+                <ScalarProperty Name="idOrderInfo" ColumnName="idOrderInfo" />
+                <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+                <ScalarProperty Name="idAgency" ColumnName="idAgency" />
+                <ScalarProperty Name="idOperationalArea" ColumnName="idOperationalArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="ordersModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+                <ScalarProperty Name="codeOrder" ColumnName="codeOrder" />
+                <ScalarProperty Name="dateOrder" ColumnName="dateOrder" />
+                <ScalarProperty Name="IdPriority" ColumnName="IdPriority" />
+                <ScalarProperty Name="IdFactory" ColumnName="IdFactory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrdersDetails">
+            <EntityTypeMapping TypeName="ordersModel.OrdersDetail">
+              <MappingFragment StoreEntitySet="OrdersDetail">
+                <ScalarProperty Name="idOrderDetail" ColumnName="idOrderDetail" />
+                <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+                <ScalarProperty Name="idPlanet" ColumnName="idPlanet" />
+                <ScalarProperty Name="idReference" ColumnName="idReference" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
