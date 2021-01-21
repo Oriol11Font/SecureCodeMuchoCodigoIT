@@ -42,11 +42,13 @@
             this.tblMenu = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tblMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -105,10 +107,9 @@
             this.welcomeText.AutoSize = true;
             this.welcomeText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeText.Location = new System.Drawing.Point(2, 0);
-            this.welcomeText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.welcomeText.Location = new System.Drawing.Point(3, 0);
             this.welcomeText.Name = "welcomeText";
-            this.welcomeText.Size = new System.Drawing.Size(492, 367);
+            this.welcomeText.Size = new System.Drawing.Size(634, 470);
             this.welcomeText.TabIndex = 0;
             this.welcomeText.Text = "Welcome";
             this.welcomeText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,13 +125,13 @@
             this.tblMenu.Controls.Add(this.welcomeText, 0, 0);
             this.tblMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblMenu.Location = new System.Drawing.Point(10, 150);
-            this.tblMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.tblMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblMenu.Name = "tblMenu";
             this.tblMenu.RowCount = 2;
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tblMenu.Size = new System.Drawing.Size(1490, 734);
+            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblMenu.Size = new System.Drawing.Size(1921, 940);
             this.tblMenu.TabIndex = 19;
             // 
             // pictureBox2
@@ -152,16 +153,28 @@
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::InitialFormsLibrary.Properties.Resources.user;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox5.Image = global::InitialFormsLibrary.Properties.Resources.user;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 110);
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1510, 894);
+            this.ClientSize = new System.Drawing.Size(1941, 1100);
             this.Controls.Add(this.tblMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Menu";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Menu_Load);
@@ -172,6 +185,7 @@
             this.tblMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +203,6 @@
         private System.Windows.Forms.TableLayoutPanel tblMenu;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

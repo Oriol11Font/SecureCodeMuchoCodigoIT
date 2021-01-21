@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using InitialFormsLibrary;
-using TestsForms;
 using Users;
 
 namespace SecureCoreMain
@@ -16,7 +14,7 @@ namespace SecureCoreMain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportViewer());
+            Application.Run(new newsplash());
         }
     }
 }

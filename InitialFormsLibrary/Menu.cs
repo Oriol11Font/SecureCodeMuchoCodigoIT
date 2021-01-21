@@ -54,10 +54,10 @@ namespace SecureCoreMain
 
         private void SetUserRank()
         {
-            var userCategory = (int)data
+            var userCategory = (int) data
                 .GetByQuery($@"SELECT idUsercategory FROM Users WHERE UserName = '{UserName}';").Tables[0].Rows[0]
                 .ItemArray[0];
-            _accessLevel = (int)data
+            _accessLevel = (int) data
                 .GetByQuery($@"SELECT AccessLevel FROM UserCategories WHERE idUserCategory = '{userCategory}';")
                 .Tables[0].Rows[0].ItemArray[0];
         }
@@ -74,15 +74,15 @@ namespace SecureCoreMain
             foreach (DataRow dr in sqldata.Tables[0].Rows)
             {
                 // si no té un nivell d'accés igual o superior no podrà veure els botons del menú que requereixin d'un accés superior
-                if (_accessLevel >= (int)dr.ItemArray[5])
+                if (_accessLevel >= (int) dr.ItemArray[5])
                 {
                     try
                     {
                         var menubtn = new exeButton
                         {
-                            ImageLocation1 = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".png",
-                            ImageLocation2 = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".gif",
-                            ImageLocation = Application.StartupPath + "\\images\\" + (string)dr.ItemArray[2] + ".png",
+                            ImageLocation1 = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".png",
+                            ImageLocation2 = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".gif",
+                            ImageLocation = Application.StartupPath + "\\images\\" + (string) dr.ItemArray[2] + ".png",
                             SizeMode = PictureBoxSizeMode.Zoom,
                             userName = UserName,
                             imgProfile = profileImg,
@@ -98,7 +98,6 @@ namespace SecureCoreMain
                     {
                         MessageBox.Show($@"No s'ha trobat la imatge {dr.ItemArray[2]}");
                     }
-
                 }
             }
         }
@@ -110,6 +109,17 @@ namespace SecureCoreMain
                 UserName = UserName
             };
             usrReportViewer.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ReportViewer rpt = new ReportViewer
+            {
+                FormTitle = @"User Reports",
+                UserName = this.UserName,
+                profileImg = this.profileImg
+            };
+            rpt.Show();
         }
     }
 }

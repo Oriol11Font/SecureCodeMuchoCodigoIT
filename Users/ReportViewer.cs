@@ -13,16 +13,11 @@ namespace Users
 {
     public partial class ReportViewer : BaseForm
     {
-        private int _idUser { get; set; }
         private DataAccessClass _dac = new DataAccessClass();
-        UserReport rpt;
-
-        UserEntities db;
-        List<User> usr;
+        private ReportDocument cryRpt;
 
         public ReportViewer()
         {
-            FormTitle = @"User Reports";
             InitializeComponent();
         }
 
@@ -31,7 +26,7 @@ namespace Users
             try
             {
                 errorLabel.Visible = false;
-                ReportDocument cryRpt = new ReportDocument();
+                cryRpt = new ReportDocument();
                 ConnectionInfo crConnectionInfo = new ConnectionInfo();
                 TableLogOnInfo crtableLogoninfo = new TableLogOnInfo();
 
@@ -50,16 +45,10 @@ namespace Users
                     CrTable.ApplyLogOnInfo(crtableLogoninfo);
                 }
 
-                cryRpt.RecordSelectionFormula = "{Comando.idUser} = " + textBox1.Text + "";
+                cryRpt.RecordSelectionFormula = "{Comando.CodeUser} = '" + textBox1.Text + "'";
 
                 crystalReportViewer1.ReportSource = cryRpt;
                 saveButton.Enabled = true;
-
-                int printerId = 0;
-                do printerId++;
-                while (PrinterSettings.InstalledPrinters[printerId] != "Microsoft Print to PDF");
-
-                cryRpt.ExportToDisk(ExportFormatType.PortableDocFormat, @"C:\Users\pauco\Desktop\Card.pdf");
             } catch
             {
                 errorLabel.Text = @"Error mostrant report";
@@ -68,12 +57,24 @@ namespace Users
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SaveReport(object sender, EventArgs e)
         {
-
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.InitialDirectory = @"C:\";
+            saveFileDialog1.Title = @"Selecciona la ubicació on desar el report";
+            saveFileDialog1.CheckFileExists = false;
+            saveFileDialog1.CheckPathExists = true;
+            saveFileDialog1.DefaultExt = "pdf";
+            saveFileDialog1.Filter = @"Pdf Files|*.pdf";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                cryRpt.ExportToDisk(ExportFormatType.PortableDocFormat, saveFileDialog1.FileName);
+            }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void BackButton(object sender, EventArgs e)
         {
             this.Close();
         }
