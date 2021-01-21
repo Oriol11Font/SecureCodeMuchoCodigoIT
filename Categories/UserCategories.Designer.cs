@@ -238,10 +238,11 @@ namespace Categories
             this.CodiCategory.CampoBBDD = "CodeCategory";
             this.CodiCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CodiCategory.Foranea = false;
-            this.CodiCategory.Location = new System.Drawing.Point(99, 327);
+            this.CodiCategory.Location = new System.Drawing.Point(110, 409);
+            this.CodiCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CodiCategory.Name = "CodiCategory";
-            this.CodiCategory.Size = new System.Drawing.Size(400, 23);
-            this.CodiCategory.TabIndex = 27;
+            this.CodiCategory.Size = new System.Drawing.Size(444, 26);
+            this.CodiCategory.TabIndex = 1;
             this.CodiCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // DescCategory
@@ -250,10 +251,11 @@ namespace Categories
             this.DescCategory.CampoBBDD = "DescCategory";
             this.DescCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescCategory.Foranea = false;
-            this.DescCategory.Location = new System.Drawing.Point(574, 327);
+            this.DescCategory.Location = new System.Drawing.Point(638, 409);
+            this.DescCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DescCategory.Name = "DescCategory";
-            this.DescCategory.Size = new System.Drawing.Size(400, 23);
-            this.DescCategory.TabIndex = 28;
+            this.DescCategory.Size = new System.Drawing.Size(444, 26);
+            this.DescCategory.TabIndex = 2;
             this.DescCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // LvlCategory
@@ -262,19 +264,20 @@ namespace Categories
             this.LvlCategory.CampoBBDD = "AccessLevel";
             this.LvlCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LvlCategory.Foranea = false;
-            this.LvlCategory.Location = new System.Drawing.Point(1057, 327);
+            this.LvlCategory.Location = new System.Drawing.Point(1174, 409);
+            this.LvlCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LvlCategory.Name = "LvlCategory";
-            this.LvlCategory.Size = new System.Drawing.Size(400, 23);
-            this.LvlCategory.TabIndex = 29;
+            this.LvlCategory.Size = new System.Drawing.Size(444, 26);
+            this.LvlCategory.TabIndex = 3;
             this.LvlCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(96, 286);
+            this.label1.Location = new System.Drawing.Point(107, 358);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 32);
+            this.label1.Size = new System.Drawing.Size(333, 38);
             this.label1.TabIndex = 30;
             this.label1.Text = "Codi de la Categoria";
             // 
@@ -282,9 +285,9 @@ namespace Categories
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(571, 286);
+            this.label2.Location = new System.Drawing.Point(634, 358);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 32);
+            this.label2.Size = new System.Drawing.Size(181, 38);
             this.label2.TabIndex = 31;
             this.label2.Text = "Descripció";
             // 
@@ -292,9 +295,9 @@ namespace Categories
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1054, 286);
+            this.label3.Location = new System.Drawing.Point(1171, 358);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 32);
+            this.label3.Size = new System.Drawing.Size(235, 38);
             this.label3.TabIndex = 32;
             this.label3.Text = "Nivell d\'Accés";
             // 
@@ -303,9 +306,10 @@ namespace Categories
             this.panel8.Controls.Add(this.dtgCategories);
             this.panel8.Controls.Add(this.btn_actualitzar);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(10, 470);
+            this.panel8.Location = new System.Drawing.Point(10, 590);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1900, 600);
+            this.panel8.Size = new System.Drawing.Size(2113, 750);
             this.panel8.TabIndex = 33;
             // 
             // dtgCategories
@@ -322,7 +326,7 @@ namespace Categories
             this.dtgCategories.ColumnHeadersHeight = 29;
             this.dtgCategories.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgCategories.EnableHeadersVisualStyles = false;
-            this.dtgCategories.Location = new System.Drawing.Point(0, 60);
+            this.dtgCategories.Location = new System.Drawing.Point(0, 75);
             this.dtgCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgCategories.Name = "dtgCategories";
             this.dtgCategories.ReadOnly = true;
@@ -341,18 +345,18 @@ namespace Categories
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Yellow;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgCategories.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgCategories.Size = new System.Drawing.Size(1900, 540);
+            this.dtgCategories.Size = new System.Drawing.Size(2113, 675);
             this.dtgCategories.TabIndex = 27;
             // 
             // btn_actualitzar
             // 
             this.btn_actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_actualitzar.ForeColor = System.Drawing.Color.White;
-            this.btn_actualitzar.Location = new System.Drawing.Point(36, 2);
+            this.btn_actualitzar.Location = new System.Drawing.Point(40, 2);
             this.btn_actualitzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualitzar.Name = "btn_actualitzar";
-            this.btn_actualitzar.Size = new System.Drawing.Size(180, 39);
-            this.btn_actualitzar.TabIndex = 24;
+            this.btn_actualitzar.Size = new System.Drawing.Size(200, 49);
+            this.btn_actualitzar.TabIndex = 4;
             this.btn_actualitzar.Text = "Actualitzar";
             this.btn_actualitzar.UseVisualStyleBackColor = true;
             this.btn_actualitzar.Click += new System.EventHandler(this.btn_actualitzar_Click);
@@ -361,20 +365,20 @@ namespace Categories
             // 
             this.backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backbtn.ForeColor = System.Drawing.Color.White;
-            this.backbtn.Location = new System.Drawing.Point(28, 169);
+            this.backbtn.Location = new System.Drawing.Point(31, 211);
             this.backbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(180, 39);
-            this.backbtn.TabIndex = 27;
+            this.backbtn.Size = new System.Drawing.Size(200, 49);
+            this.backbtn.TabIndex = 5;
             this.backbtn.Text = "Tornar al Menú";
             this.backbtn.UseVisualStyleBackColor = true;
             this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
             // 
             // UserCategories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(2133, 1350);
             this.Controls.Add(this.backbtn);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label3);
@@ -384,6 +388,7 @@ namespace Categories
             this.Controls.Add(this.DescCategory);
             this.Controls.Add(this.CodiCategory);
             this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "UserCategories";
             this.Text = "UserCategories";
             this.Load += new System.EventHandler(this.UserCategories_Load);

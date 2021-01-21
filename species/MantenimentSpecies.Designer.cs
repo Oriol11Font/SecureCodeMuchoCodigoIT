@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +85,31 @@
             this.swTextBox2 = new ControlsMC.SWTextBox();
             this.SuspendLayout();
             // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "idAgency";
+            this.dataGridViewTextBoxColumn49.HeaderText = "idAgency";
+            this.dataGridViewTextBoxColumn49.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            this.dataGridViewTextBoxColumn49.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "CodeAgency";
+            this.dataGridViewTextBoxColumn50.HeaderText = "CodeAgency";
+            this.dataGridViewTextBoxColumn50.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.DataPropertyName = "DescAgency";
+            this.dataGridViewTextBoxColumn51.HeaderText = "DescAgency";
+            this.dataGridViewTextBoxColumn51.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            this.dataGridViewTextBoxColumn51.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn46
             // 
             this.dataGridViewTextBoxColumn46.DataPropertyName = "idAgency";
@@ -90,6 +118,7 @@
             this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
             this.dataGridViewTextBoxColumn46.ReadOnly = true;
             this.dataGridViewTextBoxColumn46.Visible = false;
+            this.dataGridViewTextBoxColumn46.Width = 150;
             // 
             // dataGridViewTextBoxColumn47
             // 
@@ -98,6 +127,7 @@
             this.dataGridViewTextBoxColumn47.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
             this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.Width = 150;
             // 
             // dataGridViewTextBoxColumn48
             // 
@@ -106,6 +136,7 @@
             this.dataGridViewTextBoxColumn48.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
             this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            this.dataGridViewTextBoxColumn48.Width = 150;
             // 
             // dataGridViewTextBoxColumn43
             // 
@@ -536,7 +567,7 @@
             this.swTextBox1.Location = new System.Drawing.Point(164, 431);
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(400, 35);
-            this.swTextBox1.TabIndex = 25;
+            this.swTextBox1.TabIndex = 1;
             this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // lbl_1
@@ -566,7 +597,7 @@
             this.swTextBox2.Location = new System.Drawing.Point(979, 431);
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(400, 35);
-            this.swTextBox2.TabIndex = 28;
+            this.swTextBox2.TabIndex = 2;
             this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // MantenimentSpecies
@@ -644,5 +675,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
     }
 }

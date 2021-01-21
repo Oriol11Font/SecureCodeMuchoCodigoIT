@@ -79,7 +79,7 @@
             this.AppTitle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AppTitle.Location = new System.Drawing.Point(43, 12);
             this.AppTitle.Name = "AppTitle";
-            this.AppTitle.Size = new System.Drawing.Size(464, 17);
+            this.AppTitle.Size = new System.Drawing.Size(514, 20);
             this.AppTitle.TabIndex = 3;
             this.AppTitle.Text = "MuchoCodigoIT - SecureCore - Rebel Alliance System Upgrade";
             // 
@@ -208,9 +208,8 @@
             this.logoutlink.Location = new System.Drawing.Point(127, 66);
             this.logoutlink.Name = "logoutlink";
             this.logoutlink.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.logoutlink.Size = new System.Drawing.Size(259, 41);
-            this.logoutlink.TabIndex = 2;
-            this.logoutlink.TabStop = true;
+            this.logoutlink.Size = new System.Drawing.Size(373, 41);
+            this.logoutlink.TabIndex = 30;
             this.logoutlink.Text = "Cerrar sesión";
             this.logoutlink.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.logoutlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLabel_LinkClicked);
@@ -219,8 +218,8 @@
             // 
             this.profileimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.profileimg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileimg.ErrorImage = global::LibreriaControles.Properties.Resources.Guti;
-            this.profileimg.InitialImage = global::LibreriaControles.Properties.Resources.Guti;
+            this.profileimg.ErrorImage = global::LibreriaControles.Properties.Resources.noimageprofile;
+            this.profileimg.InitialImage = global::LibreriaControles.Properties.Resources.noimageprofile1;
             this.profileimg.Location = new System.Drawing.Point(392, 7);
             this.profileimg.Name = "profileimg";
             this.profileimg.Size = new System.Drawing.Size(100, 100);
@@ -230,18 +229,18 @@
             // 
             // username
             // 
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(150, 7);
+            this.username.Font = new System.Drawing.Font("Nasalization", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(13, 7);
             this.username.Name = "username";
             this.username.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.username.Size = new System.Drawing.Size(236, 56);
+            this.username.Size = new System.Drawing.Size(373, 56);
             this.username.TabIndex = 1;
             this.username.Text = "UserName";
             this.username.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1774, 1055);

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtg = new System.Windows.Forms.DataGridView();
             this.createbtn = new System.Windows.Forms.Button();
             this.btn_actualitzar = new System.Windows.Forms.Button();
-            this.btn_datagrid = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lbl_camp1 = new System.Windows.Forms.Label();
             this.swTextBox1 = new ControlsMC.SWTextBox();
@@ -68,9 +67,9 @@
             // dtg
             // 
             this.dtg.AllowUserToAddRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            this.dtg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dtg.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dtg.BackgroundColor = System.Drawing.Color.Gainsboro;
@@ -86,20 +85,20 @@
             this.dtg.Name = "dtg";
             this.dtg.ReadOnly = true;
             this.dtg.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtg.RowHeadersWidth = 20;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtg.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtg.RowTemplate.Height = 30;
             this.dtg.Size = new System.Drawing.Size(2113, 675);
             this.dtg.TabIndex = 20;
@@ -114,7 +113,7 @@
             this.createbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createbtn.Name = "createbtn";
             this.createbtn.Size = new System.Drawing.Size(200, 49);
-            this.createbtn.TabIndex = 26;
+            this.createbtn.TabIndex = 10;
             this.createbtn.Text = "Afegir";
             this.createbtn.UseVisualStyleBackColor = true;
             this.createbtn.Click += new System.EventHandler(this.createbtn_Click);
@@ -127,22 +126,10 @@
             this.btn_actualitzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_actualitzar.Name = "btn_actualitzar";
             this.btn_actualitzar.Size = new System.Drawing.Size(200, 49);
-            this.btn_actualitzar.TabIndex = 24;
+            this.btn_actualitzar.TabIndex = 11;
             this.btn_actualitzar.Text = "Actualitzar";
             this.btn_actualitzar.UseVisualStyleBackColor = true;
             this.btn_actualitzar.Click += new System.EventHandler(this.btn_actualitzar_Click);
-            // 
-            // btn_datagrid
-            // 
-            this.btn_datagrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_datagrid.ForeColor = System.Drawing.Color.White;
-            this.btn_datagrid.Location = new System.Drawing.Point(461, 612);
-            this.btn_datagrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_datagrid.Name = "btn_datagrid";
-            this.btn_datagrid.Size = new System.Drawing.Size(200, 49);
-            this.btn_datagrid.TabIndex = 25;
-            this.btn_datagrid.Text = "Veure DataSet";
-            this.btn_datagrid.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -198,7 +185,7 @@
             this.swTextBox2.Location = new System.Drawing.Point(450, 414);
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox2.TabIndex = 32;
+            this.swTextBox2.TabIndex = 2;
             this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label2
@@ -230,7 +217,7 @@
             this.swTextBox3.Location = new System.Drawing.Point(44, 414);
             this.swTextBox3.Name = "swTextBox3";
             this.swTextBox3.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox3.TabIndex = 30;
+            this.swTextBox3.TabIndex = 1;
             this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // swTextBox4
@@ -243,7 +230,7 @@
             this.swTextBox4.Name = "swTextBox4";
             this.swTextBox4.PasswordChar = '*';
             this.swTextBox4.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox4.TabIndex = 39;
+            this.swTextBox4.TabIndex = 6;
             this.swTextBox4.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label4
@@ -265,7 +252,7 @@
             this.swTextBox5.Location = new System.Drawing.Point(44, 534);
             this.swTextBox5.Name = "swTextBox5";
             this.swTextBox5.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox5.TabIndex = 37;
+            this.swTextBox5.TabIndex = 5;
             this.swTextBox5.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // label5
@@ -310,52 +297,54 @@
             // 
             // pbox_user
             // 
+            this.pbox_user.ErrorImage = global::Users.Properties.Resources.noimageprofile;
             this.pbox_user.Location = new System.Drawing.Point(1643, 351);
             this.pbox_user.Name = "pbox_user";
             this.pbox_user.Size = new System.Drawing.Size(300, 300);
-            this.pbox_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbox_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbox_user.TabIndex = 45;
             this.pbox_user.TabStop = false;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(857, 412);
+            this.comboBox1.Location = new System.Drawing.Point(857, 411);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 28);
-            this.comboBox1.TabIndex = 50;
+            this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ItemHeight = 20;
             this.comboBox2.Location = new System.Drawing.Point(857, 534);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(300, 28);
-            this.comboBox2.TabIndex = 51;
+            this.comboBox2.TabIndex = 7;
             this.comboBox2.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1261, 412);
+            this.comboBox3.Location = new System.Drawing.Point(1261, 408);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(300, 28);
-            this.comboBox3.TabIndex = 52;
+            this.comboBox3.TabIndex = 4;
             this.comboBox3.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(1261, 532);
+            this.comboBox4.Location = new System.Drawing.Point(1261, 536);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(300, 28);
-            this.comboBox4.TabIndex = 53;
+            this.comboBox4.TabIndex = 8;
             this.comboBox4.SelectionChangeCommitted += new System.EventHandler(this.comboBox2_SelectionChangeCommitted);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(857, 308);
+            this.textBox1.Location = new System.Drawing.Point(857, 412);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 54;
@@ -364,7 +353,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(857, 592);
+            this.textBox2.Location = new System.Drawing.Point(857, 534);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 55;
@@ -373,7 +362,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(1261, 308);
+            this.textBox3.Location = new System.Drawing.Point(1261, 410);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 56;
@@ -382,7 +371,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1261, 592);
+            this.textBox4.Location = new System.Drawing.Point(1261, 536);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 57;
@@ -408,7 +397,7 @@
             this.swTextBox6.Location = new System.Drawing.Point(1643, 307);
             this.swTextBox6.Name = "swTextBox6";
             this.swTextBox6.Size = new System.Drawing.Size(300, 26);
-            this.swTextBox6.TabIndex = 59;
+            this.swTextBox6.TabIndex = 9;
             this.swTextBox6.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
             // 
             // MantenimentUsers
@@ -418,10 +407,6 @@
             this.ClientSize = new System.Drawing.Size(2133, 1350);
             this.Controls.Add(this.swTextBox6);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
@@ -444,14 +429,20 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.createbtn);
             this.Controls.Add(this.btn_actualitzar);
-            this.Controls.Add(this.btn_datagrid);
             this.Controls.Add(this.dtg);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MantenimentUsers";
             this.Text = "MantenimentUsers";
             this.Load += new System.EventHandler(this.MantenimentUsers_Load);
+            this.Controls.SetChildIndex(this.textBox4, 0);
+            this.Controls.SetChildIndex(this.textBox3, 0);
+            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
             this.Controls.SetChildIndex(this.dtg, 0);
-            this.Controls.SetChildIndex(this.btn_datagrid, 0);
             this.Controls.SetChildIndex(this.btn_actualitzar, 0);
             this.Controls.SetChildIndex(this.createbtn, 0);
             this.Controls.SetChildIndex(this.button1, 0);
@@ -474,10 +465,6 @@
             this.Controls.SetChildIndex(this.comboBox2, 0);
             this.Controls.SetChildIndex(this.comboBox3, 0);
             this.Controls.SetChildIndex(this.comboBox4, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
             this.Controls.SetChildIndex(this.label9, 0);
             this.Controls.SetChildIndex(this.swTextBox6, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
@@ -492,7 +479,6 @@
         private System.Windows.Forms.DataGridView dtg;
         private System.Windows.Forms.Button createbtn;
         private System.Windows.Forms.Button btn_actualitzar;
-        private System.Windows.Forms.Button btn_datagrid;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbl_camp1;
         private ControlsMC.SWTextBox swTextBox1;

@@ -57,6 +57,7 @@
             this.username_warning = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pic_logo_login = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.trademark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MCimg)).BeginInit();
             this.topbar.SuspendLayout();
@@ -402,6 +403,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.inputsPanel);
             this.panel7.Controls.Add(this.trademark);
             this.panel7.Controls.Add(this.AppTitle);
@@ -427,6 +429,18 @@
             this.pic_logo_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_logo_login.TabIndex = 6;
             this.pic_logo_login.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(847, 452);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 50);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Sol·licitar Comandes";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
@@ -494,5 +508,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox username_warning;
         private System.Windows.Forms.PictureBox password_warning;
+        private System.Windows.Forms.Button button1;
     }
 }

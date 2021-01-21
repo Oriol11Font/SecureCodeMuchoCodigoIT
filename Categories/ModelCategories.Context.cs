@@ -13,10 +13,10 @@ namespace Categories
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CategoriesEntities : DbContext
+    public partial class CaregoriesEntities : DbContext
     {
-        public CategoriesEntities()
-            : base("name=CategoriesEntities")
+        public CaregoriesEntities()
+            : base("name=CaregoriesEntities")
         {
         }
     

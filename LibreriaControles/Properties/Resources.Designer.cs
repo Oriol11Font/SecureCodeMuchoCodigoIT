@@ -93,6 +93,26 @@ namespace LibreriaControles.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap noimageprofile {
+            get {
+                object obj = ResourceManager.GetObject("noimageprofile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noimageprofile1 {
+            get {
+                object obj = ResourceManager.GetObject("noimageprofile1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap profile_img {
             get {
                 object obj = ResourceManager.GetObject("profile_img", resourceCulture);

@@ -97,8 +97,8 @@
     <Compile Include="UserReport.cs">
       <DependentUpon>UserReport.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
