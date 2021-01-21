@@ -23,8 +23,7 @@ namespace Users
 
         UserEntities db;
         List<User> usr;
-
-        DataAccessClass dac = new DataAccessClass();
+        readonly DataAccessClass dac = new DataAccessClass();
         DataSet dsrang = new DataSet();
         DataSet dscategoria = new DataSet();
         DataSet dsplaneta = new DataSet();

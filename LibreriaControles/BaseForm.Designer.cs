@@ -205,7 +205,7 @@
             this.logoutlink.BackColor = System.Drawing.Color.Transparent;
             this.logoutlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutlink.LinkColor = System.Drawing.Color.White;
-            this.logoutlink.Location = new System.Drawing.Point(13, 66);
+            this.logoutlink.Location = new System.Drawing.Point(127, 66);
             this.logoutlink.Name = "logoutlink";
             this.logoutlink.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.logoutlink.Size = new System.Drawing.Size(373, 41);
