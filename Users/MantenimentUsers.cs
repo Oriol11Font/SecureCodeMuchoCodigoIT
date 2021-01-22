@@ -23,8 +23,7 @@ namespace Users
 
         UserEntities db;
         List<User> usr;
-
-        DataAccessClass dac = new DataAccessClass();
+        readonly DataAccessClass dac = new DataAccessClass();
         DataSet dsrang = new DataSet();
         DataSet dscategoria = new DataSet();
         DataSet dsplaneta = new DataSet();
@@ -204,7 +203,7 @@ namespace Users
 
         private void carregarfoto(string foto)
         {
-            pbox_user.ImageLocation = "..\\Users\\Resources\\" + foto;
+            pbox_user.ImageLocation = Application.StartupPath + "\\images\\" + foto;
         }
     }
 }
