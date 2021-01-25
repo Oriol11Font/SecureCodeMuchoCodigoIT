@@ -1,9 +1,9 @@
-﻿using System;
+﻿using LibreriaClases;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
-using LibreriaClases;
 
 namespace TextBoxControls
 {
@@ -11,7 +11,7 @@ namespace TextBoxControls
     {
         private int _ControlID;
 
-        DataAccessClass data = new DataAccessClass();
+        readonly DataAccessClass data = new DataAccessClass();
 
         DataSet sqldata;
 
@@ -130,29 +130,25 @@ namespace TextBoxControls
                 /*Sha de mirar*/
                 var ensamblat = Assembly.LoadFrom(dll);
 
-                //Declarem les variables
-                object dllBD;
-                Type tipus;
-
                 //recuperem el tipus de la classe que volem instanciar
-                tipus = ensamblat.GetType(FormCS);
+                var tipus = ensamblat.GetType(FormCS);
 
                 //Declarem un array d’objectes I l’omplim amb
                 //els nostres paràmetres
                 Object[] args = { this.sqldata };
 
                 //instanciem l’objecte   
-                dllBD = Activator.CreateInstance(tipus, args);
+                var dllBD = Activator.CreateInstance(tipus, args);
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
-                ((Form) dllBD).Show();
+                ((Form)dllBD).Show();
             }
         }
 
         private void controltxt_TextChanged(object sender, EventArgs e)
         {
-            var sql = "SELECT * FROM "+NomTaula+" WHERE "+NomId+" = " + controltxt.Text;
+            var sql = "SELECT * FROM " + NomTaula + " WHERE " + NomId + " = " + controltxt.Text;
 
             if (!(NomTaula == null || NomId == null))
             {
@@ -162,7 +158,7 @@ namespace TextBoxControls
                 {
                     var sqldata = data.GetByQuery(sql);
 
-                    if (!(sqldata == null))
+                    if (sqldata != null)
                         if (sqldata.Tables[0].Rows.Count > 0)
                         {
                             var dr = sqldata.Tables[0].Rows[0];

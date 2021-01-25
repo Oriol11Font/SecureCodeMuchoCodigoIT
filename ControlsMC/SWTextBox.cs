@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ControlsMC
 {
-    public class SWTextBox : TextBox
+    public class SwTextBox : TextBox
     {
         public enum TipusDada
         {
@@ -16,14 +16,14 @@ namespace ControlsMC
             Codi
         }
 
-        public SWTextBox()
+        public SwTextBox()
         {
             InitializeComponent();
         }
 
         public TipusDada Tipus { get; set; }
 
-        public string CampoBBDD { get; set; }
+        public string CampoBbdd { get; set; }
 
         public bool Foranea { get; set; }
 

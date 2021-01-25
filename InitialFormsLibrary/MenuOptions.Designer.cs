@@ -44,12 +44,12 @@ namespace InitialFormsLibrary
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.swTextBox1 = new ControlsMC.SWTextBox();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
+            this.swTextBox1 = new ControlsMC.SwTextBox();
+            this.swTextBox2 = new ControlsMC.SwTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.swTextBox3 = new ControlsMC.SWTextBox();
+            this.swTextBox3 = new ControlsMC.SwTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.swTextBox4 = new ControlsMC.SWTextBox();
+            this.swTextBox4 = new ControlsMC.SwTextBox();
             this.Classe = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -175,26 +175,26 @@ namespace InitialFormsLibrary
             // swTextBox1
             // 
             this.swTextBox1.AllowEmpty = true;
-            this.swTextBox1.CampoBBDD = "titleMenu";
+            this.swTextBox1.CampoBbdd = "titleMenu";
             this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox1.Foranea = false;
             this.swTextBox1.Location = new System.Drawing.Point(48, 298);
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(300, 36);
             this.swTextBox1.TabIndex = 29;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox1.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // swTextBox2
             // 
             this.swTextBox2.AllowEmpty = true;
-            this.swTextBox2.CampoBBDD = "imgMenu";
+            this.swTextBox2.CampoBbdd = "imgMenu";
             this.swTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox2.Foranea = false;
             this.swTextBox2.Location = new System.Drawing.Point(378, 298);
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(300, 36);
             this.swTextBox2.TabIndex = 31;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox2.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // label2
             // 
@@ -209,14 +209,14 @@ namespace InitialFormsLibrary
             // swTextBox3
             // 
             this.swTextBox3.AllowEmpty = true;
-            this.swTextBox3.CampoBBDD = "Form";
+            this.swTextBox3.CampoBbdd = "Form";
             this.swTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox3.Foranea = false;
             this.swTextBox3.Location = new System.Drawing.Point(704, 298);
             this.swTextBox3.Name = "swTextBox3";
             this.swTextBox3.Size = new System.Drawing.Size(300, 36);
             this.swTextBox3.TabIndex = 33;
-            this.swTextBox3.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox3.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // label3
             // 
@@ -231,14 +231,14 @@ namespace InitialFormsLibrary
             // swTextBox4
             // 
             this.swTextBox4.AllowEmpty = true;
-            this.swTextBox4.CampoBBDD = "Classe";
+            this.swTextBox4.CampoBbdd = "Classe";
             this.swTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox4.Foranea = false;
             this.swTextBox4.Location = new System.Drawing.Point(1028, 298);
             this.swTextBox4.Name = "swTextBox4";
             this.swTextBox4.Size = new System.Drawing.Size(300, 36);
             this.swTextBox4.TabIndex = 35;
-            this.swTextBox4.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox4.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // Classe
             // 
@@ -293,12 +293,12 @@ namespace InitialFormsLibrary
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private ControlsMC.SWTextBox swTextBox1;
-        private ControlsMC.SWTextBox swTextBox2;
+        private ControlsMC.SwTextBox swTextBox1;
+        private ControlsMC.SwTextBox swTextBox2;
         private System.Windows.Forms.Label label2;
-        private ControlsMC.SWTextBox swTextBox3;
+        private ControlsMC.SwTextBox swTextBox3;
         private System.Windows.Forms.Label label3;
-        private ControlsMC.SWTextBox swTextBox4;
+        private ControlsMC.SwTextBox swTextBox4;
         private System.Windows.Forms.Label Classe;
     }
 }

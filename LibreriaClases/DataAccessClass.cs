@@ -66,8 +66,6 @@ namespace LibreriaClases
 
         public DataSet GetByQuery(string query)
         {
-            // variable declarations needed
-            SqlDataAdapter adapter;
             DataSet ds;
 
             try
@@ -79,7 +77,7 @@ namespace LibreriaClases
                 ds = new DataSet();
 
                 // we initialize the adapter that provides communication between the DataSet and the SQL Database
-                adapter = new SqlDataAdapter(query, _conn);
+                var adapter = new SqlDataAdapter(query, _conn);
 
                 _conn.Open();
 
@@ -186,14 +184,13 @@ namespace LibreriaClases
             {
                 var originalDs = GetTable(newDs.Tables[0].TableName);
                 var queries = new List<string>();
-                string tableName;
 
                 // we check if the DataSet has any changes
                 if (newDs.HasChanges())
                 {
                     for (var i = 0; i < newDs.Tables.Count; i++)
                     {
-                        tableName = originalDs.Tables[i].TableName;
+                        var tableName = originalDs.Tables[i].TableName;
                         foreach (DataRow row in newDs.Tables[i].Rows)
                             if (originalDs.Tables[i]
                                 .Select($@"{originalDs.Tables[i].Columns[0].ColumnName} = {row.ItemArray.GetValue(0)}")
@@ -250,14 +247,10 @@ namespace LibreriaClases
         {
             var finalStr = "";
             var index = 0;
-            string str;
 
             foreach (var obj in dr.ItemArray)
             {
-                if (!Regex.IsMatch(obj.ToString(), @"^\d+$"))
-                    str = $"'{obj}'";
-                else
-                    str = $"{obj}";
+                var str = !Regex.IsMatch(obj.ToString(), @"^\d+$") ? $"'{obj}'" : $"{obj}";
                 if (index != dr.ItemArray.Length - 1) str = $"{str}, ";
 
                 finalStr = $"{finalStr}{str}";
@@ -280,31 +273,8 @@ namespace LibreriaClases
             MessageBox.Show($"{message}: Excepció {e}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public DataSet CarregarMenu()
-        {
-            DataSet ds;
-            try
-            {
-                String sql = "SELECT * FROM MenuOptions";
-                ds = GetByQuery(sql);
-            }
-            catch (Exception e)
-            {
-                ErrorMessage(e, @"La petició de dades d'una taula no s'ha pogut realitzar", null);
-                ds = null;
-            }
-            finally
-            {
-                _conn?.Close();
-            }
-
-            return ds;
-        }
-
         public int getid(string nombretabla, string campoid, string campodesc, string valoredi)
         {
-            int id;
-
             _conn = new SqlConnection(_connectionString);
 
             _conn.Open();
@@ -312,10 +282,10 @@ namespace LibreriaClases
             string query = "SELECT " + campoid + " FROM [" + nombretabla + "] WHERE " + campodesc + "= '" + valoredi + "'";
 
             SqlCommand command = new SqlCommand(query, _conn);
-            
+
             //command.CommandType = CommandType.Text;
 
-            id = Convert.ToInt32(command.ExecuteScalar());
+            var id = Convert.ToInt32(command.ExecuteScalar());
 
             _conn.Close();
             _conn.Dispose();

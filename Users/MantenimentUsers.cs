@@ -1,13 +1,12 @@
 ﻿using BasicForms;
 using ControlsMC;
+using LibreriaClases;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using TextBoxControls;
-using LibreriaClases;
-using System.Data;
 
 namespace Users
 {
@@ -17,7 +16,7 @@ namespace Users
         {
             FormTitle = "Manteniment Usuaris";
             UserName = username;
-            profileImg = imgProfile;
+            ProfileImg = imgProfile;
             InitializeComponent();
         }
 
@@ -32,7 +31,11 @@ namespace Users
         bool EsNou = false;
         private void MantenimentUsers_Load(object sender, EventArgs e)
         {
-            CarregaDades();  
+            CarregaDades();
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            comboBox3.Enabled = false;
+            comboBox4.Enabled = false;
         }
 
         private void CarregaDades()
@@ -73,9 +76,9 @@ namespace Users
         private void TreureBinding()
         {
             foreach (Control txt in Controls)
-                if (txt.GetType() == typeof(SWTextBox))
+                if (txt.GetType() == typeof(SwTextBox))
                 {
-                    var txt1 = (SWTextBox)txt;
+                    var txt1 = (SwTextBox)txt;
                     txt1.DataBindings.Clear();
                     txt1.Text = "";
                 }
@@ -94,19 +97,19 @@ namespace Users
         private void FerBiding()
         {
             foreach (Control txt in Controls)
-                if (txt.GetType() == typeof(SWTextBox))
+                if (txt.GetType() == typeof(SwTextBox))
                 {
-                    var txt1 = (SWTextBox)txt;
+                    var txt1 = (SwTextBox)txt;
                     txt1.Font = new Font("Microsoft Sans Serif", 12);
                     txt1.DataBindings.Clear();
-                    txt1.DataBindings.Add("Text", dtg.DataSource, txt1.CampoBBDD, true);
+                    txt1.DataBindings.Add("Text", dtg.DataSource, txt1.CampoBbdd, true);
                 }
                 else if (txt.GetType() == typeof(ComboBox))
                 {
                     var txt1 = (ComboBox)txt;
-  
+
                     txt1.Font = new Font("Microsoft Sans Serif", 12);
-                                       
+
                 }
                 else if (txt.GetType() == typeof(TextBox))
                 {
@@ -114,7 +117,7 @@ namespace Users
                     txt1.Font = new Font("Microsoft Sans Serif", 12);
                     txt1.DataBindings.Clear();
                     txt1.DataBindings.Add("Text", dtg.DataSource, txt1.Tag.ToString(), true);
-                   
+
                 }
                 else if (txt.GetType() == typeof(Label))
                 {
@@ -131,7 +134,7 @@ namespace Users
         }
 
         private void btn_actualitzar_Click(object sender, EventArgs e)
-        {   
+        {
             if (EsNou)
             {
                 User newuser = new User()
@@ -162,7 +165,8 @@ namespace Users
 
         private void textBoxs_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.TextLength > 0) {
+            if (textBox1.TextLength > 0)
+            {
                 comboBox1.SelectedValue = textBox1.Text;
             }
             if (textBox2.TextLength > 0)
@@ -189,6 +193,10 @@ namespace Users
 
         private void dtg_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            comboBox4.Enabled = true;
             FerBiding();
             foto = swTextBox6.Text;
             carregarfoto(foto);
@@ -196,6 +204,10 @@ namespace Users
 
         private void dtg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            comboBox3.Enabled = true;
+            comboBox4.Enabled = true;
             FerBiding();
             foto = swTextBox6.Text;
             carregarfoto(foto);

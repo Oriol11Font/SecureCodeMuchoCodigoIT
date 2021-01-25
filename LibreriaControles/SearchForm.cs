@@ -69,14 +69,7 @@ namespace BasicForms
             }
             catch (Exception error)
             {
-                if (error is InvalidOperationException)
-                {
-                    errLabel.Text = @"No hi ha dades que s'assemblin a la teva consulta";
-                }
-                else
-                {
-                    errLabel.Text = @"No s'ha pogut filtrar la teva consulta";
-                }
+                errLabel.Text = error is InvalidOperationException ? @"No hi ha dades que s'assemblin a la teva consulta" : @"No s'ha pogut filtrar la teva consulta";
                 errLabel.Visible = true;
             }
             finally

@@ -1,18 +1,18 @@
-﻿using System;
+﻿using ControlsMC;
+using LibreriaClases;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using ControlsMC;
-using LibreriaClases;
 using TextBoxControls;
 
 namespace BasicForms
 {
     public partial class ForaniForm : BaseForm
     {
-        public DataSet dts;
+        public DataSet Dts;
 
-        public int[] ids = {0};
+        public int[] Ids = { 0 };
 
         public ForaniForm()
         {
@@ -29,7 +29,7 @@ namespace BasicForms
             {
                 var query = "select * from " + Taula;
                 var dtb = new DataAccessClass();
-                dtb.UpdateDb(query, dts);
+                dtb.UpdateDb(query, Dts);
                 btn_actualitzar.ForeColor = Color.LawnGreen;
             }
             catch (Exception e)
@@ -47,8 +47,8 @@ namespace BasicForms
         private void NomColumnes()
         {
             var cont = 0;
-            if (!(NomColumn.Length == 0))
-                for (var i = 1; i < dts.Tables[0].Columns.Count; i++)
+            if (NomColumn.Length != 0)
+                for (var i = 1; i < Dts.Tables[0].Columns.Count; i++)
                 {
                     dtg.Columns[i].HeaderText = NomColumn[cont];
                     cont++;
@@ -61,35 +61,36 @@ namespace BasicForms
             {
                 var dtb = new DataAccessClass();
                 var query = "select * from " + Taula;
-                dts = dtb.GetByQuery(query);
+                Dts = dtb.GetByQuery(query);
 
-                dtg.DataSource = dts.Tables[0];
+                dtg.DataSource = Dts.Tables[0];
 
-                for (int i = 0; i < ids.Length; i++)
+                foreach (var t in Ids)
                 {
-                    dtg.Columns[ids[i]].Visible = false;
+                    dtg.Columns[t].Visible = false;
                 }
 
                 dtg.ForeColor = Color.Black;
                 NomColumnes();
 
                 foreach (Control txt in Controls)
-                    if (txt.GetType() == typeof(SWTextBox))
+                    if (txt.GetType() == typeof(SwTextBox))
                     {
-                        var txt1 = (SWTextBox) txt;
+                        var txt1 = (SwTextBox)txt;
                         txt1.Font = new Font("Microsoft Sans Serif", 12);
                         txt1.DataBindings.Clear();
-                        txt1.DataBindings.Add("Text", dts.Tables[0], txt1.CampoBBDD);
+                        txt1.DataBindings.Add("Text", Dts.Tables[0], txt1.CampoBbdd);
                     }
                     else if (txt.GetType() == typeof(MCCodi))
                     {
-                        var txt1 = (MCCodi) txt;
+                        var txt1 = (MCCodi)txt;
                         txt1.Font = new Font("Microsoft Sans Serif", 12);
                         txt1.DataBindings.Clear();
-                        txt1.DataBindings.Add("ControlID", dts.Tables[0], txt1.NomId);
-                    } else if (txt.GetType() == typeof(Label))
+                        txt1.DataBindings.Add("ControlID", Dts.Tables[0], txt1.NomId);
+                    }
+                    else if (txt.GetType() == typeof(Label))
                     {
-                        var txt1 = (Label) txt;
+                        var txt1 = (Label)txt;
                         txt1.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
                         txt1.ForeColor = Color.White;
                         txt1.BackColor = Color.Transparent;
@@ -101,16 +102,11 @@ namespace BasicForms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void createbtn_Click(object sender, EventArgs eA)
         {
             try
             {
-                dts.Tables[0].Rows.Add();
+                Dts.Tables[0].Rows.Add();
                 createbtn.ForeColor = Color.LawnGreen;
             }
             catch (Exception e)

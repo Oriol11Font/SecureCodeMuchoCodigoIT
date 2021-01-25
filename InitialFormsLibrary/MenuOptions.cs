@@ -8,9 +8,9 @@ namespace InitialFormsLibrary
         {
             FormTitle = @"Opcions de menú";
             UserName = username;
-            profileImg = imgProfile;
+            ProfileImg = imgProfile;
             Taula = "MenuOptions";
             InitializeComponent();
         }
     }
-} 
+}

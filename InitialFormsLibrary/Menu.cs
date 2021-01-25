@@ -1,12 +1,10 @@
-﻿using System;
-using System.Windows.Forms;
-using InitialFormsLibrary;
+﻿using BasicForms;
 using LibreriaClases;
-using BasicForms;
-using TextBoxControls;
+using System;
 using System.Data;
 using System.IO;
-using System.Reflection;
+using System.Windows.Forms;
+using TextBoxControls;
 
 namespace SecureCoreMain
 {
@@ -22,24 +20,23 @@ namespace SecureCoreMain
             var sqldataUser = data.GetByQuery(sql);
             var drUser = sqldataUser.Tables[0].Rows[0];
             UserName = drUser.ItemArray.GetValue(2).ToString();
-            profileImg = drUser.ItemArray.GetValue(7).ToString();
+            ProfileImg = drUser.ItemArray.GetValue(7).ToString();
             InitializeComponent();
         }
 
-        private void setWelcomeLabel(String UserName)
+        private void setWelcomeLabel()
         {
             string momentDia;
-            var time = new DateTime();
-
-            switch (time.Hour)
+            var hour = DateTime.Now.Hour;
+            switch (hour)
             {
-                case int n when n >= 8 && n < 13:
+                case int n when n >= 0 && n < 12:
                     momentDia = "Bon dia";
                     break;
-                case int n when n >= 13 && n < 20:
+                case int n when n >= 12 && n < 20:
                     momentDia = "Bona tarda";
                     break;
-                case int n when n >= 20 && n < 8:
+                case int n when n >= 20 || n < 0:
                     momentDia = "Bona nit";
                     break;
                 default:
@@ -47,8 +44,7 @@ namespace SecureCoreMain
                     break;
             }
 
-            // var hora = "\nSón les " + time.Hour + ":" + tiempo.Minute;
-            this.welcomeText.Text = $"{momentDia} {this.UserName}";
+            welcomeText.Text = $"{momentDia} {this.UserName}";
         }
 
         private void SetUserRank()
@@ -64,28 +60,28 @@ namespace SecureCoreMain
         private void Menu_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-            setWelcomeLabel(UserName);
+            setWelcomeLabel();
 
             SetUserRank();
 
-            var sqldata = data.CarregarMenu();
+            var sqldata = data.GetTable("MenuOptions");
 
             foreach (DataRow dr in sqldata.Tables[0].Rows)
             {
                 // si no té un nivell d'accés igual o superior no podrà veure els botons del menú que requereixin d'un accés superior
-                if (_accessLevel >= (int)dr.ItemArray[5])
+                if (_accessLevel >= int.Parse(dr.ItemArray.GetValue(5).ToString()))
                 {
                     try
                     {
-                        var menubtn = new exeButton
+                        var menubtn = new ExeButton
                         {
-                            ImageLocation1 = "..\\TextBoxControls\\Resources\\" + dr.ItemArray[2].ToString() + ".png", 
-                            ImageLocation2 = "..\\TextBoxControls\\Resources\\" + dr.ItemArray[2].ToString() + ".gif",
-                            ImageLocation = "..\\TextBoxControls\\Resources\\" +  dr.ItemArray[2].ToString() + ".png",
-                            
+                            ImageLocation1 = $@"..\\TextBoxControls\\Resources\\{dr.ItemArray[2]}.png",
+                            ImageLocation2 = $@"..\\TextBoxControls\\Resources\\{dr.ItemArray[2]}.gif",
+                            ImageLocation = $@"..\\TextBoxControls\\Resources\\{dr.ItemArray[2]}.png",
+
                             SizeMode = PictureBoxSizeMode.Zoom,
-                            userName = UserName,
-                            imgProfile = profileImg,
+                            UserName = UserName,
+                            ImgProfile = ProfileImg,
                             Form = dr.ItemArray[3].ToString(),
                             Classe = dr.ItemArray[4].ToString(),
                             Margin = new Padding(50),

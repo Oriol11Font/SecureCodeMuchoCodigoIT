@@ -1,13 +1,9 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
-using LibreriaClases;
-using BasicForms;
-using System.Linq;
-using System.Collections.Generic;
+﻿using BasicForms;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
-using System.Drawing.Printing;
+using LibreriaClases;
+using System;
+using System.Windows.Forms;
 
 namespace Users
 {
@@ -20,7 +16,7 @@ namespace Users
         {
             FormTitle = "User Report";
             UserName = username;
-            profileImg = imgProfile;
+            ProfileImg = imgProfile;
             InitializeComponent();
         }
 
@@ -52,25 +48,28 @@ namespace Users
 
                 crystalReportViewer1.ReportSource = cryRpt;
                 saveButton.Enabled = true;
-            } catch
+            }
+            catch
             {
                 errorLabel.Text = @"Error mostrant report";
                 errorLabel.Visible = true;
             }
-            
+
         }
 
         private void SaveReport(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.InitialDirectory = @"C:\";
-            saveFileDialog1.Title = @"Selecciona la ubicació on desar el report";
-            saveFileDialog1.CheckFileExists = false;
-            saveFileDialog1.CheckPathExists = true;
-            saveFileDialog1.DefaultExt = "pdf";
-            saveFileDialog1.Filter = @"Pdf Files|*.pdf";
-            saveFileDialog1.FilterIndex = 2;
-            saveFileDialog1.RestoreDirectory = true;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog
+            {
+                InitialDirectory = @"C:\",
+                Title = @"Selecciona la ubicació on desar el report",
+                CheckFileExists = false,
+                CheckPathExists = true,
+                DefaultExt = "pdf",
+                Filter = @"Pdf Files|*.pdf",
+                FilterIndex = 2,
+                RestoreDirectory = true
+            };
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 cryRpt.ExportToDisk(ExportFormatType.PortableDocFormat, saveFileDialog1.FileName);
@@ -79,7 +78,12 @@ namespace Users
 
         private void BackButton(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) MostrarReport(null, null);
         }
     }
 }

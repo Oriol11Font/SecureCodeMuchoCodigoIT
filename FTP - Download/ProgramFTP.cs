@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FTP___Download
@@ -24,9 +20,10 @@ namespace FTP___Download
                 {
                     input = Console.ReadLine();
 
-                    if (input == "hola"){}
+                    if (input == "hola") { }
 
-                    else if (input == "check") {
+                    else if (input == "check")
+                    {
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("[INFORMACIÓN] --- Buscant si existeixen arxius nous dins del servidor... ---");
                         Console.ForegroundColor = ConsoleColor.White;
@@ -41,7 +38,7 @@ namespace FTP___Download
 
                         try
                         {
-                            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, ftpFolderPath));
+                            FtpWebRequest request = (FtpWebRequest)WebRequest.Create($"ftp://{ftpHost}/{ftpFolderPath}");
                             request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
 
                             // This example assumes the FTP site uses anonymous logon.
@@ -62,7 +59,7 @@ namespace FTP___Download
                             response.Close();
 
                             seleccionArchivo();
-                        } 
+                        }
                         catch (Exception err)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
@@ -70,11 +67,14 @@ namespace FTP___Download
                             Console.ForegroundColor = ConsoleColor.White;
                         }
 
-                    } else if (input == "path") {
-                        Console.WriteLine("GetFolderPath: "+ "C:\\Users\\" + Environment.UserName + "\\Descargas");
+                    }
+                    else if (input == "path")
+                    {
+                        Console.WriteLine("GetFolderPath: " + "C:\\Users\\" + Environment.UserName + "\\Descargas");
                     }
 
-                    else {
+                    else
+                    {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("[ERROR] --- Comando no reconocido por la consola, pueda que no exista o no este bien escrito ---");
                         Console.ForegroundColor = ConsoleColor.White;
@@ -82,9 +82,10 @@ namespace FTP___Download
 
                     //input = Console.ReadLine();
                 }
-            
-                
-            } catch (Exception err)
+
+
+            }
+            catch (Exception err)
             {
                 MessageBox.Show(err.ToString());
             }
@@ -107,7 +108,7 @@ namespace FTP___Download
             try
             {
                 // Get the object used to communicate with the server.
-                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, finalpath));
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create($"ftp://{ftpHost}/{finalpath}");
                 request.Method = WebRequestMethods.Ftp.DownloadFile;
 
                 // This example assumes the FTP site uses anonymous logon.
@@ -129,7 +130,7 @@ namespace FTP___Download
                 }
 
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("[INFORMACIÓN] --- Arxiu "+ fileName +" generat correctament a: "+downloadpath+" ---");
+                Console.WriteLine("[INFORMACIÓN] --- Arxiu " + fileName + " generat correctament a: " + downloadpath + " ---");
                 Console.ForegroundColor = ConsoleColor.White;
 
                 writeStream.Close();
@@ -138,10 +139,10 @@ namespace FTP___Download
             catch (Exception err)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("[ERROR] --- Ha sigut impossible descarregar l'arxiu des del servidor FTP: "+err+" ---");
+                Console.WriteLine("[ERROR] --- Ha sigut impossible descarregar l'arxiu des del servidor FTP: " + err + " ---");
                 Console.ForegroundColor = ConsoleColor.White;
             }
-            
+
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace TextBoxControls
 {
-    partial class exeButton
+    partial class ExeButton
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

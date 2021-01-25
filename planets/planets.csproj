@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CercaPlanetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CercaPlanetes.Designer.cs">
+      <DependentUpon>CercaPlanetes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimentPlanets.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CercaPlanetes.resx">
+      <DependentUpon>CercaPlanetes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimentPlanets.resx">
       <DependentUpon>MantenimentPlanets.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,7 +16,7 @@ namespace FTP
         public Pujador()
         {
             UserName = "Anonymous";
-            profileImg = "Oriol.jpg";
+            ProfileImg = "Oriol.jpg";
             FormTitle = "Registrar o Pujar comandes";
             InitializeComponent();
         }
@@ -52,12 +52,8 @@ namespace FTP
 
                 string finalpath = uploadserverpath + fileName;
 
-
-                //hacer request y postear
-                FtpWebRequest ftpRequest;
-
                 // Crea el objeto de conexión del servidor FTP
-                ftpRequest = (FtpWebRequest)WebRequest.Create(string.Format("ftp://{0}/{1}", ftpHost, finalpath));
+                var ftpRequest = (FtpWebRequest)WebRequest.Create($"ftp://{ftpHost}/{finalpath}");
                 // Asigna las credenciales
                 ftpRequest.Credentials = new NetworkCredential(ftpUser, ftpPW);
                 // Asigna las propiedades
@@ -173,7 +169,8 @@ namespace FTP
                                     throw new Exception("Tabla de BBDD inexistente");
                                 }
 
-                            } else
+                            }
+                            else
                             {
                                 if (cont == 0)
                                 {
@@ -185,7 +182,7 @@ namespace FTP
                                         IdPriority = Convert.ToInt16(priority)
                                     };
 
-                                    
+
                                     dbo.Orders.Add(ord);
                                     dbo.SaveChanges();
                                     label5.Text = "Order created";
@@ -202,7 +199,7 @@ namespace FTP
                                     dbo.OrderInfoes.Add(ordInf);
                                     dbo.SaveChanges();
                                     label6.Text = "OrderInfo Created";
-                                    
+
                                 }
 
                                 if (elements[0].Equals("LIN"))
@@ -226,7 +223,7 @@ namespace FTP
                                         Quantity = quantity,
                                         DeliveryDate = deliveryDate
                                     };
-                                    
+
                                     dbo.OrdersDetails.Add(ordDet);
                                     dbo.SaveChanges();
 

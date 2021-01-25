@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace TextBoxControls
 {
-    public partial class exeButton : PictureBox
+    public partial class ExeButton : PictureBox
     {
-        public exeButton()
+        public ExeButton()
         {
             InitializeComponent();
         }
@@ -19,9 +19,9 @@ namespace TextBoxControls
 
         public string ImageLocation2 { get; set; }
 
-        public string imgProfile { get; set; }
+        public string ImgProfile { get; set; }
 
-        public string userName { get; set; }
+        public string UserName { get; set; }
 
         private void exeButton_Click(object sender, EventArgs e)
         {
@@ -29,27 +29,24 @@ namespace TextBoxControls
             {
                 var ensamblat = Assembly.LoadFrom(Classe);
 
-                //Declarem les variables
-                object dllBD;
-                Type tipus;
-
                 //recuperem el tipus de la classe que volem instanciar
-                tipus = ensamblat.GetType(Form);
+                var tipus = ensamblat.GetType(Form);
 
-                Object[] args = { this.userName, this.imgProfile };
+                object[] args = { UserName, ImgProfile };
 
                 //instanciem l’objecte   
-                dllBD = Activator.CreateInstance(tipus, args);
+                var dllBD = Activator.CreateInstance(tipus, args);
 
                 //el mostrem assumint que es tracta d’un form 
                 // i per això fem un cast amb (Form) 
                 ((Form)dllBD).Show();
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Aquest botó no està operatiu " + ex);
             }
-            
+
         }
 
         private void exeButton_MouseHover(object sender, EventArgs e)
@@ -61,7 +58,7 @@ namespace TextBoxControls
         private void exeButton_MouseLeave(object sender, EventArgs e)
         {
             Margin = new Padding(50);
-            ImageLocation = ImageLocation1; 
+            ImageLocation = ImageLocation1;
         }
     }
 }

@@ -1,14 +1,5 @@
 ﻿using BasicForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace planets
 {
@@ -18,9 +9,14 @@ namespace planets
         {
             FormTitle = "Manteniment Planetes";
             UserName = username;
-            profileImg = imgProfile;
-            ids = new int[] {0, 3, 7, 8};
+            ProfileImg = imgProfile;
+            Ids = new[] { 0, 3, 7, 8 };
             InitializeComponent();
+        }
+
+        private void txtBoxSectors_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

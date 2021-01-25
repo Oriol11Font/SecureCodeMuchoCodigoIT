@@ -1,7 +1,6 @@
 ﻿using BasicForms;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -14,20 +13,20 @@ namespace Categories
         {
             FormTitle = "Categories dels Usuaris";
             UserName = username;
-            profileImg = imgProfile;
+            ProfileImg = imgProfile;
             InitializeComponent();
         }
 
-        CaregoriesEntities db;
-        List<UserCategory> cat;
+        CaregoriesEntities _db;
+        List<UserCategory> _cat;
 
         private void CarregaDades()
         {
-            db = new CaregoriesEntities();
+            _db = new CaregoriesEntities();
 
-            cat = db.UserCategories.ToList();
+            _cat = _db.UserCategories.ToList();
 
-            dtgCategories.DataSource = cat;
+            dtgCategories.DataSource = _cat;
             dtgCategories.Columns[0].Visible = false;
         }
         private void UserCategories_Load(object sender, EventArgs e)
@@ -41,15 +40,15 @@ namespace Categories
         {
             CodiCategory.Font = new Font("Microsoft Sans Serif", 12);
             CodiCategory.DataBindings.Clear();
-            CodiCategory.DataBindings.Add("Text", dtgCategories.DataSource, CodiCategory.CampoBBDD, true);
+            CodiCategory.DataBindings.Add("Text", dtgCategories.DataSource, CodiCategory.CampoBbdd, true);
 
             DescCategory.Font = new Font("Microsoft Sans Serif", 12);
             DescCategory.DataBindings.Clear();
-            DescCategory.DataBindings.Add("Text", dtgCategories.DataSource, DescCategory.CampoBBDD, true);
+            DescCategory.DataBindings.Add("Text", dtgCategories.DataSource, DescCategory.CampoBbdd, true);
 
             LvlCategory.Font = new Font("Microsoft Sans Serif", 12);
             LvlCategory.DataBindings.Clear();
-            LvlCategory.DataBindings.Add("Text", dtgCategories.DataSource, LvlCategory.CampoBBDD, true);
+            LvlCategory.DataBindings.Add("Text", dtgCategories.DataSource, LvlCategory.CampoBbdd, true);
         }
 
         private void backbtn_Click(object sender, EventArgs e)
@@ -64,7 +63,7 @@ namespace Categories
                 //cat = (from c in db.UserCategories
                 //   select c).ToList();
 
-                db.SaveChanges();
+                _db.SaveChanges();
                 CarregaDades();
                 GenerarBinding();
 

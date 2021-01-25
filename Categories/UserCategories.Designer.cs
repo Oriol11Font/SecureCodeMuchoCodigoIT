@@ -50,9 +50,9 @@ namespace Categories
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodiCategory = new ControlsMC.SWTextBox();
-            this.DescCategory = new ControlsMC.SWTextBox();
-            this.LvlCategory = new ControlsMC.SWTextBox();
+            this.CodiCategory = new ControlsMC.SwTextBox();
+            this.DescCategory = new ControlsMC.SwTextBox();
+            this.LvlCategory = new ControlsMC.SwTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -235,7 +235,7 @@ namespace Categories
             // CodiCategory
             // 
             this.CodiCategory.AllowEmpty = true;
-            this.CodiCategory.CampoBBDD = "CodeCategory";
+            this.CodiCategory.CampoBbdd = "CodeCategory";
             this.CodiCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CodiCategory.Foranea = false;
             this.CodiCategory.Location = new System.Drawing.Point(110, 409);
@@ -243,12 +243,12 @@ namespace Categories
             this.CodiCategory.Name = "CodiCategory";
             this.CodiCategory.Size = new System.Drawing.Size(444, 26);
             this.CodiCategory.TabIndex = 1;
-            this.CodiCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.CodiCategory.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // DescCategory
             // 
             this.DescCategory.AllowEmpty = true;
-            this.DescCategory.CampoBBDD = "DescCategory";
+            this.DescCategory.CampoBbdd = "DescCategory";
             this.DescCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescCategory.Foranea = false;
             this.DescCategory.Location = new System.Drawing.Point(638, 409);
@@ -256,12 +256,12 @@ namespace Categories
             this.DescCategory.Name = "DescCategory";
             this.DescCategory.Size = new System.Drawing.Size(444, 26);
             this.DescCategory.TabIndex = 2;
-            this.DescCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.DescCategory.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // LvlCategory
             // 
             this.LvlCategory.AllowEmpty = true;
-            this.LvlCategory.CampoBBDD = "AccessLevel";
+            this.LvlCategory.CampoBbdd = "AccessLevel";
             this.LvlCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LvlCategory.Foranea = false;
             this.LvlCategory.Location = new System.Drawing.Point(1174, 409);
@@ -269,7 +269,7 @@ namespace Categories
             this.LvlCategory.Name = "LvlCategory";
             this.LvlCategory.Size = new System.Drawing.Size(444, 26);
             this.LvlCategory.TabIndex = 3;
-            this.LvlCategory.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.LvlCategory.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // label1
             // 
@@ -415,9 +415,9 @@ namespace Categories
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private ControlsMC.SWTextBox CodiCategory;
-        private ControlsMC.SWTextBox DescCategory;
-        private ControlsMC.SWTextBox LvlCategory;
+        private ControlsMC.SwTextBox CodiCategory;
+        private ControlsMC.SwTextBox DescCategory;
+        private ControlsMC.SwTextBox LvlCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

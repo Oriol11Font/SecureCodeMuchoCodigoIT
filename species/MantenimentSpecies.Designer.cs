@@ -79,10 +79,10 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swTextBox1 = new ControlsMC.SWTextBox();
+            this.swTextBox1 = new ControlsMC.SwTextBox();
             this.lbl_1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.swTextBox2 = new ControlsMC.SWTextBox();
+            this.swTextBox2 = new ControlsMC.SwTextBox();
             this.SuspendLayout();
             // 
             // dataGridViewTextBoxColumn49
@@ -561,14 +561,14 @@
             // swTextBox1
             // 
             this.swTextBox1.AllowEmpty = true;
-            this.swTextBox1.CampoBBDD = "CodeSpecie";
+            this.swTextBox1.CampoBbdd = "CodeSpecie";
             this.swTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox1.Foranea = false;
             this.swTextBox1.Location = new System.Drawing.Point(164, 431);
             this.swTextBox1.Name = "swTextBox1";
             this.swTextBox1.Size = new System.Drawing.Size(400, 35);
             this.swTextBox1.TabIndex = 1;
-            this.swTextBox1.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox1.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // lbl_1
             // 
@@ -591,14 +591,14 @@
             // swTextBox2
             // 
             this.swTextBox2.AllowEmpty = true;
-            this.swTextBox2.CampoBBDD = "DescSpecie";
+            this.swTextBox2.CampoBbdd = "DescSpecie";
             this.swTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTextBox2.Foranea = false;
             this.swTextBox2.Location = new System.Drawing.Point(979, 431);
             this.swTextBox2.Name = "swTextBox2";
             this.swTextBox2.Size = new System.Drawing.Size(400, 35);
             this.swTextBox2.TabIndex = 2;
-            this.swTextBox2.Tipus = ControlsMC.SWTextBox.TipusDada.Text;
+            this.swTextBox2.Tipus = ControlsMC.SwTextBox.TipusDada.Text;
             // 
             // MantenimentSpecies
             // 
@@ -644,7 +644,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private ControlsMC.SWTextBox swTextBox1;
+        private ControlsMC.SwTextBox swTextBox1;
         private System.Windows.Forms.Label lbl_1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
@@ -653,7 +653,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private ControlsMC.SWTextBox swTextBox2;
+        private ControlsMC.SwTextBox swTextBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;

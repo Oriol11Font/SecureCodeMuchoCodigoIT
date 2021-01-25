@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace BasicForms
@@ -10,7 +9,7 @@ namespace BasicForms
 
         public string FormTitle { get; set; } = "Form Title";
 
-        public string profileImg { get; set; }
+        public string ProfileImg { get; set; }
 
         public bool Unsaved { get; set; }
 
@@ -29,7 +28,8 @@ Es perdran tots els canvis no guardats",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes) Application.Exit();
-            } else
+            }
+            else
             {
                 Application.Exit();
             }
@@ -49,7 +49,7 @@ Es perdran tots els canvis no guardats",
             appImg.ImageLocation = "..\\LibreriaControles\\Resources\\logo_app.png";
             username.Text = UserName;
             TitleForm.Text = FormTitle;
-            profileimg.ImageLocation = "..\\LibreriaControles\\Resources\\" + profileImg;
+            profileimg.ImageLocation = "..\\LibreriaControles\\Resources\\" + ProfileImg;
         }
     }
 }
